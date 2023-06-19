@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Bab 1 Pengenalan Python &amp; SQL | WORKSHOP</title>
+  <meta name="description" content="Buku ini dipersembahkan kepada para peserta Workshop JNE yang berjudul; Data Analytics with Python+SQL. E-book ini diharapkan untuk dapat mempermudah pembelajaran (workshop) dengan menyediakan materi interaktif yang dapat diakases secara online. Materi tersebut akan kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya." />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Bab 1 Pengenalan Python &amp; SQL | WORKSHOP" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Buku ini dipersembahkan kepada para peserta Workshop JNE yang berjudul; Data Analytics with Python+SQL. E-book ini diharapkan untuk dapat mempermudah pembelajaran (workshop) dengan menyediakan materi interaktif yang dapat diakases secara online. Materi tersebut akan kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya." />
+  <meta name="github-repo" content="dsciencelabs/Bookdown-Tempalate_R" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Bab 1 Pengenalan Python &amp; SQL | WORKSHOP" />
+  
+  <meta name="twitter:description" content="Buku ini dipersembahkan kepada para peserta Workshop JNE yang berjudul; Data Analytics with Python+SQL. E-book ini diharapkan untuk dapat mempermudah pembelajaran (workshop) dengan menyediakan materi interaktif yang dapat diakases secara online. Materi tersebut akan kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya." />
+  
+
+<meta name="author" content="Bakti Siregar, M.Sc" />
+
+
+<meta name="date" content="2023-06-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="kata-pengantar.html"/>
+<link rel="next" href="pemilihan-data.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><center><img src="images/JNE_Py_SQL.png" alt="logo" width="50%" height="50%"style="margin: 15px 0 0 0"></center></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html"><i class="fa fa-check"></i>Kata Pengantar</a>
+<ul>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#maksud-tujuan"><i class="fa fa-check"></i>Maksud &amp; Tujuan</a></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#jadwal-kegiatan"><i class="fa fa-check"></i>Jadwal Kegiatan</a>
+<ul>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#pertemuan-1"><i class="fa fa-check"></i>Pertemuan 1</a></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#pertemuan-2"><i class="fa fa-check"></i>Pertemuan 2</a></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#pertemuan-3"><i class="fa fa-check"></i>Pertemuan 3</a></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#pertemuan-4"><i class="fa fa-check"></i>Pertemuan 4</a></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#pertemuan-5"><i class="fa fa-check"></i>Pertemuan 5</a></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#pertemuan-6"><i class="fa fa-check"></i>Pertemuan 6</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#pemateri-mediator"><i class="fa fa-check"></i>Pemateri &amp; Mediator</a></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#para-peserta"><i class="fa fa-check"></i>Para Peserta</a></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#manfaat-dan-fasilitas"><i class="fa fa-check"></i>Manfaat dan Fasilitas</a></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#syarat-peserta"><i class="fa fa-check"></i>Syarat Peserta</a></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#masukan-saran"><i class="fa fa-check"></i>Masukan &amp; Saran</a></li>
+<li class="chapter" data-level="" data-path="kata-pengantar.html"><a href="kata-pengantar.html#ucapan-terima-kasih"><i class="fa fa-check"></i>Ucapan Terima Kasih</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="pengenalan-python-sql.html"><a href="pengenalan-python-sql.html"><i class="fa fa-check"></i><b>1</b> Pengenalan Python &amp; SQL</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="pengenalan-python-sql.html"><a href="pengenalan-python-sql.html#mengapa-sql-python"><i class="fa fa-check"></i><b>1.1</b> Mengapa SQL &amp; Python?</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="pemilihan-data.html"><a href="pemilihan-data.html"><i class="fa fa-check"></i><b>2</b> Pemilihan Data</a></li>
+<li class="chapter" data-level="3" data-path="pengelompokan-data.html"><a href="pengelompokan-data.html"><i class="fa fa-check"></i><b>3</b> Pengelompokan Data</a></li>
+<li class="chapter" data-level="4" data-path="perhitungan-waktu-subkueri.html"><a href="perhitungan-waktu-subkueri.html"><i class="fa fa-check"></i><b>4</b> Perhitungan Waktu &amp; Subkueri</a></li>
+<li class="chapter" data-level="5" data-path="pemahaman-5w1h-visualisasi.html"><a href="pemahaman-5w1h-visualisasi.html"><i class="fa fa-check"></i><b>5</b> Pemahaman 5W1H &amp; Visualisasi</a></li>
+<li class="chapter" data-level="6" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html"><i class="fa fa-check"></i><b>6</b> Persentasi Tugas Akhir</a></li>
+<li class="chapter" data-level="7" data-path="penutup.html"><a href="penutup.html"><i class="fa fa-check"></i><b>7</b> Penutup</a></li>
+<li><a href="section.html#section" id="toc-section"></a></li>
+<li class="chapter" data-level="" data-path="daftar-pustaka.html"><a href="daftar-pustaka.html"><i class="fa fa-check"></i>Daftar Pustaka</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL.git" target="blank">Published with Bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">WORKSHOP</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="pengenalan-python-sql" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Bab 1</span> Pengenalan Python &amp; SQL<a href="pengenalan-python-sql.html#pengenalan-python-sql" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Keberadaan SQL dimulai tahun 1970, dan selama puluhan tahun telah dipakai oleh programmer untuk mengakses database. Banyak sekali perdebatan mengenai cara penyebutan SQL ini, namun pada kenyataannya, kita dapat melafalkannya sebagai “sequel” ataupun “S.Q.L”. Mempelajari bahasa pemrograman umum seperti Python dan R adalah penting, namun tidak memiliki kemampuan SQL akan membuat kita amat sulit untuk mendapatkan pekerjaan dalam bidang pengolahan data.</p>
+<p><img align="middle" src="https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/images/SQL.png?raw=true"  width = 100% /></p>
+<p>Hampir semua nama besar di bidang teknologi menggunakan SQL seperti Uber, Netflix, dan Airbnb. Bahkan dalam perusahaan seperti Facebook, Google dan Amazon, yang telah membuat sendiri database system berkemampuan tinggi, tetap menggunakan SQL untuk melakukan query dan analisis data.</p>
+<div id="mengapa-sql-python" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Mengapa SQL &amp; Python?<a href="pengenalan-python-sql.html#mengapa-sql-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Jika kita ingin bekerja di bidang pengolahan data, kita harus fokus kepada kemampuan yang diinginkan oleh para perusahaan pemberi kerja tersebut. Untuk posisi analis data, SQL termasuk kemampuan yang diutamakan, sekitar 57.4% dari keseluruhan lowongan pekerjaan. Berdasarkan survei yang dilakukan Dataquest dan StackOverflow pada gambar dibawah ini, dapat dilihat bahwa SQL bahkan lebih populer di kalangan data scientist dan data engineer dibandingkan Python dan R.</p>
+<p><img align="middle" src="https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/images/SQL1.png?raw=true"  width = 100% /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="kata-pengantar.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pemilihan-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": true,
+"twitter": true,
+"linkedin": true,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/edit/master/chapters/01-Pengenalan_PySQL.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

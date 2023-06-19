@@ -1,6 +1,6 @@
 
 ```{r echo = FALSE}
-Gloss_data <- read.csv("References/GlossFct.csv", header = TRUE)
+Gloss_data <- read.csv("https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/references/GlossFct.csv", header = TRUE)
 Gloss_data$Term = trimws(tolower(Gloss_data$Term))
 
 A1 <- '<a href="#" class="tooltip" style="color:green">*'

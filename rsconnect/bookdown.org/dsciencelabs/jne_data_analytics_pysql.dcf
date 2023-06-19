@@ -1,0 +1,14 @@
+name: jne_data_analytics_pysql
+title: JNE_Data_Analytics_PySQL
+username: dsciencelabs
+account: dsciencelabs
+server: bookdown.org
+hostUrl: https://bookdown.org/__api__
+appId: 12471
+bundleId: 86034
+url: https://bookdown.org/dsciencelabs/jne_data_analytics_pysql/
+when: 1687217475.24441
+lastSyncTime: 1687217475.24445
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: _bookdown.yml|_build.sh|_deploy.sh|_output.yml|apa-old-doi-prefix.csl|book.bib|data/printable-postgresql-sample-database-diagram.pdf|DESCRIPTION|Dockerfile|index.Rmd|jupyterlab/01_py_sql.ipynb|LICENSE|now.json|preamble.tex|README.md|references/Glossary.Rmd|references/GlossFct.csv|references/LDAReference2020A.bib|references/Packages.Rmd|references/PdfOutput.Rmd|style.css|chapters|images

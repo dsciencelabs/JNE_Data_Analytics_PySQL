@@ -1,0 +1,16 @@
+--- 
+title: "WORKSHOP"
+subtitle : "Data Analytics With Python & SQL"
+author: "Bakti Siregar, M.Sc"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: ["references/LDAReference2020A.bib"]
+biblio-style: econPeriod
+link-citations: yes
+github-repo: dsciencelabs/Bookdown-Tempalate_R
+description: "Buku ini dipersembahkan kepada para peserta Workshop JNE yang berjudul; Data Analytics with Python+SQL. E-book ini diharapkan untuk dapat mempermudah pembelajaran (workshop) dengan menyediakan materi interaktif yang dapat diakases secara online. Materi tersebut akan kuis, demonstrasi komputer, grafik interaktif, video, dan sejenisnya."
+---
+
+

@@ -344,12 +344,23 @@ Anda akan melihat Dashboard
 
 * [Download PostgreSQL](https://www.postgresql.org/download/)
 
-## Koneksi Python & SQL 
 
 ## Praktikal (Hands On)
 
+Untuk memulia bagian ini, pastikan bahwa anda sudah meng-install Anaconda dan XAMPP dikomputer yang akan digunakan. Kemudian, bukalah applikasi Juperterlab yang ada pada layar Anaconda Navigator, seperti diperlihatkan sebagai berikut:
+
+<img style="float: center; margin: 0px 0px 0px 0px; width:100%" src="images/bab1/anaconda1.png"/>
+
+Selanjutnya, akan muncul halaman baru pada browser seperti gambar berikut;
+ 
+<img style="float: center; margin: 0px 0px 0px 0px; width:100%" src="images/bab1/anaconda2.png"/>
+
+Kemudian, klik `File > Open from URL'. Muncul tampilan sebagai berukut: 
+
+<img style="float: center; margin: 0px 0px 0px 0px; width:100%" src="images/bab1/anaconda2.png"/>
 
 
-
+Terakhir, Copy - Paste link berikut; [https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/jupyterlab/01_py_sql.ipynb](https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/jupyterlab/01_py_sql.ipynb) pada kolom `Open URL`. Selanjutnya, ikuti toturialnya. 
+ 
 ## Latihan
 

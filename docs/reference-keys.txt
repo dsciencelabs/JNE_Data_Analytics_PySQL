@@ -46,7 +46,6 @@ cari-postgresql-15
 enter-password
 cek-dashboard
 video-instalasi-postgresql
-koneksi-python-sql
 praktikal-hands-on
 latihan
 pemilihan-data

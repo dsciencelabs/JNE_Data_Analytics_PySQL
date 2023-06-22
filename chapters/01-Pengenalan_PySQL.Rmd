@@ -347,7 +347,7 @@ Anda akan melihat Dashboard
 
 ## Praktikal (Hands On)
 
-Untuk memulia bagian ini, pastikan bahwa anda sudah meng-install Anaconda dan XAMPP dikomputer yang akan digunakan. Kemudian, bukalah applikasi Juperterlab yang ada pada layar Anaconda Navigator, seperti diperlihatkan sebagai berikut:
+Untuk memulai bagian ini, pastikan bahwa anda sudah meng-install Anaconda dan XAMPP dikomputer yang akan digunakan. Kemudian, bukalah applikasi Juperterlab yang ada pada layar Anaconda Navigator, seperti diperlihatkan sebagai berikut:
 
 <img style="float: center; margin: 0px 0px 0px 0px; width:100%" src="images/bab1/anaconda1.png"/>
 
@@ -355,12 +355,16 @@ Selanjutnya, akan muncul halaman baru pada browser seperti gambar berikut;
  
 <img style="float: center; margin: 0px 0px 0px 0px; width:100%" src="images/bab1/anaconda2.png"/>
 
-Kemudian, klik `File > Open from URL'. Muncul tampilan sebagai berukut: 
+Selanjutnya, klik `File > Open from URL'. Muncul tampilan sebagai berukut: 
 
-<img style="float: center; margin: 0px 0px 0px 0px; width:100%" src="images/bab1/anaconda2.png"/>
+<img style="float: center; margin: 0px 0px 0px 0px; width:100%" src="images/bab1/anaconda3.png"/>
 
 
-Terakhir, Copy - Paste link berikut; [https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/jupyterlab/01_py_sql.ipynb](https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/jupyterlab/01_py_sql.ipynb) pada kolom `Open URL`. Selanjutnya, ikuti toturialnya. 
+Terakhir, Copy-Paste dibawah ini pada kolom `Open URL`. Selanjutnya, ikuti tutorialnya. 
+
+* [**Akses Databases MySQL dengan Python**](https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/jupyterlab/01_py_sql.ipynb)
+
+* [**Akses Databases PostgreSQL dengan Python**](https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/jupyterlab/01_py_postgresql.ipynb)
  
 ## Latihan
 

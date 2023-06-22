@@ -366,5 +366,7 @@ Terakhir, Copy-Paste dibawah ini pada kolom `Open URL`. Selanjutnya, ikuti tutor
 
 * [**Akses Databases PostgreSQL dengan Python**](https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/jupyterlab/01_py_postgresql.ipynb)
  
-## Latihan
+## Latihan 
+
+Materi latihan akan diberikan setalah toturial selesai.
 

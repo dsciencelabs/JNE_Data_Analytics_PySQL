@@ -362,9 +362,9 @@ Selanjutnya, klik `File > Open from URL'. Muncul tampilan sebagai berukut:
 
 Terakhir, Copy-Paste dibawah ini pada kolom `Open URL`. Selanjutnya, ikuti tutorialnya. 
 
-* [**Akses Databases MySQL dengan Python**](https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/jupyterlab/01_py_sql.ipynb)
+* [**Akses Databases MySQL dengan Python**](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/jupyterlab/01_py_sql.ipynb)
 
-* [**Akses Databases PostgreSQL dengan Python**](https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/jupyterlab/01_py_postgresql.ipynb)
+* [**Akses Databases PostgreSQL dengan Python**](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/jupyterlab/01_py_postgresql.ipynb)
  
 ## Latihan 
 

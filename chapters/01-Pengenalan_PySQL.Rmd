@@ -362,11 +362,23 @@ Selanjutnya, klik `File > Open from URL'. Muncul tampilan sebagai berukut:
 
 Terakhir, Copy-Paste dibawah ini pada kolom `Open URL`. Selanjutnya, ikuti tutorialnya. 
 
-* [**Akses Databases MySQL dengan Python**](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/jupyterlab/01_py_sql.ipynb)
+* [**Akses Databases MySQL dengan Python**](https://drive.google.com/file/d/1Rkve2s-XM7V4rX1EfedK5J1Sc_16Uzem/view?usp=sharing)
 
-* [**Akses Databases PostgreSQL dengan Python**](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/jupyterlab/01_py_postgresql.ipynb)
+* [**Akses Databases PostgreSQL dengan Python**](https://drive.google.com/file/d/1RvfBOZSG6y75CgiEtuj3qQKr9TlADKzN/view?usp=sharing)
+
+* [**Contoh Applikasi Sederhana Py_SQL**](https://drive.google.com/file/d/1S3uBFww_8EB6S92H1fefEaTMlT4ADA0s/view?usp=sharing)
  
 ## Latihan 
 
-Materi latihan akan diberikan setalah toturial selesai.
+Berikut ini adalah Soal Latihan yang harus dikerjakan bersama Kelompok masing-masing. 
+
+
+* **Kelompok A** [Klik disini](https://drive.google.com/file/d/1RjCIxXOQo-NZ9HWWrJDu8bTyvZjykSkf/view?usp=sharing) 
+
+  1. KOKO ARIF BUDIMAN
+  2. ALDINO PRASETIAWAN
+  3. SURISTIN ADNAN
+  4. HAERUL
+  5. AGUNG DARMANTO
+
 

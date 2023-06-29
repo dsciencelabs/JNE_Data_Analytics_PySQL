@@ -240,7 +240,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#mengubah-tabel"><i class="fa fa-check"></i><b>2.3</b> Mengubah Tabel</a>
 <ul>
 <li class="chapter" data-level="2.3.1" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#menambah-kolom"><i class="fa fa-check"></i><b>2.3.1</b> Menambah Kolom</a></li>
+<li class="chapter" data-level="2.3.2" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#drop-kolom"><i class="fa fa-check"></i><b>2.3.2</b> Drop Kolom</a></li>
+<li class="chapter" data-level="2.3.3" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#modifikasi-column"><i class="fa fa-check"></i><b>2.3.3</b> Modifikasi Column</a></li>
 </ul></li>
+<li class="chapter" data-level="2.4" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#pengaturan-struktur-tabel"><i class="fa fa-check"></i><b>2.4</b> Pengaturan Struktur Tabel</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="pengelompokan-data.html"><a href="pengelompokan-data.html"><i class="fa fa-check"></i><b>3</b> Pengelompokan Data</a></li>
 <li class="chapter" data-level="4" data-path="perhitungan-waktu-subkueri.html"><a href="perhitungan-waktu-subkueri.html"><i class="fa fa-check"></i><b>4</b> Perhitungan Waktu &amp; Subkueri</a></li>
@@ -430,10 +433,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="menambah-kolom" class="section level3 hasAnchor" number="2.3.1">
 <h3><span class="header-section-number">2.3.1</span> Menambah Kolom<a href="akses-localhost-dengan-python.html#menambah-kolom" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Untuk menambahkan kolom dalam tabel, gunakan sintaks berikut:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="akses-localhost-dengan-python.html#cb11-1" tabindex="-1"></a><span class="fu">dbExecute</span>(MySQL, <span class="st">&quot;ALTER TABLE Orders</span></span>
-<span id="cb11-2"><a href="akses-localhost-dengan-python.html#cb11-2" tabindex="-1"></a><span class="st">                 ADD Email varchar(255)&quot;</span>)</span></code></pre></div>
-
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="akses-localhost-dengan-python.html#cb11-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;ALTER TABLE distribution_centers </span><span class="ch">\</span></span>
+<span id="cb11-2"><a href="akses-localhost-dengan-python.html#cb11-2" tabindex="-1"></a><span class="st">        ADD Email VARCHAR(100) </span><span class="ch">\</span></span>
+<span id="cb11-3"><a href="akses-localhost-dengan-python.html#cb11-3" tabindex="-1"></a><span class="st">        FIRST&quot;</span></span>
+<span id="cb11-4"><a href="akses-localhost-dengan-python.html#cb11-4" tabindex="-1"></a>cursor2.execute(sql)</span>
+<span id="cb11-5"><a href="akses-localhost-dengan-python.html#cb11-5" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="akses-localhost-dengan-python.html#cb11-6" tabindex="-1"></a>db2.commit()</span></code></pre></div>
 </div>
+<div id="drop-kolom" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Drop Kolom<a href="akses-localhost-dengan-python.html#drop-kolom" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Untuk menghapus kolom dalam tabel, gunakan sintaks berikut (perhatikan bahwa beberapa sistem database tidak mengizinkan penghapusan kolom):</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="akses-localhost-dengan-python.html#cb12-1" tabindex="-1"></a>sql <span class="ot">=</span> <span class="st">&quot;ALTER TABLE distribution_centers \</span></span>
+<span id="cb12-2"><a href="akses-localhost-dengan-python.html#cb12-2" tabindex="-1"></a><span class="st">       DROP COLUMN Email\ &quot;</span></span>
+<span id="cb12-3"><a href="akses-localhost-dengan-python.html#cb12-3" tabindex="-1"></a><span class="fu">cursor2.execute</span>(sql)</span>
+<span id="cb12-4"><a href="akses-localhost-dengan-python.html#cb12-4" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="akses-localhost-dengan-python.html#cb12-5" tabindex="-1"></a><span class="fu">db2.commit</span>()</span></code></pre></div>
+</div>
+<div id="modifikasi-column" class="section level3 hasAnchor" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> Modifikasi Column<a href="akses-localhost-dengan-python.html#modifikasi-column" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Untuk modifikasi nama kolom adalah sebagai berikut:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="akses-localhost-dengan-python.html#cb13-1" tabindex="-1"></a>sql <span class="ot">=</span> <span class="st">&quot;ALTER TABLE distribution_centers \</span></span>
+<span id="cb13-2"><a href="akses-localhost-dengan-python.html#cb13-2" tabindex="-1"></a><span class="st">       MODIFY COLUMN Email Address\ &quot;</span></span>
+<span id="cb13-3"><a href="akses-localhost-dengan-python.html#cb13-3" tabindex="-1"></a><span class="fu">cursor2.execute</span>(sql)</span>
+<span id="cb13-4"><a href="akses-localhost-dengan-python.html#cb13-4" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="akses-localhost-dengan-python.html#cb13-5" tabindex="-1"></a><span class="fu">db2.commit</span>()</span></code></pre></div>
+</div>
+</div>
+<div id="pengaturan-struktur-tabel" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Pengaturan Struktur Tabel<a href="akses-localhost-dengan-python.html#pengaturan-struktur-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Pengaturan Struktur Tabel SQL digunakan untuk menentukan aturan struktur data dalam tabel. Batasan digunakan untuk membatasi jenis data yang dapat masuk ke dalam tabel, memastikan keakuratan dan keandalan data dalam tabel. Batasan dapat berupa tingkat kolom atau tingkat tabel. Batasan tingkat kolom berlaku untuk kolom, dan batasan tingkat tabel berlaku untuk keseluruhan tabel. Berikut Batasan yang biasanya digunakan dalam SQL:</p>
+<ul>
+<li><em>NOT NULL:</em> Memastikan kolom tidak boleh memiliki nilai NULL</li>
+<li><em>UNIQUE:</em> Memastikan bahwa semua nilai dalam kolom berbeda</li>
+<li><em>PRIMARY KEY:</em> Kombinasi NOT NULL dan UNIQUE. Secara unik mengidentifikasi setiap baris dalam tabel</li>
+<li><em>FOREIGN KEY:</em> Secara unik mengidentifikasi baris/record di tabel lain</li>
+<li><em>CHECK:</em> Memastikan bahwa semua nilai dalam kolom memenuhi kondisi tertentu</li>
+<li><em>DEFAULT:</em> Menetapkan nilai default untuk kolom saat tidak ada nilai yang ditentukan</li>
+<li><em>INDEX:</em> Digunakan untuk membuat dan mengambil data dari database dengan sangat cepat</li>
+<li><em>AUTO_INCREMENT:</em> memungkinkan inset data unik pada kolom tertentu yang dihasilkan secara otomatis saat data baru dimasukkan ke dalam tabel. Seringkali kolom ini adalah adalah juga <em>PRIMARY KEY</em> dan ingin dibuat secara otomatis setiap kali catatan baru dimasukkan.</li>
+</ul>
+
 </div>
 </div>
             </section>

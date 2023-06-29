@@ -207,15 +207,55 @@ Ada kalanya kita ingin menambah, memodifikasi, menghapus yang ada pada tabel. Pe
 
 Untuk menambahkan kolom dalam tabel, gunakan sintaks berikut:
 
+```{python, eval=FALSE}
+sql = "ALTER TABLE distribution_centers \
+        ADD Email VARCHAR(100) \
+        FIRST"
+cursor2.execute(sql)
+
+db2.commit()
+```
+
+
+### Drop Kolom
+
+Untuk menghapus kolom dalam tabel, gunakan sintaks berikut (perhatikan bahwa beberapa sistem database tidak mengizinkan penghapusan kolom):
+
 ```{r eval=FALSE}
-dbExecute(MySQL, "ALTER TABLE Orders
-                 ADD Email varchar(255)")
+sql = "ALTER TABLE distribution_centers \
+       DROP COLUMN Email\ "
+cursor2.execute(sql)
+
+db2.commit()
 ```
 
 
-```{python}
+### Modifikasi Column
 
+Untuk modifikasi nama kolom adalah sebagai berikut:
+
+```{r eval=FALSE}
+sql = "ALTER TABLE distribution_centers \
+       MODIFY COLUMN Email Address\ "
+cursor2.execute(sql)
+
+db2.commit()
 ```
+
+
+## Pengaturan Struktur Tabel
+
+Pengaturan Struktur Tabel SQL digunakan untuk menentukan aturan struktur data dalam tabel. Batasan digunakan untuk membatasi jenis data yang dapat masuk ke dalam tabel, memastikan keakuratan dan keandalan data dalam tabel. Batasan dapat berupa tingkat kolom atau tingkat tabel. Batasan tingkat kolom berlaku untuk kolom, dan batasan tingkat tabel berlaku untuk keseluruhan tabel. Berikut Batasan yang biasanya digunakan dalam SQL:
+
+* *NOT NULL:* Memastikan kolom tidak boleh memiliki nilai NULL
+* *UNIQUE:* Memastikan bahwa semua nilai dalam kolom berbeda
+* *PRIMARY KEY:* Kombinasi NOT NULL dan UNIQUE. Secara unik mengidentifikasi setiap baris dalam tabel
+* *FOREIGN KEY:* Secara unik mengidentifikasi baris/record di tabel lain
+* *CHECK:* Memastikan bahwa semua nilai dalam kolom memenuhi kondisi tertentu
+* *DEFAULT:* Menetapkan nilai default untuk kolom saat tidak ada nilai yang ditentukan
+* *INDEX:* Digunakan untuk membuat dan mengambil data dari database dengan sangat cepat
+* *AUTO_INCREMENT:* memungkinkan inset data unik pada kolom tertentu yang dihasilkan secara otomatis saat data baru dimasukkan ke dalam tabel. Seringkali kolom ini adalah adalah juga *PRIMARY KEY* dan ingin dibuat secara otomatis setiap kali catatan baru dimasukkan.
+
 
 
 

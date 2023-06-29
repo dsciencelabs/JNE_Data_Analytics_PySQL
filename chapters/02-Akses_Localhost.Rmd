@@ -1,15 +1,15 @@
 # Akses Localhost dengan Python
 
-Pada pertemuan sebelumnya telah depelajari pengenalan dasar bagaimana mengakses basis data dengan menggunakan Python ke MySQL. Pada pertemuan kedua ini, akan fokus untuk berlatih untuk melakukan pemilihan data. Secara garis besar materi yang akan dibahas adalah; 
+Pada pertemuan sebelumnya telah depelajari pengenalan dasar bagaimana mengakses basis data dengan menggunakan Python ke MySQL dan PostgreSQL. Pada pertemuan kedua ini, akan fokus untuk berlatih untuk melakukan pemilihan data. Secara garis besar materi yang akan dibahas adalah; 
 
-* Mengulang kembali bagaimana meng-akses basis data dengan Python ke MySQL
+* Mengulang kembali bagaimana meng-akses basis data dengan Python ke MySQL dan PostgreSQL
 * Membuat dan menghapus basis data
 * Membuat database lengkap dengan melakukan import data dari Excel **(database rekayasa untuk pelatihan Data Analytics di JNE)**
 * Operasi tabel pada database
 * Menambahkan pengaturan batasan tabel 
 
 
-## Koneksi MySQL dengan Python
+## Koneksi MySQL dan Python
 
 Untuk mengakses basis data yang ada pada MySQL dengan Python dapat menggunakan koding berikut di Jupiterlab anda. 
 
@@ -32,9 +32,7 @@ db1 = mysql.connector.connect(
 )
 ```
 
-
 Jika tidak muncul pesan error pada saat menjalankan koding diatas pada Chunck Jupiterlab anda. Artinya, koneksi Python ke MySQL sudah terhubung dengan baik. 
-
 
 ### Memeriksa Daftar Database
 
@@ -104,6 +102,50 @@ cursor.execute(sql)
 for x in cursor:
   print(x) 
 ```
+
+### Import Tabel dari CSV
+
+Berikut ini diperlihatkan cara untuk menambahkan daftar database dari CSV. Langkah pertama, import data dari Excel menggukan Python.
+
+```{python}
+import pandas as pd
+
+link_data = 'https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/users.csv'
+
+df1 = pd.read_csv(link_data, sep=';' )
+df1.head(5)
+```
+
+### Tambahkan Tabel CSV ke Database
+
+Jika data tabel yang telah di import dari file CSV sudah ada dalam memori Jupeterlab **(Python)** anda, maka selanjutnya untuk menambahkan tabel tersebut ke database adalah sebagai berikut:
+
+```{python}
+import pymysql
+from sqlalchemy import create_engine
+
+# membuat engine
+engine = create_engine("mysql+pymysql://{user}:{pw}@localhost/{db}"
+                       .format(user="bakti",
+                               pw="123",
+                               db="jne2"))
+
+# df1.to_sql('users', engine, if_exists = 'append', index = True)
+df1.to_sql('users', engine, if_exists='replace', index = False)
+```
+
+## Tugas Mandiri
+
+Tambahkan tabel berikut ke database `jne2` dengan mengikuti materi yang sudah anda pelajari sebelumnya. 
+
+* [https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/products.csv](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/products.csv)
+* [https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/orders.csv](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/orders.csv)
+* [https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/order_items.csv](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/order_items.csv)
+* [https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/inventory_items.csv](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/inventory_items.csv)
+* [https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/events.csv](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/events.csv)
+* [https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/distribution_centers.csv](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/distribution_centers.csv)
+
+
 
 
 

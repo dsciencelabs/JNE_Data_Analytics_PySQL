@@ -49,11 +49,14 @@ video-instalasi-postgresql
 praktikal-hands-on
 latihan
 akses-localhost-dengan-python
-koneksi-mysql-dengan-python
+koneksi-mysql-dan-python
 memeriksa-daftar-database
 membuat-database
 menghapus-database
 memeriksa-daftar-tabel
+import-tabel-dari-csv
+tambahkan-tabel-csv-ke-database
+tugas-mandiri
 pengelompokan-data
 perhitungan-waktu-subkueri
 pemahaman-5w1h-visualisasi

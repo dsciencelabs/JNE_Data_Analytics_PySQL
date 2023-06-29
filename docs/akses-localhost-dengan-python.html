@@ -223,13 +223,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html"><i class="fa fa-check"></i><b>2</b> Akses Localhost dengan Python</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#koneksi-mysql-dengan-python"><i class="fa fa-check"></i><b>2.1</b> Koneksi MySQL dengan Python</a>
+<li class="chapter" data-level="2.1" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#koneksi-mysql-dan-python"><i class="fa fa-check"></i><b>2.1</b> Koneksi MySQL dan Python</a>
 <ul>
 <li class="chapter" data-level="2.1.1" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#memeriksa-daftar-database"><i class="fa fa-check"></i><b>2.1.1</b> Memeriksa Daftar Database</a></li>
 <li class="chapter" data-level="2.1.2" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#membuat-database"><i class="fa fa-check"></i><b>2.1.2</b> Membuat Database</a></li>
 <li class="chapter" data-level="2.1.3" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#menghapus-database"><i class="fa fa-check"></i><b>2.1.3</b> Menghapus Database</a></li>
 <li class="chapter" data-level="2.1.4" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#memeriksa-daftar-tabel"><i class="fa fa-check"></i><b>2.1.4</b> Memeriksa Daftar Tabel</a></li>
+<li class="chapter" data-level="2.1.5" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#import-tabel-dari-csv"><i class="fa fa-check"></i><b>2.1.5</b> Import Tabel dari CSV</a></li>
+<li class="chapter" data-level="2.1.6" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#tambahkan-tabel-csv-ke-database"><i class="fa fa-check"></i><b>2.1.6</b> Tambahkan Tabel CSV ke Database</a></li>
 </ul></li>
+<li class="chapter" data-level="2.2" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#tugas-mandiri"><i class="fa fa-check"></i><b>2.2</b> Tugas Mandiri</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="pengelompokan-data.html"><a href="pengelompokan-data.html"><i class="fa fa-check"></i><b>3</b> Pengelompokan Data</a></li>
 <li class="chapter" data-level="4" data-path="perhitungan-waktu-subkueri.html"><a href="perhitungan-waktu-subkueri.html"><i class="fa fa-check"></i><b>4</b> Perhitungan Waktu &amp; Subkueri</a></li>
@@ -260,16 +263,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="akses-localhost-dengan-python" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Bab 2</span> Akses Localhost dengan Python<a href="akses-localhost-dengan-python.html#akses-localhost-dengan-python" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Pada pertemuan sebelumnya telah depelajari pengenalan dasar bagaimana mengakses basis data dengan menggunakan Python ke MySQL. Pada pertemuan kedua ini, akan fokus untuk berlatih untuk melakukan pemilihan data. Secara garis besar materi yang akan dibahas adalah;</p>
+<p>Pada pertemuan sebelumnya telah depelajari pengenalan dasar bagaimana mengakses basis data dengan menggunakan Python ke MySQL dan PostgreSQL. Pada pertemuan kedua ini, akan fokus untuk berlatih untuk melakukan pemilihan data. Secara garis besar materi yang akan dibahas adalah;</p>
 <ul>
-<li>Mengulang kembali bagaimana meng-akses basis data dengan Python ke MySQL</li>
+<li>Mengulang kembali bagaimana meng-akses basis data dengan Python ke MySQL dan PostgreSQL</li>
 <li>Membuat dan menghapus basis data</li>
 <li>Membuat database lengkap dengan melakukan import data dari Excel <strong>(database rekayasa untuk pelatihan Data Analytics di JNE)</strong></li>
 <li>Operasi tabel pada database</li>
 <li>Menambahkan pengaturan batasan tabel</li>
 </ul>
-<div id="koneksi-mysql-dengan-python" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Koneksi MySQL dengan Python<a href="akses-localhost-dengan-python.html#koneksi-mysql-dengan-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="koneksi-mysql-dan-python" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Koneksi MySQL dan Python<a href="akses-localhost-dengan-python.html#koneksi-mysql-dan-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Untuk mengakses basis data yang ada pada MySQL dengan Python dapat menggunakan koding berikut di Jupiterlab anda.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="akses-localhost-dengan-python.html#cb1-1" tabindex="-1"></a><span class="co"># import module </span></span>
 <span id="cb1-2"><a href="akses-localhost-dengan-python.html#cb1-2" tabindex="-1"></a><span class="im">import</span> mysql.connector</span>
@@ -341,8 +344,54 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-21"><a href="akses-localhost-dengan-python.html#cb6-21" tabindex="-1"></a><span class="co"># menampilkan daftar tabel</span></span>
 <span id="cb6-22"><a href="akses-localhost-dengan-python.html#cb6-22" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> cursor:</span>
 <span id="cb6-23"><a href="akses-localhost-dengan-python.html#cb6-23" tabindex="-1"></a>  <span class="bu">print</span>(x) </span></code></pre></div>
-
 </div>
+<div id="import-tabel-dari-csv" class="section level3 hasAnchor" number="2.1.5">
+<h3><span class="header-section-number">2.1.5</span> Import Tabel dari CSV<a href="akses-localhost-dengan-python.html#import-tabel-dari-csv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Berikut ini diperlihatkan cara untuk menambahkan daftar database dari CSV. Langkah pertama, import data dari Excel menggukan Python.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="akses-localhost-dengan-python.html#cb7-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb7-2"><a href="akses-localhost-dengan-python.html#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="akses-localhost-dengan-python.html#cb7-3" tabindex="-1"></a>link_data <span class="op">=</span> <span class="st">&#39;https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/users.csv&#39;</span></span>
+<span id="cb7-4"><a href="akses-localhost-dengan-python.html#cb7-4" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="akses-localhost-dengan-python.html#cb7-5" tabindex="-1"></a>df1 <span class="op">=</span> pd.read_csv(link_data, sep<span class="op">=</span><span class="st">&#39;;&#39;</span> )</span>
+<span id="cb7-6"><a href="akses-localhost-dengan-python.html#cb7-6" tabindex="-1"></a>df1.head(<span class="dv">5</span>)</span></code></pre></div>
+<pre><code>##       id first_name last_name  ...     longitude  traffic_source          created_at
+## 0  44184   Patricia  Martinez  ...  -67,83560991          Search   6/27/2023 6:07:04
+## 1  48555     Daniel  Mckinney  ...  -67,83560991          Search  10/24/2020 4:57:00
+## 2  80173     Regina    Hudson  ...  -67,83560991         Display    1/3/2022 7:23:00
+## 3  85798    Kenneth    Montes  ...  -67,83560991          Search   2/18/2023 6:55:00
+## 4  88855    Zachary  Petersen  ...  -67,83560991          Search  1/27/2022 17:30:00
+## 
+## [5 rows x 15 columns]</code></pre>
+</div>
+<div id="tambahkan-tabel-csv-ke-database" class="section level3 hasAnchor" number="2.1.6">
+<h3><span class="header-section-number">2.1.6</span> Tambahkan Tabel CSV ke Database<a href="akses-localhost-dengan-python.html#tambahkan-tabel-csv-ke-database" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Jika data tabel yang telah di import dari file CSV sudah ada dalam memori Jupeterlab <strong>(Python)</strong> anda, maka selanjutnya untuk menambahkan tabel tersebut ke database adalah sebagai berikut:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="akses-localhost-dengan-python.html#cb9-1" tabindex="-1"></a><span class="im">import</span> pymysql</span>
+<span id="cb9-2"><a href="akses-localhost-dengan-python.html#cb9-2" tabindex="-1"></a><span class="im">from</span> sqlalchemy <span class="im">import</span> create_engine</span>
+<span id="cb9-3"><a href="akses-localhost-dengan-python.html#cb9-3" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="akses-localhost-dengan-python.html#cb9-4" tabindex="-1"></a><span class="co"># membuat engine</span></span>
+<span id="cb9-5"><a href="akses-localhost-dengan-python.html#cb9-5" tabindex="-1"></a>engine <span class="op">=</span> create_engine(<span class="st">&quot;mysql+pymysql://</span><span class="sc">{user}</span><span class="st">:</span><span class="sc">{pw}</span><span class="st">@localhost/</span><span class="sc">{db}</span><span class="st">&quot;</span></span>
+<span id="cb9-6"><a href="akses-localhost-dengan-python.html#cb9-6" tabindex="-1"></a>                       .<span class="bu">format</span>(user<span class="op">=</span><span class="st">&quot;bakti&quot;</span>,</span>
+<span id="cb9-7"><a href="akses-localhost-dengan-python.html#cb9-7" tabindex="-1"></a>                               pw<span class="op">=</span><span class="st">&quot;123&quot;</span>,</span>
+<span id="cb9-8"><a href="akses-localhost-dengan-python.html#cb9-8" tabindex="-1"></a>                               db<span class="op">=</span><span class="st">&quot;jne2&quot;</span>))</span>
+<span id="cb9-9"><a href="akses-localhost-dengan-python.html#cb9-9" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="akses-localhost-dengan-python.html#cb9-10" tabindex="-1"></a><span class="co"># df1.to_sql(&#39;users&#39;, engine, if_exists = &#39;append&#39;, index = True)</span></span>
+<span id="cb9-11"><a href="akses-localhost-dengan-python.html#cb9-11" tabindex="-1"></a>df1.to_sql(<span class="st">&#39;users&#39;</span>, engine, if_exists<span class="op">=</span><span class="st">&#39;replace&#39;</span>, index <span class="op">=</span> <span class="va">False</span>)</span></code></pre></div>
+<pre><code>## 500</code></pre>
+</div>
+</div>
+<div id="tugas-mandiri" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Tugas Mandiri<a href="akses-localhost-dengan-python.html#tugas-mandiri" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Tambahkan tabel berikut ke database <code>jne2</code> dengan mengikuti materi yang sudah anda pelajari sebelumnya.</p>
+<ul>
+<li><a href="https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/products.csv">https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/products.csv</a></li>
+<li><a href="https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/orders.csv">https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/orders.csv</a></li>
+<li><a href="https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/order_items.csv">https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/order_items.csv</a></li>
+<li><a href="https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/inventory_items.csv">https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/inventory_items.csv</a></li>
+<li><a href="https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/events.csv">https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/events.csv</a></li>
+<li><a href="https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/distribution_centers.csv">https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/distribution_centers.csv</a></li>
+</ul>
+
 </div>
 </div>
             </section>

@@ -1,2 +1,22 @@
 # Pemilihan Data
 
+Pada pertemuan sebelumnya telah depelajari pengenalan dasar bagaimana mengakses basis data dengan menggunakan Python ke PHPMyadmin dan PostgreSQL. Pada pertemuan kedua ini, akan fokus untuk berlatih untuk melakukan pemilihan data. Secara garis besar materi yang akan dibahas adalah; 
+
+* Mengulang kembali bagaimana meng-akses basis data dengan Python ke SQL **(khusus PostgreSQL)**
+* Membuat dan menghapus basis data
+* Menambahkan sekumpulan struktur tabel basis data lengkap **(Basis data rekayasa untuk JNE)**
+* Menambahkan data (isi atau nilai) untuk setiap struktur data yang ada.
+* Mengubah isi data tabel
+* Mengimport basis data **(tabel CSV)**
+* Menambahkan pengaturan batasan tabel 
+
+
+## Akses PostgreSQL dengan Python
+
+Untuk mengakses basis data yang ada pada PostegreSQL dengan Python dapat menggunakan koding berikut di Jupiterlab anda. 
+
+```{python}
+
+```
+
+

@@ -362,18 +362,18 @@ Selanjutnya, klik `File > Open from URL'. Muncul tampilan sebagai berukut:
 
 Terakhir, Copy-Paste dibawah ini pada kolom `Open URL`. Selanjutnya, ikuti tutorialnya. 
 
-* [**Akses Databases MySQL dengan Python**](https://drive.google.com/file/d/1Rkve2s-XM7V4rX1EfedK5J1Sc_16Uzem/view?usp=sharing)
+* [**Akses Databases MySQL dengan Python**](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/8edaefe5f8ee31bc491cfdbf2f11a7a0f3375801/jupyterlab/01_py_sql.ipynb)
 
-* [**Akses Databases PostgreSQL dengan Python**](https://drive.google.com/file/d/1RvfBOZSG6y75CgiEtuj3qQKr9TlADKzN/view?usp=sharing)
+* [**Akses Databases PostgreSQL dengan Python**](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/8edaefe5f8ee31bc491cfdbf2f11a7a0f3375801/jupyterlab/01_py_postgresql.ipynb)
 
-* [**Contoh Applikasi Sederhana Py_SQL**](https://drive.google.com/file/d/1S3uBFww_8EB6S92H1fefEaTMlT4ADA0s/view?usp=sharing)
+* [**Contoh Applikasi Sederhana Py_SQL**](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/8edaefe5f8ee31bc491cfdbf2f11a7a0f3375801/jupyterlab/01_Contoh_Aplikasi.ipynb)
  
 ## Latihan 
 
 Berikut ini adalah Soal Latihan yang harus dikerjakan bersama Kelompok masing-masing. 
 
 
-* **Kelompok A** [Klik disini](https://drive.google.com/file/d/1RjCIxXOQo-NZ9HWWrJDu8bTyvZjykSkf/view?usp=sharing) 
+* **Kelompok A** [Klik disini](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/8edaefe5f8ee31bc491cfdbf2f11a7a0f3375801/jupyterlab/01_tugas_Kelompok_A.ipynb) 
 
   1. KOKO ARIF BUDIMAN
   2. ALDINO PRASETIAWAN
@@ -382,7 +382,7 @@ Berikut ini adalah Soal Latihan yang harus dikerjakan bersama Kelompok masing-ma
   5. AGUNG DARMANTO
   
 
-* **Kelompok B** [Klik disini](https://drive.google.com/file/d/1Rg_wXlz7RFscCYHg0Fk1mjVQnKoZX2RK/view?usp=sharing) 
+* **Kelompok B** [Klik disini](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/8edaefe5f8ee31bc491cfdbf2f11a7a0f3375801/jupyterlab/01_tugas_Kelompok_B.ipynb) 
 
   1. M. SYAHRIZAL
   2. FAJAR DEMOKRASI PUTRA
@@ -390,7 +390,7 @@ Berikut ini adalah Soal Latihan yang harus dikerjakan bersama Kelompok masing-ma
   4. IBNU FALAH
   5. RESTU KUSUMAWATI
   
-* **Kelompok C** [Klik disini](https://drive.google.com/file/d/1ReuW0MwSXnY0GrDivqn9Shya7Y4B3_iC/view?usp=sharing) 
+* **Kelompok C** [Klik disini](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/8edaefe5f8ee31bc491cfdbf2f11a7a0f3375801/jupyterlab/01_tugas_Kelompok_C.ipynb) 
 
   1. ADE DARMAWAN
   2. RETNO WULANDARI

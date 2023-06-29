@@ -103,9 +103,7 @@ for x in cursor2:
   print(x) 
 ```
 
-
-
-## CRUDS Lanjut 
+## CRUD Lanjut 
 
 Pada materi sebelumnya telah dipelajari bagaimana untuk melakukan `CRUDS` database. `CRUDS` merupakan singkatan dari **Create, Read, Update, Delete, dan Search**. Berikut ini akan diperlihatkan cara untuk menambahkan daftar database dari CSV. Langkah pertama, import data dari Excel menggukan Python.
 
@@ -161,7 +159,7 @@ df2 = pd.read_sql_table('distribution_centers', en_co)
 df2
 ```
 
-### Update Data Tabel 
+### `Update` Data  
 
 Sama seperti yang telah dipelajari sebelumnya, melakukan update data pada tabel disini dapat dilakukan dengan cara berikut:
 
@@ -180,25 +178,25 @@ print("{} data diubah".format(cursor2.rowcount))
 * Tambahkan satu lokasi baru pada tabel `distribution_centers`
 * Tambahkan tiga lokasi baru pada tabel `distribution_centers`
 
+
+### `Delete` Data 
+
+Pada bagian hapus data sama seperti update data. Kita harus menggunakan query DELETE untuk menghapus dan WHERE untuk menentukan data yang akan dihapus.
+
 ```{python, eval=F}
-sql = '''INSERT INTO karyawan (
-                     name=%s, 
-                     latitude=%s, 
-                     longitude=%s) 
-       VALUES (%s, %s, %s)'''
-val = ("JNE", 106.7977, -6.1774)
+sql = "DELETE FROM distribution_centers WHERE id=%s"
+val = (11, )
 cursor2.execute(sql, val)
 
 db2.commit()
 
-print('{} data ditambahkan'.format(cursor2.rowcount))
+print("{} data dihapus".format(cursor2.rowcount))
 ```
 
+**Tugas Kelompok:**
 
-### Delete 
+* Hapuskan tiga lokasi baru sebelumnya, yang anda tambahkan pada tabel `distribution_centers` secara bersamaan.
 
-
-### Search
 
 ## Mengubah Tabel 
 
@@ -206,6 +204,14 @@ Ada kalanya kita ingin menambah, memodifikasi, menghapus yang ada pada tabel. Pe
 
 
 ### Menambah Kolom
+
+Untuk menambahkan kolom dalam tabel, gunakan sintaks berikut:
+
+```{r eval=FALSE}
+dbExecute(MySQL, "ALTER TABLE Orders
+                 ADD Email varchar(255)")
+```
+
 
 ```{python}
 

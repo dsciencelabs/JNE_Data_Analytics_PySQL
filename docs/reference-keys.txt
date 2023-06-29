@@ -54,12 +54,11 @@ memeriksa-daftar-database
 membuat-database
 menghapus-database
 memeriksa-daftar-tabel
-cruds-lanjut
+crud-lanjut
 create-tabel-dari-csv
 read-dataframe
-update-data-tabel
-delete
-search
+update-data
+delete-data
 mengubah-tabel
 menambah-kolom
 pengelompokan-data

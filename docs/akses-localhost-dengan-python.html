@@ -23,7 +23,7 @@
 <meta name="author" content="Bakti Siregar, M.Sc" />
 
 
-<meta name="date" content="2023-06-29" />
+<meta name="date" content="2023-06-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -229,10 +229,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1.2" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#membuat-database"><i class="fa fa-check"></i><b>2.1.2</b> Membuat Database</a></li>
 <li class="chapter" data-level="2.1.3" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#menghapus-database"><i class="fa fa-check"></i><b>2.1.3</b> Menghapus Database</a></li>
 <li class="chapter" data-level="2.1.4" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#memeriksa-daftar-tabel"><i class="fa fa-check"></i><b>2.1.4</b> Memeriksa Daftar Tabel</a></li>
-<li class="chapter" data-level="2.1.5" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#import-tabel-dari-csv"><i class="fa fa-check"></i><b>2.1.5</b> Import Tabel dari CSV</a></li>
-<li class="chapter" data-level="2.1.6" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#tambahkan-tabel-csv-ke-database"><i class="fa fa-check"></i><b>2.1.6</b> Tambahkan Tabel CSV ke Database</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#tugas-mandiri"><i class="fa fa-check"></i><b>2.2</b> Tugas Mandiri</a></li>
+<li class="chapter" data-level="2.2" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#cruds-lanjut"><i class="fa fa-check"></i><b>2.2</b> CRUDS Lanjut</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#create-tabel-dari-csv"><i class="fa fa-check"></i><b>2.2.1</b> <code>Create</code> Tabel dari CSV</a></li>
+<li class="chapter" data-level="2.2.2" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#read-dataframe"><i class="fa fa-check"></i><b>2.2.2</b> <code>Read</code> Dataframe</a></li>
+<li class="chapter" data-level="2.2.3" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#update-data-tabel"><i class="fa fa-check"></i><b>2.2.3</b> Update Data Tabel</a></li>
+<li class="chapter" data-level="2.2.4" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#delete"><i class="fa fa-check"></i><b>2.2.4</b> Delete</a></li>
+<li class="chapter" data-level="2.2.5" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#search"><i class="fa fa-check"></i><b>2.2.5</b> Search</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#mengubah-tabel"><i class="fa fa-check"></i><b>2.3</b> Mengubah Tabel</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#menambah-kolom"><i class="fa fa-check"></i><b>2.3.1</b> Menambah Kolom</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="pengelompokan-data.html"><a href="pengelompokan-data.html"><i class="fa fa-check"></i><b>3</b> Pengelompokan Data</a></li>
 <li class="chapter" data-level="4" data-path="perhitungan-waktu-subkueri.html"><a href="perhitungan-waktu-subkueri.html"><i class="fa fa-check"></i><b>4</b> Perhitungan Waktu &amp; Subkueri</a></li>
@@ -288,100 +297,82 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">2.1.1</span> Memeriksa Daftar Database<a href="akses-localhost-dengan-python.html#memeriksa-daftar-database" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Setelah kita terhubung dengan local server menggunakan Python dan MySQL. Sekarang saatnya kita mulai untuk memerikas database apa saja yang ada didalamnya.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="akses-localhost-dengan-python.html#cb2-1" tabindex="-1"></a><span class="co"># membuat objek &#39;cursor` sebagai kata kunci eksekusi SQL</span></span>
-<span id="cb2-2"><a href="akses-localhost-dengan-python.html#cb2-2" tabindex="-1"></a>cursor <span class="op">=</span> db1.cursor()</span>
+<span id="cb2-2"><a href="akses-localhost-dengan-python.html#cb2-2" tabindex="-1"></a>cursor1 <span class="op">=</span> db1.cursor()</span>
 <span id="cb2-3"><a href="akses-localhost-dengan-python.html#cb2-3" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="akses-localhost-dengan-python.html#cb2-4" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
 <span id="cb2-5"><a href="akses-localhost-dengan-python.html#cb2-5" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;SHOW DATABASES&#39;</span></span>
 <span id="cb2-6"><a href="akses-localhost-dengan-python.html#cb2-6" tabindex="-1"></a></span>
 <span id="cb2-7"><a href="akses-localhost-dengan-python.html#cb2-7" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
-<span id="cb2-8"><a href="akses-localhost-dengan-python.html#cb2-8" tabindex="-1"></a>cursor.execute(sql)</span>
+<span id="cb2-8"><a href="akses-localhost-dengan-python.html#cb2-8" tabindex="-1"></a>cursor1.execute(sql)</span>
 <span id="cb2-9"><a href="akses-localhost-dengan-python.html#cb2-9" tabindex="-1"></a></span>
 <span id="cb2-10"><a href="akses-localhost-dengan-python.html#cb2-10" tabindex="-1"></a><span class="co"># menampilkan daftar database</span></span>
-<span id="cb2-11"><a href="akses-localhost-dengan-python.html#cb2-11" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> cursor:</span>
+<span id="cb2-11"><a href="akses-localhost-dengan-python.html#cb2-11" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> cursor1:</span>
 <span id="cb2-12"><a href="akses-localhost-dengan-python.html#cb2-12" tabindex="-1"></a>  <span class="bu">print</span>(x) </span></code></pre></div>
-<pre><code>## (&#39;information_schema&#39;,)
-## (&#39;jne2&#39;,)
-## (&#39;mysql&#39;,)
-## (&#39;performance_schema&#39;,)
-## (&#39;phpmyadmin&#39;,)
-## (&#39;toko_mainan&#39;,)</code></pre>
 </div>
 <div id="membuat-database" class="section level3 hasAnchor" number="2.1.2">
 <h3><span class="header-section-number">2.1.2</span> Membuat Database<a href="akses-localhost-dengan-python.html#membuat-database" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Berikut ini adalah koding yang dapat digunakan untuk membuat database baru dengan menggunakan koneksi <code>db.cursor()</code> yang ada pada objek <code>cursor</code>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="akses-localhost-dengan-python.html#cb4-1" tabindex="-1"></a>sql<span class="op">=</span> <span class="st">&#39;CREATE DATABASE jne2&#39;</span></span>
-<span id="cb4-2"><a href="akses-localhost-dengan-python.html#cb4-2" tabindex="-1"></a>cursor.execute(sql)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="akses-localhost-dengan-python.html#cb3-1" tabindex="-1"></a>sql<span class="op">=</span> <span class="st">&#39;CREATE DATABASE jne2&#39;</span></span>
+<span id="cb3-2"><a href="akses-localhost-dengan-python.html#cb3-2" tabindex="-1"></a>cursor1.execute(sql)</span></code></pre></div>
 </div>
 <div id="menghapus-database" class="section level3 hasAnchor" number="2.1.3">
 <h3><span class="header-section-number">2.1.3</span> Menghapus Database<a href="akses-localhost-dengan-python.html#menghapus-database" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Jika anda ingin menghapus database tertentu dari lokal server, maka dapat melakukannya dengan koding berikut:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="akses-localhost-dengan-python.html#cb5-1" tabindex="-1"></a>sql<span class="op">=</span> <span class="st">&#39;DROP DATABASE jne2&#39;</span></span>
-<span id="cb5-2"><a href="akses-localhost-dengan-python.html#cb5-2" tabindex="-1"></a>cursor.execute(sql)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="akses-localhost-dengan-python.html#cb4-1" tabindex="-1"></a>sql<span class="op">=</span> <span class="st">&#39;DROP DATABASE jne2&#39;</span></span>
+<span id="cb4-2"><a href="akses-localhost-dengan-python.html#cb4-2" tabindex="-1"></a>cursor1.execute(sql)</span></code></pre></div>
 </div>
 <div id="memeriksa-daftar-tabel" class="section level3 hasAnchor" number="2.1.4">
 <h3><span class="header-section-number">2.1.4</span> Memeriksa Daftar Tabel<a href="akses-localhost-dengan-python.html#memeriksa-daftar-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Untuk memeriksa daftar tabel yang ada pada local server. Perhatikan Koding berikut:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="akses-localhost-dengan-python.html#cb6-1" tabindex="-1"></a><span class="co"># import module </span></span>
-<span id="cb6-2"><a href="akses-localhost-dengan-python.html#cb6-2" tabindex="-1"></a><span class="im">import</span> mysql.connector</span>
-<span id="cb6-3"><a href="akses-localhost-dengan-python.html#cb6-3" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="akses-localhost-dengan-python.html#cb6-4" tabindex="-1"></a><span class="co"># koneksi salah satu database MySQl ke Python</span></span>
-<span id="cb6-5"><a href="akses-localhost-dengan-python.html#cb6-5" tabindex="-1"></a>db2 <span class="op">=</span> mysql.connector.<span class="ex">connect</span>(</span>
-<span id="cb6-6"><a href="akses-localhost-dengan-python.html#cb6-6" tabindex="-1"></a>  host<span class="op">=</span><span class="st">&#39;localhost&#39;</span>,</span>
-<span id="cb6-7"><a href="akses-localhost-dengan-python.html#cb6-7" tabindex="-1"></a>  user<span class="op">=</span><span class="st">&#39;bakti&#39;</span>,</span>
-<span id="cb6-8"><a href="akses-localhost-dengan-python.html#cb6-8" tabindex="-1"></a>  passwd<span class="op">=</span><span class="st">&#39;123&#39;</span>,</span>
-<span id="cb6-9"><a href="akses-localhost-dengan-python.html#cb6-9" tabindex="-1"></a>  database<span class="op">=</span><span class="st">&#39;jne2&#39;</span></span>
-<span id="cb6-10"><a href="akses-localhost-dengan-python.html#cb6-10" tabindex="-1"></a>)</span>
-<span id="cb6-11"><a href="akses-localhost-dengan-python.html#cb6-11" tabindex="-1"></a></span>
-<span id="cb6-12"><a href="akses-localhost-dengan-python.html#cb6-12" tabindex="-1"></a><span class="co"># membuat objek &#39;cursor` sebagai kata kunci eksekusi SQL</span></span>
-<span id="cb6-13"><a href="akses-localhost-dengan-python.html#cb6-13" tabindex="-1"></a>cursor <span class="op">=</span> db2.cursor()</span>
-<span id="cb6-14"><a href="akses-localhost-dengan-python.html#cb6-14" tabindex="-1"></a></span>
-<span id="cb6-15"><a href="akses-localhost-dengan-python.html#cb6-15" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
-<span id="cb6-16"><a href="akses-localhost-dengan-python.html#cb6-16" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;SHOW TABLES&quot;</span></span>
-<span id="cb6-17"><a href="akses-localhost-dengan-python.html#cb6-17" tabindex="-1"></a></span>
-<span id="cb6-18"><a href="akses-localhost-dengan-python.html#cb6-18" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
-<span id="cb6-19"><a href="akses-localhost-dengan-python.html#cb6-19" tabindex="-1"></a>cursor.execute(sql)</span>
-<span id="cb6-20"><a href="akses-localhost-dengan-python.html#cb6-20" tabindex="-1"></a></span>
-<span id="cb6-21"><a href="akses-localhost-dengan-python.html#cb6-21" tabindex="-1"></a><span class="co"># menampilkan daftar tabel</span></span>
-<span id="cb6-22"><a href="akses-localhost-dengan-python.html#cb6-22" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> cursor:</span>
-<span id="cb6-23"><a href="akses-localhost-dengan-python.html#cb6-23" tabindex="-1"></a>  <span class="bu">print</span>(x) </span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="akses-localhost-dengan-python.html#cb5-1" tabindex="-1"></a><span class="co"># import module </span></span>
+<span id="cb5-2"><a href="akses-localhost-dengan-python.html#cb5-2" tabindex="-1"></a><span class="im">import</span> mysql.connector</span>
+<span id="cb5-3"><a href="akses-localhost-dengan-python.html#cb5-3" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="akses-localhost-dengan-python.html#cb5-4" tabindex="-1"></a><span class="co"># koneksi salah satu database MySQl ke Python</span></span>
+<span id="cb5-5"><a href="akses-localhost-dengan-python.html#cb5-5" tabindex="-1"></a>db2 <span class="op">=</span> mysql.connector.<span class="ex">connect</span>(</span>
+<span id="cb5-6"><a href="akses-localhost-dengan-python.html#cb5-6" tabindex="-1"></a>  host<span class="op">=</span><span class="st">&#39;localhost&#39;</span>,</span>
+<span id="cb5-7"><a href="akses-localhost-dengan-python.html#cb5-7" tabindex="-1"></a>  user<span class="op">=</span><span class="st">&#39;bakti&#39;</span>,</span>
+<span id="cb5-8"><a href="akses-localhost-dengan-python.html#cb5-8" tabindex="-1"></a>  passwd<span class="op">=</span><span class="st">&#39;123&#39;</span>,</span>
+<span id="cb5-9"><a href="akses-localhost-dengan-python.html#cb5-9" tabindex="-1"></a>  database<span class="op">=</span><span class="st">&#39;jne2&#39;</span></span>
+<span id="cb5-10"><a href="akses-localhost-dengan-python.html#cb5-10" tabindex="-1"></a>)</span>
+<span id="cb5-11"><a href="akses-localhost-dengan-python.html#cb5-11" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="akses-localhost-dengan-python.html#cb5-12" tabindex="-1"></a><span class="co"># membuat objek &#39;cursor` sebagai kata kunci eksekusi SQL</span></span>
+<span id="cb5-13"><a href="akses-localhost-dengan-python.html#cb5-13" tabindex="-1"></a>cursor2 <span class="op">=</span> db2.cursor()</span>
+<span id="cb5-14"><a href="akses-localhost-dengan-python.html#cb5-14" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="akses-localhost-dengan-python.html#cb5-15" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb5-16"><a href="akses-localhost-dengan-python.html#cb5-16" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;SHOW TABLES&quot;</span></span>
+<span id="cb5-17"><a href="akses-localhost-dengan-python.html#cb5-17" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="akses-localhost-dengan-python.html#cb5-18" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb5-19"><a href="akses-localhost-dengan-python.html#cb5-19" tabindex="-1"></a>cursor2.execute(sql)</span>
+<span id="cb5-20"><a href="akses-localhost-dengan-python.html#cb5-20" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="akses-localhost-dengan-python.html#cb5-21" tabindex="-1"></a><span class="co"># menampilkan daftar tabel</span></span>
+<span id="cb5-22"><a href="akses-localhost-dengan-python.html#cb5-22" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> cursor2:</span>
+<span id="cb5-23"><a href="akses-localhost-dengan-python.html#cb5-23" tabindex="-1"></a>  <span class="bu">print</span>(x) </span></code></pre></div>
 </div>
-<div id="import-tabel-dari-csv" class="section level3 hasAnchor" number="2.1.5">
-<h3><span class="header-section-number">2.1.5</span> Import Tabel dari CSV<a href="akses-localhost-dengan-python.html#import-tabel-dari-csv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Berikut ini diperlihatkan cara untuk menambahkan daftar database dari CSV. Langkah pertama, import data dari Excel menggukan Python.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="akses-localhost-dengan-python.html#cb7-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb7-2"><a href="akses-localhost-dengan-python.html#cb7-2" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="akses-localhost-dengan-python.html#cb7-3" tabindex="-1"></a>link_data <span class="op">=</span> <span class="st">&#39;https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/users.csv&#39;</span></span>
-<span id="cb7-4"><a href="akses-localhost-dengan-python.html#cb7-4" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="akses-localhost-dengan-python.html#cb7-5" tabindex="-1"></a>df1 <span class="op">=</span> pd.read_csv(link_data, sep<span class="op">=</span><span class="st">&#39;;&#39;</span> )</span>
-<span id="cb7-6"><a href="akses-localhost-dengan-python.html#cb7-6" tabindex="-1"></a>df1.head(<span class="dv">5</span>)</span></code></pre></div>
-<pre><code>##       id first_name last_name  ...     longitude  traffic_source          created_at
-## 0  44184   Patricia  Martinez  ...  -67,83560991          Search   6/27/2023 6:07:04
-## 1  48555     Daniel  Mckinney  ...  -67,83560991          Search  10/24/2020 4:57:00
-## 2  80173     Regina    Hudson  ...  -67,83560991         Display    1/3/2022 7:23:00
-## 3  85798    Kenneth    Montes  ...  -67,83560991          Search   2/18/2023 6:55:00
-## 4  88855    Zachary  Petersen  ...  -67,83560991          Search  1/27/2022 17:30:00
-## 
-## [5 rows x 15 columns]</code></pre>
 </div>
-<div id="tambahkan-tabel-csv-ke-database" class="section level3 hasAnchor" number="2.1.6">
-<h3><span class="header-section-number">2.1.6</span> Tambahkan Tabel CSV ke Database<a href="akses-localhost-dengan-python.html#tambahkan-tabel-csv-ke-database" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="cruds-lanjut" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> CRUDS Lanjut<a href="akses-localhost-dengan-python.html#cruds-lanjut" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Pada materi sebelumnya telah dipelajari bagaimana untuk melakukan <code>CRUDS</code> database. <code>CRUDS</code> merupakan singkatan dari <strong>Create, Read, Update, Delete, dan Search</strong>. Berikut ini akan diperlihatkan cara untuk menambahkan daftar database dari CSV. Langkah pertama, import data dari Excel menggukan Python.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="akses-localhost-dengan-python.html#cb6-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb6-2"><a href="akses-localhost-dengan-python.html#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="akses-localhost-dengan-python.html#cb6-3" tabindex="-1"></a>link_data <span class="op">=</span> <span class="st">&#39;https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/users.csv&#39;</span></span>
+<span id="cb6-4"><a href="akses-localhost-dengan-python.html#cb6-4" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="akses-localhost-dengan-python.html#cb6-5" tabindex="-1"></a>df1 <span class="op">=</span> pd.read_csv(link_data, sep<span class="op">=</span><span class="st">&#39;;&#39;</span> )</span>
+<span id="cb6-6"><a href="akses-localhost-dengan-python.html#cb6-6" tabindex="-1"></a>df1.head(<span class="dv">5</span>)</span></code></pre></div>
+<div id="create-tabel-dari-csv" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> <code>Create</code> Tabel dari CSV<a href="akses-localhost-dengan-python.html#create-tabel-dari-csv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Jika data tabel yang telah di import dari file CSV sudah ada dalam memori Jupeterlab <strong>(Python)</strong> anda, maka selanjutnya untuk menambahkan tabel tersebut ke database adalah sebagai berikut:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="akses-localhost-dengan-python.html#cb9-1" tabindex="-1"></a><span class="im">import</span> pymysql</span>
-<span id="cb9-2"><a href="akses-localhost-dengan-python.html#cb9-2" tabindex="-1"></a><span class="im">from</span> sqlalchemy <span class="im">import</span> create_engine</span>
-<span id="cb9-3"><a href="akses-localhost-dengan-python.html#cb9-3" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="akses-localhost-dengan-python.html#cb9-4" tabindex="-1"></a><span class="co"># membuat engine</span></span>
-<span id="cb9-5"><a href="akses-localhost-dengan-python.html#cb9-5" tabindex="-1"></a>engine <span class="op">=</span> create_engine(<span class="st">&quot;mysql+pymysql://</span><span class="sc">{user}</span><span class="st">:</span><span class="sc">{pw}</span><span class="st">@localhost/</span><span class="sc">{db}</span><span class="st">&quot;</span></span>
-<span id="cb9-6"><a href="akses-localhost-dengan-python.html#cb9-6" tabindex="-1"></a>                       .<span class="bu">format</span>(user<span class="op">=</span><span class="st">&quot;bakti&quot;</span>,</span>
-<span id="cb9-7"><a href="akses-localhost-dengan-python.html#cb9-7" tabindex="-1"></a>                               pw<span class="op">=</span><span class="st">&quot;123&quot;</span>,</span>
-<span id="cb9-8"><a href="akses-localhost-dengan-python.html#cb9-8" tabindex="-1"></a>                               db<span class="op">=</span><span class="st">&quot;jne2&quot;</span>))</span>
-<span id="cb9-9"><a href="akses-localhost-dengan-python.html#cb9-9" tabindex="-1"></a></span>
-<span id="cb9-10"><a href="akses-localhost-dengan-python.html#cb9-10" tabindex="-1"></a><span class="co"># df1.to_sql(&#39;users&#39;, engine, if_exists = &#39;append&#39;, index = True)</span></span>
-<span id="cb9-11"><a href="akses-localhost-dengan-python.html#cb9-11" tabindex="-1"></a>df1.to_sql(<span class="st">&#39;users&#39;</span>, engine, if_exists<span class="op">=</span><span class="st">&#39;replace&#39;</span>, index <span class="op">=</span> <span class="va">False</span>)</span></code></pre></div>
-<pre><code>## 500</code></pre>
-</div>
-</div>
-<div id="tugas-mandiri" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Tugas Mandiri<a href="akses-localhost-dengan-python.html#tugas-mandiri" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="akses-localhost-dengan-python.html#cb7-1" tabindex="-1"></a><span class="im">import</span> pymysql</span>
+<span id="cb7-2"><a href="akses-localhost-dengan-python.html#cb7-2" tabindex="-1"></a><span class="im">from</span> sqlalchemy <span class="im">import</span> create_engine</span>
+<span id="cb7-3"><a href="akses-localhost-dengan-python.html#cb7-3" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="akses-localhost-dengan-python.html#cb7-4" tabindex="-1"></a><span class="co"># membuat engine</span></span>
+<span id="cb7-5"><a href="akses-localhost-dengan-python.html#cb7-5" tabindex="-1"></a>engine <span class="op">=</span> create_engine(<span class="st">&quot;mysql+pymysql://</span><span class="sc">{user}</span><span class="st">:</span><span class="sc">{pw}</span><span class="st">@localhost/</span><span class="sc">{db}</span><span class="st">&quot;</span></span>
+<span id="cb7-6"><a href="akses-localhost-dengan-python.html#cb7-6" tabindex="-1"></a>                       .<span class="bu">format</span>(user<span class="op">=</span><span class="st">&quot;bakti&quot;</span>,</span>
+<span id="cb7-7"><a href="akses-localhost-dengan-python.html#cb7-7" tabindex="-1"></a>                               pw<span class="op">=</span><span class="st">&quot;123&quot;</span>,</span>
+<span id="cb7-8"><a href="akses-localhost-dengan-python.html#cb7-8" tabindex="-1"></a>                               db<span class="op">=</span><span class="st">&quot;jne2&quot;</span>))</span>
+<span id="cb7-9"><a href="akses-localhost-dengan-python.html#cb7-9" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="akses-localhost-dengan-python.html#cb7-10" tabindex="-1"></a><span class="co"># df1.to_sql(&#39;users&#39;, engine, if_exists = &#39;append&#39;, index = True)</span></span>
+<span id="cb7-11"><a href="akses-localhost-dengan-python.html#cb7-11" tabindex="-1"></a>df1.to_sql(<span class="st">&#39;user&#39;</span>, engine, if_exists<span class="op">=</span><span class="st">&#39;replace&#39;</span>, index <span class="op">=</span> <span class="va">False</span>)</span></code></pre></div>
+<p><strong>Tugas Kelompok:</strong></p>
 <p>Tambahkan tabel berikut ke database <code>jne2</code> dengan mengikuti materi yang sudah anda pelajari sebelumnya.</p>
 <ul>
 <li><a href="https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/products.csv">https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/products.csv</a></li>
@@ -391,7 +382,58 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/events.csv">https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/events.csv</a></li>
 <li><a href="https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/distribution_centers.csv">https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/distribution_centers.csv</a></li>
 </ul>
+</div>
+<div id="read-dataframe" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> <code>Read</code> Dataframe<a href="akses-localhost-dengan-python.html#read-dataframe" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Berbeda dengan materi materi dasar yang kita pelajari sebelumnya, untuk membaca data tabel dari database dalam bentuk dataframe dapat dilakukan dengan cara berikut;</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="akses-localhost-dengan-python.html#cb8-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb8-2"><a href="akses-localhost-dengan-python.html#cb8-2" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="akses-localhost-dengan-python.html#cb8-3" tabindex="-1"></a>en_co <span class="op">=</span> engine.<span class="ex">connect</span>()</span>
+<span id="cb8-4"><a href="akses-localhost-dengan-python.html#cb8-4" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="akses-localhost-dengan-python.html#cb8-5" tabindex="-1"></a>df2 <span class="op">=</span> pd.read_sql_table(<span class="st">&#39;distribution_centers&#39;</span>, en_co)</span>
+<span id="cb8-6"><a href="akses-localhost-dengan-python.html#cb8-6" tabindex="-1"></a>df2</span></code></pre></div>
+</div>
+<div id="update-data-tabel" class="section level3 hasAnchor" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Update Data Tabel<a href="akses-localhost-dengan-python.html#update-data-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sama seperti yang telah dipelajari sebelumnya, melakukan update data pada tabel disini dapat dilakukan dengan cara berikut:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="akses-localhost-dengan-python.html#cb9-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;UPDATE distribution_centers SET name=</span><span class="sc">%s</span><span class="st">, latitude=</span><span class="sc">%s</span><span class="st">, longitude=</span><span class="sc">%s</span><span class="st"> WHERE id=</span><span class="sc">%s</span><span class="st">&#39;</span></span>
+<span id="cb9-2"><a href="akses-localhost-dengan-python.html#cb9-2" tabindex="-1"></a>val <span class="op">=</span> (<span class="st">&quot;JNE Learning Center&quot;</span>, <span class="fl">106.7977</span>, <span class="op">-</span><span class="fl">6.1774</span>, <span class="dv">10</span>)</span>
+<span id="cb9-3"><a href="akses-localhost-dengan-python.html#cb9-3" tabindex="-1"></a>cursor2.execute(sql, val)</span>
+<span id="cb9-4"><a href="akses-localhost-dengan-python.html#cb9-4" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="akses-localhost-dengan-python.html#cb9-5" tabindex="-1"></a>db2.commit()</span>
+<span id="cb9-6"><a href="akses-localhost-dengan-python.html#cb9-6" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="akses-localhost-dengan-python.html#cb9-7" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="sc">{}</span><span class="st"> data diubah&quot;</span>.<span class="bu">format</span>(cursor2.rowcount))</span></code></pre></div>
+<p><strong>Tugas Kelompok:</strong></p>
+<ul>
+<li>Tambahkan satu lokasi baru pada tabel <code>distribution_centers</code></li>
+<li>Tambahkan tiga lokasi baru pada tabel <code>distribution_centers</code></li>
+</ul>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="akses-localhost-dengan-python.html#cb10-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39;INSERT INTO karyawan (</span></span>
+<span id="cb10-2"><a href="akses-localhost-dengan-python.html#cb10-2" tabindex="-1"></a><span class="st">                     name=</span><span class="sc">%s</span><span class="st">, </span></span>
+<span id="cb10-3"><a href="akses-localhost-dengan-python.html#cb10-3" tabindex="-1"></a><span class="st">                     latitude=</span><span class="sc">%s</span><span class="st">, </span></span>
+<span id="cb10-4"><a href="akses-localhost-dengan-python.html#cb10-4" tabindex="-1"></a><span class="st">                     longitude=</span><span class="sc">%s</span><span class="st">) </span></span>
+<span id="cb10-5"><a href="akses-localhost-dengan-python.html#cb10-5" tabindex="-1"></a><span class="st">       VALUES (</span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">)&#39;&#39;&#39;</span></span>
+<span id="cb10-6"><a href="akses-localhost-dengan-python.html#cb10-6" tabindex="-1"></a>val <span class="op">=</span> (<span class="st">&quot;JNE&quot;</span>, <span class="fl">106.7977</span>, <span class="op">-</span><span class="fl">6.1774</span>)</span>
+<span id="cb10-7"><a href="akses-localhost-dengan-python.html#cb10-7" tabindex="-1"></a>cursor2.execute(sql, val)</span>
+<span id="cb10-8"><a href="akses-localhost-dengan-python.html#cb10-8" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="akses-localhost-dengan-python.html#cb10-9" tabindex="-1"></a>db2.commit()</span>
+<span id="cb10-10"><a href="akses-localhost-dengan-python.html#cb10-10" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="akses-localhost-dengan-python.html#cb10-11" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;</span><span class="sc">{}</span><span class="st"> data ditambahkan&#39;</span>.<span class="bu">format</span>(cursor2.rowcount))</span></code></pre></div>
+</div>
+<div id="delete" class="section level3 hasAnchor" number="2.2.4">
+<h3><span class="header-section-number">2.2.4</span> Delete<a href="akses-localhost-dengan-python.html#delete" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="search" class="section level3 hasAnchor" number="2.2.5">
+<h3><span class="header-section-number">2.2.5</span> Search<a href="akses-localhost-dengan-python.html#search" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+</div>
+<div id="mengubah-tabel" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Mengubah Tabel<a href="akses-localhost-dengan-python.html#mengubah-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Ada kalanya kita ingin menambah, memodifikasi, menghapus yang ada pada tabel. Pernyataan yang digunakan adalah <code>ALTER TABLE</code>, seperti diperlihatkan sebagai berikut:</p>
+<div id="menambah-kolom" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Menambah Kolom<a href="akses-localhost-dengan-python.html#menambah-kolom" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 
+</div>
 </div>
 </div>
             </section>

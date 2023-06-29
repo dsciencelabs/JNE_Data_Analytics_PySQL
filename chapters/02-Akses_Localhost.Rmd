@@ -20,7 +20,7 @@ library(Rcpp)
 use_condaenv("base", required = TRUE)
 ```
 
-```{python}
+```{python, eval=F}
 # import module 
 import mysql.connector
 
@@ -38,18 +38,18 @@ Jika tidak muncul pesan error pada saat menjalankan koding diatas pada Chunck Ju
 
 Setelah kita terhubung dengan local server menggunakan Python dan MySQL. Sekarang saatnya kita mulai untuk memerikas database apa saja yang ada didalamnya. 
 
-```{python}
+```{python, eval=F}
 # membuat objek 'cursor` sebagai kata kunci eksekusi SQL
-cursor = db1.cursor()
+cursor1 = db1.cursor()
 
 # Perintah SQL
 sql = 'SHOW DATABASES'
 
 # Eksekusi perintah  SQL
-cursor.execute(sql)
+cursor1.execute(sql)
 
 # menampilkan daftar database
-for x in cursor:
+for x in cursor1:
   print(x) 
 ```
 
@@ -59,7 +59,7 @@ Berikut ini adalah koding yang dapat digunakan untuk membuat database baru denga
 
 ```{python, eval=F}
 sql= 'CREATE DATABASE jne2'
-cursor.execute(sql)
+cursor1.execute(sql)
 ```
 
 
@@ -69,7 +69,7 @@ Jika anda ingin menghapus database tertentu dari lokal server, maka dapat melaku
 
 ```{python, eval=F}
 sql= 'DROP DATABASE jne2'
-cursor.execute(sql)
+cursor1.execute(sql)
 ```
 
 
@@ -90,24 +90,26 @@ db2 = mysql.connector.connect(
 )
 
 # membuat objek 'cursor` sebagai kata kunci eksekusi SQL
-cursor = db2.cursor()
+cursor2 = db2.cursor()
 
 # Perintah SQL
 sql = "SHOW TABLES"
 
 # Eksekusi perintah  SQL
-cursor.execute(sql)
+cursor2.execute(sql)
 
 # menampilkan daftar tabel
-for x in cursor:
+for x in cursor2:
   print(x) 
 ```
 
-### Import Tabel dari CSV
 
-Berikut ini diperlihatkan cara untuk menambahkan daftar database dari CSV. Langkah pertama, import data dari Excel menggukan Python.
 
-```{python}
+## CRUDS Lanjut 
+
+Pada materi sebelumnya telah dipelajari bagaimana untuk melakukan `CRUDS` database. `CRUDS` merupakan singkatan dari **Create, Read, Update, Delete, dan Search**. Berikut ini akan diperlihatkan cara untuk menambahkan daftar database dari CSV. Langkah pertama, import data dari Excel menggukan Python.
+
+```{python, eval=F}
 import pandas as pd
 
 link_data = 'https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/users.csv'
@@ -116,11 +118,11 @@ df1 = pd.read_csv(link_data, sep=';' )
 df1.head(5)
 ```
 
-### Tambahkan Tabel CSV ke Database
+### `Create` Tabel dari CSV 
 
 Jika data tabel yang telah di import dari file CSV sudah ada dalam memori Jupeterlab **(Python)** anda, maka selanjutnya untuk menambahkan tabel tersebut ke database adalah sebagai berikut:
 
-```{python}
+```{python, eval=F}
 import pymysql
 from sqlalchemy import create_engine
 
@@ -131,10 +133,10 @@ engine = create_engine("mysql+pymysql://{user}:{pw}@localhost/{db}"
                                db="jne2"))
 
 # df1.to_sql('users', engine, if_exists = 'append', index = True)
-df1.to_sql('users', engine, if_exists='replace', index = False)
+df1.to_sql('user', engine, if_exists='replace', index = False)
 ```
 
-## Tugas Mandiri
+**Tugas Kelompok:**
 
 Tambahkan tabel berikut ke database `jne2` dengan mengikuti materi yang sudah anda pelajari sebelumnya. 
 
@@ -146,6 +148,68 @@ Tambahkan tabel berikut ke database `jne2` dengan mengikuti materi yang sudah an
 * [https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/distribution_centers.csv](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/distribution_centers.csv)
 
 
+### `Read` Dataframe
+
+Berbeda dengan materi materi dasar yang kita pelajari sebelumnya, untuk membaca data tabel dari database dalam bentuk dataframe dapat dilakukan dengan cara berikut;
+
+```{python, eval=F}
+import pandas as pd
+
+en_co = engine.connect()
+
+df2 = pd.read_sql_table('distribution_centers', en_co)
+df2
+```
+
+### Update Data Tabel 
+
+Sama seperti yang telah dipelajari sebelumnya, melakukan update data pada tabel disini dapat dilakukan dengan cara berikut:
+
+```{python, eval=F}
+sql = 'UPDATE distribution_centers SET name=%s, latitude=%s, longitude=%s WHERE id=%s'
+val = ("JNE Learning Center", 106.7977, -6.1774, 10)
+cursor2.execute(sql, val)
+
+db2.commit()
+
+print("{} data diubah".format(cursor2.rowcount))
+```
+
+**Tugas Kelompok:**
+
+* Tambahkan satu lokasi baru pada tabel `distribution_centers`
+* Tambahkan tiga lokasi baru pada tabel `distribution_centers`
+
+```{python, eval=F}
+sql = '''INSERT INTO karyawan (
+                     name=%s, 
+                     latitude=%s, 
+                     longitude=%s) 
+       VALUES (%s, %s, %s)'''
+val = ("JNE", 106.7977, -6.1774)
+cursor2.execute(sql, val)
+
+db2.commit()
+
+print('{} data ditambahkan'.format(cursor2.rowcount))
+```
+
+
+### Delete 
+
+
+### Search
+
+## Mengubah Tabel 
+
+Ada kalanya kita ingin menambah, memodifikasi, menghapus yang ada pada tabel. Pernyataan yang digunakan adalah `ALTER TABLE`, seperti diperlihatkan sebagai berikut:
+
+
+### Menambah Kolom
+
+```{python}
+
+```
 
 
 

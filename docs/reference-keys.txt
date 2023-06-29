@@ -54,9 +54,14 @@ memeriksa-daftar-database
 membuat-database
 menghapus-database
 memeriksa-daftar-tabel
-import-tabel-dari-csv
-tambahkan-tabel-csv-ke-database
-tugas-mandiri
+cruds-lanjut
+create-tabel-dari-csv
+read-dataframe
+update-data-tabel
+delete
+search
+mengubah-tabel
+menambah-kolom
 pengelompokan-data
 perhitungan-waktu-subkueri
 pemahaman-5w1h-visualisasi

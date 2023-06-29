@@ -1,22 +1,125 @@
 # Pemilihan Data
 
-Pada pertemuan sebelumnya telah depelajari pengenalan dasar bagaimana mengakses basis data dengan menggunakan Python ke PHPMyadmin dan PostgreSQL. Pada pertemuan kedua ini, akan fokus untuk berlatih untuk melakukan pemilihan data. Secara garis besar materi yang akan dibahas adalah; 
+Pada pertemuan sebelumnya telah depelajari pengenalan dasar bagaimana mengakses basis data dengan menggunakan Python ke MySQL. Pada pertemuan kedua ini, akan fokus untuk berlatih untuk melakukan pemilihan data. Secara garis besar materi yang akan dibahas adalah; 
 
-* Mengulang kembali bagaimana meng-akses basis data dengan Python ke SQL **(khusus PostgreSQL)**
+* Mengulang kembali bagaimana meng-akses basis data dengan Python ke MySQL
 * Membuat dan menghapus basis data
-* Menambahkan sekumpulan struktur tabel basis data lengkap **(Basis data rekayasa untuk JNE)**
-* Menambahkan data (isi atau nilai) untuk setiap struktur data yang ada.
-* Mengubah isi data tabel
-* Mengimport basis data **(tabel CSV)**
+* Membuat database lengkap dengan melakukan import data dari Excel**(database rekayasa untuk pelatihan Data Analytics di JNE)**
+* Operasi tabel pada database
 * Menambahkan pengaturan batasan tabel 
 
 
-## Akses PostgreSQL dengan Python
+## Akses MySQL dengan Python
 
-Untuk mengakses basis data yang ada pada PostegreSQL dengan Python dapat menggunakan koding berikut di Jupiterlab anda. 
+Untuk mengakses basis data yang ada pada MySQL dengan Python dapat menggunakan koding berikut di Jupiterlab anda. 
+
+```{r include=FALSE}
+library(reticulate)
+library(Rcpp)
+# conda_list()
+use_condaenv("base", required = TRUE)
+```
+
+```{python}
+# import module 
+import mysql.connector
+
+# koneksi server
+db1 = mysql.connector.connect(
+  host='localhost',
+  user='bakti',
+  passwd='123'
+)
+```
+
+
+Jika tidak muncul pesan error pada saat menjalankan koding diatas pada Chunck Jupiterlab anda. Artinya, koneksi Python ke MySQL sudah terhubung dengan baik. 
+
+
+## Memeriksa Daftar Database
+
+Setelah kita terhubung dengan local server menggunakan Python dan MySQL. Sekarang saatnya kita mulai untuk memerikas database apa saja yang ada didalamnya. 
+
+```{python}
+# membuat objek 'cursor` sebagai kata kunci eksekusi SQL
+cursor = db1.cursor()
+
+# Perintah SQL
+sql = 'SHOW DATABASES'
+
+# Eksekusi perintah  SQL
+cursor.execute(sql)
+
+# menampilkan daftar database
+for x in cursor:
+  print(x) 
+```
+
+## Membuat Database
+
+Berikut ini adalah koding yang dapat digunakan untuk membuat database baru dengan menggunakan koneksi `db.cursor()` yang ada pada objek `cursor`.
+
+```{python, eval=F}
+sql= 'CREATE DATABASE jne2'
+cursor.execute(sql)
+```
+
+
+## Menghapus Database 
+
+Jika anda ingin menghapus database tertentu dari lokal server, maka dapat melakukannya dengan koding berikut:
+
+```{python, eval=F}
+sql= 'DROP DATABASE jne2'
+cursor.execute(sql)
+```
+
+
+## Memeriksa Daftar Tabel
+
+Untuk memeriksa daftar tabel yang ada pada local server. Perhatikan Koding berikut:
+
+```{python}
+# import module 
+import mysql.connector
+
+# koneksi salah satu database MySQl ke Python
+db2 = mysql.connector.connect(
+  host='localhost',
+  user='bakti',
+  passwd='123',
+  database='jne2'
+)
+
+# membuat objek 'cursor` sebagai kata kunci eksekusi SQL
+cursor = db2.cursor()
+
+# Perintah SQL
+sql = "SHOW TABLES"
+
+# Eksekusi perintah  SQL
+cursor.execute(sql)
+
+# menampilkan daftar tabel
+for x in cursor:
+  print(x) 
+```
+
+## Membuat Database
+
+Berikut ini, adalah cara untuk menambahkan database baru ke lokal server anda.
 
 ```{python}
 
 ```
+
+
+
+
+
+
+
+
+
 
 

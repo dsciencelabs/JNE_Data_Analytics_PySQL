@@ -164,13 +164,17 @@ read1
 Sama seperti yang telah dipelajari sebelumnya, melakukan update data pada tabel disini dapat dilakukan dengan cara berikut:
 
 ```{python, eval=F}
+import pandas as pd
+
+en_co = engine.connect()
+
 sql = 'UPDATE distribution_centers SET name=%s, latitude=%s, longitude=%s WHERE id=%s'
-val = ("JNE Learning Center", 106.7977, -6.1774, 10)
+val = ("JNE", 106.7977, -6.1774, 10)
 cursor2.execute(sql, val)
 
 db2.commit()
 
-print("{} data diubah".format(cursor2.rowcount))
+pd.read_sql_table('distribution_centers', en_co)
 ```
 
 **Tugas Kelompok:**

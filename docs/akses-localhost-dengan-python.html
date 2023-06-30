@@ -249,6 +249,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.4.3" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#order-by"><i class="fa fa-check"></i><b>2.4.3</b> ORDER BY</a></li>
 <li class="chapter" data-level="2.4.4" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#limit"><i class="fa fa-check"></i><b>2.4.4</b> LIMIT</a></li>
 </ul></li>
+<li class="chapter" data-level="2.5" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#tugas-kelompok"><i class="fa fa-check"></i><b>2.5</b> Tugas Kelompok</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="pengelompokan-data.html"><a href="pengelompokan-data.html"><i class="fa fa-check"></i><b>3</b> Pengelompokan Data</a>
 <ul>
@@ -501,8 +502,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="akses-localhost-dengan-python.html#cb19-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;SELECT * FROM distribution_centers LIMIT 3,5&#39;</span></span>
 <span id="cb19-2"><a href="akses-localhost-dengan-python.html#cb19-2" tabindex="-1"></a>or_by <span class="op">=</span> pd.read_sql(sql, db2)</span>
 <span id="cb19-3"><a href="akses-localhost-dengan-python.html#cb19-3" tabindex="-1"></a>or_by</span></code></pre></div>
-
 </div>
+</div>
+<div id="tugas-kelompok" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Tugas Kelompok<a href="akses-localhost-dengan-python.html#tugas-kelompok" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Diskusikan dan Kerjakan soal berikut bersama Kelompok Masing2.</p>
+<ul>
+<li><p>Tambahkanlah kolom <code>Product_Price</code> pada table <code>inventory_items</code></p></li>
+<li><p>Hapuslah kolom <code>Product_Price</code> pada table <code>inventory_items</code></p></li>
+<li><p>Tambahkanlah kolom <code>Id</code> pada table <code>orders</code></p></li>
+<li><p>Hapuslah kolom <code>Id</code> pada table <code>orders</code></p></li>
+<li><p>Tambahkanlah kolom <code>Total_Sales</code> pada table <code>order_items</code></p></li>
+<li><p>Hapuslah kolom <code>Total_Sales</code> pada table <code>order_items</code></p></li>
+<li><p>Tampilkanlah data yang <code>order_id&gt;= 50</code> dari table <code>orders</code></p></li>
+<li><p>Tampilkanlah data berdasarkan negara london dari table <code>events</code></p></li>
+<li><p>Tampilkanlah data yang memiliki product_id = 9482 dari table <code>inventory_items</code></p></li>
+<li><p>Tampilkanlah data yang memiliki id = 72884 dan dengan status cancelled dari table <code>order_items</code></p></li>
+<li><p>Urutkanlah Data dari table <code>distribution_centers</code> dengan nama dari huruf z ke a</p></li>
+<li><p>Urutkanlah Data dari table <code>order_items</code> dengan <code>sale_price</code> dari terkecil ke besar</p></li>
+<li><p>Tambahkan Tabel dari local (tidak menggunakan link) ke database <code>jne2</code></p></li>
+<li><p>Upload Tugas 2 Kelompok A <a href="https://drive.google.com/drive/folders/1uIngLAZeiJIM_wh_pP6ZTpcRJCj-us2W?usp=drive_link">Disini</a></p></li>
+<li><p>Upload Tugas 2 Kelompok B <a href="https://drive.google.com/drive/folders/1SgIX7N0xlZESc3LyRWV8CGag7Rml2zI1?usp=drive_link">Disini</a></p></li>
+<li><p>Upload Tugas 2 Kelompok C <a href="https://drive.google.com/drive/folders/1F6b66tYfT5pn9tDnG-5iY1dTJgpQ9g8K?usp=drive_link">Disini</a></p></li>
+</ul>
+
 </div>
 </div>
             </section>

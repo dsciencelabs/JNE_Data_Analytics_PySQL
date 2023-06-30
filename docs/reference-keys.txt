@@ -67,6 +67,7 @@ select
 where
 order-by
 limit
+tugas-kelompok
 pengelompokan-data
 pengaturan-struktur-tabel
 perhitungan-waktu-subkueri

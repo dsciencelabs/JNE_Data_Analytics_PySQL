@@ -298,5 +298,25 @@ or_by
 ```
 
 
+## Tugas Kelompok 
 
+Diskusikan dan Kerjakan soal berikut bersama Kelompok Masing2.
+
+* Tambahkanlah kolom `Product_Price` pada table `inventory_items`
+* Hapuslah kolom `Product_Price` pada table `inventory_items`
+* Tambahkanlah kolom `Id` pada table `orders`
+* Hapuslah kolom `Id` pada table `orders`
+* Tambahkanlah kolom `Total_Sales` pada table `order_items`
+* Hapuslah kolom `Total_Sales` pada table `order_items`
+* Tampilkanlah data yang `order_id>= 50` dari table `orders`
+* Tampilkanlah data berdasarkan negara london dari table `events`
+* Tampilkanlah data yang memiliki product_id = 9482 dari table `inventory_items`
+* Tampilkanlah data yang memiliki id = 72884 dan dengan status cancelled dari table `order_items`
+* Urutkanlah Data dari table `distribution_centers` dengan nama dari huruf z ke a
+* Urutkanlah Data dari table `order_items` dengan `sale_price` dari terkecil ke besar
+* Tambahkan Tabel dari local (tidak menggunakan link) ke database `jne2`
+
+* Upload Tugas 2 Kelompok A [Disini](https://drive.google.com/drive/folders/1uIngLAZeiJIM_wh_pP6ZTpcRJCj-us2W?usp=drive_link)
+* Upload Tugas 2 Kelompok B [Disini](https://drive.google.com/drive/folders/1SgIX7N0xlZESc3LyRWV8CGag7Rml2zI1?usp=drive_link)
+* Upload Tugas 2 Kelompok C [Disini](https://drive.google.com/drive/folders/1F6b66tYfT5pn9tDnG-5iY1dTJgpQ9g8K?usp=drive_link) 
 

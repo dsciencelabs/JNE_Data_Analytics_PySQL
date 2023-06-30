@@ -240,8 +240,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#mengubah-tabel"><i class="fa fa-check"></i><b>2.3</b> Mengubah Tabel</a>
 <ul>
 <li class="chapter" data-level="2.3.1" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#menambah-kolom"><i class="fa fa-check"></i><b>2.3.1</b> Menambah Kolom</a></li>
-<li class="chapter" data-level="2.3.2" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#drop-kolom"><i class="fa fa-check"></i><b>2.3.2</b> Drop Kolom</a></li>
-<li class="chapter" data-level="2.3.3" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#modifikasi-column"><i class="fa fa-check"></i><b>2.3.3</b> Modifikasi Column</a></li>
+<li class="chapter" data-level="2.3.2" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#modifikasi-column"><i class="fa fa-check"></i><b>2.3.2</b> Modifikasi Column</a></li>
+<li class="chapter" data-level="2.3.3" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#drop-kolom"><i class="fa fa-check"></i><b>2.3.3</b> Drop Kolom</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#pengaturan-struktur-tabel"><i class="fa fa-check"></i><b>2.4</b> Pengaturan Struktur Tabel</a></li>
 </ul></li>
@@ -353,7 +353,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="crud-lanjut" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> CRUD Lanjut<a href="akses-localhost-dengan-python.html#crud-lanjut" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Pada materi sebelumnya telah dipelajari bagaimana untuk melakukan <code>CRUDS</code> database. <code>CRUDS</code> merupakan singkatan dari <strong>Create, Read, Update, Delete, dan Search</strong>. Berikut ini akan diperlihatkan cara untuk menambahkan daftar database dari CSV. Langkah pertama, import data dari Excel menggukan Python.</p>
+<p>Pada materi sebelumnya telah dipelajari bagaimana untuk melakukan <code>CRUD</code> database. <code>CRUDS</code> merupakan singkatan dari **Create, Read, Update, dan Delete Berikut ini akan diperlihatkan cara untuk menambahkan daftar database dari CSV. Langkah pertama, import data dari Excel menggukan Python.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="akses-localhost-dengan-python.html#cb6-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb6-2"><a href="akses-localhost-dengan-python.html#cb6-2" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="akses-localhost-dengan-python.html#cb6-3" tabindex="-1"></a>link_data <span class="op">=</span> <span class="st">&#39;https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/users.csv&#39;</span></span>
@@ -440,23 +440,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb11-5"><a href="akses-localhost-dengan-python.html#cb11-5" tabindex="-1"></a></span>
 <span id="cb11-6"><a href="akses-localhost-dengan-python.html#cb11-6" tabindex="-1"></a>db2.commit()</span></code></pre></div>
 </div>
-<div id="drop-kolom" class="section level3 hasAnchor" number="2.3.2">
-<h3><span class="header-section-number">2.3.2</span> Drop Kolom<a href="akses-localhost-dengan-python.html#drop-kolom" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Untuk menghapus kolom dalam tabel, gunakan sintaks berikut (perhatikan bahwa beberapa sistem database tidak mengizinkan penghapusan kolom):</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="akses-localhost-dengan-python.html#cb12-1" tabindex="-1"></a>sql <span class="ot">=</span> <span class="st">&quot;ALTER TABLE distribution_centers \</span></span>
-<span id="cb12-2"><a href="akses-localhost-dengan-python.html#cb12-2" tabindex="-1"></a><span class="st">       DROP COLUMN Email\ &quot;</span></span>
-<span id="cb12-3"><a href="akses-localhost-dengan-python.html#cb12-3" tabindex="-1"></a><span class="fu">cursor2.execute</span>(sql)</span>
-<span id="cb12-4"><a href="akses-localhost-dengan-python.html#cb12-4" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="akses-localhost-dengan-python.html#cb12-5" tabindex="-1"></a><span class="fu">db2.commit</span>()</span></code></pre></div>
-</div>
-<div id="modifikasi-column" class="section level3 hasAnchor" number="2.3.3">
-<h3><span class="header-section-number">2.3.3</span> Modifikasi Column<a href="akses-localhost-dengan-python.html#modifikasi-column" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="modifikasi-column" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Modifikasi Column<a href="akses-localhost-dengan-python.html#modifikasi-column" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Untuk modifikasi nama kolom adalah sebagai berikut:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="akses-localhost-dengan-python.html#cb13-1" tabindex="-1"></a>sql <span class="ot">=</span> <span class="st">&quot;ALTER TABLE distribution_centers \</span></span>
-<span id="cb13-2"><a href="akses-localhost-dengan-python.html#cb13-2" tabindex="-1"></a><span class="st">       MODIFY COLUMN Email Address\ &quot;</span></span>
-<span id="cb13-3"><a href="akses-localhost-dengan-python.html#cb13-3" tabindex="-1"></a><span class="fu">cursor2.execute</span>(sql)</span>
-<span id="cb13-4"><a href="akses-localhost-dengan-python.html#cb13-4" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="akses-localhost-dengan-python.html#cb13-5" tabindex="-1"></a><span class="fu">db2.commit</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="akses-localhost-dengan-python.html#cb12-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;ALTER TABLE distribution_centers </span><span class="ch">\</span></span>
+<span id="cb12-2"><a href="akses-localhost-dengan-python.html#cb12-2" tabindex="-1"></a><span class="st">       MODIFY COLUMN Email Address &quot;</span></span>
+<span id="cb12-3"><a href="akses-localhost-dengan-python.html#cb12-3" tabindex="-1"></a>cursor2.execute(sql)</span>
+<span id="cb12-4"><a href="akses-localhost-dengan-python.html#cb12-4" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="akses-localhost-dengan-python.html#cb12-5" tabindex="-1"></a>db2.commit()</span></code></pre></div>
+</div>
+<div id="drop-kolom" class="section level3 hasAnchor" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> Drop Kolom<a href="akses-localhost-dengan-python.html#drop-kolom" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Untuk menghapus kolom dalam tabel, gunakan sintaks berikut (perhatikan bahwa beberapa sistem database tidak mengizinkan penghapusan kolom):</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="akses-localhost-dengan-python.html#cb13-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;ALTER TABLE distribution_centers </span><span class="ch">\</span></span>
+<span id="cb13-2"><a href="akses-localhost-dengan-python.html#cb13-2" tabindex="-1"></a><span class="st">       DROP COLUMN Address&quot;</span></span>
+<span id="cb13-3"><a href="akses-localhost-dengan-python.html#cb13-3" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="akses-localhost-dengan-python.html#cb13-4" tabindex="-1"></a>cursor2.execute(sql)</span>
+<span id="cb13-5"><a href="akses-localhost-dengan-python.html#cb13-5" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="akses-localhost-dengan-python.html#cb13-6" tabindex="-1"></a>db2.commit()</span></code></pre></div>
 </div>
 </div>
 <div id="pengaturan-struktur-tabel" class="section level2 hasAnchor" number="2.4">

@@ -61,8 +61,8 @@ update-data
 delete-data
 mengubah-tabel
 menambah-kolom
-drop-kolom
 modifikasi-column
+drop-kolom
 pengaturan-struktur-tabel
 pengelompokan-data
 perhitungan-waktu-subkueri

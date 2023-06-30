@@ -105,7 +105,7 @@ for x in cursor2:
 
 ## CRUD Lanjut 
 
-Pada materi sebelumnya telah dipelajari bagaimana untuk melakukan `CRUDS` database. `CRUDS` merupakan singkatan dari **Create, Read, Update, Delete, dan Search**. Berikut ini akan diperlihatkan cara untuk menambahkan daftar database dari CSV. Langkah pertama, import data dari Excel menggukan Python.
+Pada materi sebelumnya telah dipelajari bagaimana untuk melakukan `CRUD` database. `CRUDS` merupakan singkatan dari **Create, Read, Update, dan Delete Berikut ini akan diperlihatkan cara untuk menambahkan daftar database dari CSV. Langkah pertama, import data dari Excel menggukan Python.
 
 ```{python, eval=F}
 import pandas as pd
@@ -217,26 +217,27 @@ db2.commit()
 ```
 
 
-### Drop Kolom
+### Modifikasi Column
 
-Untuk menghapus kolom dalam tabel, gunakan sintaks berikut (perhatikan bahwa beberapa sistem database tidak mengizinkan penghapusan kolom):
+Untuk modifikasi nama kolom adalah sebagai berikut:
 
-```{r eval=FALSE}
+```{python, eval=FALSE}
 sql = "ALTER TABLE distribution_centers \
-       DROP COLUMN Email\ "
+       MODIFY COLUMN Email Address "
 cursor2.execute(sql)
 
 db2.commit()
 ```
 
 
-### Modifikasi Column
+### Drop Kolom
 
-Untuk modifikasi nama kolom adalah sebagai berikut:
+Untuk menghapus kolom dalam tabel, gunakan sintaks berikut (perhatikan bahwa beberapa sistem database tidak mengizinkan penghapusan kolom):
 
-```{r eval=FALSE}
+```{python, eval=FALSE}
 sql = "ALTER TABLE distribution_centers \
-       MODIFY COLUMN Email Address\ "
+       DROP COLUMN Address"
+
 cursor2.execute(sql)
 
 db2.commit()

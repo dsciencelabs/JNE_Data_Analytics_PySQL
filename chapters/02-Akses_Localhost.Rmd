@@ -155,8 +155,8 @@ import pandas as pd
 
 en_co = engine.connect()
 
-df2 = pd.read_sql_table('distribution_centers', en_co)
-df2
+read1 = pd.read_sql_table('distribution_centers', en_co)
+read1
 ```
 
 ### `Update` Data  

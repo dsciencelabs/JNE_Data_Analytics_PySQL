@@ -110,7 +110,7 @@ Pada materi sebelumnya telah dipelajari bagaimana untuk melakukan `CRUD` databas
 ```{python, eval=F}
 import pandas as pd
 
-link_data = 'https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/users.csv'
+link_data = 'https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/inventory_items.csv'
 
 df1 = pd.read_csv(link_data, sep=';' )
 df1.head(5)
@@ -257,9 +257,30 @@ Pengaturan Struktur Tabel SQL digunakan untuk menentukan aturan struktur data da
 * *INDEX:* Digunakan untuk membuat dan mengambil data dari database dengan sangat cepat
 * *AUTO_INCREMENT:* memungkinkan inset data unik pada kolom tertentu yang dihasilkan secara otomatis saat data baru dimasukkan ke dalam tabel. Seringkali kolom ini adalah adalah juga *PRIMARY KEY* dan ingin dibuat secara otomatis setiap kali catatan baru dimasukkan.
 
+## Pemilahan Data
+
+Berikut ini adalah beberapa cara yang dapat digunakan untuk memilah-milah tabel dari database.
+
+### SELECT 
+
+```{python, eval=F}
+sql = "SELECT * FROM "
+cursor2.execute(sql)
+
+results = cursor2.fetchall()
+
+for data in results:
+  print(data)
+```
 
 
 
+
+### WHERE 
+
+```{python, eval=FALSE}
+
+```
 
 
 

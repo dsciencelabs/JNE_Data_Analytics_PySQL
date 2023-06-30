@@ -64,6 +64,9 @@ menambah-kolom
 modifikasi-column
 drop-kolom
 pengaturan-struktur-tabel
+pemilahan-data
+select
+where
 pengelompokan-data
 perhitungan-waktu-subkueri
 pemahaman-5w1h-visualisasi

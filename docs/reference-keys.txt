@@ -61,13 +61,14 @@ update-data
 delete-data
 mengubah-tabel
 menambah-kolom
-modifikasi-column
 drop-kolom
-pengaturan-struktur-tabel
 pemilahan-data
 select
 where
+order-by
+limit
 pengelompokan-data
+pengaturan-struktur-tabel
 perhitungan-waktu-subkueri
 pemahaman-5w1h-visualisasi
 persentasi-tugas-akhir

@@ -240,17 +240,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#mengubah-tabel"><i class="fa fa-check"></i><b>2.3</b> Mengubah Tabel</a>
 <ul>
 <li class="chapter" data-level="2.3.1" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#menambah-kolom"><i class="fa fa-check"></i><b>2.3.1</b> Menambah Kolom</a></li>
-<li class="chapter" data-level="2.3.2" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#modifikasi-column"><i class="fa fa-check"></i><b>2.3.2</b> Modifikasi Column</a></li>
-<li class="chapter" data-level="2.3.3" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#drop-kolom"><i class="fa fa-check"></i><b>2.3.3</b> Drop Kolom</a></li>
+<li class="chapter" data-level="2.3.2" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#drop-kolom"><i class="fa fa-check"></i><b>2.3.2</b> Drop Kolom</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#pengaturan-struktur-tabel"><i class="fa fa-check"></i><b>2.4</b> Pengaturan Struktur Tabel</a></li>
-<li class="chapter" data-level="2.5" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#pemilahan-data"><i class="fa fa-check"></i><b>2.5</b> Pemilahan Data</a>
+<li class="chapter" data-level="2.4" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#pemilahan-data"><i class="fa fa-check"></i><b>2.4</b> Pemilahan Data</a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#select"><i class="fa fa-check"></i><b>2.5.1</b> SELECT</a></li>
-<li class="chapter" data-level="2.5.2" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#where"><i class="fa fa-check"></i><b>2.5.2</b> WHERE</a></li>
+<li class="chapter" data-level="2.4.1" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#select"><i class="fa fa-check"></i><b>2.4.1</b> SELECT</a></li>
+<li class="chapter" data-level="2.4.2" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#where"><i class="fa fa-check"></i><b>2.4.2</b> WHERE</a></li>
+<li class="chapter" data-level="2.4.3" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#order-by"><i class="fa fa-check"></i><b>2.4.3</b> ORDER BY</a></li>
 </ul></li>
+<li class="chapter" data-level="2.5" data-path="akses-localhost-dengan-python.html"><a href="akses-localhost-dengan-python.html#limit"><i class="fa fa-check"></i><b>2.5</b> LIMIT</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="pengelompokan-data.html"><a href="pengelompokan-data.html"><i class="fa fa-check"></i><b>3</b> Pengelompokan Data</a></li>
+<li class="chapter" data-level="3" data-path="pengelompokan-data.html"><a href="pengelompokan-data.html"><i class="fa fa-check"></i><b>3</b> Pengelompokan Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="pengelompokan-data.html"><a href="pengelompokan-data.html#pengaturan-struktur-tabel"><i class="fa fa-check"></i><b>3.1</b> Pengaturan Struktur Tabel</a></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="perhitungan-waktu-subkueri.html"><a href="perhitungan-waktu-subkueri.html"><i class="fa fa-check"></i><b>4</b> Perhitungan Waktu &amp; Subkueri</a></li>
 <li class="chapter" data-level="5" data-path="pemahaman-5w1h-visualisasi.html"><a href="pemahaman-5w1h-visualisasi.html"><i class="fa fa-check"></i><b>5</b> Pemahaman 5W1H &amp; Visualisasi</a></li>
 <li class="chapter" data-level="6" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html"><i class="fa fa-check"></i><b>6</b> Persentasi Tugas Akhir</a></li>
@@ -438,64 +441,60 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="menambah-kolom" class="section level3 hasAnchor" number="2.3.1">
 <h3><span class="header-section-number">2.3.1</span> Menambah Kolom<a href="akses-localhost-dengan-python.html#menambah-kolom" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Untuk menambahkan kolom dalam tabel, gunakan sintaks berikut:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="akses-localhost-dengan-python.html#cb11-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;ALTER TABLE distribution_centers </span><span class="ch">\</span></span>
-<span id="cb11-2"><a href="akses-localhost-dengan-python.html#cb11-2" tabindex="-1"></a><span class="st">        ADD Email VARCHAR(100) </span><span class="ch">\</span></span>
-<span id="cb11-3"><a href="akses-localhost-dengan-python.html#cb11-3" tabindex="-1"></a><span class="st">        FIRST&quot;</span></span>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="akses-localhost-dengan-python.html#cb11-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;ALTER TABLE distribution_centers </span><span class="ch">\</span></span>
+<span id="cb11-2"><a href="akses-localhost-dengan-python.html#cb11-2" tabindex="-1"></a><span class="st">       ADD email VARCHAR(100) </span><span class="ch">\</span></span>
+<span id="cb11-3"><a href="akses-localhost-dengan-python.html#cb11-3" tabindex="-1"></a><span class="st">       FIRST&#39;</span></span>
 <span id="cb11-4"><a href="akses-localhost-dengan-python.html#cb11-4" tabindex="-1"></a>cursor2.execute(sql)</span>
 <span id="cb11-5"><a href="akses-localhost-dengan-python.html#cb11-5" tabindex="-1"></a></span>
 <span id="cb11-6"><a href="akses-localhost-dengan-python.html#cb11-6" tabindex="-1"></a>db2.commit()</span></code></pre></div>
 </div>
-<div id="modifikasi-column" class="section level3 hasAnchor" number="2.3.2">
-<h3><span class="header-section-number">2.3.2</span> Modifikasi Column<a href="akses-localhost-dengan-python.html#modifikasi-column" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Untuk modifikasi nama kolom adalah sebagai berikut:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="akses-localhost-dengan-python.html#cb12-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;ALTER TABLE distribution_centers </span><span class="ch">\</span></span>
-<span id="cb12-2"><a href="akses-localhost-dengan-python.html#cb12-2" tabindex="-1"></a><span class="st">       MODIFY COLUMN Email Address &quot;</span></span>
-<span id="cb12-3"><a href="akses-localhost-dengan-python.html#cb12-3" tabindex="-1"></a>cursor2.execute(sql)</span>
-<span id="cb12-4"><a href="akses-localhost-dengan-python.html#cb12-4" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="akses-localhost-dengan-python.html#cb12-5" tabindex="-1"></a>db2.commit()</span></code></pre></div>
-</div>
-<div id="drop-kolom" class="section level3 hasAnchor" number="2.3.3">
-<h3><span class="header-section-number">2.3.3</span> Drop Kolom<a href="akses-localhost-dengan-python.html#drop-kolom" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="drop-kolom" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Drop Kolom<a href="akses-localhost-dengan-python.html#drop-kolom" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Untuk menghapus kolom dalam tabel, gunakan sintaks berikut (perhatikan bahwa beberapa sistem database tidak mengizinkan penghapusan kolom):</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="akses-localhost-dengan-python.html#cb13-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;ALTER TABLE distribution_centers </span><span class="ch">\</span></span>
-<span id="cb13-2"><a href="akses-localhost-dengan-python.html#cb13-2" tabindex="-1"></a><span class="st">       DROP COLUMN Address&quot;</span></span>
-<span id="cb13-3"><a href="akses-localhost-dengan-python.html#cb13-3" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="akses-localhost-dengan-python.html#cb13-4" tabindex="-1"></a>cursor2.execute(sql)</span>
-<span id="cb13-5"><a href="akses-localhost-dengan-python.html#cb13-5" tabindex="-1"></a></span>
-<span id="cb13-6"><a href="akses-localhost-dengan-python.html#cb13-6" tabindex="-1"></a>db2.commit()</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="akses-localhost-dengan-python.html#cb12-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;ALTER TABLE distribution_centers </span><span class="ch">\</span></span>
+<span id="cb12-2"><a href="akses-localhost-dengan-python.html#cb12-2" tabindex="-1"></a><span class="st">       DROP COLUMN email&quot;</span></span>
+<span id="cb12-3"><a href="akses-localhost-dengan-python.html#cb12-3" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="akses-localhost-dengan-python.html#cb12-4" tabindex="-1"></a>cursor2.execute(sql)</span>
+<span id="cb12-5"><a href="akses-localhost-dengan-python.html#cb12-5" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="akses-localhost-dengan-python.html#cb12-6" tabindex="-1"></a>db2.commit()</span></code></pre></div>
 </div>
 </div>
-<div id="pengaturan-struktur-tabel" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> Pengaturan Struktur Tabel<a href="akses-localhost-dengan-python.html#pengaturan-struktur-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Pengaturan Struktur Tabel SQL digunakan untuk menentukan aturan struktur data dalam tabel. Batasan digunakan untuk membatasi jenis data yang dapat masuk ke dalam tabel, memastikan keakuratan dan keandalan data dalam tabel. Batasan dapat berupa tingkat kolom atau tingkat tabel. Batasan tingkat kolom berlaku untuk kolom, dan batasan tingkat tabel berlaku untuk keseluruhan tabel. Berikut Batasan yang biasanya digunakan dalam SQL:</p>
-<ul>
-<li><em>NOT NULL:</em> Memastikan kolom tidak boleh memiliki nilai NULL</li>
-<li><em>UNIQUE:</em> Memastikan bahwa semua nilai dalam kolom berbeda</li>
-<li><em>PRIMARY KEY:</em> Kombinasi NOT NULL dan UNIQUE. Secara unik mengidentifikasi setiap baris dalam tabel</li>
-<li><em>FOREIGN KEY:</em> Secara unik mengidentifikasi baris/record di tabel lain</li>
-<li><em>CHECK:</em> Memastikan bahwa semua nilai dalam kolom memenuhi kondisi tertentu</li>
-<li><em>DEFAULT:</em> Menetapkan nilai default untuk kolom saat tidak ada nilai yang ditentukan</li>
-<li><em>INDEX:</em> Digunakan untuk membuat dan mengambil data dari database dengan sangat cepat</li>
-<li><em>AUTO_INCREMENT:</em> memungkinkan inset data unik pada kolom tertentu yang dihasilkan secara otomatis saat data baru dimasukkan ke dalam tabel. Seringkali kolom ini adalah adalah juga <em>PRIMARY KEY</em> dan ingin dibuat secara otomatis setiap kali catatan baru dimasukkan.</li>
-</ul>
-</div>
-<div id="pemilahan-data" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> Pemilahan Data<a href="akses-localhost-dengan-python.html#pemilahan-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="pemilahan-data" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Pemilahan Data<a href="akses-localhost-dengan-python.html#pemilahan-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Berikut ini adalah beberapa cara yang dapat digunakan untuk memilah-milah tabel dari database.</p>
-<div id="select" class="section level3 hasAnchor" number="2.5.1">
-<h3><span class="header-section-number">2.5.1</span> SELECT<a href="akses-localhost-dengan-python.html#select" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="akses-localhost-dengan-python.html#cb14-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;SELECT * FROM &quot;</span></span>
-<span id="cb14-2"><a href="akses-localhost-dengan-python.html#cb14-2" tabindex="-1"></a>cursor2.execute(sql)</span>
-<span id="cb14-3"><a href="akses-localhost-dengan-python.html#cb14-3" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="akses-localhost-dengan-python.html#cb14-4" tabindex="-1"></a>results <span class="op">=</span> cursor2.fetchall()</span>
-<span id="cb14-5"><a href="akses-localhost-dengan-python.html#cb14-5" tabindex="-1"></a></span>
-<span id="cb14-6"><a href="akses-localhost-dengan-python.html#cb14-6" tabindex="-1"></a><span class="cf">for</span> data <span class="kw">in</span> results:</span>
-<span id="cb14-7"><a href="akses-localhost-dengan-python.html#cb14-7" tabindex="-1"></a>  <span class="bu">print</span>(data)</span></code></pre></div>
+<div id="select" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> SELECT<a href="akses-localhost-dengan-python.html#select" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="akses-localhost-dengan-python.html#cb13-1" tabindex="-1"></a>pilih_tab <span class="op">=</span> pd.read_sql(<span class="st">&#39;SELECT * FROM distribution_centers&#39;</span>, db2)</span>
+<span id="cb13-2"><a href="akses-localhost-dengan-python.html#cb13-2" tabindex="-1"></a>pilih_tab</span></code></pre></div>
+<p>Untuk memilih beberapa kolom saja dari tabel adalah sebagai berikut:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="akses-localhost-dengan-python.html#cb14-1" tabindex="-1"></a>pilih_kol <span class="op">=</span> pd.read_sql(<span class="st">&#39;SELECT id, name FROM distribution_centers&#39;</span>, db2)</span>
+<span id="cb14-2"><a href="akses-localhost-dengan-python.html#cb14-2" tabindex="-1"></a>pilih_kol</span></code></pre></div>
 </div>
-<div id="where" class="section level3 hasAnchor" number="2.5.2">
-<h3><span class="header-section-number">2.5.2</span> WHERE<a href="akses-localhost-dengan-python.html#where" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="where" class="section level3 hasAnchor" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> WHERE<a href="akses-localhost-dengan-python.html#where" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Kondisi yang dinyatakan pada klausa WHERE bisa simpel ataupun kompleks. Kita dapat menggabungkan beberapa kondisi menggunakan logical connectives (AND, OR dan NOT) menjadi sebuah kondisi tunggal. Berikut adalah contoh penggunaan klausa WHERE:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="akses-localhost-dengan-python.html#cb15-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;SELECT * FROM distribution_centers WHERE id&lt;=3&#39;</span></span>
+<span id="cb15-2"><a href="akses-localhost-dengan-python.html#cb15-2" tabindex="-1"></a>kondisi <span class="op">=</span> pd.read_sql(sql, db2)</span>
+<span id="cb15-3"><a href="akses-localhost-dengan-python.html#cb15-3" tabindex="-1"></a>kondisi</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="akses-localhost-dengan-python.html#cb16-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;SELECT * FROM distribution_centers WHERE id=3 AND name= &quot;Houston TX&quot;&#39;</span></span>
+<span id="cb16-2"><a href="akses-localhost-dengan-python.html#cb16-2" tabindex="-1"></a>kondisi <span class="op">=</span> pd.read_sql(sql, db2)</span>
+<span id="cb16-3"><a href="akses-localhost-dengan-python.html#cb16-3" tabindex="-1"></a>kondisi</span></code></pre></div>
+</div>
+<div id="order-by" class="section level3 hasAnchor" number="2.4.3">
+<h3><span class="header-section-number">2.4.3</span> ORDER BY<a href="akses-localhost-dengan-python.html#order-by" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Klausa ORDER BY digunakan untuk menampilkan output dalam bentuk urutan alfabet ASCending atau DESCending.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="akses-localhost-dengan-python.html#cb17-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;SELECT * FROM distribution_centers ORDER BY name ASC;&#39;</span></span>
+<span id="cb17-2"><a href="akses-localhost-dengan-python.html#cb17-2" tabindex="-1"></a>or_by <span class="op">=</span> pd.read_sql(sql, db2)</span>
+<span id="cb17-3"><a href="akses-localhost-dengan-python.html#cb17-3" tabindex="-1"></a>or_by</span></code></pre></div>
+</div>
+</div>
+<div id="limit" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> LIMIT<a href="akses-localhost-dengan-python.html#limit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Klausa LIMIT digunakan untuk membatasi hasil query kita sesuai dengan angka yang kita tetapkan.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="akses-localhost-dengan-python.html#cb18-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;SELECT * FROM distribution_centers LIMIT 5;&#39;</span></span>
+<span id="cb18-2"><a href="akses-localhost-dengan-python.html#cb18-2" tabindex="-1"></a>or_by <span class="op">=</span> pd.read_sql(sql, db2)</span>
+<span id="cb18-3"><a href="akses-localhost-dengan-python.html#cb18-3" tabindex="-1"></a>or_by</span></code></pre></div>
 
-</div>
 </div>
 </div>
             </section>

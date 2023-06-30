@@ -208,27 +208,13 @@ Ada kalanya kita ingin menambah, memodifikasi, menghapus yang ada pada tabel. Pe
 Untuk menambahkan kolom dalam tabel, gunakan sintaks berikut:
 
 ```{python, eval=FALSE}
-sql = "ALTER TABLE distribution_centers \
-        ADD Email VARCHAR(100) \
-        FIRST"
+sql = 'ALTER TABLE distribution_centers \
+       ADD email VARCHAR(100) \
+       FIRST'
 cursor2.execute(sql)
 
 db2.commit()
 ```
-
-
-### Modifikasi Column
-
-Untuk modifikasi nama kolom adalah sebagai berikut:
-
-```{python, eval=FALSE}
-sql = "ALTER TABLE distribution_centers \
-       MODIFY COLUMN Email Address "
-cursor2.execute(sql)
-
-db2.commit()
-```
-
 
 ### Drop Kolom
 
@@ -236,26 +222,12 @@ Untuk menghapus kolom dalam tabel, gunakan sintaks berikut (perhatikan bahwa beb
 
 ```{python, eval=FALSE}
 sql = "ALTER TABLE distribution_centers \
-       DROP COLUMN Address"
+       DROP COLUMN email"
 
 cursor2.execute(sql)
 
 db2.commit()
 ```
-
-
-## Pengaturan Struktur Tabel
-
-Pengaturan Struktur Tabel SQL digunakan untuk menentukan aturan struktur data dalam tabel. Batasan digunakan untuk membatasi jenis data yang dapat masuk ke dalam tabel, memastikan keakuratan dan keandalan data dalam tabel. Batasan dapat berupa tingkat kolom atau tingkat tabel. Batasan tingkat kolom berlaku untuk kolom, dan batasan tingkat tabel berlaku untuk keseluruhan tabel. Berikut Batasan yang biasanya digunakan dalam SQL:
-
-* *NOT NULL:* Memastikan kolom tidak boleh memiliki nilai NULL
-* *UNIQUE:* Memastikan bahwa semua nilai dalam kolom berbeda
-* *PRIMARY KEY:* Kombinasi NOT NULL dan UNIQUE. Secara unik mengidentifikasi setiap baris dalam tabel
-* *FOREIGN KEY:* Secara unik mengidentifikasi baris/record di tabel lain
-* *CHECK:* Memastikan bahwa semua nilai dalam kolom memenuhi kondisi tertentu
-* *DEFAULT:* Menetapkan nilai default untuk kolom saat tidak ada nilai yang ditentukan
-* *INDEX:* Digunakan untuk membuat dan mengambil data dari database dengan sangat cepat
-* *AUTO_INCREMENT:* memungkinkan inset data unik pada kolom tertentu yang dihasilkan secara otomatis saat data baru dimasukkan ke dalam tabel. Seringkali kolom ini adalah adalah juga *PRIMARY KEY* dan ingin dibuat secara otomatis setiap kali catatan baru dimasukkan.
 
 ## Pemilahan Data
 
@@ -264,25 +236,54 @@ Berikut ini adalah beberapa cara yang dapat digunakan untuk memilah-milah tabel 
 ### SELECT 
 
 ```{python, eval=F}
-sql = "SELECT * FROM "
-cursor2.execute(sql)
-
-results = cursor2.fetchall()
-
-for data in results:
-  print(data)
+pilih_tab = pd.read_sql('SELECT * FROM distribution_centers', db2)
+pilih_tab
 ```
 
+Untuk memilih beberapa kolom saja dari tabel adalah sebagai berikut:
 
-
+```{python, eval=FALSE}
+pilih_kol = pd.read_sql('SELECT id, name FROM distribution_centers', db2)
+pilih_kol
+```
 
 ### WHERE 
 
-```{python, eval=FALSE}
+Kondisi yang dinyatakan pada klausa WHERE bisa simpel ataupun kompleks. Kita dapat menggabungkan beberapa kondisi menggunakan logical connectives (AND, OR dan NOT) menjadi sebuah kondisi tunggal. Berikut adalah contoh penggunaan klausa WHERE:
 
+
+```{python, eval=FALSE}
+sql = 'SELECT * FROM distribution_centers WHERE id<=3'
+kondisi = pd.read_sql(sql, db2)
+kondisi
+```
+
+```{python, eval=FALSE}
+sql = 'SELECT * FROM distribution_centers WHERE id=3 AND name= "Houston TX"'
+kondisi = pd.read_sql(sql, db2)
+kondisi
 ```
 
 
+### ORDER BY
+
+Klausa ORDER BY digunakan untuk menampilkan output dalam bentuk urutan alfabet ASCending atau DESCending. 
+
+```{python, eval=FALSE}
+sql = 'SELECT * FROM distribution_centers ORDER BY name ASC;'
+or_by = pd.read_sql(sql, db2)
+or_by
+```
+
+## LIMIT
+
+Klausa LIMIT digunakan untuk membatasi hasil query kita sesuai dengan angka yang kita tetapkan.
+
+```{python, eval=FALSE}
+sql = 'SELECT * FROM distribution_centers LIMIT 5;'
+or_by = pd.read_sql(sql, db2)
+or_by
+```
 
 
 

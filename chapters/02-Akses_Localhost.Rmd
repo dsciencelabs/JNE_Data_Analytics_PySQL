@@ -279,17 +279,23 @@ or_by = pd.read_sql(sql, db2)
 or_by
 ```
 
-## LIMIT
+### LIMIT
 
 Klausa LIMIT digunakan untuk membatasi hasil query kita sesuai dengan angka yang kita tetapkan.
 
 ```{python, eval=FALSE}
-sql = 'SELECT * FROM distribution_centers LIMIT 5;'
+sql = 'SELECT * FROM distribution_centers LIMIT 3;'
 or_by = pd.read_sql(sql, db2)
 or_by
 ```
 
+Coba perhatikan koding berikut:
 
+```{python, eval=FALSE}
+sql = 'SELECT * FROM distribution_centers LIMIT 3,5'
+or_by = pd.read_sql(sql, db2)
+or_by
+```
 
 
 

@@ -1,6 +1,6 @@
-# CRUD dan Pilah Data
+# CRUDA & Filter Tabel
 
-Pada pertemuan sebelumnya telah depelajari pengenalan dasar bagaimana mengakses basis data dengan menggunakan Python ke MySQL dan PostgreSQL. Pada pertemuan kedua ini, akan fokus untuk berlatih untuk melakukan pemilihan data. Secara garis besar materi yang akan dibahas adalah; 
+Pada pertemuan sebelumnya telah depelajari pengenalan dasar bagaimana mengakses basis data dengan menggunakan Python ke MySQL dan PostgreSQL. Pada pertemuan kedua ini, akan fokus untuk berlatih untuk melakukan CRUDA dan Filter tabel. Secara garis besar materi yang akan dibahas adalah; 
 
 * Mengulang kembali bagaimana meng-akses basis data dengan Python ke MySQL dan PostgreSQL
 * Membuat dan menghapus basis data
@@ -103,9 +103,9 @@ for x in cursor2:
   print(x) 
 ```
 
-## CRUD Lanjut 
+## CRUDA Tabel 
 
-Pada materi sebelumnya telah dipelajari bagaimana untuk melakukan `CRUD` database. `CRUDS` merupakan singkatan dari **Create, Read, Update, dan Delete Berikut ini akan diperlihatkan cara untuk menambahkan daftar database dari CSV. Langkah pertama, import data dari Excel menggukan Python.
+Pada materi sebelumnya telah dipelajari bagaimana untuk melakukan `CRUDA` Tabel yang ada pada database. `CRUDA` merupakan singkatan dari **Create, Read, Update, Delete, dan Alter. Berikut ini akan diperlihatkan cara untuk menambahkan daftar database dari CSV. Langkah pertama, import data dari Excel menggukan Python.
 
 ```{python, eval=F}
 import pandas as pd
@@ -116,7 +116,7 @@ df1 = pd.read_csv(link_data, sep=';' )
 df1.head(5)
 ```
 
-### `Create` Tabel dari CSV 
+### CREATE
 
 Jika data tabel yang telah di import dari file CSV sudah ada dalam memori Jupeterlab **(Python)** anda, maka selanjutnya untuk menambahkan tabel tersebut ke database adalah sebagai berikut:
 
@@ -146,7 +146,7 @@ Tambahkan tabel berikut ke database `jne2` dengan mengikuti materi yang sudah an
 * [https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/distribution_centers.csv](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/distribution_centers.csv)
 
 
-### `Read` Dataframe
+### READ
 
 Berbeda dengan materi materi dasar yang kita pelajari sebelumnya, untuk membaca data tabel dari database dalam bentuk dataframe dapat dilakukan dengan cara berikut;
 
@@ -159,7 +159,7 @@ read1 = pd.read_sql_table('distribution_centers', en_co)
 read1
 ```
 
-### `Update` Data  
+### UPDATE 
 
 Sama seperti yang telah dipelajari sebelumnya, melakukan update data pada tabel disini dapat dilakukan dengan cara berikut:
 
@@ -183,7 +183,7 @@ pd.read_sql_table('distribution_centers', en_co)
 * Tambahkan tiga lokasi baru pada tabel `distribution_centers`
 
 
-### `Delete` Data 
+### DELETE
 
 Pada bagian hapus data sama seperti update data. Kita harus menggunakan query DELETE untuk menghapus dan WHERE untuk menentukan data yang akan dihapus.
 
@@ -202,27 +202,7 @@ print("{} data dihapus".format(cursor2.rowcount))
 * Hapuskan tiga lokasi baru sebelumnya, yang anda tambahkan pada tabel `distribution_centers` secara bersamaan.
 
 
-## Mengubah Tabel 
-
-Ada kalanya kita ingin menambah, memodifikasi, menghapus yang ada pada tabel. Pernyataan yang digunakan adalah `ALTER TABLE`, seperti diperlihatkan sebagai berikut:
-
-
-### Menambah Kolom
-
-Untuk menambahkan kolom dalam tabel, gunakan sintaks berikut:
-
-```{python, eval=FALSE}
-sql = 'ALTER TABLE distribution_centers \
-       ADD email VARCHAR(100) \
-       FIRST'
-cursor2.execute(sql)
-
-db2.commit()
-```
-
-### Drop Kolom
-
-Untuk menghapus kolom dalam tabel, gunakan sintaks berikut (perhatikan bahwa beberapa sistem database tidak mengizinkan penghapusan kolom):
+**Catatan:** Untuk menghapus kolom dalam tabel, gunakan sintaks berikut (perhatikan bahwa beberapa sistem database tidak mengizinkan penghapusan kolom):
 
 ```{python, eval=FALSE}
 sql = "ALTER TABLE distribution_centers \
@@ -233,7 +213,22 @@ cursor2.execute(sql)
 db2.commit()
 ```
 
-## Pemilahan Data
+
+### ALTER
+
+Ada kalanya kita ingin menambah, memodifikasi, menghapus yang ada pada tabel. Pernyataan yang digunakan adalah `ALTER TABLE`, seperti diperlihatkan sebagai berikut:
+
+```{python, eval=FALSE}
+sql = 'ALTER TABLE distribution_centers \
+       ADD email VARCHAR(100) \
+       FIRST'
+cursor2.execute(sql)
+
+db2.commit()
+```
+
+
+## Filter Tabel
 
 Berikut ini adalah beberapa cara yang dapat digunakan untuk memilah-milah tabel dari database.
 

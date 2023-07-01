@@ -1,4 +1,4 @@
-# Pengelompokan Data
+# Perhitungan & Statistik Dasar
 
 
 ## Pengaturan Struktur Tabel

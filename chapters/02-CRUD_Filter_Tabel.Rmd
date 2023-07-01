@@ -1,0 +1,321 @@
+# CRUDA & Filter Tabel
+
+Pada pertemuan sebelumnya telah depelajari pengenalan dasar bagaimana mengakses basis data dengan menggunakan Python ke MySQL dan PostgreSQL. Pada pertemuan kedua ini, akan fokus untuk berlatih untuk melakukan CRUDA dan Filter tabel. Secara garis besar materi yang akan dibahas adalah; 
+
+* Mengulang kembali bagaimana meng-akses basis data dengan Python ke MySQL dan PostgreSQL
+* Membuat dan menghapus basis data
+* Membuat database lengkap dengan melakukan import data dari Excel **(database rekayasa untuk pelatihan Data Analytics di JNE)**
+* Operasi tabel pada database
+* Menambahkan pengaturan batasan tabel 
+
+
+## Koneksi MySQL dan Python
+
+Untuk mengakses basis data yang ada pada MySQL dengan Python dapat menggunakan koding berikut di Jupiterlab anda. 
+
+```{r include=FALSE}
+library(reticulate)
+library(Rcpp)
+# conda_list()
+use_condaenv("base", required = TRUE)
+```
+
+```{python, eval=F}
+# import module 
+import mysql.connector
+
+# koneksi server
+db1 = mysql.connector.connect(
+  host='localhost',
+  user='bakti',
+  passwd='123'
+)
+```
+
+Jika tidak muncul pesan error pada saat menjalankan koding diatas pada Chunck Jupiterlab anda. Artinya, koneksi Python ke MySQL sudah terhubung dengan baik. 
+
+### Memeriksa Daftar Database
+
+Setelah kita terhubung dengan local server menggunakan Python dan MySQL. Sekarang saatnya kita mulai untuk memerikas database apa saja yang ada didalamnya. 
+
+```{python, eval=F}
+# membuat objek 'cursor` sebagai kata kunci eksekusi SQL
+cursor1 = db1.cursor()
+
+# Perintah SQL
+sql = 'SHOW DATABASES'
+
+# Eksekusi perintah  SQL
+cursor1.execute(sql)
+
+# menampilkan daftar database
+for x in cursor1:
+  print(x) 
+```
+
+### Membuat Database
+
+Berikut ini adalah koding yang dapat digunakan untuk membuat database baru dengan menggunakan koneksi `db.cursor()` yang ada pada objek `cursor`.
+
+```{python, eval=F}
+sql= 'CREATE DATABASE jne2'
+cursor1.execute(sql)
+```
+
+
+### Menghapus Database 
+
+Jika anda ingin menghapus database tertentu dari lokal server, maka dapat melakukannya dengan koding berikut:
+
+```{python, eval=F}
+sql= 'DROP DATABASE jne2'
+cursor1.execute(sql)
+```
+
+
+### Memeriksa Daftar Tabel
+
+Untuk memeriksa daftar tabel yang ada pada local server. Perhatikan Koding berikut:
+
+```{python, eval=F}
+# import module 
+import mysql.connector
+
+# koneksi salah satu database MySQl ke Python
+db2 = mysql.connector.connect(
+  host='localhost',
+  user='bakti',
+  passwd='123',
+  database='jne2'
+)
+
+# membuat objek 'cursor` sebagai kata kunci eksekusi SQL
+cursor2 = db2.cursor()
+
+# Perintah SQL
+sql = "SHOW TABLES"
+
+# Eksekusi perintah  SQL
+cursor2.execute(sql)
+
+# menampilkan daftar tabel
+for x in cursor2:
+  print(x) 
+```
+
+## CRUDA Tabel 
+
+Pada materi sebelumnya telah dipelajari bagaimana untuk melakukan `CRUDA` Tabel yang ada pada database. `CRUDA` merupakan singkatan dari **Create, Read, Update, Delete, dan Alter. Berikut ini akan diperlihatkan cara untuk menambahkan daftar database dari CSV. Langkah pertama, import data dari Excel menggukan Python.
+
+```{python, eval=F}
+import pandas as pd
+
+link_data = 'https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/inventory_items.csv'
+
+df1 = pd.read_csv(link_data, sep=';' )
+df1.head(5)
+```
+
+### CREATE
+
+Jika data tabel yang telah di import dari file CSV sudah ada dalam memori Jupeterlab **(Python)** anda, maka selanjutnya untuk menambahkan tabel tersebut ke database adalah sebagai berikut:
+
+```{python, eval=F}
+import pymysql
+from sqlalchemy import create_engine
+
+# membuat engine
+engine = create_engine("mysql+pymysql://{user}:{pw}@localhost/{db}"
+                       .format(user="bakti",
+                               pw="123",
+                               db="jne2"))
+
+# df1.to_sql('users', engine, if_exists = 'append', index = True)
+df1.to_sql('user', engine, if_exists='replace', index = False)
+```
+
+**Tugas Kelompok:**
+
+Tambahkan tabel berikut ke database `jne2` dengan mengikuti materi yang sudah anda pelajari sebelumnya. 
+
+* [https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/products.csv](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/products.csv)
+* [https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/orders.csv](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/orders.csv)
+* [https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/order_items.csv](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/order_items.csv)
+* [https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/inventory_items.csv](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/inventory_items.csv)
+* [https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/events.csv](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/events.csv)
+* [https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/distribution_centers.csv](https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/distribution_centers.csv)
+
+
+### READ
+
+Berbeda dengan materi materi dasar yang kita pelajari sebelumnya, untuk membaca data tabel dari database dalam bentuk dataframe dapat dilakukan dengan cara berikut;
+
+```{python, eval=F}
+import pandas as pd
+
+en_co = engine.connect()
+
+read1 = pd.read_sql_table('distribution_centers', en_co)
+read1
+```
+
+### UPDATE 
+
+Sama seperti yang telah dipelajari sebelumnya, melakukan update data pada tabel disini dapat dilakukan dengan cara berikut:
+
+```{python, eval=F}
+import pandas as pd
+
+en_co = engine.connect()
+
+sql = 'UPDATE distribution_centers SET name=%s, latitude=%s, longitude=%s WHERE id=%s'
+val = ("JNE", 106.7977, -6.1774, 10)
+cursor2.execute(sql, val)
+
+db2.commit()
+
+pd.read_sql_table('distribution_centers', en_co)
+```
+
+**Tugas Kelompok:**
+
+* Tambahkan satu lokasi baru pada tabel `distribution_centers`
+* Tambahkan tiga lokasi baru pada tabel `distribution_centers`
+
+
+### DELETE
+
+Pada bagian hapus data sama seperti update data. Kita harus menggunakan query DELETE untuk menghapus dan WHERE untuk menentukan data yang akan dihapus.
+
+```{python, eval=F}
+sql = "DELETE FROM distribution_centers WHERE id=%s"
+val = (11, )
+cursor2.execute(sql, val)
+
+db2.commit()
+
+print("{} data dihapus".format(cursor2.rowcount))
+```
+
+**Tugas Kelompok:**
+
+* Hapuskan tiga lokasi baru sebelumnya, yang anda tambahkan pada tabel `distribution_centers` secara bersamaan.
+
+
+**Catatan:** Untuk menghapus kolom dalam tabel, gunakan sintaks berikut (perhatikan bahwa beberapa sistem database tidak mengizinkan penghapusan kolom):
+
+```{python, eval=FALSE}
+sql = "ALTER TABLE distribution_centers \
+       DROP COLUMN email"
+
+cursor2.execute(sql)
+
+db2.commit()
+```
+
+
+### ALTER
+
+Ada kalanya kita ingin menambah, memodifikasi, menghapus yang ada pada tabel. Pernyataan yang digunakan adalah `ALTER TABLE`, seperti diperlihatkan sebagai berikut:
+
+```{python, eval=FALSE}
+sql = 'ALTER TABLE distribution_centers \
+       ADD email VARCHAR(100) \
+       FIRST'
+cursor2.execute(sql)
+
+db2.commit()
+```
+
+
+## Filter Tabel
+
+Berikut ini adalah beberapa cara yang dapat digunakan untuk memilah-milah tabel dari database.
+
+### SELECT 
+
+```{python, eval=F}
+pilih_tab = pd.read_sql('SELECT * FROM distribution_centers', db2)
+pilih_tab
+```
+
+Untuk memilih beberapa kolom saja dari tabel adalah sebagai berikut:
+
+```{python, eval=FALSE}
+pilih_kol = pd.read_sql('SELECT id, name FROM distribution_centers', db2)
+pilih_kol
+```
+
+### WHERE 
+
+Kondisi yang dinyatakan pada klausa WHERE bisa simpel ataupun kompleks. Kita dapat menggabungkan beberapa kondisi menggunakan logical connectives (AND, OR dan NOT) menjadi sebuah kondisi tunggal. Berikut adalah contoh penggunaan klausa WHERE:
+
+
+```{python, eval=FALSE}
+sql = 'SELECT * FROM distribution_centers WHERE id<=3'
+kondisi = pd.read_sql(sql, db2)
+kondisi
+```
+
+```{python, eval=FALSE}
+sql = 'SELECT * FROM distribution_centers WHERE id=3 AND name= "Houston TX"'
+kondisi = pd.read_sql(sql, db2)
+kondisi
+```
+
+
+### ORDER BY
+
+Klausa ORDER BY digunakan untuk menampilkan output dalam bentuk urutan alfabet ASCending atau DESCending. 
+
+```{python, eval=FALSE}
+sql = 'SELECT * FROM distribution_centers ORDER BY name ASC;'
+or_by = pd.read_sql(sql, db2)
+or_by
+```
+
+### LIMIT
+
+Klausa LIMIT digunakan untuk membatasi hasil query kita sesuai dengan angka yang kita tetapkan.
+
+```{python, eval=FALSE}
+sql = 'SELECT * FROM distribution_centers LIMIT 3;'
+or_by = pd.read_sql(sql, db2)
+or_by
+```
+
+Coba perhatikan koding berikut:
+
+```{python, eval=FALSE}
+sql = 'SELECT * FROM distribution_centers LIMIT 3,5'
+or_by = pd.read_sql(sql, db2)
+or_by
+```
+
+
+## Tugas Kelompok 
+
+Diskusikan dan Kerjakan soal berikut bersama Kelompok Masing2.
+
+* Tambahkanlah kolom `Product_Price` pada table `inventory_items`
+* Hapuslah kolom `Product_Price` pada table `inventory_items`
+* Tambahkanlah kolom `Id` pada table `orders`
+* Hapuslah kolom `Id` pada table `orders`
+* Tambahkanlah kolom `Total_Sales` pada table `order_items`
+* Hapuslah kolom `Total_Sales` pada table `order_items`
+* Tampilkanlah data yang `order_id>= 50` dari table `orders`
+* Tampilkanlah data berdasarkan negara london dari table `events`
+* Tampilkanlah data yang memiliki product_id = 9482 dari table `inventory_items`
+* Tampilkanlah data yang memiliki id = 72884 dan dengan status cancelled dari table `order_items`
+* Urutkanlah Data dari table `distribution_centers` dengan nama dari huruf z ke a
+* Urutkanlah Data dari table `order_items` dengan `sale_price` dari terkecil ke besar
+* Tambahkan Tabel dari local (tidak menggunakan link) ke database `jne2`
+
+* Upload Tugas 2 Kelompok A [Disini](https://drive.google.com/drive/folders/1uIngLAZeiJIM_wh_pP6ZTpcRJCj-us2W?usp=drive_link)
+* Upload Tugas 2 Kelompok B [Disini](https://drive.google.com/drive/folders/1SgIX7N0xlZESc3LyRWV8CGag7Rml2zI1?usp=drive_link)
+* Upload Tugas 2 Kelompok C [Disini](https://drive.google.com/drive/folders/1F6b66tYfT5pn9tDnG-5iY1dTJgpQ9g8K?usp=drive_link) 
+
+
+## Cara mengatasi XAMPP tidak berfungsi dengan baik
+
+https://www.amalankomputer.com/2021/01/cara-mengatasi-apache-shutdown.html

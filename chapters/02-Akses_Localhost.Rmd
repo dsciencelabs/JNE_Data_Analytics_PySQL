@@ -320,3 +320,7 @@ Diskusikan dan Kerjakan soal berikut bersama Kelompok Masing2.
 * Upload Tugas 2 Kelompok B [Disini](https://drive.google.com/drive/folders/1SgIX7N0xlZESc3LyRWV8CGag7Rml2zI1?usp=drive_link)
 * Upload Tugas 2 Kelompok C [Disini](https://drive.google.com/drive/folders/1F6b66tYfT5pn9tDnG-5iY1dTJgpQ9g8K?usp=drive_link) 
 
+
+## Cara mengatasi XAMPP tidak berfungsi dengan baik
+
+https://www.amalankomputer.com/2021/01/cara-mengatasi-apache-shutdown.html

@@ -48,7 +48,7 @@ cek-dashboard
 video-instalasi-postgresql
 praktikal-hands-on
 latihan
-akses-localhost-dengan-python
+crud-dan-pilah-data
 koneksi-mysql-dan-python
 memeriksa-daftar-database
 membuat-database

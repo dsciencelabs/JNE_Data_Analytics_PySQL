@@ -5,7 +5,7 @@ tables: yes
 rmd_files: ["index.Rmd",
            "chapters/00-Pengantar.Rmd",
            "chapters/01-Pengenalan_PySQL.Rmd",
-           "chapters/02-Akses_Localhost.Rmd",
+           "chapters/02-CRUD_Pilah_Data.Rmd",
            "chapters/03-Pengelompokkan_Data.Rmd",
            "chapters/04-Perhitungan_Waktu_Subkueri.Rmd",
            "chapters/05-Pamahaman_5W1H_Visualisasi.Rmd",

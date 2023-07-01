@@ -1,4 +1,4 @@
-# Akses Localhost dengan Python
+# CRUD dan Pilah Data
 
 Pada pertemuan sebelumnya telah depelajari pengenalan dasar bagaimana mengakses basis data dengan menggunakan Python ke MySQL dan PostgreSQL. Pada pertemuan kedua ini, akan fokus untuk berlatih untuk melakukan pemilihan data. Secara garis besar materi yang akan dibahas adalah; 
 

@@ -97,3 +97,4 @@ Berikut ini adalah beberapa contoh dan deskripsi Fungsi Agregat yang terdapat da
 <img align="middle" src="images/bab2/fungsi_agregat.png"  width = 100% />
 
 
+

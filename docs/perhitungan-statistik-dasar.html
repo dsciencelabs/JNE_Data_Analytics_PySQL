@@ -370,6 +370,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">3.1.2</span> Perhitungan Agregat<a href="perhitungan-statistik-dasar.html#perhitungan-agregat" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Berikut ini adalah beberapa contoh dan deskripsi Fungsi Agregat yang terdapat dalam SQL:</p>
 <p><img align="middle" src="images/bab2/fungsi_agregat.png"  width = 100% /></p>
+<p>**Fungsi COUNT(*)** mengembalikan jumlah baris yang dikembalikan oleh pernyataan SELECT, termasuk NULL dan duplikat, sedangkan COUNT(column) mengembalikan jumlah baris yang dikembalikan oleh klausa SELECT.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="perhitungan-statistik-dasar.html#cb25-1" tabindex="-1"></a><span class="co"># Perintah SQL </span></span>
+<span id="cb25-2"><a href="perhitungan-statistik-dasar.html#cb25-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;SELECT COUNT(product_category) </span><span class="ch">\</span></span>
+<span id="cb25-3"><a href="perhitungan-statistik-dasar.html#cb25-3" tabindex="-1"></a><span class="st">       FROM inventory_items </span><span class="ch">\</span></span>
+<span id="cb25-4"><a href="perhitungan-statistik-dasar.html#cb25-4" tabindex="-1"></a><span class="st">       WHERE cost&lt;5&quot;</span></span>
+<span id="cb25-5"><a href="perhitungan-statistik-dasar.html#cb25-5" tabindex="-1"></a>       </span>
+<span id="cb25-6"><a href="perhitungan-statistik-dasar.html#cb25-6" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb25-7"><a href="perhitungan-statistik-dasar.html#cb25-7" tabindex="-1"></a>cursor1.execute(sql)</span>
+<span id="cb25-8"><a href="perhitungan-statistik-dasar.html#cb25-8" tabindex="-1"></a></span>
+<span id="cb25-9"><a href="perhitungan-statistik-dasar.html#cb25-9" tabindex="-1"></a><span class="co"># menampilkan daftar tabel</span></span>
+<span id="cb25-10"><a href="perhitungan-statistik-dasar.html#cb25-10" tabindex="-1"></a><span class="cf">for</span> data <span class="kw">in</span> cursor1:</span>
+<span id="cb25-11"><a href="perhitungan-statistik-dasar.html#cb25-11" tabindex="-1"></a>  <span class="bu">print</span>(data) </span></code></pre></div>
 
 </div>
 </div>

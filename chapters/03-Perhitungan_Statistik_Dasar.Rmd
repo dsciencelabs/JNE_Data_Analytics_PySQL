@@ -96,5 +96,24 @@ Berikut ini adalah beberapa contoh dan deskripsi Fungsi Agregat yang terdapat da
 
 <img align="middle" src="images/bab2/fungsi_agregat.png"  width = 100% />
 
+**Fungsi COUNT(*)** mengembalikan jumlah baris yang dikembalikan oleh pernyataan SELECT, termasuk NULL dan duplikat, sedangkan COUNT(column) mengembalikan jumlah baris yang dikembalikan oleh klausa SELECT.
+
+
+```{python, eval=F}
+# Perintah SQL 
+sql = "SELECT COUNT(product_category) \
+       FROM inventory_items \
+       WHERE cost<5"
+       
+# Eksekusi perintah  SQL
+cursor1.execute(sql)
+
+# menampilkan daftar tabel
+for data in cursor1:
+  print(data) 
+```
+
+
+
 
 

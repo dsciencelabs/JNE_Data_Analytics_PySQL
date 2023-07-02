@@ -55,6 +55,8 @@ for data in cursor1:
   print(data) 
 ```
 
-
-
 ### Perhitungan Agregat
+
+
+
+

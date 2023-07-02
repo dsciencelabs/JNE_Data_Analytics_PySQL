@@ -48,7 +48,7 @@ cek-dashboard
 video-instalasi-postgresql
 praktikal-hands-on
 latihan
-ekplorasi-data
+eksplorasi-data
 koneksi-mysql-dan-python
 memeriksa-daftar-database
 membuat-database

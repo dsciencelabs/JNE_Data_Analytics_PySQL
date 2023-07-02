@@ -293,8 +293,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>Fungsi skalar</strong> atau fungsi math dalam SQL digunakan untuk mengembalikan nilai tunggal <em>(single value)</em> dari suatu nilai input yang diberikan pada perintah sebelumnya. Sedangkan, <strong>Fungsi agregat</strong> dalam SQL digunakan untuk melakukan perhitungan matematika pada sekelompok nilai dan kemudian mengembalikan nilai tunggal.</p>
 <div id="perhitungan-skalar" class="section level3 hasAnchor" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> Perhitungan Skalar<a href="perhitungan-statistik-dasar.html#perhitungan-skalar" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Berikut ini adalah beberapa contoh dan deskripsi Fungsi Skalar yang terdapat dalam SQL :</p>
-<p><img align="middle" src="images/bab1/definisi_DB.png"  width = 100% /></p>
 <p>Sebelum kita memulai melakukan beberapa perhitungan skalar pada data yang kita pilih dari database. Pertama-tama, mari kita lihat dulu isi data pada tabel berikut:</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="perhitungan-statistik-dasar.html#cb20-1" tabindex="-1"></a><span class="im">from</span> sqlalchemy <span class="im">import</span> create_engine</span>
 <span id="cb20-2"><a href="perhitungan-statistik-dasar.html#cb20-2" tabindex="-1"></a><span class="im">import</span> pymysql</span>
@@ -327,19 +325,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 499  133420  ...                            8,00
 ## 
 ## [500 rows x 12 columns]</code></pre>
-<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="perhitungan-statistik-dasar.html#cb22-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;SELECT DISTINCT ABS(cost) </span><span class="ch">\</span></span>
-<span id="cb22-2"><a href="perhitungan-statistik-dasar.html#cb22-2" tabindex="-1"></a><span class="st">       FROM  inventory_items </span><span class="ch">\</span></span>
-<span id="cb22-3"><a href="perhitungan-statistik-dasar.html#cb22-3" tabindex="-1"></a><span class="st">       WHERE product_id=16898&quot;</span></span>
-<span id="cb22-4"><a href="perhitungan-statistik-dasar.html#cb22-4" tabindex="-1"></a>       </span>
-<span id="cb22-5"><a href="perhitungan-statistik-dasar.html#cb22-5" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
-<span id="cb22-6"><a href="perhitungan-statistik-dasar.html#cb22-6" tabindex="-1"></a>cursor1.execute(sql)</span>
-<span id="cb22-7"><a href="perhitungan-statistik-dasar.html#cb22-7" tabindex="-1"></a></span>
-<span id="cb22-8"><a href="perhitungan-statistik-dasar.html#cb22-8" tabindex="-1"></a><span class="co"># menampilkan daftar tabel</span></span>
-<span id="cb22-9"><a href="perhitungan-statistik-dasar.html#cb22-9" tabindex="-1"></a><span class="cf">for</span> data <span class="kw">in</span> cursor1:</span>
-<span id="cb22-10"><a href="perhitungan-statistik-dasar.html#cb22-10" tabindex="-1"></a>  <span class="bu">print</span>(data) </span></code></pre></div>
+<p>Berikut ini adalah beberapa contoh dan deskripsi Fungsi Skalar yang terdapat dalam SQL:</p>
+<p><img align="middle" src="images/bab2/fungsi_skalar.png"  width = 100% /></p>
+<p><strong>Syntax fungsi <code>ABS()</code></strong> adalah sebagai untuk menampilkan nilai absolut dari suatu bilangan bulat. Sebelum memulai menggunakan fungsi ABS(), perlu untuk membuat objek koneksi dan kursor eksekusinya terlebih dahulu.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="perhitungan-statistik-dasar.html#cb22-1" tabindex="-1"></a><span class="co"># import module </span></span>
+<span id="cb22-2"><a href="perhitungan-statistik-dasar.html#cb22-2" tabindex="-1"></a><span class="im">import</span> mysql.connector</span>
+<span id="cb22-3"><a href="perhitungan-statistik-dasar.html#cb22-3" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="perhitungan-statistik-dasar.html#cb22-4" tabindex="-1"></a><span class="co"># koneksi salah satu database MySQl ke Python</span></span>
+<span id="cb22-5"><a href="perhitungan-statistik-dasar.html#cb22-5" tabindex="-1"></a>db1 <span class="op">=</span> mysql.connector.<span class="ex">connect</span>(</span>
+<span id="cb22-6"><a href="perhitungan-statistik-dasar.html#cb22-6" tabindex="-1"></a>  host<span class="op">=</span><span class="st">&#39;localhost&#39;</span>,</span>
+<span id="cb22-7"><a href="perhitungan-statistik-dasar.html#cb22-7" tabindex="-1"></a>  user<span class="op">=</span><span class="st">&#39;bakti&#39;</span>,</span>
+<span id="cb22-8"><a href="perhitungan-statistik-dasar.html#cb22-8" tabindex="-1"></a>  passwd<span class="op">=</span><span class="st">&#39;123&#39;</span>,</span>
+<span id="cb22-9"><a href="perhitungan-statistik-dasar.html#cb22-9" tabindex="-1"></a>  database<span class="op">=</span><span class="st">&#39;jne2&#39;</span></span>
+<span id="cb22-10"><a href="perhitungan-statistik-dasar.html#cb22-10" tabindex="-1"></a>)</span>
+<span id="cb22-11"><a href="perhitungan-statistik-dasar.html#cb22-11" tabindex="-1"></a></span>
+<span id="cb22-12"><a href="perhitungan-statistik-dasar.html#cb22-12" tabindex="-1"></a><span class="co"># membuat objek &#39;cursor` sebagai kata kunci eksekusi SQL</span></span>
+<span id="cb22-13"><a href="perhitungan-statistik-dasar.html#cb22-13" tabindex="-1"></a>cursor1 <span class="op">=</span> db1.cursor()</span></code></pre></div>
+<p>Selanjutnya, berikut ini diperlihatkan contoh penerapan fungsi ABS().</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="perhitungan-statistik-dasar.html#cb23-1" tabindex="-1"></a><span class="co"># Perintah SQL </span></span>
+<span id="cb23-2"><a href="perhitungan-statistik-dasar.html#cb23-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;SELECT ABS(cost) </span><span class="ch">\</span></span>
+<span id="cb23-3"><a href="perhitungan-statistik-dasar.html#cb23-3" tabindex="-1"></a><span class="st">       FROM  inventory_items </span><span class="ch">\</span></span>
+<span id="cb23-4"><a href="perhitungan-statistik-dasar.html#cb23-4" tabindex="-1"></a><span class="st">       WHERE product_id=16898&quot;</span></span>
+<span id="cb23-5"><a href="perhitungan-statistik-dasar.html#cb23-5" tabindex="-1"></a>       </span>
+<span id="cb23-6"><a href="perhitungan-statistik-dasar.html#cb23-6" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb23-7"><a href="perhitungan-statistik-dasar.html#cb23-7" tabindex="-1"></a>cursor1.execute(sql)</span>
+<span id="cb23-8"><a href="perhitungan-statistik-dasar.html#cb23-8" tabindex="-1"></a></span>
+<span id="cb23-9"><a href="perhitungan-statistik-dasar.html#cb23-9" tabindex="-1"></a><span class="co"># menampilkan daftar tabel</span></span>
+<span id="cb23-10"><a href="perhitungan-statistik-dasar.html#cb23-10" tabindex="-1"></a><span class="cf">for</span> data <span class="kw">in</span> cursor1:</span>
+<span id="cb23-11"><a href="perhitungan-statistik-dasar.html#cb23-11" tabindex="-1"></a>  <span class="bu">print</span>(data) </span></code></pre></div>
+<p>Dari hasil diatas diperlihatkan beberapa hasil yang sama. Untuk menangani hal tersebut, perhatikan koding berikut:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="perhitungan-statistik-dasar.html#cb24-1" tabindex="-1"></a><span class="co"># Perintah SQL </span></span>
+<span id="cb24-2"><a href="perhitungan-statistik-dasar.html#cb24-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;SELECT DISTINCT ABS(cost) </span><span class="ch">\</span></span>
+<span id="cb24-3"><a href="perhitungan-statistik-dasar.html#cb24-3" tabindex="-1"></a><span class="st">       FROM  inventory_items </span><span class="ch">\</span></span>
+<span id="cb24-4"><a href="perhitungan-statistik-dasar.html#cb24-4" tabindex="-1"></a><span class="st">       WHERE product_id=16898&quot;</span></span>
+<span id="cb24-5"><a href="perhitungan-statistik-dasar.html#cb24-5" tabindex="-1"></a>       </span>
+<span id="cb24-6"><a href="perhitungan-statistik-dasar.html#cb24-6" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb24-7"><a href="perhitungan-statistik-dasar.html#cb24-7" tabindex="-1"></a>cursor1.execute(sql)</span>
+<span id="cb24-8"><a href="perhitungan-statistik-dasar.html#cb24-8" tabindex="-1"></a></span>
+<span id="cb24-9"><a href="perhitungan-statistik-dasar.html#cb24-9" tabindex="-1"></a><span class="co"># menampilkan daftar tabel</span></span>
+<span id="cb24-10"><a href="perhitungan-statistik-dasar.html#cb24-10" tabindex="-1"></a><span class="cf">for</span> data <span class="kw">in</span> cursor1:</span>
+<span id="cb24-11"><a href="perhitungan-statistik-dasar.html#cb24-11" tabindex="-1"></a>  <span class="bu">print</span>(data) </span></code></pre></div>
 </div>
 <div id="perhitungan-agregat" class="section level3 hasAnchor" number="3.1.2">
 <h3><span class="header-section-number">3.1.2</span> Perhitungan Agregat<a href="perhitungan-statistik-dasar.html#perhitungan-agregat" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Berikut ini adalah beberapa contoh dan deskripsi Fungsi Agregat yang terdapat dalam SQL:</p>
+<p><img align="middle" src="images/bab2/fungsi_agregat.png"  width = 100% /></p>
 
 </div>
 </div>

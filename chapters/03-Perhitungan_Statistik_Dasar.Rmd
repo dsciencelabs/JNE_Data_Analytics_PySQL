@@ -8,8 +8,52 @@ Pada dasarnya SQL bukan saja hanya dapat dipergunakan untuk melakukan manajemen 
 
 ### Perhitungan Skalar
 
-Berikut ini adalah beberapa perhitungan skalar yang dapat digunakan dalam SQL:
+Berikut ini adalah beberapa contoh dan deskripsi Fungsi Skalar yang terdapat dalam SQL :
 
+<img align="middle" src="images/bab1/definisi_DB.png"  width = 100% />
+
+```{r include=FALSE}
+library(reticulate)
+library(Rcpp)
+# conda_list()
+use_condaenv("base", required = TRUE)
+```
+
+Sebelum kita memulai melakukan beberapa perhitungan skalar pada data yang kita pilih dari database. Pertama-tama, mari kita lihat dulu isi data pada tabel berikut:
+
+```{python}
+from sqlalchemy import create_engine
+import pymysql
+import pandas as pd
+
+# membuat engine
+engine = create_engine("mysql+pymysql://{user}:{pw}@localhost/{db}"
+                       .format(user="bakti",
+                               pw="123",
+                               db="jne2"))
+# engine koneksi ke database
+db_enco = engine.connect()
+
+# Perintah SQL 
+sql = "inventory_items"
+       
+# Eksekusi perintah  SQL dengan Python (panda)
+pd.read_sql(sql,db_enco)
+```
+
+
+```{python, eval=F}
+sql = "SELECT DISTINCT ABS(cost) \
+       FROM  inventory_items \
+       WHERE product_id=16898"
+       
+# Eksekusi perintah  SQL
+cursor1.execute(sql)
+
+# menampilkan daftar tabel
+for data in cursor1:
+  print(data) 
+```
 
 
 

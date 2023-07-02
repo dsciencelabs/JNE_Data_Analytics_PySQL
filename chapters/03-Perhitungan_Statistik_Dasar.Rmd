@@ -1,11 +1,15 @@
 # Perhitungan & Statistik Dasar
 
+Pada dasarnya SQL bukan saja hanya dapat dipergunakan untuk melakukan manajemen database. Tetapi, dapat juga melakukan perhitungan matematika dan statistika dasar yang pada akhirnya dapat disimpan pada database untuk keperluan analisa. Secara spesifik, pelatihan ini akan membahas beberapa diantaranya yakni mengenai penggunaan fungsi sklar dan fungsi agregat.
 
 ## Fungsi Skalar vs Agregat
 
 **Fungsi skalar** atau fungsi math dalam SQL digunakan untuk mengembalikan nilai tunggal *(single value)* dari suatu nilai input yang diberikan pada perintah sebelumnya. Sedangkan, **Fungsi agregat** dalam SQL digunakan untuk melakukan perhitungan matematika pada sekelompok nilai dan kemudian mengembalikan nilai tunggal.
 
 ### Perhitungan Skalar
+
+Berikut ini adalah beberapa perhitungan skalar yang dapat digunakan dalam SQL:
+
 
 
 

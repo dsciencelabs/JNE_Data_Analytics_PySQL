@@ -41,7 +41,9 @@ Berikut ini adalah beberapa contoh dan deskripsi Fungsi Skalar yang terdapat dal
 
 <img align="middle" src="images/bab2/fungsi_skalar.png"  width = 100% />
 
-**Syntax fungsi `ABS()`** adalah sebagai untuk menampilkan nilai absolut dari suatu bilangan bulat. Sebelum memulai menggunakan fungsi ABS(), perlu untuk membuat objek koneksi dan kursor eksekusinya terlebih dahulu.
+#### Fungsi `ABS()` {-}
+
+Fungsi `ABS()` adalah sebagai untuk menampilkan nilai absolut dari suatu bilangan bulat. Sebelum memulai menggunakan fungsi ABS(), perlu untuk membuat objek koneksi dan kursor eksekusinya terlebih dahulu.
 
 ```{python, eval=F}
 # import module 
@@ -96,7 +98,9 @@ Berikut ini adalah beberapa contoh dan deskripsi Fungsi Agregat yang terdapat da
 
 <img align="middle" src="images/bab2/fungsi_agregat.png"  width = 100% />
 
-**Syntax fungsi `COUNT(*)`** mengembalikan jumlah baris yang dikembalikan oleh pernyataan SELECT, termasuk NULL dan duplikat, sedangkan COUNT(column) mengembalikan jumlah baris yang dikembalikan oleh klausa SELECT.
+#### Fungsi `COUNT(*)` {-}
+
+Fungsi `COUNT(*)` mengembalikan jumlah baris yang dikembalikan oleh pernyataan SELECT, termasuk NULL dan duplikat, sedangkan COUNT(column) mengembalikan jumlah baris yang dikembalikan oleh klausa SELECT.
 
 
 ```{python, eval=F}
@@ -113,11 +117,24 @@ for data in cursor1:
   print(data) 
 ```
 
-**Tugas Kelompok* 
+**Tugas Mandiri**
 
-1. Apakah hasil Kueri diatas duah benar? Perhatikan Strukrur tabel `Cost`!
-2. Cobalah untuk melakukan penjumlahan total pada `product_category`, dimana `Cost`<5. Paparkan temuan anda!
-3. 
+* Apakah hasil Kueri diatas duah benar? Perhatikan Strukrur tabel `Cost`!
+* Cobalah untuk melakukan penjumlahan total pada `product_category`, dimana `Cost`<5. Paparkan temuan anda!
+
+
+#### Fungsi `COUNTD(*)` {-}
+
+Fungsi ``COUNTD()`` adalah fungsi yang digunakan untuk menghitung jumlah baris secara bersusun dengan hanya berfungsi pada karakter yang berbeda. Misal jika terdapat tabel dengan baris 1,2,3,4,4,5,6,6,7 bersusun, maka yang terhitung jumlah barisnya hanya ada 7, karena hanya ada 7 buah karakter yang unik. Syntax fungsi COUNTD() secara umum adalah sebagai berikut :
+
+
+
+**Tugas Mandiri** 
+
+* Pada jenis data apakah kita dapat menggunaka fungsi SUM()?
+* Jika dalam fungsi SUM() menggunakan opsi DISTINCT, apakah yang tejadi?
+
+
 
 
 

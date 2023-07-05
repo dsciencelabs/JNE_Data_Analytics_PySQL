@@ -74,6 +74,10 @@ perhitungan-agregat
 perhitungan-group-by
 perhitungan-having
 perhitungan-case-when
+buat-struktur-tabel
+insert-data
+lihat-data-tabel
+perhitungan-case
 join-tabel-subkueri
 pengaturan-struktur-tabel
 w1h-visualisasi

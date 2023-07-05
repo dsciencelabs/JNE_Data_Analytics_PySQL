@@ -192,3 +192,87 @@ CASE digunakan layaknya seperti IF-ELSE pada beberapa bahasa pemrograman yang la
 <img align="middle" src="images/bab3/case.png"  width = 100% />
 
 
+### Buat Struktur Tabel 
+
+```{python, eval=F}
+# Perintah SQL 
+sql = "CREATE TABLE jadwal \
+  (kegiatan varchar(20), \
+   senin varchar(10),  \
+   selasa varchar(10), \
+   rabu varchar(10), \
+   kamis varchar(10), \
+   jumat varchar(10), \
+   sabtu varchar(10)) "
+       
+# Eksekusi perintah  SQL
+cursor1.execute(sql)
+
+# menampilkan daftar tabel
+for data in cursor1:
+  print(data) 
+```
+
+### Insert Data
+
+
+```{python, eval=F}
+
+# Perintah SQL 
+sql = "INSERT INTO jadwal values \
+('olahraga','ya','tidak','ya','tidak','ya','tidak''), \
+('diskusi','tidak','ya','tidak','tidak','tidak','ya'), \
+('rapat','ya','tidak','tidak','tidak','tidak','tidak'), \
+('ulangan','tidak','ya','ya','ya','tidak','tidak')"
+       
+# Eksekusi perintah  SQL
+cursor1.execute(sql)
+
+# menampilkan daftar tabel
+for data in cursor1:
+  print(data) 
+```
+
+### Lihat Data Tabel
+
+```{python, eval=F}
+# Perintah SQL 
+sql = "SELECT * FROM jadwal;"
+       
+# Eksekusi perintah  SQL
+cursor1.execute(sql)
+
+# menampilkan daftar tabel
+for data in cursor1:
+  print(data) 
+```
+
+
+### Perhitungan `CASE`
+
+
+```{python, eval=F}
+# Perintah SQL 
+sql = "SELECT jadwal.* \
+  , case when senin='ya' then 1 else 0 end \
+  + case when selasa='ya' then 1 else 0 end \
+  + case when rabu='ya' then 1 else 0 end \
+  + case when kamis='ya' then 1 else 0 end \
+  + case when jumat='ya' then 1 else 0 end \
+  + case when sabtu='ya' then 1 else 0 end end as digunakan \
+  , case when senin='tidak' then 1 else 0 end \
+  + case when selasa='tidak' then 1 else 0 end \
+  + case when rabu='tidak' then 1 else 0 end \
+  + case when kamis='tidak' then 1 else 0 end \
+  + case when jumat='tidak' then 1 else 0 end \
+  + case when sabtu='tidak' then 1 else 0 end as tidak_digunakan \
+  FROM jadwal;"
+       
+# Eksekusi perintah  SQL
+cursor1.execute(sql)
+
+# menampilkan daftar tabel
+for data in cursor1:
+  print(data) 
+```
+

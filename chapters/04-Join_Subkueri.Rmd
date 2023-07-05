@@ -1,4 +1,4 @@
-# Join & Subkueri Tabel 
+# Join Tabel & Subkueri 
 
 ## Pengaturan Struktur Tabel
 

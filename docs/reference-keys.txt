@@ -71,6 +71,9 @@ perhitungan-statistik-dasar
 fungsi-skalar-vs-agregat
 perhitungan-skalar
 perhitungan-agregat
+perhitungan-group-by
+perhitungan-having
+perhitungan-case-when
 join-tabel-subkueri
 pengaturan-struktur-tabel
 w1h-visualisasi

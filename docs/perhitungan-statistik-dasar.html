@@ -23,7 +23,7 @@
 <meta name="author" content="Bakti Siregar, M.Sc" />
 
 
-<meta name="date" content="2023-07-05" />
+<meta name="date" content="2023-07-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -255,6 +255,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1.1" data-path="perhitungan-statistik-dasar.html"><a href="perhitungan-statistik-dasar.html#perhitungan-skalar"><i class="fa fa-check"></i><b>3.1.1</b> Perhitungan Skalar</a></li>
 <li class="chapter" data-level="3.1.2" data-path="perhitungan-statistik-dasar.html"><a href="perhitungan-statistik-dasar.html#perhitungan-agregat"><i class="fa fa-check"></i><b>3.1.2</b> Perhitungan Agregat</a></li>
 </ul></li>
+<li class="chapter" data-level="3.2" data-path="perhitungan-statistik-dasar.html"><a href="perhitungan-statistik-dasar.html#perhitungan-group-by"><i class="fa fa-check"></i><b>3.2</b> Perhitungan <code>GROUP BY</code></a></li>
+<li class="chapter" data-level="3.3" data-path="perhitungan-statistik-dasar.html"><a href="perhitungan-statistik-dasar.html#perhitungan-having"><i class="fa fa-check"></i><b>3.3</b> Perhitungan <code>HAVING</code></a></li>
+<li class="chapter" data-level="3.4" data-path="perhitungan-statistik-dasar.html"><a href="perhitungan-statistik-dasar.html#perhitungan-case-when"><i class="fa fa-check"></i><b>3.4</b> Perhitungan <code>CASE WHEN</code></a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html"><i class="fa fa-check"></i><b>4</b> Join Tabel &amp; Subkueri</a>
 <ul>
@@ -312,8 +315,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb20-16"><a href="perhitungan-statistik-dasar.html#cb20-16" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL dengan Python (panda)</span></span>
 <span id="cb20-17"><a href="perhitungan-statistik-dasar.html#cb20-17" tabindex="-1"></a>pd.read_sql(sql,db_enco)</span></code></pre></div>
 <p>Berikut ini adalah beberapa contoh dan deskripsi Fungsi Skalar yang terdapat dalam SQL:</p>
-<p><img align="middle" src="images/bab2/fungsi_skalar.png"  width = 100% /></p>
-<p><strong>Syntax fungsi <code>ABS()</code></strong> adalah sebagai untuk menampilkan nilai absolut dari suatu bilangan bulat. Sebelum memulai menggunakan fungsi ABS(), perlu untuk membuat objek koneksi dan kursor eksekusinya terlebih dahulu.</p>
+<p><img align="middle" src="images/bab3/fungsi_skalar.png"  width = 100% /></p>
+<div id="fungsi-abs" class="section level4 unnumbered hasAnchor">
+<h4>Fungsi <code>ABS()</code><a href="perhitungan-statistik-dasar.html#fungsi-abs" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Fungsi <code>ABS()</code> adalah sebagai untuk menampilkan nilai absolut dari suatu bilangan bulat. Sebelum memulai menggunakan fungsi ABS(), perlu untuk membuat objek koneksi dan kursor eksekusinya terlebih dahulu.</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="perhitungan-statistik-dasar.html#cb21-1" tabindex="-1"></a><span class="co"># import module </span></span>
 <span id="cb21-2"><a href="perhitungan-statistik-dasar.html#cb21-2" tabindex="-1"></a><span class="im">import</span> mysql.connector</span>
 <span id="cb21-3"><a href="perhitungan-statistik-dasar.html#cb21-3" tabindex="-1"></a></span>
@@ -352,11 +357,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb23-10"><a href="perhitungan-statistik-dasar.html#cb23-10" tabindex="-1"></a><span class="cf">for</span> data <span class="kw">in</span> cursor1:</span>
 <span id="cb23-11"><a href="perhitungan-statistik-dasar.html#cb23-11" tabindex="-1"></a>  <span class="bu">print</span>(data) </span></code></pre></div>
 </div>
+</div>
 <div id="perhitungan-agregat" class="section level3 hasAnchor" number="3.1.2">
 <h3><span class="header-section-number">3.1.2</span> Perhitungan Agregat<a href="perhitungan-statistik-dasar.html#perhitungan-agregat" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Berikut ini adalah beberapa contoh dan deskripsi Fungsi Agregat yang terdapat dalam SQL:</p>
-<p><img align="middle" src="images/bab2/fungsi_agregat.png"  width = 100% /></p>
-<p><strong>Syntax fungsi <code>COUNT(*)</code></strong> mengembalikan jumlah baris yang dikembalikan oleh pernyataan SELECT, termasuk NULL dan duplikat, sedangkan COUNT(column) mengembalikan jumlah baris yang dikembalikan oleh klausa SELECT.</p>
+<p><img align="middle" src="images/bab3/fungsi_agregat.png"  width = 100% /></p>
+<div id="fungsi-count" class="section level4 unnumbered hasAnchor">
+<h4>Fungsi <code>COUNT(*)</code><a href="perhitungan-statistik-dasar.html#fungsi-count" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Fungsi <code>COUNT(*)</code> mengembalikan jumlah baris yang dikembalikan oleh pernyataan SELECT, termasuk NULL dan duplikat, sedangkan COUNT(column) mengembalikan jumlah baris yang dikembalikan oleh klausa SELECT.</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="perhitungan-statistik-dasar.html#cb24-1" tabindex="-1"></a><span class="co"># Perintah SQL </span></span>
 <span id="cb24-2"><a href="perhitungan-statistik-dasar.html#cb24-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;SELECT COUNT(product_category) </span><span class="ch">\</span></span>
 <span id="cb24-3"><a href="perhitungan-statistik-dasar.html#cb24-3" tabindex="-1"></a><span class="st">       FROM inventory_items </span><span class="ch">\</span></span>
@@ -368,14 +376,66 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb24-9"><a href="perhitungan-statistik-dasar.html#cb24-9" tabindex="-1"></a><span class="co"># menampilkan daftar tabel</span></span>
 <span id="cb24-10"><a href="perhitungan-statistik-dasar.html#cb24-10" tabindex="-1"></a><span class="cf">for</span> data <span class="kw">in</span> cursor1:</span>
 <span id="cb24-11"><a href="perhitungan-statistik-dasar.html#cb24-11" tabindex="-1"></a>  <span class="bu">print</span>(data) </span></code></pre></div>
-<p>**Tugas Kelompok*</p>
-<ol style="list-style-type: decimal">
+<p><strong>Tugas Mandiri</strong></p>
+<ul>
 <li>Apakah hasil Kueri diatas duah benar? Perhatikan Strukrur tabel <code>Cost</code>!</li>
 <li>Cobalah untuk melakukan penjumlahan total pada <code>product_category</code>, dimana <code>Cost</code>&lt;5. Paparkan temuan anda!</li>
-<li></li>
-</ol>
-
+</ul>
 </div>
+<div id="fungsi-countd" class="section level4 unnumbered hasAnchor">
+<h4>Fungsi <code>COUNTD(*)</code><a href="perhitungan-statistik-dasar.html#fungsi-countd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Fungsi <code>COUNTD()</code> adalah fungsi yang digunakan untuk menghitung jumlah baris secara bersusun dengan hanya berfungsi pada karakter yang berbeda. Misal jika terdapat tabel dengan baris 1,2,3,4,4,5,6,6,7 bersusun, maka yang terhitung jumlah barisnya hanya ada 7, karena hanya ada 7 buah karakter yang unik. Syntax fungsi COUNTD() secara umum adalah sebagai berikut :</p>
+<p><strong>Tugas Mandiri:</strong></p>
+<ul>
+<li>Pada jenis data apakah kita dapat menggunaka fungsi SUM()?</li>
+<li>Jika dalam fungsi SUM() menggunakan opsi DISTINCT, apakah yang tejadi?</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="perhitungan-group-by" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Perhitungan <code>GROUP BY</code><a href="perhitungan-statistik-dasar.html#perhitungan-group-by" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Jika ingin memunculkan rata-rata dari <code>cost</code> untuk setiap <code>product_department</code>?</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="perhitungan-statistik-dasar.html#cb25-1" tabindex="-1"></a><span class="co"># Perintah SQL </span></span>
+<span id="cb25-2"><a href="perhitungan-statistik-dasar.html#cb25-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;SELECT product_department, </span><span class="ch">\</span></span>
+<span id="cb25-3"><a href="perhitungan-statistik-dasar.html#cb25-3" tabindex="-1"></a><span class="st">          AVG(cost) </span><span class="ch">\</span></span>
+<span id="cb25-4"><a href="perhitungan-statistik-dasar.html#cb25-4" tabindex="-1"></a><span class="st">        FROM inventory_items </span><span class="ch">\</span></span>
+<span id="cb25-5"><a href="perhitungan-statistik-dasar.html#cb25-5" tabindex="-1"></a><span class="st">        GROUP BY product_category;&quot;</span></span>
+<span id="cb25-6"><a href="perhitungan-statistik-dasar.html#cb25-6" tabindex="-1"></a>       </span>
+<span id="cb25-7"><a href="perhitungan-statistik-dasar.html#cb25-7" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb25-8"><a href="perhitungan-statistik-dasar.html#cb25-8" tabindex="-1"></a>cursor1.execute(sql)</span>
+<span id="cb25-9"><a href="perhitungan-statistik-dasar.html#cb25-9" tabindex="-1"></a></span>
+<span id="cb25-10"><a href="perhitungan-statistik-dasar.html#cb25-10" tabindex="-1"></a><span class="co"># menampilkan daftar tabel</span></span>
+<span id="cb25-11"><a href="perhitungan-statistik-dasar.html#cb25-11" tabindex="-1"></a><span class="cf">for</span> data <span class="kw">in</span> cursor1:</span>
+<span id="cb25-12"><a href="perhitungan-statistik-dasar.html#cb25-12" tabindex="-1"></a>  <span class="bu">print</span>(data) </span></code></pre></div>
+<p><strong>Notes: Perhatikan hasilnya</strong></p>
+<p><code>Group By</code> dapat digunakan untuk mengelompokkan data berdasarkan nilai dari barisnya. Lebih dari sekedar mengelompokkan data, Group By biasanya juga disandingkan dengan Fungsi Aggregate. Fungsi-fungsi Aggregate ini merupakan fungsi yang sudah dipelajari sebelumnya, seperti: <code>SUM()</code>, <code>AVG()</code>, <code>COUNT()</code> dan lain sebagainya.</p>
+<p><strong>Tugas Kelompok</strong></p>
+<ul>
+<li>Tampilkan jumlah <code>brand</code> yang ada pada pada tabel <code>products</code> dan urutkan dari besar ke kecil!</li>
+</ul>
+</div>
+<div id="perhitungan-having" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Perhitungan <code>HAVING</code><a href="perhitungan-statistik-dasar.html#perhitungan-having" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Jika WHERE digunakan di conditional statement yang diaplikasikan pada kolom, maka HAVING digunakan untuk conditional statement di level group. HAVING dapat digunakan untuk memutuskan grup mana yang akan dipilih atau difilter pada hasil akhir. HAVING dapat digunakan dengan clause <code>SUM(), AVG(), COUNT()</code> dan fungsi agregat yang lain, tetapi tidak untuk WHERE.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="perhitungan-statistik-dasar.html#cb26-1" tabindex="-1"></a><span class="co"># Perintah SQL </span></span>
+<span id="cb26-2"><a href="perhitungan-statistik-dasar.html#cb26-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;SELECT brand, COUNT(brand) AS Jumlah_brand</span><span class="ch">\</span></span>
+<span id="cb26-3"><a href="perhitungan-statistik-dasar.html#cb26-3" tabindex="-1"></a><span class="st">        FROM products </span><span class="ch">\</span></span>
+<span id="cb26-4"><a href="perhitungan-statistik-dasar.html#cb26-4" tabindex="-1"></a><span class="st">        GROUP BY brand </span><span class="ch">\</span></span>
+<span id="cb26-5"><a href="perhitungan-statistik-dasar.html#cb26-5" tabindex="-1"></a><span class="st">        HAVING (brand) = 2 &quot;</span></span>
+<span id="cb26-6"><a href="perhitungan-statistik-dasar.html#cb26-6" tabindex="-1"></a>       </span>
+<span id="cb26-7"><a href="perhitungan-statistik-dasar.html#cb26-7" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb26-8"><a href="perhitungan-statistik-dasar.html#cb26-8" tabindex="-1"></a>cursor1.execute(sql)</span>
+<span id="cb26-9"><a href="perhitungan-statistik-dasar.html#cb26-9" tabindex="-1"></a></span>
+<span id="cb26-10"><a href="perhitungan-statistik-dasar.html#cb26-10" tabindex="-1"></a><span class="co"># menampilkan daftar tabel</span></span>
+<span id="cb26-11"><a href="perhitungan-statistik-dasar.html#cb26-11" tabindex="-1"></a><span class="cf">for</span> data <span class="kw">in</span> cursor1:</span>
+<span id="cb26-12"><a href="perhitungan-statistik-dasar.html#cb26-12" tabindex="-1"></a>  <span class="bu">print</span>(data) </span></code></pre></div>
+</div>
+<div id="perhitungan-case-when" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Perhitungan <code>CASE WHEN</code><a href="perhitungan-statistik-dasar.html#perhitungan-case-when" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>CASE digunakan layaknya seperti IF-ELSE pada beberapa bahasa pemrograman yang lain. Berikut ini adalah gambaran bagaimana CASE bekerja</p>
+<p><img align="middle" src="images/bab3/case.png"  width = 100% /></p>
+
 </div>
 </div>
             </section>

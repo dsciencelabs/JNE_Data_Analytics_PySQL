@@ -39,7 +39,7 @@ pd.read_sql(sql,db_enco)
 
 Berikut ini adalah beberapa contoh dan deskripsi Fungsi Skalar yang terdapat dalam SQL:
 
-<img align="middle" src="images/bab2/fungsi_skalar.png"  width = 100% />
+<img align="middle" src="images/bab3/fungsi_skalar.png"  width = 100% />
 
 #### Fungsi `ABS()` {-}
 
@@ -96,7 +96,7 @@ for data in cursor1:
 
 Berikut ini adalah beberapa contoh dan deskripsi Fungsi Agregat yang terdapat dalam SQL:
 
-<img align="middle" src="images/bab2/fungsi_agregat.png"  width = 100% />
+<img align="middle" src="images/bab3/fungsi_agregat.png"  width = 100% />
 
 #### Fungsi `COUNT(*)` {-}
 
@@ -128,13 +128,67 @@ for data in cursor1:
 Fungsi ``COUNTD()`` adalah fungsi yang digunakan untuk menghitung jumlah baris secara bersusun dengan hanya berfungsi pada karakter yang berbeda. Misal jika terdapat tabel dengan baris 1,2,3,4,4,5,6,6,7 bersusun, maka yang terhitung jumlah barisnya hanya ada 7, karena hanya ada 7 buah karakter yang unik. Syntax fungsi COUNTD() secara umum adalah sebagai berikut :
 
 
-
-**Tugas Mandiri** 
+**Tugas Mandiri:** 
 
 * Pada jenis data apakah kita dapat menggunaka fungsi SUM()?
 * Jika dalam fungsi SUM() menggunakan opsi DISTINCT, apakah yang tejadi?
 
 
+## Perhitungan `GROUP BY`
 
+Jika ingin memunculkan rata-rata dari `cost` untuk setiap `product_department`?
+
+
+```{python, eval=F}
+# Perintah SQL 
+sql = "SELECT product_department, \
+	      AVG(cost) \
+      	FROM inventory_items \
+        GROUP BY product_category;"
+       
+# Eksekusi perintah  SQL
+cursor1.execute(sql)
+
+# menampilkan daftar tabel
+for data in cursor1:
+  print(data) 
+```
+
+**Notes: Perhatikan hasilnya**
+
+`Group By` dapat digunakan untuk mengelompokkan data berdasarkan nilai dari barisnya. Lebih dari sekedar mengelompokkan data, Group By biasanya juga disandingkan dengan Fungsi Aggregate. Fungsi-fungsi Aggregate ini merupakan fungsi yang sudah dipelajari sebelumnya, seperti: `SUM()`, `AVG()`, `COUNT()` dan lain sebagainya.
+
+
+**Tugas Kelompok**
+
+* Tampilkan jumlah `brand` yang ada pada pada tabel `products` dan urutkan dari besar ke kecil!
+
+
+## Perhitungan `HAVING`
+
+Jika WHERE digunakan di conditional statement yang diaplikasikan pada kolom, maka HAVING digunakan untuk conditional statement di level group. HAVING dapat digunakan untuk memutuskan grup mana yang akan dipilih atau difilter pada hasil akhir. HAVING dapat digunakan dengan clause `SUM(), AVG(), COUNT()` dan fungsi agregat yang lain, tetapi tidak untuk WHERE.
+
+
+```{python, eval=F}
+# Perintah SQL 
+sql = "SELECT brand, COUNT(brand) AS Jumlah_brand\
+      	FROM products \
+        GROUP BY brand \
+        HAVING (brand) = 2 "
+       
+# Eksekusi perintah  SQL
+cursor1.execute(sql)
+
+# menampilkan daftar tabel
+for data in cursor1:
+  print(data) 
+```
+
+## Perhitungan `CASE WHEN`
+
+CASE digunakan layaknya seperti IF-ELSE pada beberapa bahasa pemrograman yang lain. Berikut ini adalah gambaran bagaimana CASE bekerja 
+
+
+<img align="middle" src="images/bab3/case.png"  width = 100% />
 
 

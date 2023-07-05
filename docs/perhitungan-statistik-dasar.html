@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="eksplorasi-data.html"/>
-<link rel="next" href="join-subkueri-tabel.html"/>
+<link rel="next" href="join-tabel-subkueri.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -256,9 +256,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1.2" data-path="perhitungan-statistik-dasar.html"><a href="perhitungan-statistik-dasar.html#perhitungan-agregat"><i class="fa fa-check"></i><b>3.1.2</b> Perhitungan Agregat</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="join-subkueri-tabel.html"><a href="join-subkueri-tabel.html"><i class="fa fa-check"></i><b>4</b> Join &amp; Subkueri Tabel</a>
+<li class="chapter" data-level="4" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html"><i class="fa fa-check"></i><b>4</b> Join Tabel &amp; Subkueri</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="join-subkueri-tabel.html"><a href="join-subkueri-tabel.html#pengaturan-struktur-tabel"><i class="fa fa-check"></i><b>4.1</b> Pengaturan Struktur Tabel</a></li>
+<li class="chapter" data-level="4.1" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#pengaturan-struktur-tabel"><i class="fa fa-check"></i><b>4.1</b> Pengaturan Struktur Tabel</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="w1h-visualisasi.html"><a href="w1h-visualisasi.html"><i class="fa fa-check"></i><b>5</b> 5W1H &amp; Visualisasi</a></li>
 <li class="chapter" data-level="6" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html"><i class="fa fa-check"></i><b>6</b> Persentasi Tugas Akhir</a></li>
@@ -356,7 +356,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">3.1.2</span> Perhitungan Agregat<a href="perhitungan-statistik-dasar.html#perhitungan-agregat" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Berikut ini adalah beberapa contoh dan deskripsi Fungsi Agregat yang terdapat dalam SQL:</p>
 <p><img align="middle" src="images/bab2/fungsi_agregat.png"  width = 100% /></p>
-<p>**Fungsi COUNT(*)** mengembalikan jumlah baris yang dikembalikan oleh pernyataan SELECT, termasuk NULL dan duplikat, sedangkan COUNT(column) mengembalikan jumlah baris yang dikembalikan oleh klausa SELECT.</p>
+<p><strong>Syntax fungsi <code>COUNT(*)</code></strong> mengembalikan jumlah baris yang dikembalikan oleh pernyataan SELECT, termasuk NULL dan duplikat, sedangkan COUNT(column) mengembalikan jumlah baris yang dikembalikan oleh klausa SELECT.</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="perhitungan-statistik-dasar.html#cb24-1" tabindex="-1"></a><span class="co"># Perintah SQL </span></span>
 <span id="cb24-2"><a href="perhitungan-statistik-dasar.html#cb24-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;SELECT COUNT(product_category) </span><span class="ch">\</span></span>
 <span id="cb24-3"><a href="perhitungan-statistik-dasar.html#cb24-3" tabindex="-1"></a><span class="st">       FROM inventory_items </span><span class="ch">\</span></span>
@@ -368,6 +368,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb24-9"><a href="perhitungan-statistik-dasar.html#cb24-9" tabindex="-1"></a><span class="co"># menampilkan daftar tabel</span></span>
 <span id="cb24-10"><a href="perhitungan-statistik-dasar.html#cb24-10" tabindex="-1"></a><span class="cf">for</span> data <span class="kw">in</span> cursor1:</span>
 <span id="cb24-11"><a href="perhitungan-statistik-dasar.html#cb24-11" tabindex="-1"></a>  <span class="bu">print</span>(data) </span></code></pre></div>
+<p>**Tugas Kelompok*</p>
+<ol style="list-style-type: decimal">
+<li>Apakah hasil Kueri diatas duah benar? Perhatikan Strukrur tabel <code>Cost</code>!</li>
+<li>Cobalah untuk melakukan penjumlahan total pada <code>product_category</code>, dimana <code>Cost</code>&lt;5. Paparkan temuan anda!</li>
+<li></li>
+</ol>
 
 </div>
 </div>
@@ -378,7 +384,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="eksplorasi-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="join-subkueri-tabel.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="join-tabel-subkueri.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

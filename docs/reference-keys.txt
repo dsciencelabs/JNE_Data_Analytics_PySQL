@@ -71,7 +71,7 @@ perhitungan-statistik-dasar
 fungsi-skalar-vs-agregat
 perhitungan-skalar
 perhitungan-agregat
-join-subkueri-tabel
+join-tabel-subkueri
 pengaturan-struktur-tabel
 w1h-visualisasi
 persentasi-tugas-akhir

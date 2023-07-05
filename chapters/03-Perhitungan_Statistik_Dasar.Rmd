@@ -96,7 +96,7 @@ Berikut ini adalah beberapa contoh dan deskripsi Fungsi Agregat yang terdapat da
 
 <img align="middle" src="images/bab2/fungsi_agregat.png"  width = 100% />
 
-**Fungsi COUNT(*)** mengembalikan jumlah baris yang dikembalikan oleh pernyataan SELECT, termasuk NULL dan duplikat, sedangkan COUNT(column) mengembalikan jumlah baris yang dikembalikan oleh klausa SELECT.
+**Syntax fungsi `COUNT(*)`** mengembalikan jumlah baris yang dikembalikan oleh pernyataan SELECT, termasuk NULL dan duplikat, sedangkan COUNT(column) mengembalikan jumlah baris yang dikembalikan oleh klausa SELECT.
 
 
 ```{python, eval=F}
@@ -113,7 +113,11 @@ for data in cursor1:
   print(data) 
 ```
 
+**Tugas Kelompok* 
 
+1. Apakah hasil Kueri diatas duah benar? Perhatikan Strukrur tabel `Cost`!
+2. Cobalah untuk melakukan penjumlahan total pada `product_category`, dimana `Cost`<5. Paparkan temuan anda!
+3. 
 
 
 

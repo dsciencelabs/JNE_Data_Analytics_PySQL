@@ -17,7 +17,7 @@ library(Rcpp)
 use_condaenv("base", required = TRUE)
 ```
 
-```{python}
+```{python, eval=F}
 from sqlalchemy import create_engine
 import pymysql
 import pandas as pd

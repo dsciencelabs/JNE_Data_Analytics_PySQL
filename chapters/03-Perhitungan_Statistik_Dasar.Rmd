@@ -276,6 +276,8 @@ for data in cursor1:
     print(data)
 ```
 
+
+
 ## Tugas Kelompok 
 
 
@@ -284,7 +286,6 @@ for data in cursor1:
 tanpa duplikat dengan memfilter berdasarkan kategori produk (bebas pilih)
 3. Pada tabel products, urutkan dari yang terbesar rata-rata harga retail berdasarkan jenis brand
 4. Kelompokkan inventory_items berdasarkan kategori produk lalu, filter Total Biaya lebih dari 150
-5. Kelompokkan inventory_items berdasarkan nama dan department produk dengan kasus total biaya untuk department 
-# laki-laki kurang dari 200 dan department perempuan lebih dari 200. Lalu urutkan dari yang terbesar
+5. Kelompokkan inventory_items berdasarkan nama dan department produk dengan kasus total biaya untuk department laki-laki kurang dari 200 dan department perempuan lebih dari 200. Lalu urutkan dari yang terbesar
 
 

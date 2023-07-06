@@ -78,6 +78,7 @@ buat-struktur-tabel
 insert-data
 lihat-data-tabel
 perhitungan-case
+tugas-kelompok-1
 join-tabel-subkueri
 pengaturan-struktur-tabel
 w1h-visualisasi

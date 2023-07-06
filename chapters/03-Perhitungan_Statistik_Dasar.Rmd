@@ -220,13 +220,14 @@ for data in cursor1:
 
 # Perintah SQL 
 sql = "INSERT INTO jadwal values \
-('olahraga','ya','tidak','ya','tidak','ya','tidak''), \
+('olahraga','ya','tidak','ya','tidak','ya','tidak'), \
 ('diskusi','tidak','ya','tidak','tidak','tidak','ya'), \
 ('rapat','ya','tidak','tidak','tidak','tidak','tidak'), \
 ('ulangan','tidak','ya','ya','ya','tidak','tidak')"
        
 # Eksekusi perintah  SQL
 cursor1.execute(sql)
+db1.commit()
 
 # menampilkan daftar tabel
 for data in cursor1:
@@ -252,27 +253,37 @@ for data in cursor1:
 
 
 ```{python, eval=F}
-# Perintah SQL 
-sql = "SELECT jadwal.* \
-  , case when senin='ya' then 1 else 0 end \
-  + case when selasa='ya' then 1 else 0 end \
-  + case when rabu='ya' then 1 else 0 end \
-  + case when kamis='ya' then 1 else 0 end \
-  + case when jumat='ya' then 1 else 0 end \
-  + case when sabtu='ya' then 1 else 0 end end as digunakan \
-  , case when senin='tidak' then 1 else 0 end \
-  + case when selasa='tidak' then 1 else 0 end \
-  + case when rabu='tidak' then 1 else 0 end \
-  + case when kamis='tidak' then 1 else 0 end \
-  + case when jumat='tidak' then 1 else 0 end \
-  + case when sabtu='tidak' then 1 else 0 end as tidak_digunakan \
+sql = "SELECT jadwal.*, \
+  CASE WHEN senin='ya' THEN 1 ELSE 0 END \
+  + CASE WHEN selasa='ya' THEN 1 ELSE 0 END \
+  + CASE WHEN rabu='ya' THEN 1 ELSE 0 END \
+  + CASE WHEN kamis='ya' THEN 1 ELSE 0 END \
+  + CASE WHEN jumat='ya' THEN 1 ELSE 0 END \
+  + CASE WHEN sabtu='ya' THEN 1 ELSE 0 END AS digunakan, \
+  CASE WHEN senin='tidak' THEN 1 ELSE 0 END \
+  + CASE WHEN selasa='tidak' THEN 1 ELSE 0 END \
+  + CASE WHEN rabu='tidak' THEN 1 ELSE 0 END \
+  + CASE WHEN kamis='tidak' THEN 1 ELSE 0 END \
+  + CASE WHEN jumat='tidak' THEN 1 ELSE 0 END \
+  + CASE WHEN sabtu='tidak' THEN 1 ELSE 0 END AS tidak_digunakan \
   FROM jadwal;"
        
-# Eksekusi perintah  SQL
+# Eksekusi perintah SQL
 cursor1.execute(sql)
 
-# menampilkan daftar tabel
+# Menampilkan daftar tabel
 for data in cursor1:
-  print(data) 
+    print(data)
 ```
+
+## Tugas Kelompok 
+
+
+1. Gunakan tabel order_items untuk mengetahui total dari beberapa status pengiriman
+2. Pada tabel inventory_items. Tampilkan informasi kategori, nama produk dan biaya (dengan kondisi pembulatan dua angka dibelakang koma) 
+tanpa duplikat dengan memfilter berdasarkan kategori produk (bebas pilih)
+3. Pada tabel products, urutkan dari yang terbesar rata-rata harga retail berdasarkan jenis brand
+4. Kelompokkan inventory_items berdasarkan kategori produk lalu, filter Total Biaya lebih dari 150
+5. Kelompokkan inventory_items berdasarkan kategori dan department produk dengan kasus total biaya untuk department laki-laki 
+lebih dari 150 dan department perempuan lebih dari 180
 

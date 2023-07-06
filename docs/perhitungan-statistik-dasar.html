@@ -264,6 +264,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4.3" data-path="perhitungan-statistik-dasar.html"><a href="perhitungan-statistik-dasar.html#lihat-data-tabel"><i class="fa fa-check"></i><b>3.4.3</b> Lihat Data Tabel</a></li>
 <li class="chapter" data-level="3.4.4" data-path="perhitungan-statistik-dasar.html"><a href="perhitungan-statistik-dasar.html#perhitungan-case"><i class="fa fa-check"></i><b>3.4.4</b> Perhitungan <code>CASE</code></a></li>
 </ul></li>
+<li class="chapter" data-level="3.5" data-path="perhitungan-statistik-dasar.html"><a href="perhitungan-statistik-dasar.html#tugas-kelompok-1"><i class="fa fa-check"></i><b>3.5</b> Tugas Kelompok</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html"><i class="fa fa-check"></i><b>4</b> Join Tabel &amp; Subkueri</a>
 <ul>
@@ -464,17 +465,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">3.4.2</span> Insert Data<a href="perhitungan-statistik-dasar.html#insert-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="perhitungan-statistik-dasar.html#cb28-1" tabindex="-1"></a><span class="co"># Perintah SQL </span></span>
 <span id="cb28-2"><a href="perhitungan-statistik-dasar.html#cb28-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;INSERT INTO jadwal values </span><span class="ch">\</span></span>
-<span id="cb28-3"><a href="perhitungan-statistik-dasar.html#cb28-3" tabindex="-1"></a><span class="st">(&#39;olahraga&#39;,&#39;ya&#39;,&#39;tidak&#39;,&#39;ya&#39;,&#39;tidak&#39;,&#39;ya&#39;,&#39;tidak&#39;&#39;), </span><span class="ch">\</span></span>
+<span id="cb28-3"><a href="perhitungan-statistik-dasar.html#cb28-3" tabindex="-1"></a><span class="st">(&#39;olahraga&#39;,&#39;ya&#39;,&#39;tidak&#39;,&#39;ya&#39;,&#39;tidak&#39;,&#39;ya&#39;,&#39;tidak&#39;), </span><span class="ch">\</span></span>
 <span id="cb28-4"><a href="perhitungan-statistik-dasar.html#cb28-4" tabindex="-1"></a><span class="st">(&#39;diskusi&#39;,&#39;tidak&#39;,&#39;ya&#39;,&#39;tidak&#39;,&#39;tidak&#39;,&#39;tidak&#39;,&#39;ya&#39;), </span><span class="ch">\</span></span>
 <span id="cb28-5"><a href="perhitungan-statistik-dasar.html#cb28-5" tabindex="-1"></a><span class="st">(&#39;rapat&#39;,&#39;ya&#39;,&#39;tidak&#39;,&#39;tidak&#39;,&#39;tidak&#39;,&#39;tidak&#39;,&#39;tidak&#39;), </span><span class="ch">\</span></span>
 <span id="cb28-6"><a href="perhitungan-statistik-dasar.html#cb28-6" tabindex="-1"></a><span class="st">(&#39;ulangan&#39;,&#39;tidak&#39;,&#39;ya&#39;,&#39;ya&#39;,&#39;ya&#39;,&#39;tidak&#39;,&#39;tidak&#39;)&quot;</span></span>
 <span id="cb28-7"><a href="perhitungan-statistik-dasar.html#cb28-7" tabindex="-1"></a>       </span>
 <span id="cb28-8"><a href="perhitungan-statistik-dasar.html#cb28-8" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
 <span id="cb28-9"><a href="perhitungan-statistik-dasar.html#cb28-9" tabindex="-1"></a>cursor1.execute(sql)</span>
-<span id="cb28-10"><a href="perhitungan-statistik-dasar.html#cb28-10" tabindex="-1"></a></span>
-<span id="cb28-11"><a href="perhitungan-statistik-dasar.html#cb28-11" tabindex="-1"></a><span class="co"># menampilkan daftar tabel</span></span>
-<span id="cb28-12"><a href="perhitungan-statistik-dasar.html#cb28-12" tabindex="-1"></a><span class="cf">for</span> data <span class="kw">in</span> cursor1:</span>
-<span id="cb28-13"><a href="perhitungan-statistik-dasar.html#cb28-13" tabindex="-1"></a>  <span class="bu">print</span>(data) </span></code></pre></div>
+<span id="cb28-10"><a href="perhitungan-statistik-dasar.html#cb28-10" tabindex="-1"></a>db1.commit()</span>
+<span id="cb28-11"><a href="perhitungan-statistik-dasar.html#cb28-11" tabindex="-1"></a></span>
+<span id="cb28-12"><a href="perhitungan-statistik-dasar.html#cb28-12" tabindex="-1"></a><span class="co"># menampilkan daftar tabel</span></span>
+<span id="cb28-13"><a href="perhitungan-statistik-dasar.html#cb28-13" tabindex="-1"></a><span class="cf">for</span> data <span class="kw">in</span> cursor1:</span>
+<span id="cb28-14"><a href="perhitungan-statistik-dasar.html#cb28-14" tabindex="-1"></a>  <span class="bu">print</span>(data) </span></code></pre></div>
 </div>
 <div id="lihat-data-tabel" class="section level3 hasAnchor" number="3.4.3">
 <h3><span class="header-section-number">3.4.3</span> Lihat Data Tabel<a href="perhitungan-statistik-dasar.html#lihat-data-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -490,30 +492,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="perhitungan-case" class="section level3 hasAnchor" number="3.4.4">
 <h3><span class="header-section-number">3.4.4</span> Perhitungan <code>CASE</code><a href="perhitungan-statistik-dasar.html#perhitungan-case" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="perhitungan-statistik-dasar.html#cb30-1" tabindex="-1"></a><span class="co"># Perintah SQL </span></span>
-<span id="cb30-2"><a href="perhitungan-statistik-dasar.html#cb30-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;SELECT jadwal.* </span><span class="ch">\</span></span>
-<span id="cb30-3"><a href="perhitungan-statistik-dasar.html#cb30-3" tabindex="-1"></a><span class="st">  , case when senin=&#39;ya&#39; then 1 else 0 end </span><span class="ch">\</span></span>
-<span id="cb30-4"><a href="perhitungan-statistik-dasar.html#cb30-4" tabindex="-1"></a><span class="st">  + case when selasa=&#39;ya&#39; then 1 else 0 end </span><span class="ch">\</span></span>
-<span id="cb30-5"><a href="perhitungan-statistik-dasar.html#cb30-5" tabindex="-1"></a><span class="st">  + case when rabu=&#39;ya&#39; then 1 else 0 end </span><span class="ch">\</span></span>
-<span id="cb30-6"><a href="perhitungan-statistik-dasar.html#cb30-6" tabindex="-1"></a><span class="st">  + case when kamis=&#39;ya&#39; then 1 else 0 end </span><span class="ch">\</span></span>
-<span id="cb30-7"><a href="perhitungan-statistik-dasar.html#cb30-7" tabindex="-1"></a><span class="st">  + case when jumat=&#39;ya&#39; then 1 else 0 end </span><span class="ch">\</span></span>
-<span id="cb30-8"><a href="perhitungan-statistik-dasar.html#cb30-8" tabindex="-1"></a><span class="st">  + case when sabtu=&#39;ya&#39; then 1 else 0 end end as digunakan </span><span class="ch">\</span></span>
-<span id="cb30-9"><a href="perhitungan-statistik-dasar.html#cb30-9" tabindex="-1"></a><span class="st">  , case when senin=&#39;tidak&#39; then 1 else 0 end </span><span class="ch">\</span></span>
-<span id="cb30-10"><a href="perhitungan-statistik-dasar.html#cb30-10" tabindex="-1"></a><span class="st">  + case when selasa=&#39;tidak&#39; then 1 else 0 end </span><span class="ch">\</span></span>
-<span id="cb30-11"><a href="perhitungan-statistik-dasar.html#cb30-11" tabindex="-1"></a><span class="st">  + case when rabu=&#39;tidak&#39; then 1 else 0 end </span><span class="ch">\</span></span>
-<span id="cb30-12"><a href="perhitungan-statistik-dasar.html#cb30-12" tabindex="-1"></a><span class="st">  + case when kamis=&#39;tidak&#39; then 1 else 0 end </span><span class="ch">\</span></span>
-<span id="cb30-13"><a href="perhitungan-statistik-dasar.html#cb30-13" tabindex="-1"></a><span class="st">  + case when jumat=&#39;tidak&#39; then 1 else 0 end </span><span class="ch">\</span></span>
-<span id="cb30-14"><a href="perhitungan-statistik-dasar.html#cb30-14" tabindex="-1"></a><span class="st">  + case when sabtu=&#39;tidak&#39; then 1 else 0 end as tidak_digunakan </span><span class="ch">\</span></span>
-<span id="cb30-15"><a href="perhitungan-statistik-dasar.html#cb30-15" tabindex="-1"></a><span class="st">  FROM jadwal;&quot;</span></span>
-<span id="cb30-16"><a href="perhitungan-statistik-dasar.html#cb30-16" tabindex="-1"></a>       </span>
-<span id="cb30-17"><a href="perhitungan-statistik-dasar.html#cb30-17" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
-<span id="cb30-18"><a href="perhitungan-statistik-dasar.html#cb30-18" tabindex="-1"></a>cursor1.execute(sql)</span>
-<span id="cb30-19"><a href="perhitungan-statistik-dasar.html#cb30-19" tabindex="-1"></a></span>
-<span id="cb30-20"><a href="perhitungan-statistik-dasar.html#cb30-20" tabindex="-1"></a><span class="co"># menampilkan daftar tabel</span></span>
-<span id="cb30-21"><a href="perhitungan-statistik-dasar.html#cb30-21" tabindex="-1"></a><span class="cf">for</span> data <span class="kw">in</span> cursor1:</span>
-<span id="cb30-22"><a href="perhitungan-statistik-dasar.html#cb30-22" tabindex="-1"></a>  <span class="bu">print</span>(data) </span></code></pre></div>
-
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="perhitungan-statistik-dasar.html#cb30-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;SELECT jadwal.*, </span><span class="ch">\</span></span>
+<span id="cb30-2"><a href="perhitungan-statistik-dasar.html#cb30-2" tabindex="-1"></a><span class="st">  CASE WHEN senin=&#39;ya&#39; THEN 1 ELSE 0 END </span><span class="ch">\</span></span>
+<span id="cb30-3"><a href="perhitungan-statistik-dasar.html#cb30-3" tabindex="-1"></a><span class="st">  + CASE WHEN selasa=&#39;ya&#39; THEN 1 ELSE 0 END </span><span class="ch">\</span></span>
+<span id="cb30-4"><a href="perhitungan-statistik-dasar.html#cb30-4" tabindex="-1"></a><span class="st">  + CASE WHEN rabu=&#39;ya&#39; THEN 1 ELSE 0 END </span><span class="ch">\</span></span>
+<span id="cb30-5"><a href="perhitungan-statistik-dasar.html#cb30-5" tabindex="-1"></a><span class="st">  + CASE WHEN kamis=&#39;ya&#39; THEN 1 ELSE 0 END </span><span class="ch">\</span></span>
+<span id="cb30-6"><a href="perhitungan-statistik-dasar.html#cb30-6" tabindex="-1"></a><span class="st">  + CASE WHEN jumat=&#39;ya&#39; THEN 1 ELSE 0 END </span><span class="ch">\</span></span>
+<span id="cb30-7"><a href="perhitungan-statistik-dasar.html#cb30-7" tabindex="-1"></a><span class="st">  + CASE WHEN sabtu=&#39;ya&#39; THEN 1 ELSE 0 END AS digunakan, </span><span class="ch">\</span></span>
+<span id="cb30-8"><a href="perhitungan-statistik-dasar.html#cb30-8" tabindex="-1"></a><span class="st">  CASE WHEN senin=&#39;tidak&#39; THEN 1 ELSE 0 END </span><span class="ch">\</span></span>
+<span id="cb30-9"><a href="perhitungan-statistik-dasar.html#cb30-9" tabindex="-1"></a><span class="st">  + CASE WHEN selasa=&#39;tidak&#39; THEN 1 ELSE 0 END </span><span class="ch">\</span></span>
+<span id="cb30-10"><a href="perhitungan-statistik-dasar.html#cb30-10" tabindex="-1"></a><span class="st">  + CASE WHEN rabu=&#39;tidak&#39; THEN 1 ELSE 0 END </span><span class="ch">\</span></span>
+<span id="cb30-11"><a href="perhitungan-statistik-dasar.html#cb30-11" tabindex="-1"></a><span class="st">  + CASE WHEN kamis=&#39;tidak&#39; THEN 1 ELSE 0 END </span><span class="ch">\</span></span>
+<span id="cb30-12"><a href="perhitungan-statistik-dasar.html#cb30-12" tabindex="-1"></a><span class="st">  + CASE WHEN jumat=&#39;tidak&#39; THEN 1 ELSE 0 END </span><span class="ch">\</span></span>
+<span id="cb30-13"><a href="perhitungan-statistik-dasar.html#cb30-13" tabindex="-1"></a><span class="st">  + CASE WHEN sabtu=&#39;tidak&#39; THEN 1 ELSE 0 END AS tidak_digunakan </span><span class="ch">\</span></span>
+<span id="cb30-14"><a href="perhitungan-statistik-dasar.html#cb30-14" tabindex="-1"></a><span class="st">  FROM jadwal;&quot;</span></span>
+<span id="cb30-15"><a href="perhitungan-statistik-dasar.html#cb30-15" tabindex="-1"></a>       </span>
+<span id="cb30-16"><a href="perhitungan-statistik-dasar.html#cb30-16" tabindex="-1"></a><span class="co"># Eksekusi perintah SQL</span></span>
+<span id="cb30-17"><a href="perhitungan-statistik-dasar.html#cb30-17" tabindex="-1"></a>cursor1.execute(sql)</span>
+<span id="cb30-18"><a href="perhitungan-statistik-dasar.html#cb30-18" tabindex="-1"></a></span>
+<span id="cb30-19"><a href="perhitungan-statistik-dasar.html#cb30-19" tabindex="-1"></a><span class="co"># Menampilkan daftar tabel</span></span>
+<span id="cb30-20"><a href="perhitungan-statistik-dasar.html#cb30-20" tabindex="-1"></a><span class="cf">for</span> data <span class="kw">in</span> cursor1:</span>
+<span id="cb30-21"><a href="perhitungan-statistik-dasar.html#cb30-21" tabindex="-1"></a>    <span class="bu">print</span>(data)</span></code></pre></div>
 </div>
+</div>
+<div id="tugas-kelompok-1" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Tugas Kelompok<a href="perhitungan-statistik-dasar.html#tugas-kelompok-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Gunakan tabel order_items untuk mengetahui total dari beberapa status pengiriman</li>
+<li>Pada tabel inventory_items. Tampilkan informasi kategori, nama produk dan biaya (dengan kondisi pembulatan dua angka dibelakang koma)
+tanpa duplikat dengan memfilter berdasarkan kategori produk (bebas pilih)</li>
+<li>Pada tabel products, urutkan dari yang terbesar rata-rata harga retail berdasarkan jenis brand</li>
+<li>Kelompokkan inventory_items berdasarkan kategori produk lalu, filter Total Biaya lebih dari 150</li>
+<li>Kelompokkan inventory_items berdasarkan kategori dan department produk dengan kasus total biaya untuk department laki-laki
+lebih dari 150 dan department perempuan lebih dari 180</li>
+</ol>
+
 </div>
 </div>
             </section>

@@ -1,5 +1,12 @@
 # Perhitungan & Statistik Dasar
 
+```{r include=FALSE}
+library(reticulate)
+library(Rcpp)
+# conda_list()
+use_condaenv("py3113", required = TRUE)
+```
+
 Pada dasarnya SQL bukan saja hanya dapat dipergunakan untuk melakukan manajemen database. Tetapi, dapat juga melakukan perhitungan matematika dan statistika dasar yang pada akhirnya dapat disimpan pada database untuk keperluan analisa. Secara spesifik, pelatihan ini akan membahas beberapa diantaranya yakni mengenai penggunaan fungsi sklar dan fungsi agregat.
 
 ## Fungsi Skalar vs Agregat
@@ -10,12 +17,6 @@ Pada dasarnya SQL bukan saja hanya dapat dipergunakan untuk melakukan manajemen 
 
 Sebelum kita memulai melakukan beberapa perhitungan skalar pada data yang kita pilih dari database. Pertama-tama, mari kita lihat dulu isi data pada tabel berikut:
 
-```{r include=FALSE}
-library(reticulate)
-library(Rcpp)
-# conda_list()
-use_condaenv("base", required = TRUE)
-```
 
 ```{python, eval=F}
 from sqlalchemy import create_engine
@@ -31,7 +32,7 @@ engine = create_engine("mysql+pymysql://{user}:{pw}@localhost/{db}"
 db_enco = engine.connect()
 
 # Perintah SQL 
-sql = "inventory_items"
+sql = "SELECT * FROM inventory_items"
        
 # Eksekusi perintah  SQL dengan Python (panda)
 pd.read_sql(sql,db_enco)

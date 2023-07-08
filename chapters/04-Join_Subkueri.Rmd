@@ -7,13 +7,15 @@ library(Rcpp)
 use_condaenv("py3113", required = TRUE)
 ```
 
-## Review (Perhitungan & Statistika)
+## Pendahuluan
 
-Sebelum memasuki materi join table, ada baiknya kita tinjau ulang materi mengenai perhitungan dan statistika dasar yang telah dipelajari pada pertemuan minggu lalu. Berikut ini adalah soal latihan yang dapat menyegarkarkan ingatan anda dengan materi sebelumnya.
+Pada bagian pendahuluan ini kita akan membahas query untuk menampilkan data dari beberapa tabel MySQL. Karena sering kali mengambil data dari database yang disimpan di beberapa tabel untuk diolah sehingga menjadi satu keluaran. Kita menggunakan empat tabel, yaitu: tabel pelanggan, produk, transaksi, dan transaksi_detail. struktur dan hubungan keempat tabel tersebut tampak seperti pada gambar berikut:
 
-### Latihan 1
+<img align="middle" src="images/bab4/Hubungan-Antar-Tabel.png"  width = 100% />
 
-Berapa banyak pelanggan berbeda yang melakukan pemesanan?
+
+
+Pertama-tama kita buat koneksi Python ke MySQL, jangan lupa untuk klik start di XAMPP.
 
 ```{python, eval=F}
 from sqlalchemy import create_engine
@@ -28,15 +30,10 @@ engine = create_engine("mysql+pymysql://{user}:{pw}@localhost/{db}"
 
 # engine koneksi ke database
 db_enco = engine.connect()
-
-# 1. Gunakan tabel order_items untuk mengetahui total dari beberapa status pengiriman!
-
-# Perintah SQL 
-sql = "SELECT status, COUNT(status) As Total FROM order_items GROUP BY status"
-
-# Eksekusi perintah  SQL dengan Python (panda)
-pd.read_sql(sql,db_enco)
 ```
+
+
+
 
 ## Pengaturan Struktur Tabel
 

@@ -4,7 +4,7 @@
 library(reticulate)
 library(Rcpp)
 # conda_list()
-use_condaenv("base", required = TRUE)
+use_condaenv("py3113", required = TRUE)
 ```
 
 ## Review (Perhitungan & Statistika)
@@ -15,9 +15,28 @@ Sebelum memasuki materi join table, ada baiknya kita tinjau ulang materi mengena
 
 Berapa banyak pelanggan berbeda yang melakukan pemesanan?
 
+```{python, eval=F}
+from sqlalchemy import create_engine
+import pymysql
+import pandas as pd
 
+# membuat engine
+engine = create_engine("mysql+pymysql://{user}:{pw}@localhost/{db}"
+                       .format(user="bakti",
+                               pw="123",
+                               db="jne2"))
 
+# engine koneksi ke database
+db_enco = engine.connect()
 
+# 1. Gunakan tabel order_items untuk mengetahui total dari beberapa status pengiriman!
+
+# Perintah SQL 
+sql = "SELECT status, COUNT(status) As Total FROM order_items GROUP BY status"
+
+# Eksekusi perintah  SQL dengan Python (panda)
+pd.read_sql(sql,db_enco)
+```
 
 ## Pengaturan Struktur Tabel
 
@@ -35,5 +54,7 @@ Pengaturan Struktur Tabel SQL digunakan untuk menentukan aturan struktur data da
 
 
 * https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b
+* https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/
+* https://jagowebdev.com/wp-content/demo/files/join_pada_mysql.sql.txt
 * https://blog.devgenius.io/thelook-ecommerce-data-analysis-using-sql-2cf420de9095
 

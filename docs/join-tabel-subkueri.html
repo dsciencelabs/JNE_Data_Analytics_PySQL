@@ -307,6 +307,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="latihan-1" class="section level3 hasAnchor" number="4.1.1">
 <h3><span class="header-section-number">4.1.1</span> Latihan 1<a href="join-tabel-subkueri.html#latihan-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Berapa banyak pelanggan berbeda yang melakukan pemesanan?</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="join-tabel-subkueri.html#cb31-1" tabindex="-1"></a><span class="im">from</span> sqlalchemy <span class="im">import</span> create_engine</span>
+<span id="cb31-2"><a href="join-tabel-subkueri.html#cb31-2" tabindex="-1"></a><span class="im">import</span> pymysql</span>
+<span id="cb31-3"><a href="join-tabel-subkueri.html#cb31-3" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb31-4"><a href="join-tabel-subkueri.html#cb31-4" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="join-tabel-subkueri.html#cb31-5" tabindex="-1"></a><span class="co"># membuat engine</span></span>
+<span id="cb31-6"><a href="join-tabel-subkueri.html#cb31-6" tabindex="-1"></a>engine <span class="op">=</span> create_engine(<span class="st">&quot;mysql+pymysql://</span><span class="sc">{user}</span><span class="st">:</span><span class="sc">{pw}</span><span class="st">@localhost/</span><span class="sc">{db}</span><span class="st">&quot;</span></span>
+<span id="cb31-7"><a href="join-tabel-subkueri.html#cb31-7" tabindex="-1"></a>                       .<span class="bu">format</span>(user<span class="op">=</span><span class="st">&quot;bakti&quot;</span>,</span>
+<span id="cb31-8"><a href="join-tabel-subkueri.html#cb31-8" tabindex="-1"></a>                               pw<span class="op">=</span><span class="st">&quot;123&quot;</span>,</span>
+<span id="cb31-9"><a href="join-tabel-subkueri.html#cb31-9" tabindex="-1"></a>                               db<span class="op">=</span><span class="st">&quot;jne2&quot;</span>))</span>
+<span id="cb31-10"><a href="join-tabel-subkueri.html#cb31-10" tabindex="-1"></a></span>
+<span id="cb31-11"><a href="join-tabel-subkueri.html#cb31-11" tabindex="-1"></a><span class="co"># engine koneksi ke database</span></span>
+<span id="cb31-12"><a href="join-tabel-subkueri.html#cb31-12" tabindex="-1"></a>db_enco <span class="op">=</span> engine.<span class="ex">connect</span>()</span>
+<span id="cb31-13"><a href="join-tabel-subkueri.html#cb31-13" tabindex="-1"></a></span>
+<span id="cb31-14"><a href="join-tabel-subkueri.html#cb31-14" tabindex="-1"></a><span class="co"># 1. Gunakan tabel order_items untuk mengetahui total dari beberapa status pengiriman!</span></span>
+<span id="cb31-15"><a href="join-tabel-subkueri.html#cb31-15" tabindex="-1"></a></span>
+<span id="cb31-16"><a href="join-tabel-subkueri.html#cb31-16" tabindex="-1"></a><span class="co"># Perintah SQL </span></span>
+<span id="cb31-17"><a href="join-tabel-subkueri.html#cb31-17" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&quot;SELECT status, COUNT(status) As Total FROM order_items GROUP BY status&quot;</span></span>
+<span id="cb31-18"><a href="join-tabel-subkueri.html#cb31-18" tabindex="-1"></a></span>
+<span id="cb31-19"><a href="join-tabel-subkueri.html#cb31-19" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL dengan Python (panda)</span></span>
+<span id="cb31-20"><a href="join-tabel-subkueri.html#cb31-20" tabindex="-1"></a>pd.read_sql(sql,db_enco)</span></code></pre></div>
 </div>
 </div>
 <div id="pengaturan-struktur-tabel" class="section level2 hasAnchor" number="4.2">
@@ -322,6 +342,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p><em>INDEX:</em> Digunakan untuk membuat dan mengambil data dari database dengan sangat cepat</p></li>
 <li><p><em>AUTO_INCREMENT:</em> memungkinkan inset data unik pada kolom tertentu yang dihasilkan secara otomatis saat data baru dimasukkan ke dalam tabel. Seringkali kolom ini adalah adalah juga <em>PRIMARY KEY</em> dan ingin dibuat secara otomatis setiap kali catatan baru dimasukkan.</p></li>
 <li><p><a href="https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b" class="uri">https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b</a></p></li>
+<li><p><a href="https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/" class="uri">https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/</a></p></li>
+<li><p><a href="https://jagowebdev.com/wp-content/demo/files/join_pada_mysql.sql.txt" class="uri">https://jagowebdev.com/wp-content/demo/files/join_pada_mysql.sql.txt</a></p></li>
 <li><p><a href="https://blog.devgenius.io/thelook-ecommerce-data-analysis-using-sql-2cf420de9095" class="uri">https://blog.devgenius.io/thelook-ecommerce-data-analysis-using-sql-2cf420de9095</a></p></li>
 </ul>
 

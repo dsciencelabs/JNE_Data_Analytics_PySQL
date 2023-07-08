@@ -78,8 +78,10 @@ buat-struktur-tabel
 insert-data
 lihat-data-tabel
 perhitungan-case
-tugas-kelompok-1
+tugas-kelompok-selesai-duluan-c-a-b
 join-tabel-subkueri
+review-perhitungan-statistika
+latihan-1
 pengaturan-struktur-tabel
 w1h-visualisasi
 persentasi-tugas-akhir

@@ -1,5 +1,24 @@
 # Join Tabel & Subkueri 
 
+```{r include=FALSE}
+library(reticulate)
+library(Rcpp)
+# conda_list()
+use_condaenv("base", required = TRUE)
+```
+
+## Review (Perhitungan & Statistika)
+
+Sebelum memasuki materi join table, ada baiknya kita tinjau ulang materi mengenai perhitungan dan statistika dasar yang telah dipelajari pada pertemuan minggu lalu. Berikut ini adalah soal latihan yang dapat menyegarkarkan ingatan anda dengan materi sebelumnya.
+
+### Latihan 1
+
+Berapa banyak pelanggan berbeda yang melakukan pemesanan?
+
+
+
+
+
 ## Pengaturan Struktur Tabel
 
 Pengaturan Struktur Tabel SQL digunakan untuk menentukan aturan struktur data dalam tabel. Batasan digunakan untuk membatasi jenis data yang dapat masuk ke dalam tabel, memastikan keakuratan dan keandalan data dalam tabel. Batasan dapat berupa tingkat kolom atau tingkat tabel. Batasan tingkat kolom berlaku untuk kolom, dan batasan tingkat tabel berlaku untuk keseluruhan tabel. Berikut Batasan yang biasanya digunakan dalam SQL:
@@ -12,3 +31,9 @@ Pengaturan Struktur Tabel SQL digunakan untuk menentukan aturan struktur data da
 * *DEFAULT:* Menetapkan nilai default untuk kolom saat tidak ada nilai yang ditentukan
 * *INDEX:* Digunakan untuk membuat dan mengambil data dari database dengan sangat cepat
 * *AUTO_INCREMENT:* memungkinkan inset data unik pada kolom tertentu yang dihasilkan secara otomatis saat data baru dimasukkan ke dalam tabel. Seringkali kolom ini adalah adalah juga *PRIMARY KEY* dan ingin dibuat secara otomatis setiap kali catatan baru dimasukkan.
+
+
+
+* https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b
+* https://blog.devgenius.io/thelook-ecommerce-data-analysis-using-sql-2cf420de9095
+

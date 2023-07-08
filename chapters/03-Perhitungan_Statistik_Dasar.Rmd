@@ -277,9 +277,7 @@ for data in cursor1:
 ```
 
 
-
-## Tugas Kelompok 
-
+## Tugas Kelompok (Selesai duluan C, A, B)
 
 1. Gunakan tabel order_items untuk mengetahui total dari beberapa status pengiriman
 2. Pada tabel inventory_items. Tampilkan informasi kategori, nama produk dan biaya (dengan kondisi pembulatan dua angka dibelakang koma) 

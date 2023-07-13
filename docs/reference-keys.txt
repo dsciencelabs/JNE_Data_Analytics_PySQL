@@ -80,9 +80,10 @@ lihat-data-tabel
 perhitungan-case
 tugas-kelompok-selesai-duluan-c-a-b
 join-tabel-subkueri
-review-perhitungan-statistika
-latihan-1
-pengaturan-struktur-tabel
+pendahuluan-1
+create-database-baru
+create-tabel
+insert-data-tabel
 w1h-visualisasi
 persentasi-tugas-akhir
 penutup

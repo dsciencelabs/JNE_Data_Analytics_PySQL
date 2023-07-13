@@ -9,13 +9,151 @@ use_condaenv("py3113", required = TRUE)
 
 ## Pendahuluan
 
-Pada bagian pendahuluan ini kita akan membahas query untuk menampilkan data dari beberapa tabel MySQL. Karena sering kali mengambil data dari database yang disimpan di beberapa tabel untuk diolah sehingga menjadi satu keluaran. Kita menggunakan empat tabel, yaitu: tabel pelanggan, produk, transaksi, dan transaksi_detail. struktur dan hubungan keempat tabel tersebut tampak seperti pada gambar berikut:
+Pada bagian pendahuluan ini kita akan membahas query untuk menampilkan data dari beberapa tabel MySQL. Karena sering kali mengambil data dari database yang disimpan di beberapa tabel untuk diolah sehingga menjadi satu keluaran. Kita menggunakan empat tabel, yaitu: tabel pelanggan, produk, transaksi, dan transaksi_detail. Struktur dan hubungan keempat tabel tersebut tampak seperti pada gambar berikut:
 
 <img align="middle" src="images/bab4/Hubungan-Antar-Tabel.png"  width = 100% />
 
 
+## CREATE Database Baru
 
-Pertama-tama kita buat koneksi Python ke MySQL, jangan lupa untuk klik start di XAMPP.
+Pertama-tama kita buat database baru untuk menyimpan menyimpan tabel seperti dipelihatkan diatas, sebagai berikut:
+
+```{python, eval=F}
+# import module 
+import mysql.connector
+
+# koneksi server
+db1 = mysql.connector.connect(
+  host='localhost',
+  user='bakti',
+  passwd='123'
+)
+
+# membuat objek 'cursor` sebagai kata kunci eksekusi SQL
+cursor1 = db1.cursor()
+
+# Perintah SQL
+sql='''CREATE DATABASE IF NOT EXISTS join_tabel'''
+
+# Eksekusi perintah  SQL
+cursor1.execute(sql)
+```
+
+**Catatan:** Refresh Koneksi db1 dan cursor1 anda 1 jam sekali
+
+Untuk memastikan keberadaan database yang telah dibuat adalah sebagai berikut;
+
+```{python, eval=F}
+# Perintah SQL
+sql = 'SHOW DATABASES'
+
+# Eksekusi perintah  SQL
+cursor1.execute(sql)
+
+# menampilkan daftar database
+for x in cursor1:
+  print(x) 
+```
+
+### CREATE Tabel 
+
+Sintaks berikut ini adalah untu membangun ke-empat tabel yang kan kita gunakan.
+
+```{python, eval=F}
+
+# import module 
+import mysql.connector
+
+# koneksi server
+db2 = mysql.connector.connect(
+  host='localhost',
+  user='bakti',
+  passwd='123',
+  database='join_tabel'
+)
+
+# Perintah SQL
+sql = '''
+CREATE TABLE IF NOT EXISTS `barang` (
+  `id_barang` int(11) NOT NULL AUTO_INCREMENT,
+  `id_kategori` smallint(6) NOT NULL,
+  `nama_barang` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `harga` int(11) NOT NULL,
+  `stok` int(11) NOT NULL,
+  PRIMARY KEY (`id_barang`)
+);
+
+CREATE TABLE IF NOT EXISTS `pelanggan` (
+  `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id_pelanggan`)
+);
+
+CREATE TABLE IF NOT EXISTS `penjualan` (
+  `id_transaksi` int(11) NOT NULL AUTO_INCREMENT,
+  `id_pelanggan` int(11) DEFAULT NULL,
+  `tgl_transaksi` date NOT NULL,
+  `total_transaksi` int(11) NOT NULL,
+  PRIMARY KEY (`id_transaksi`),
+  KEY `FK_penjualan_pelanggan` (`id_pelanggan`),
+  CONSTRAINT `FK_penjualan_pelanggan` FOREIGN KEY (`id_pelanggan`) REFERENCES `pelanggan` (`id_pelanggan`) ON DELETE SET NULL ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS `penjualan_detail` (
+  `id_transaksi_detail` int(11) NOT NULL AUTO_INCREMENT,
+  `id_transaksi` int(11) DEFAULT NULL,
+  `id_barang` int(11) DEFAULT NULL,
+  `jml_barang` smallint(6) DEFAULT NULL,
+  `harga_satuan` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_transaksi_detail`),
+  KEY `FK_tb_penjualan_detail_tb_barang` (`id_barang`),
+  KEY `FK_tb_penjualan_detail_tb_penjualan` (`id_transaksi`),
+  CONSTRAINT `FK_tb_penjualan_detail_tb_barang` FOREIGN KEY (`id_barang`) REFERENCES `barang` (`id_barang`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_tb_penjualan_detail_tb_penjualan` FOREIGN KEY (`id_transaksi`) REFERENCES `penjualan` (`id_transaksi`) ON DELETE CASCADE ON UPDATE CASCADE
+)
+'''
+
+# Eksekusi perintah  SQL
+cursor2.execute(sql)
+
+db2.commit()
+```
+
+**Keterangan**:
+
+Pengaturan Struktur Tabel SQL digunakan untuk menentukan aturan struktur data dalam tabel. Batasan digunakan untuk membatasi jenis data yang dapat masuk ke dalam tabel, memastikan keakuratan dan keandalan data dalam tabel. Batasan dapat berupa tingkat kolom atau tingkat tabel. Batasan tingkat kolom berlaku untuk kolom, dan batasan tingkat tabel berlaku untuk keseluruhan tabel. Berikut Batasan yang biasanya digunakan dalam SQL:
+
+* *NOT NULL:* Memastikan kolom tidak boleh memiliki nilai NULL
+* *UNIQUE:* Memastikan bahwa semua nilai dalam kolom berbeda
+* *PRIMARY KEY:* Kombinasi NOT NULL dan UNIQUE. Secara unik mengidentifikasi setiap baris dalam tabel
+* *FOREIGN KEY:* Secara unik mengidentifikasi baris/record di tabel lain
+* *CHECK:* Memastikan bahwa semua nilai dalam kolom memenuhi kondisi tertentu
+* *DEFAULT:* Menetapkan nilai default untuk kolom saat tidak ada nilai yang ditentukan
+* *INDEX:* Digunakan untuk membuat dan mengambil data dari database dengan sangat cepat
+* *AUTO_INCREMENT:* memungkinkan inset data unik pada kolom tertentu yang dihasilkan secara otomatis saat data baru dimasukkan ke dalam tabel. Seringkali kolom ini adalah adalah juga *PRIMARY KEY* dan ingin dibuat secara otomatis setiap kali catatan baru dimasukkan.
+
+
+### INSERT Data Tabel
+
+```{python, eval=F}
+sql = ''' USE join_tabel;
+INSERT INTO `barang` (`id_barang`, `id_kategori`, `nama_barang`, `harga`, `stok`) 
+         VALUES (%s, %s, %s, %s, %s)'''
+values = [(1, 1, 'RAM', 230000, 4),
+	        (2, 1, 'Mainboard', 1250000, 7),
+	        (3, 1, 'Mouse', 80000, 6),
+	        (4, 3, 'Mousepad', 35000, 3),
+	        (5, 3, 'Keyboard', 80000, 5)
+	     ]
+	     
+for val in values:
+  cursor1.execute(sql, val)
+  db1.commit()
+```
+
+
+
 
 ```{python, eval=F}
 from sqlalchemy import create_engine
@@ -31,22 +169,6 @@ engine = create_engine("mysql+pymysql://{user}:{pw}@localhost/{db}"
 # engine koneksi ke database
 db_enco = engine.connect()
 ```
-
-
-
-
-## Pengaturan Struktur Tabel
-
-Pengaturan Struktur Tabel SQL digunakan untuk menentukan aturan struktur data dalam tabel. Batasan digunakan untuk membatasi jenis data yang dapat masuk ke dalam tabel, memastikan keakuratan dan keandalan data dalam tabel. Batasan dapat berupa tingkat kolom atau tingkat tabel. Batasan tingkat kolom berlaku untuk kolom, dan batasan tingkat tabel berlaku untuk keseluruhan tabel. Berikut Batasan yang biasanya digunakan dalam SQL:
-
-* *NOT NULL:* Memastikan kolom tidak boleh memiliki nilai NULL
-* *UNIQUE:* Memastikan bahwa semua nilai dalam kolom berbeda
-* *PRIMARY KEY:* Kombinasi NOT NULL dan UNIQUE. Secara unik mengidentifikasi setiap baris dalam tabel
-* *FOREIGN KEY:* Secara unik mengidentifikasi baris/record di tabel lain
-* *CHECK:* Memastikan bahwa semua nilai dalam kolom memenuhi kondisi tertentu
-* *DEFAULT:* Menetapkan nilai default untuk kolom saat tidak ada nilai yang ditentukan
-* *INDEX:* Digunakan untuk membuat dan mengambil data dari database dengan sangat cepat
-* *AUTO_INCREMENT:* memungkinkan inset data unik pada kolom tertentu yang dihasilkan secara otomatis saat data baru dimasukkan ke dalam tabel. Seringkali kolom ini adalah adalah juga *PRIMARY KEY* dan ingin dibuat secara otomatis setiap kali catatan baru dimasukkan.
 
 
 

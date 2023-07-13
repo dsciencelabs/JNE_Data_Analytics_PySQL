@@ -325,7 +325,7 @@ detail_penjualan
 
 SQL JOIN adalah fungsi yang disediakan SQL yang digunakan untuk menggabungkan tabel melalui kolom atau key tertentu yang nilainya saling terkait untuk memperoleh sekumpulan data dengan informasi yang lengkap. Dengan perintah JOIN pengguna dapat menggabungkan beberapa tabel agar mendapat informasi secara lengkap sesuai yang dibutuhkan untuk analisis. Beberapa jenis join tabel ini akan dijelaskan satu persatu pada sub-topik berikut.
 
-<img align="middle" src="images/bab4/join_tale.png"  width = 100% />
+<img align="middle" src="images/bab4/join_tabel.png"  width = 100% />
 
 
 ### INNER JOIN 

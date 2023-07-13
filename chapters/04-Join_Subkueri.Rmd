@@ -239,7 +239,7 @@ values = [(1, 1, '2023-06-22', 230000),
 	        (2, 3, '2023-06-22', 195000),
 	        (3, 2, '2023-05-01', 1710000),
 	        (4, 1, '2023-07-04', 310000),
-	        (5, 4, '2023-07-10', 80000)
+	        (5, 3, '2023-07-10', 80000)
 	       ]
 	     
 for val in values:
@@ -340,7 +340,7 @@ Sebagai contoh kita akan menampilkan data pelanggan yang melakukan pesanan, quer
 sql = ''' 
 SELECT pl.id_pelanggan, nama, tgl_transaksi, total_transaksi
   FROM pelanggan AS pl
-    JOIN penjualan AS pn
+    JOIN penjualan AS 
       ON pl.id_pelanggan = pn.id_pelanggan
 '''
 
@@ -368,7 +368,136 @@ pd.read_sql(sql, en_co)
 * Berdasarkan hasil diatas, pada saat kapan sebiaknya anda akan menggunakan join tabel?
 
 
+### LEFT JOIN 
 
+Pada LEFT JOIN, semua data pada tabel sebelah kiri akan ditampilkan, sedangkan data pada tabel disebelah kanan hanya akan ditampilkan jika data terkait pada tabel tersebut muncul di tabel sebelah kiri. Contohnya, kita tampilkan semua data pelanggan beserta data transaksinya, jalankan query berikut: 
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+SELECT *
+  FROM pelanggan AS pl
+    LEFT JOIN penjualan AS pn 
+      USING(id_pelanggan)
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co)
+```
+
+### LEFT JOIN (Partial)
+
+Tabel yang dihasilkan akan mengandung seluruh nilai tabel di sisi kiri, dengan  nilai yang sama antara tabel kiri dan kanan. 
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+SELECT *
+  FROM pelanggan AS pl
+    LEFT JOIN penjualan AS pn 
+      USING(id_pelanggan)
+        WHERE pn.id_pelanggan IS NULL
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co)
+```
+
+**Kuis:** 
+
+* Berdasarkan hasil diatas, pada saat kapan sebiaknya anda akan menggunakan Left Join (Partial)?
+
+
+### RIGHT JOIN
+
+Kebalikan dari LEFT JOIN, pada RIGHT JOIN, data pada tabel sebelah kanan akan ditampilkan semua, sedangkan data pada sebelah kiri hanya ditampilkan jika data terkait pada tabel tersebut muncul pada tabel sebelah kanan.
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+SELECT *
+  FROM pelanggan pl
+    RIGHT JOIN penjualan 
+      USING(id_pelanggan)
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co)
+```
+
+**Kuis:** 
+
+* Perlukah RIGHT JOIN?
+
+Jika kita teliti lebih lanjut, sebenarnya right join hanya memindah posisi tabel, dari kiri ke kanan, contoh query pada right join dapat kita ubah dengan menjadi LEFT JOIN dengan mengubah posisi tabel.
+
+
+### FULL JOIN
+
+Tabel yang dihasilkan adalah tabel dengan semua nilai dari kedua tabel.  Apabila terdapat nilai yang tidak memiliki kesamaan dari kedua tabel, maka muncul nilai null. 
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+SELECT *
+  FROM pelanggan pl
+    FULL OUTER JOIN penjualan 
+      USING(id_pelanggan)
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co)
+```
+
+
+## Implisit Join Tabel
+
+Sejauh ini, kita menampilkan data dari beberapa tabel MySQL dengan menggunakan klausa JOIN. Selain menggunakan klausa JOIN, terdapat satu cara lagi untuk menggabungkan tabel MySQL, yaitu menggunakan implisit join, disebut implisit join karena kita tidak menggunakan klausa JOIN, pada implisit join, kriteria hubungan antar tabel di definisikan pada klausa WHERE. Sebagai contoh, mari kita gabungkan tabel pelanggan dan penjualan, jalankan query berikut:
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+SELECT pl.id_pelanggan, nama, id_transaksi, tgl_transaksi, total_transaksi
+  FROM pelanggan pl, penjualan pn
+    WHERE pl.id_pelanggan = pn.id_pelanggan
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co)
+```
+
+Perhatikan bahwa hasil tersebut sama persis dengan hasil pada contoh INNER JOIN, sehingga dapat disimpulkan bahwa implisit join = inner join.
+
+Implisit JOIN ini merupakan cara lama ketika pertama kali standar SQL dibuat, setelah muncul standar yang lebih baru (SQL2) maka mulai digunakanlah klausa JOIN. Saya sendiri prefer menggunakan klausa JOIN karena lebih mudah dibaca dan dipahami, terutama hubungan antara tabel yang digabungkan.
+
+Pada bentuk klausa JOIN, hubungan antar tabel dinyatakan pada klausa ON atau USING, sedangkan filter datanya dilakukan pada klausa WHERE, misal:
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+SELECT pl.id_pelanggan, nama, id_transaksi, tgl_transaksi, total_transaksi
+  FROM pelanggan pl
+    LEFT JOIN penjualan pn USING (id_pelanggan)
+      WHERE pl.id_pelanggan = 2 OR pl.id_pelanggan = 1
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co)
+```
+
+Sedangkan pada implisit JOIN, hubungan antar tabel dan filter datanya, semua didefinisikan pada klausa WHERE, misal:
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+SELECT pl.id_pelanggan, nama, id_transaksi, tgl_transaksi, total_transaksi
+  FROM pelanggan pl, penjualan pn
+    WHERE pl.id_pelanggan = pn.id_pelanggan
+	  AND (pl.id_pelanggan = 2 OR pl.id_pelanggan = 1)
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co)
+```
 
 * https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b
 * https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/

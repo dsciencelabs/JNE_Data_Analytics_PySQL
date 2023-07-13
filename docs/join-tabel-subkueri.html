@@ -278,7 +278,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#join-tabel"><i class="fa fa-check"></i><b>4.3</b> Join Tabel</a>
 <ul>
 <li class="chapter" data-level="4.3.1" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#inner-join"><i class="fa fa-check"></i><b>4.3.1</b> INNER JOIN</a></li>
+<li class="chapter" data-level="4.3.2" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#left-join"><i class="fa fa-check"></i><b>4.3.2</b> LEFT JOIN</a></li>
+<li class="chapter" data-level="4.3.3" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#left-join-partial"><i class="fa fa-check"></i><b>4.3.3</b> LEFT JOIN (Partial)</a></li>
+<li class="chapter" data-level="4.3.4" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#right-join"><i class="fa fa-check"></i><b>4.3.4</b> RIGHT JOIN</a></li>
+<li class="chapter" data-level="4.3.5" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#full-join"><i class="fa fa-check"></i><b>4.3.5</b> FULL JOIN</a></li>
 </ul></li>
+<li class="chapter" data-level="4.4" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#implisit-join-tabel"><i class="fa fa-check"></i><b>4.4</b> Implisit Join Tabel</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="w1h-visualisasi.html"><a href="w1h-visualisasi.html"><i class="fa fa-check"></i><b>5</b> 5W1H &amp; Visualisasi</a></li>
 <li class="chapter" data-level="6" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html"><i class="fa fa-check"></i><b>6</b> Persentasi Tugas Akhir</a></li>
@@ -503,7 +508,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb40-6"><a href="join-tabel-subkueri.html#cb40-6" tabindex="-1"></a>            (<span class="dv">2</span>, <span class="dv">3</span>, <span class="st">&#39;2023-06-22&#39;</span>, <span class="dv">195000</span>),</span>
 <span id="cb40-7"><a href="join-tabel-subkueri.html#cb40-7" tabindex="-1"></a>            (<span class="dv">3</span>, <span class="dv">2</span>, <span class="st">&#39;2023-05-01&#39;</span>, <span class="dv">1710000</span>),</span>
 <span id="cb40-8"><a href="join-tabel-subkueri.html#cb40-8" tabindex="-1"></a>            (<span class="dv">4</span>, <span class="dv">1</span>, <span class="st">&#39;2023-07-04&#39;</span>, <span class="dv">310000</span>),</span>
-<span id="cb40-9"><a href="join-tabel-subkueri.html#cb40-9" tabindex="-1"></a>            (<span class="dv">5</span>, <span class="dv">4</span>, <span class="st">&#39;2023-07-10&#39;</span>, <span class="dv">80000</span>)</span>
+<span id="cb40-9"><a href="join-tabel-subkueri.html#cb40-9" tabindex="-1"></a>            (<span class="dv">5</span>, <span class="dv">3</span>, <span class="st">&#39;2023-07-10&#39;</span>, <span class="dv">80000</span>)</span>
 <span id="cb40-10"><a href="join-tabel-subkueri.html#cb40-10" tabindex="-1"></a>           ]</span>
 <span id="cb40-11"><a href="join-tabel-subkueri.html#cb40-11" tabindex="-1"></a>         </span>
 <span id="cb40-12"><a href="join-tabel-subkueri.html#cb40-12" tabindex="-1"></a><span class="cf">for</span> val <span class="kw">in</span> values:</span>
@@ -582,7 +587,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb47-2"><a href="join-tabel-subkueri.html#cb47-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
 <span id="cb47-3"><a href="join-tabel-subkueri.html#cb47-3" tabindex="-1"></a><span class="st">SELECT pl.id_pelanggan, nama, tgl_transaksi, total_transaksi</span></span>
 <span id="cb47-4"><a href="join-tabel-subkueri.html#cb47-4" tabindex="-1"></a><span class="st">  FROM pelanggan AS pl</span></span>
-<span id="cb47-5"><a href="join-tabel-subkueri.html#cb47-5" tabindex="-1"></a><span class="st">    JOIN penjualan AS pn</span></span>
+<span id="cb47-5"><a href="join-tabel-subkueri.html#cb47-5" tabindex="-1"></a><span class="st">    JOIN penjualan AS </span></span>
 <span id="cb47-6"><a href="join-tabel-subkueri.html#cb47-6" tabindex="-1"></a><span class="st">      ON pl.id_pelanggan = pn.id_pelanggan</span></span>
 <span id="cb47-7"><a href="join-tabel-subkueri.html#cb47-7" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb47-8"><a href="join-tabel-subkueri.html#cb47-8" tabindex="-1"></a></span>
@@ -601,14 +606,119 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb48-10"><a href="join-tabel-subkueri.html#cb48-10" tabindex="-1"></a>pd.read_sql(sql, en_co)</span></code></pre></div>
 <p><strong>Kuis:</strong></p>
 <ul>
-<li><p>Berdasarkan hasil diatas, pada saat kapan sebiaknya anda akan menggunakan join tabel?</p></li>
-<li><p><a href="https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b" class="uri">https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b</a></p></li>
-<li><p><a href="https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/" class="uri">https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/</a></p></li>
-<li><p><a href="https://jagowebdev.com/wp-content/demo/files/join_pada_mysql.sql.txt" class="uri">https://jagowebdev.com/wp-content/demo/files/join_pada_mysql.sql.txt</a></p></li>
-<li><p><a href="https://blog.devgenius.io/thelook-ecommerce-data-analysis-using-sql-2cf420de9095" class="uri">https://blog.devgenius.io/thelook-ecommerce-data-analysis-using-sql-2cf420de9095</a></p></li>
+<li>Berdasarkan hasil diatas, pada saat kapan sebiaknya anda akan menggunakan join tabel?</li>
+</ul>
+</div>
+<div id="left-join" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> LEFT JOIN<a href="join-tabel-subkueri.html#left-join" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Pada LEFT JOIN, semua data pada tabel sebelah kiri akan ditampilkan, sedangkan data pada tabel disebelah kanan hanya akan ditampilkan jika data terkait pada tabel tersebut muncul di tabel sebelah kiri. Contohnya, kita tampilkan semua data pelanggan beserta data transaksinya, jalankan query berikut:</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="join-tabel-subkueri.html#cb49-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb49-2"><a href="join-tabel-subkueri.html#cb49-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb49-3"><a href="join-tabel-subkueri.html#cb49-3" tabindex="-1"></a><span class="st">SELECT *</span></span>
+<span id="cb49-4"><a href="join-tabel-subkueri.html#cb49-4" tabindex="-1"></a><span class="st">  FROM pelanggan AS pl</span></span>
+<span id="cb49-5"><a href="join-tabel-subkueri.html#cb49-5" tabindex="-1"></a><span class="st">    LEFT JOIN penjualan AS pn </span></span>
+<span id="cb49-6"><a href="join-tabel-subkueri.html#cb49-6" tabindex="-1"></a><span class="st">      USING(id_pelanggan)</span></span>
+<span id="cb49-7"><a href="join-tabel-subkueri.html#cb49-7" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb49-8"><a href="join-tabel-subkueri.html#cb49-8" tabindex="-1"></a></span>
+<span id="cb49-9"><a href="join-tabel-subkueri.html#cb49-9" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb49-10"><a href="join-tabel-subkueri.html#cb49-10" tabindex="-1"></a>pd.read_sql(sql, en_co)</span></code></pre></div>
+</div>
+<div id="left-join-partial" class="section level3 hasAnchor" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> LEFT JOIN (Partial)<a href="join-tabel-subkueri.html#left-join-partial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Tabel yang dihasilkan akan mengandung seluruh nilai tabel di sisi kiri, dengan nilai yang sama antara tabel kiri dan kanan.</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="join-tabel-subkueri.html#cb50-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb50-2"><a href="join-tabel-subkueri.html#cb50-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb50-3"><a href="join-tabel-subkueri.html#cb50-3" tabindex="-1"></a><span class="st">SELECT *</span></span>
+<span id="cb50-4"><a href="join-tabel-subkueri.html#cb50-4" tabindex="-1"></a><span class="st">  FROM pelanggan AS pl</span></span>
+<span id="cb50-5"><a href="join-tabel-subkueri.html#cb50-5" tabindex="-1"></a><span class="st">    LEFT JOIN penjualan AS pn </span></span>
+<span id="cb50-6"><a href="join-tabel-subkueri.html#cb50-6" tabindex="-1"></a><span class="st">      USING(id_pelanggan)</span></span>
+<span id="cb50-7"><a href="join-tabel-subkueri.html#cb50-7" tabindex="-1"></a><span class="st">        WHERE pn.id_pelanggan IS NULL</span></span>
+<span id="cb50-8"><a href="join-tabel-subkueri.html#cb50-8" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb50-9"><a href="join-tabel-subkueri.html#cb50-9" tabindex="-1"></a></span>
+<span id="cb50-10"><a href="join-tabel-subkueri.html#cb50-10" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb50-11"><a href="join-tabel-subkueri.html#cb50-11" tabindex="-1"></a>pd.read_sql(sql, en_co)</span></code></pre></div>
+<p><strong>Kuis:</strong></p>
+<ul>
+<li>Berdasarkan hasil diatas, pada saat kapan sebiaknya anda akan menggunakan Left Join (Partial)?</li>
+</ul>
+</div>
+<div id="right-join" class="section level3 hasAnchor" number="4.3.4">
+<h3><span class="header-section-number">4.3.4</span> RIGHT JOIN<a href="join-tabel-subkueri.html#right-join" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Kebalikan dari LEFT JOIN, pada RIGHT JOIN, data pada tabel sebelah kanan akan ditampilkan semua, sedangkan data pada sebelah kiri hanya ditampilkan jika data terkait pada tabel tersebut muncul pada tabel sebelah kanan.</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="join-tabel-subkueri.html#cb51-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb51-2"><a href="join-tabel-subkueri.html#cb51-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb51-3"><a href="join-tabel-subkueri.html#cb51-3" tabindex="-1"></a><span class="st">SELECT *</span></span>
+<span id="cb51-4"><a href="join-tabel-subkueri.html#cb51-4" tabindex="-1"></a><span class="st">  FROM pelanggan pl</span></span>
+<span id="cb51-5"><a href="join-tabel-subkueri.html#cb51-5" tabindex="-1"></a><span class="st">    RIGHT JOIN penjualan </span></span>
+<span id="cb51-6"><a href="join-tabel-subkueri.html#cb51-6" tabindex="-1"></a><span class="st">      USING(id_pelanggan)</span></span>
+<span id="cb51-7"><a href="join-tabel-subkueri.html#cb51-7" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb51-8"><a href="join-tabel-subkueri.html#cb51-8" tabindex="-1"></a></span>
+<span id="cb51-9"><a href="join-tabel-subkueri.html#cb51-9" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb51-10"><a href="join-tabel-subkueri.html#cb51-10" tabindex="-1"></a>pd.read_sql(sql, en_co)</span></code></pre></div>
+<p><strong>Kuis:</strong></p>
+<ul>
+<li>Perlukah RIGHT JOIN?</li>
+</ul>
+<p>Jika kita teliti lebih lanjut, sebenarnya right join hanya memindah posisi tabel, dari kiri ke kanan, contoh query pada right join dapat kita ubah dengan menjadi LEFT JOIN dengan mengubah posisi tabel.</p>
+</div>
+<div id="full-join" class="section level3 hasAnchor" number="4.3.5">
+<h3><span class="header-section-number">4.3.5</span> FULL JOIN<a href="join-tabel-subkueri.html#full-join" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Tabel yang dihasilkan adalah tabel dengan semua nilai dari kedua tabel. Apabila terdapat nilai yang tidak memiliki kesamaan dari kedua tabel, maka muncul nilai null.</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="join-tabel-subkueri.html#cb52-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb52-2"><a href="join-tabel-subkueri.html#cb52-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb52-3"><a href="join-tabel-subkueri.html#cb52-3" tabindex="-1"></a><span class="st">SELECT *</span></span>
+<span id="cb52-4"><a href="join-tabel-subkueri.html#cb52-4" tabindex="-1"></a><span class="st">  FROM pelanggan pl</span></span>
+<span id="cb52-5"><a href="join-tabel-subkueri.html#cb52-5" tabindex="-1"></a><span class="st">    FULL OUTER JOIN penjualan </span></span>
+<span id="cb52-6"><a href="join-tabel-subkueri.html#cb52-6" tabindex="-1"></a><span class="st">      USING(id_pelanggan)</span></span>
+<span id="cb52-7"><a href="join-tabel-subkueri.html#cb52-7" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb52-8"><a href="join-tabel-subkueri.html#cb52-8" tabindex="-1"></a></span>
+<span id="cb52-9"><a href="join-tabel-subkueri.html#cb52-9" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb52-10"><a href="join-tabel-subkueri.html#cb52-10" tabindex="-1"></a>pd.read_sql(sql, en_co)</span></code></pre></div>
+</div>
+</div>
+<div id="implisit-join-tabel" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Implisit Join Tabel<a href="join-tabel-subkueri.html#implisit-join-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Sejauh ini, kita menampilkan data dari beberapa tabel MySQL dengan menggunakan klausa JOIN. Selain menggunakan klausa JOIN, terdapat satu cara lagi untuk menggabungkan tabel MySQL, yaitu menggunakan implisit join, disebut implisit join karena kita tidak menggunakan klausa JOIN, pada implisit join, kriteria hubungan antar tabel di definisikan pada klausa WHERE. Sebagai contoh, mari kita gabungkan tabel pelanggan dan penjualan, jalankan query berikut:</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="join-tabel-subkueri.html#cb53-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb53-2"><a href="join-tabel-subkueri.html#cb53-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb53-3"><a href="join-tabel-subkueri.html#cb53-3" tabindex="-1"></a><span class="st">SELECT pl.id_pelanggan, nama, id_transaksi, tgl_transaksi, total_transaksi</span></span>
+<span id="cb53-4"><a href="join-tabel-subkueri.html#cb53-4" tabindex="-1"></a><span class="st">  FROM pelanggan pl, penjualan pn</span></span>
+<span id="cb53-5"><a href="join-tabel-subkueri.html#cb53-5" tabindex="-1"></a><span class="st">    WHERE pl.id_pelanggan = pn.id_pelanggan</span></span>
+<span id="cb53-6"><a href="join-tabel-subkueri.html#cb53-6" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb53-7"><a href="join-tabel-subkueri.html#cb53-7" tabindex="-1"></a></span>
+<span id="cb53-8"><a href="join-tabel-subkueri.html#cb53-8" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb53-9"><a href="join-tabel-subkueri.html#cb53-9" tabindex="-1"></a>pd.read_sql(sql, en_co)</span></code></pre></div>
+<p>Perhatikan bahwa hasil tersebut sama persis dengan hasil pada contoh INNER JOIN, sehingga dapat disimpulkan bahwa implisit join = inner join.</p>
+<p>Implisit JOIN ini merupakan cara lama ketika pertama kali standar SQL dibuat, setelah muncul standar yang lebih baru (SQL2) maka mulai digunakanlah klausa JOIN. Saya sendiri prefer menggunakan klausa JOIN karena lebih mudah dibaca dan dipahami, terutama hubungan antara tabel yang digabungkan.</p>
+<p>Pada bentuk klausa JOIN, hubungan antar tabel dinyatakan pada klausa ON atau USING, sedangkan filter datanya dilakukan pada klausa WHERE, misal:</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="join-tabel-subkueri.html#cb54-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb54-2"><a href="join-tabel-subkueri.html#cb54-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb54-3"><a href="join-tabel-subkueri.html#cb54-3" tabindex="-1"></a><span class="st">SELECT pl.id_pelanggan, nama, id_transaksi, tgl_transaksi, total_transaksi</span></span>
+<span id="cb54-4"><a href="join-tabel-subkueri.html#cb54-4" tabindex="-1"></a><span class="st">  FROM pelanggan pl</span></span>
+<span id="cb54-5"><a href="join-tabel-subkueri.html#cb54-5" tabindex="-1"></a><span class="st">    LEFT JOIN penjualan pn USING (id_pelanggan)</span></span>
+<span id="cb54-6"><a href="join-tabel-subkueri.html#cb54-6" tabindex="-1"></a><span class="st">      WHERE pl.id_pelanggan = 2 OR pl.id_pelanggan = 1</span></span>
+<span id="cb54-7"><a href="join-tabel-subkueri.html#cb54-7" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb54-8"><a href="join-tabel-subkueri.html#cb54-8" tabindex="-1"></a></span>
+<span id="cb54-9"><a href="join-tabel-subkueri.html#cb54-9" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb54-10"><a href="join-tabel-subkueri.html#cb54-10" tabindex="-1"></a>pd.read_sql(sql, en_co)</span></code></pre></div>
+<p>Sedangkan pada implisit JOIN, hubungan antar tabel dan filter datanya, semua didefinisikan pada klausa WHERE, misal:</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="join-tabel-subkueri.html#cb55-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb55-2"><a href="join-tabel-subkueri.html#cb55-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb55-3"><a href="join-tabel-subkueri.html#cb55-3" tabindex="-1"></a><span class="st">SELECT pl.id_pelanggan, nama, id_transaksi, tgl_transaksi, total_transaksi</span></span>
+<span id="cb55-4"><a href="join-tabel-subkueri.html#cb55-4" tabindex="-1"></a><span class="st">  FROM pelanggan pl, penjualan pn</span></span>
+<span id="cb55-5"><a href="join-tabel-subkueri.html#cb55-5" tabindex="-1"></a><span class="st">    WHERE pl.id_pelanggan = pn.id_pelanggan</span></span>
+<span id="cb55-6"><a href="join-tabel-subkueri.html#cb55-6" tabindex="-1"></a><span class="st">      AND (pl.id_pelanggan = 2 OR pl.id_pelanggan = 1)</span></span>
+<span id="cb55-7"><a href="join-tabel-subkueri.html#cb55-7" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb55-8"><a href="join-tabel-subkueri.html#cb55-8" tabindex="-1"></a></span>
+<span id="cb55-9"><a href="join-tabel-subkueri.html#cb55-9" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb55-10"><a href="join-tabel-subkueri.html#cb55-10" tabindex="-1"></a>pd.read_sql(sql, en_co)</span></code></pre></div>
+<ul>
+<li><a href="https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b" class="uri">https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b</a></li>
+<li><a href="https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/" class="uri">https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/</a></li>
+<li><a href="https://jagowebdev.com/wp-content/demo/files/join_pada_mysql.sql.txt" class="uri">https://jagowebdev.com/wp-content/demo/files/join_pada_mysql.sql.txt</a></li>
+<li><a href="https://blog.devgenius.io/thelook-ecommerce-data-analysis-using-sql-2cf420de9095" class="uri">https://blog.devgenius.io/thelook-ecommerce-data-analysis-using-sql-2cf420de9095</a></li>
 </ul>
 
-</div>
 </div>
 </div>
             </section>

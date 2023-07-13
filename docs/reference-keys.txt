@@ -87,6 +87,11 @@ insert-data-tabel
 read-tabel
 join-tabel
 inner-join
+left-join
+left-join-partial
+right-join
+full-join
+implisit-join-tabel
 w1h-visualisasi
 persentasi-tugas-akhir
 penutup

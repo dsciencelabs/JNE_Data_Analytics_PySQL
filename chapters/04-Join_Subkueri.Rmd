@@ -296,28 +296,28 @@ en_co = engine.connect()
 Selanjutnya, untuk membaca tabel sql menjadi DataFrame, tanpa mengeksekusi kueri apa pun, kita dapat menggunakan fungsi read_sql_table() yang ada pada library Pandas.
 
 ```{python, eval=F}
-barang = pd.read_sql_table('barang', en_co)
+barang = pd.read_sql('barang', en_co)
 barang
 ```
 
 #### Read Tabel Pelanggan {-}
 
 ```{python, eval=F}
-pelanggan = pd.read_sql_table('pelanggan', en_co)
+pelanggan = pd.read_sql('pelanggan', en_co)
 pelanggan
 ```
 
 #### Read Tabel Penjualan {-}
 
 ```{python, eval=F}
-penjualan = pd.read_sql_table('penjualan', en_co)
+penjualan = pd.read_sql('penjualan', en_co)
 penjualan
 ```
 
 #### Read Tabel Penjulan Detail {-}
 
 ```{python, eval=F}
-detail_penjualan = pd.read_sql_table('penjualan_detail', en_co)
+detail_penjualan = pd.read_sql('penjualan_detail', en_co)
 detail_penjualan
 ```
 
@@ -325,16 +325,47 @@ detail_penjualan
 
 SQL JOIN adalah fungsi yang disediakan SQL yang digunakan untuk menggabungkan tabel melalui kolom atau key tertentu yang nilainya saling terkait untuk memperoleh sekumpulan data dengan informasi yang lengkap. Dengan perintah JOIN pengguna dapat menggabungkan beberapa tabel agar mendapat informasi secara lengkap sesuai yang dibutuhkan untuk analisis. Beberapa jenis join tabel ini akan dijelaskan satu persatu pada sub-topik berikut.
 
+<img align="middle" src="images/bab4/join_tale.png"  width = 100% />
+
+
 ### INNER JOIN 
 
-Pada MySQL, penulisan INNER JOIN dapat dilakukan dengan tiga cara yaitu (1) menggunakan klausa INNER JOIN (2) menggunakan klausa CROSS JOIN (3) cukup menggunakan klausa JOIN saja. Pengguna bebas menggunakan sintaks yang mana saja asal konsisten, penulis lebih prefer menggunakan JOIN saja, karena lebih simpel.
+Pada MySQL, penulisan `INNER JOIN` dapat dilakukan dengan tiga cara yaitu (1) menggunakan klausa `INNER JOIN` (2) menggunakan klausa `CROSS JOIN` (3) cukup menggunakan klausa `JOIN` saja. Pengguna bebas menggunakan sintaks yang mana saja asal konsisten, penulis lebih prefer menggunakan JOIN saja, karena lebih simpel.
 
 Sebagai contoh kita akan menampilkan data pelanggan yang melakukan pesanan, query yang kita jalankan:
 
 
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+SELECT pl.id_pelanggan, nama, tgl_transaksi, total_transaksi
+  FROM pelanggan AS pl
+    JOIN penjualan AS pn
+      ON pl.id_pelanggan = pn.id_pelanggan
+'''
 
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co)
+```
 
+Tabel yang dihasilkan adalah tabel yang berisikan nilai yang sama pada kedua tabel (matching values). Jika menggunakan klausa `USING`, maka query akan berbentuk seperti berikut:
 
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+SELECT pl.id_pelanggan, nama, tgl_transaksi, total_transaksi
+  FROM pelanggan AS pl
+    JOIN penjualan AS pn
+      USING(id_pelanggan)
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co)
+```
+
+**Kuis:** 
+
+* Berdasarkan hasil diatas, pada saat kapan sebiaknya anda akan menggunakan join tabel?
 
 
 

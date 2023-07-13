@@ -550,22 +550,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="read-tabel-barang" class="section level4 unnumbered hasAnchor">
 <h4>Read Tabel Barang<a href="join-tabel-subkueri.html#read-tabel-barang" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Selanjutnya, untuk membaca tabel sql menjadi DataFrame, tanpa mengeksekusi kueri apa pun, kita dapat menggunakan fungsi read_sql_table() yang ada pada library Pandas.</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="join-tabel-subkueri.html#cb43-1" tabindex="-1"></a>barang <span class="op">=</span> pd.read_sql_table(<span class="st">&#39;barang&#39;</span>, en_co)</span>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="join-tabel-subkueri.html#cb43-1" tabindex="-1"></a>barang <span class="op">=</span> pd.read_sql(<span class="st">&#39;barang&#39;</span>, en_co)</span>
 <span id="cb43-2"><a href="join-tabel-subkueri.html#cb43-2" tabindex="-1"></a>barang</span></code></pre></div>
 </div>
 <div id="read-tabel-pelanggan" class="section level4 unnumbered hasAnchor">
 <h4>Read Tabel Pelanggan<a href="join-tabel-subkueri.html#read-tabel-pelanggan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="join-tabel-subkueri.html#cb44-1" tabindex="-1"></a>pelanggan <span class="op">=</span> pd.read_sql_table(<span class="st">&#39;pelanggan&#39;</span>, en_co)</span>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="join-tabel-subkueri.html#cb44-1" tabindex="-1"></a>pelanggan <span class="op">=</span> pd.read_sql(<span class="st">&#39;pelanggan&#39;</span>, en_co)</span>
 <span id="cb44-2"><a href="join-tabel-subkueri.html#cb44-2" tabindex="-1"></a>pelanggan</span></code></pre></div>
 </div>
 <div id="read-tabel-penjualan" class="section level4 unnumbered hasAnchor">
 <h4>Read Tabel Penjualan<a href="join-tabel-subkueri.html#read-tabel-penjualan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="join-tabel-subkueri.html#cb45-1" tabindex="-1"></a>penjualan <span class="op">=</span> pd.read_sql_table(<span class="st">&#39;penjualan&#39;</span>, en_co)</span>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="join-tabel-subkueri.html#cb45-1" tabindex="-1"></a>penjualan <span class="op">=</span> pd.read_sql(<span class="st">&#39;penjualan&#39;</span>, en_co)</span>
 <span id="cb45-2"><a href="join-tabel-subkueri.html#cb45-2" tabindex="-1"></a>penjualan</span></code></pre></div>
 </div>
 <div id="read-tabel-penjulan-detail" class="section level4 unnumbered hasAnchor">
 <h4>Read Tabel Penjulan Detail<a href="join-tabel-subkueri.html#read-tabel-penjulan-detail" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="join-tabel-subkueri.html#cb46-1" tabindex="-1"></a>detail_penjualan <span class="op">=</span> pd.read_sql_table(<span class="st">&#39;penjualan_detail&#39;</span>, en_co)</span>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="join-tabel-subkueri.html#cb46-1" tabindex="-1"></a>detail_penjualan <span class="op">=</span> pd.read_sql(<span class="st">&#39;penjualan_detail&#39;</span>, en_co)</span>
 <span id="cb46-2"><a href="join-tabel-subkueri.html#cb46-2" tabindex="-1"></a>detail_penjualan</span></code></pre></div>
 </div>
 </div>
@@ -573,15 +573,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="join-tabel" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Join Tabel<a href="join-tabel-subkueri.html#join-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>SQL JOIN adalah fungsi yang disediakan SQL yang digunakan untuk menggabungkan tabel melalui kolom atau key tertentu yang nilainya saling terkait untuk memperoleh sekumpulan data dengan informasi yang lengkap. Dengan perintah JOIN pengguna dapat menggabungkan beberapa tabel agar mendapat informasi secara lengkap sesuai yang dibutuhkan untuk analisis. Beberapa jenis join tabel ini akan dijelaskan satu persatu pada sub-topik berikut.</p>
+<p><img align="middle" src="images/bab4/join_tale.png"  width = 100% /></p>
 <div id="inner-join" class="section level3 hasAnchor" number="4.3.1">
 <h3><span class="header-section-number">4.3.1</span> INNER JOIN<a href="join-tabel-subkueri.html#inner-join" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Pada MySQL, penulisan INNER JOIN dapat dilakukan dengan tiga cara yaitu (1) menggunakan klausa INNER JOIN (2) menggunakan klausa CROSS JOIN (3) cukup menggunakan klausa JOIN saja. Pengguna bebas menggunakan sintaks yang mana saja asal konsisten, penulis lebih prefer menggunakan JOIN saja, karena lebih simpel.</p>
+<p>Pada MySQL, penulisan <code>INNER JOIN</code> dapat dilakukan dengan tiga cara yaitu (1) menggunakan klausa <code>INNER JOIN</code> (2) menggunakan klausa <code>CROSS JOIN</code> (3) cukup menggunakan klausa <code>JOIN</code> saja. Pengguna bebas menggunakan sintaks yang mana saja asal konsisten, penulis lebih prefer menggunakan JOIN saja, karena lebih simpel.</p>
 <p>Sebagai contoh kita akan menampilkan data pelanggan yang melakukan pesanan, query yang kita jalankan:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="join-tabel-subkueri.html#cb47-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb47-2"><a href="join-tabel-subkueri.html#cb47-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb47-3"><a href="join-tabel-subkueri.html#cb47-3" tabindex="-1"></a><span class="st">SELECT pl.id_pelanggan, nama, tgl_transaksi, total_transaksi</span></span>
+<span id="cb47-4"><a href="join-tabel-subkueri.html#cb47-4" tabindex="-1"></a><span class="st">  FROM pelanggan AS pl</span></span>
+<span id="cb47-5"><a href="join-tabel-subkueri.html#cb47-5" tabindex="-1"></a><span class="st">    JOIN penjualan AS pn</span></span>
+<span id="cb47-6"><a href="join-tabel-subkueri.html#cb47-6" tabindex="-1"></a><span class="st">      ON pl.id_pelanggan = pn.id_pelanggan</span></span>
+<span id="cb47-7"><a href="join-tabel-subkueri.html#cb47-7" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb47-8"><a href="join-tabel-subkueri.html#cb47-8" tabindex="-1"></a></span>
+<span id="cb47-9"><a href="join-tabel-subkueri.html#cb47-9" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb47-10"><a href="join-tabel-subkueri.html#cb47-10" tabindex="-1"></a>pd.read_sql(sql, en_co)</span></code></pre></div>
+<p>Tabel yang dihasilkan adalah tabel yang berisikan nilai yang sama pada kedua tabel (matching values). Jika menggunakan klausa <code>USING</code>, maka query akan berbentuk seperti berikut:</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="join-tabel-subkueri.html#cb48-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb48-2"><a href="join-tabel-subkueri.html#cb48-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb48-3"><a href="join-tabel-subkueri.html#cb48-3" tabindex="-1"></a><span class="st">SELECT pl.id_pelanggan, nama, tgl_transaksi, total_transaksi</span></span>
+<span id="cb48-4"><a href="join-tabel-subkueri.html#cb48-4" tabindex="-1"></a><span class="st">  FROM pelanggan AS pl</span></span>
+<span id="cb48-5"><a href="join-tabel-subkueri.html#cb48-5" tabindex="-1"></a><span class="st">    JOIN penjualan AS pn</span></span>
+<span id="cb48-6"><a href="join-tabel-subkueri.html#cb48-6" tabindex="-1"></a><span class="st">      USING(id_pelanggan)</span></span>
+<span id="cb48-7"><a href="join-tabel-subkueri.html#cb48-7" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb48-8"><a href="join-tabel-subkueri.html#cb48-8" tabindex="-1"></a></span>
+<span id="cb48-9"><a href="join-tabel-subkueri.html#cb48-9" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb48-10"><a href="join-tabel-subkueri.html#cb48-10" tabindex="-1"></a>pd.read_sql(sql, en_co)</span></code></pre></div>
+<p><strong>Kuis:</strong></p>
 <ul>
-<li><a href="https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b" class="uri">https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b</a></li>
-<li><a href="https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/" class="uri">https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/</a></li>
-<li><a href="https://jagowebdev.com/wp-content/demo/files/join_pada_mysql.sql.txt" class="uri">https://jagowebdev.com/wp-content/demo/files/join_pada_mysql.sql.txt</a></li>
-<li><a href="https://blog.devgenius.io/thelook-ecommerce-data-analysis-using-sql-2cf420de9095" class="uri">https://blog.devgenius.io/thelook-ecommerce-data-analysis-using-sql-2cf420de9095</a></li>
+<li><p>Berdasarkan hasil diatas, pada saat kapan sebiaknya anda akan menggunakan join tabel?</p></li>
+<li><p><a href="https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b" class="uri">https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b</a></p></li>
+<li><p><a href="https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/" class="uri">https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/</a></p></li>
+<li><p><a href="https://jagowebdev.com/wp-content/demo/files/join_pada_mysql.sql.txt" class="uri">https://jagowebdev.com/wp-content/demo/files/join_pada_mysql.sql.txt</a></p></li>
+<li><p><a href="https://blog.devgenius.io/thelook-ecommerce-data-analysis-using-sql-2cf420de9095" class="uri">https://blog.devgenius.io/thelook-ecommerce-data-analysis-using-sql-2cf420de9095</a></p></li>
 </ul>
 
 </div>

@@ -4,7 +4,7 @@
 library(reticulate)
 library(Rcpp)
 # conda_list()
-use_condaenv("py3113", required = TRUE)
+use_condaenv("base", required = TRUE)
 ```
 
 ## Pendahuluan
@@ -39,9 +39,7 @@ sql='''CREATE DATABASE IF NOT EXISTS join_tabel'''
 cursor1.execute(sql)
 ```
 
-**Catatan:** Refresh Koneksi db1 dan cursor1 anda 1 jam sekali
-
-Untuk memastikan keberadaan database yang telah dibuat adalah sebagai berikut;
+Untuk memastikan koneksi sudah berhasil, berikut ini coba check database yang sudah tersimpan di server lokal anda.
 
 ```{python, eval=F}
 # Perintah SQL
@@ -57,7 +55,7 @@ for x in cursor1:
 
 ### CREATE Tabel 
 
-Sintaks berikut ini adalah untu membangun ke-empat tabel yang kan kita gunakan.
+Sintaks berikut ini adalah untuk membangun ke-empat tabel yang kan kita gunakan. Pertama-tama kita buatkan koneksi dan kursor baru sebagai berikut:
 
 ```{python, eval=F}
 
@@ -72,6 +70,15 @@ db2 = mysql.connector.connect(
   database='join_tabel'
 )
 
+# membuat objek 'cursor` sebagai kata kunci eksekusi SQL
+cursor2 = db2.cursor()
+```
+
+Setelah koneksi dan kursor baru berhasil dibuatkan, berikutnya kita buatkan struktur tabel yang diperlukan;
+
+#### Barang {-}
+
+```{python, eval=F}
 # Perintah SQL
 sql = '''
 CREATE TABLE IF NOT EXISTS `barang` (
@@ -81,15 +88,42 @@ CREATE TABLE IF NOT EXISTS `barang` (
   `harga` int(11) NOT NULL,
   `stok` int(11) NOT NULL,
   PRIMARY KEY (`id_barang`)
-);
+); 
+'''
 
+# Eksekusi perintah  SQL
+cursor2.execute(sql)
+
+# Simpan perubahan
+db2.commit()
+```
+
+
+#### Pelanggan {-}
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
 CREATE TABLE IF NOT EXISTS `pelanggan` (
   `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT,
   `nama` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id_pelanggan`)
-);
+  PRIMARY KEY (`id_pelanggan`) 
+); 
+'''
 
+# Eksekusi perintah  SQL
+cursor2.execute(sql)
+
+# Simpan perubahan
+db2.commit()
+```
+
+#### Penjualan {-}
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
 CREATE TABLE IF NOT EXISTS `penjualan` (
   `id_transaksi` int(11) NOT NULL AUTO_INCREMENT,
   `id_pelanggan` int(11) DEFAULT NULL,
@@ -98,8 +132,21 @@ CREATE TABLE IF NOT EXISTS `penjualan` (
   PRIMARY KEY (`id_transaksi`),
   KEY `FK_penjualan_pelanggan` (`id_pelanggan`),
   CONSTRAINT `FK_penjualan_pelanggan` FOREIGN KEY (`id_pelanggan`) REFERENCES `pelanggan` (`id_pelanggan`) ON DELETE SET NULL ON UPDATE CASCADE
-);
+); 
+'''
 
+# Eksekusi perintah  SQL
+cursor2.execute(sql)
+
+# Simpan perubahan
+db2.commit()
+```
+
+#### Detail Penjualan {-}
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
 CREATE TABLE IF NOT EXISTS `penjualan_detail` (
   `id_transaksi_detail` int(11) NOT NULL AUTO_INCREMENT,
   `id_transaksi` int(11) DEFAULT NULL,
@@ -117,8 +164,13 @@ CREATE TABLE IF NOT EXISTS `penjualan_detail` (
 # Eksekusi perintah  SQL
 cursor2.execute(sql)
 
+# Simpan perubahan
 db2.commit()
 ```
+
+
+**Catatan: ** [Pengertian Cascade dalam MySql](http://nyunyunbee.blogspot.com/2013/06/pengertian-cascade-dalam-mysql.html)
+
 
 **Keterangan**:
 
@@ -136,10 +188,15 @@ Pengaturan Struktur Tabel SQL digunakan untuk menentukan aturan struktur data da
 
 ### INSERT Data Tabel
 
+Berikut ini adalah koding yang digunakan untuk menambahkan data ke dalam tabel;
+
+#### Data Barang {-}
+
 ```{python, eval=F}
-sql = ''' USE join_tabel;
+sql = '''
 INSERT INTO `barang` (`id_barang`, `id_kategori`, `nama_barang`, `harga`, `stok`) 
-         VALUES (%s, %s, %s, %s, %s)'''
+      VALUES (%s, %s, %s, %s, %s)'''
+      
 values = [(1, 1, 'RAM', 230000, 4),
 	        (2, 1, 'Mainboard', 1250000, 7),
 	        (3, 1, 'Mouse', 80000, 6),
@@ -148,10 +205,74 @@ values = [(1, 1, 'RAM', 230000, 4),
 	     ]
 	     
 for val in values:
-  cursor1.execute(sql, val)
-  db1.commit()
+  cursor2.execute(sql, val)
+  db2.commit()
 ```
 
+#### Data Pelanggan {-}
+
+```{python, eval=F}
+sql = '''
+INSERT INTO `pelanggan` (`id_pelanggan`, `nama`, `email`)
+      VALUES (%s, %s, %s)'''
+      
+values = [(1, 'Alfa', 'alfa@yahoo.com'),
+	        (2, 'Beta', 'beta@gmail.com'),
+	        (3, 'Delta', 'delta@hotmail.com'),
+	        (4, 'Bakti', 'dsciencelabs@outlook.com')
+	       ]
+	     
+for val in values:
+  cursor2.execute(sql, val)
+  db2.commit()
+```
+
+
+#### Data Penjualan {-}
+
+```{python, eval=F}
+sql = '''
+INSERT INTO `penjualan` (`id_transaksi`, `id_pelanggan`, `tgl_transaksi`, `total_transaksi`)
+      VALUES (%s, %s, %s, %s)'''
+      
+values = [(1, 1, '2023-06-22', 230000),
+	        (2, 3, '2023-06-22', 195000),
+	        (3, 2, '2023-05-01', 1710000),
+	        (4, 1, '2023-07-04', 310000),
+	        (5, 4, '2023-07-10', 80000)
+	       ]
+	     
+for val in values:
+  cursor2.execute(sql, val)
+  db2.commit()
+```
+
+
+#### Data Detail Penjualan {-}
+
+```{python, eval=F}
+sql = '''
+INSERT INTO `penjualan_detail` (`id_transaksi_detail`, `id_transaksi`, `id_barang`, `jml_barang`, `harga_satuan`)
+      VALUES (%s, %s, %s, %s, %s); 
+      '''
+values = [(1, 1, 1, 1, 230000),
+	        (2, 2, 4, 1, 35000),
+        	(3, 2, 5, 2, 80000),
+	        (4, 3, 2, 1, 1250000),
+        	(5, 3, 1, 2, 230000),
+        	(6, 4, 4, 2, 35000),
+	        (7, 4, 5, 1, 80000),
+	        (8, 4, 3, 2, 80000),
+	        (9, 5, 3, 1, 80000)
+	       ]
+	     
+for val in values:
+  cursor2.execute(sql, val)
+  db2.commit()
+```
+
+
+### READ tabel
 
 
 

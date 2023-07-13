@@ -84,6 +84,7 @@ pendahuluan-1
 create-database-baru
 create-tabel
 insert-data-tabel
+read-tabel
 w1h-visualisasi
 persentasi-tugas-akhir
 penutup

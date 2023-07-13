@@ -273,6 +273,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="4.2.1" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#create-tabel"><i class="fa fa-check"></i><b>4.2.1</b> CREATE Tabel</a></li>
 <li class="chapter" data-level="4.2.2" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#insert-data-tabel"><i class="fa fa-check"></i><b>4.2.2</b> INSERT Data Tabel</a></li>
+<li class="chapter" data-level="4.2.3" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#read-tabel"><i class="fa fa-check"></i><b>4.2.3</b> READ tabel</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="w1h-visualisasi.html"><a href="w1h-visualisasi.html"><i class="fa fa-check"></i><b>5</b> 5W1H &amp; Visualisasi</a></li>
@@ -328,8 +329,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb31-16"><a href="join-tabel-subkueri.html#cb31-16" tabindex="-1"></a></span>
 <span id="cb31-17"><a href="join-tabel-subkueri.html#cb31-17" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
 <span id="cb31-18"><a href="join-tabel-subkueri.html#cb31-18" tabindex="-1"></a>cursor1.execute(sql)</span></code></pre></div>
-<p><strong>Catatan:</strong> Refresh Koneksi db1 dan cursor1 anda 1 jam sekali</p>
-<p>Untuk memastikan keberadaan database yang telah dibuat adalah sebagai berikut;</p>
+<p>Untuk memastikan koneksi sudah berhasil, berikut ini coba check database yang sudah tersimpan di server lokal anda.</p>
 <div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="join-tabel-subkueri.html#cb32-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
 <span id="cb32-2"><a href="join-tabel-subkueri.html#cb32-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;SHOW DATABASES&#39;</span></span>
 <span id="cb32-3"><a href="join-tabel-subkueri.html#cb32-3" tabindex="-1"></a></span>
@@ -341,7 +341,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb32-9"><a href="join-tabel-subkueri.html#cb32-9" tabindex="-1"></a>  <span class="bu">print</span>(x) </span></code></pre></div>
 <div id="create-tabel" class="section level3 hasAnchor" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> CREATE Tabel<a href="join-tabel-subkueri.html#create-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Sintaks berikut ini adalah untu membangun ke-empat tabel yang kan kita gunakan.</p>
+<p>Sintaks berikut ini adalah untuk membangun ke-empat tabel yang kan kita gunakan. Pertama-tama kita buatkan koneksi dan kursor baru sebagai berikut:</p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="join-tabel-subkueri.html#cb33-1" tabindex="-1"></a><span class="co"># import module </span></span>
 <span id="cb33-2"><a href="join-tabel-subkueri.html#cb33-2" tabindex="-1"></a><span class="im">import</span> mysql.connector</span>
 <span id="cb33-3"><a href="join-tabel-subkueri.html#cb33-3" tabindex="-1"></a></span>
@@ -353,52 +353,92 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb33-9"><a href="join-tabel-subkueri.html#cb33-9" tabindex="-1"></a>  database<span class="op">=</span><span class="st">&#39;join_tabel&#39;</span></span>
 <span id="cb33-10"><a href="join-tabel-subkueri.html#cb33-10" tabindex="-1"></a>)</span>
 <span id="cb33-11"><a href="join-tabel-subkueri.html#cb33-11" tabindex="-1"></a></span>
-<span id="cb33-12"><a href="join-tabel-subkueri.html#cb33-12" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
-<span id="cb33-13"><a href="join-tabel-subkueri.html#cb33-13" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb33-14"><a href="join-tabel-subkueri.html#cb33-14" tabindex="-1"></a><span class="st">CREATE TABLE IF NOT EXISTS `barang` (</span></span>
-<span id="cb33-15"><a href="join-tabel-subkueri.html#cb33-15" tabindex="-1"></a><span class="st">  `id_barang` int(11) NOT NULL AUTO_INCREMENT,</span></span>
-<span id="cb33-16"><a href="join-tabel-subkueri.html#cb33-16" tabindex="-1"></a><span class="st">  `id_kategori` smallint(6) NOT NULL,</span></span>
-<span id="cb33-17"><a href="join-tabel-subkueri.html#cb33-17" tabindex="-1"></a><span class="st">  `nama_barang` varchar(255) CHARACTER SET latin1 NOT NULL,</span></span>
-<span id="cb33-18"><a href="join-tabel-subkueri.html#cb33-18" tabindex="-1"></a><span class="st">  `harga` int(11) NOT NULL,</span></span>
-<span id="cb33-19"><a href="join-tabel-subkueri.html#cb33-19" tabindex="-1"></a><span class="st">  `stok` int(11) NOT NULL,</span></span>
-<span id="cb33-20"><a href="join-tabel-subkueri.html#cb33-20" tabindex="-1"></a><span class="st">  PRIMARY KEY (`id_barang`)</span></span>
-<span id="cb33-21"><a href="join-tabel-subkueri.html#cb33-21" tabindex="-1"></a><span class="st">);</span></span>
-<span id="cb33-22"><a href="join-tabel-subkueri.html#cb33-22" tabindex="-1"></a></span>
-<span id="cb33-23"><a href="join-tabel-subkueri.html#cb33-23" tabindex="-1"></a><span class="st">CREATE TABLE IF NOT EXISTS `pelanggan` (</span></span>
-<span id="cb33-24"><a href="join-tabel-subkueri.html#cb33-24" tabindex="-1"></a><span class="st">  `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT,</span></span>
-<span id="cb33-25"><a href="join-tabel-subkueri.html#cb33-25" tabindex="-1"></a><span class="st">  `nama` varchar(50) DEFAULT NULL,</span></span>
-<span id="cb33-26"><a href="join-tabel-subkueri.html#cb33-26" tabindex="-1"></a><span class="st">  `email` varchar(50) DEFAULT NULL,</span></span>
-<span id="cb33-27"><a href="join-tabel-subkueri.html#cb33-27" tabindex="-1"></a><span class="st">  PRIMARY KEY (`id_pelanggan`)</span></span>
-<span id="cb33-28"><a href="join-tabel-subkueri.html#cb33-28" tabindex="-1"></a><span class="st">);</span></span>
-<span id="cb33-29"><a href="join-tabel-subkueri.html#cb33-29" tabindex="-1"></a></span>
-<span id="cb33-30"><a href="join-tabel-subkueri.html#cb33-30" tabindex="-1"></a><span class="st">CREATE TABLE IF NOT EXISTS `penjualan` (</span></span>
-<span id="cb33-31"><a href="join-tabel-subkueri.html#cb33-31" tabindex="-1"></a><span class="st">  `id_transaksi` int(11) NOT NULL AUTO_INCREMENT,</span></span>
-<span id="cb33-32"><a href="join-tabel-subkueri.html#cb33-32" tabindex="-1"></a><span class="st">  `id_pelanggan` int(11) DEFAULT NULL,</span></span>
-<span id="cb33-33"><a href="join-tabel-subkueri.html#cb33-33" tabindex="-1"></a><span class="st">  `tgl_transaksi` date NOT NULL,</span></span>
-<span id="cb33-34"><a href="join-tabel-subkueri.html#cb33-34" tabindex="-1"></a><span class="st">  `total_transaksi` int(11) NOT NULL,</span></span>
-<span id="cb33-35"><a href="join-tabel-subkueri.html#cb33-35" tabindex="-1"></a><span class="st">  PRIMARY KEY (`id_transaksi`),</span></span>
-<span id="cb33-36"><a href="join-tabel-subkueri.html#cb33-36" tabindex="-1"></a><span class="st">  KEY `FK_penjualan_pelanggan` (`id_pelanggan`),</span></span>
-<span id="cb33-37"><a href="join-tabel-subkueri.html#cb33-37" tabindex="-1"></a><span class="st">  CONSTRAINT `FK_penjualan_pelanggan` FOREIGN KEY (`id_pelanggan`) REFERENCES `pelanggan` (`id_pelanggan`) ON DELETE SET NULL ON UPDATE CASCADE</span></span>
-<span id="cb33-38"><a href="join-tabel-subkueri.html#cb33-38" tabindex="-1"></a><span class="st">);</span></span>
-<span id="cb33-39"><a href="join-tabel-subkueri.html#cb33-39" tabindex="-1"></a></span>
-<span id="cb33-40"><a href="join-tabel-subkueri.html#cb33-40" tabindex="-1"></a><span class="st">CREATE TABLE IF NOT EXISTS `penjualan_detail` (</span></span>
-<span id="cb33-41"><a href="join-tabel-subkueri.html#cb33-41" tabindex="-1"></a><span class="st">  `id_transaksi_detail` int(11) NOT NULL AUTO_INCREMENT,</span></span>
-<span id="cb33-42"><a href="join-tabel-subkueri.html#cb33-42" tabindex="-1"></a><span class="st">  `id_transaksi` int(11) DEFAULT NULL,</span></span>
-<span id="cb33-43"><a href="join-tabel-subkueri.html#cb33-43" tabindex="-1"></a><span class="st">  `id_barang` int(11) DEFAULT NULL,</span></span>
-<span id="cb33-44"><a href="join-tabel-subkueri.html#cb33-44" tabindex="-1"></a><span class="st">  `jml_barang` smallint(6) DEFAULT NULL,</span></span>
-<span id="cb33-45"><a href="join-tabel-subkueri.html#cb33-45" tabindex="-1"></a><span class="st">  `harga_satuan` int(11) DEFAULT NULL,</span></span>
-<span id="cb33-46"><a href="join-tabel-subkueri.html#cb33-46" tabindex="-1"></a><span class="st">  PRIMARY KEY (`id_transaksi_detail`),</span></span>
-<span id="cb33-47"><a href="join-tabel-subkueri.html#cb33-47" tabindex="-1"></a><span class="st">  KEY `FK_tb_penjualan_detail_tb_barang` (`id_barang`),</span></span>
-<span id="cb33-48"><a href="join-tabel-subkueri.html#cb33-48" tabindex="-1"></a><span class="st">  KEY `FK_tb_penjualan_detail_tb_penjualan` (`id_transaksi`),</span></span>
-<span id="cb33-49"><a href="join-tabel-subkueri.html#cb33-49" tabindex="-1"></a><span class="st">  CONSTRAINT `FK_tb_penjualan_detail_tb_barang` FOREIGN KEY (`id_barang`) REFERENCES `barang` (`id_barang`) ON DELETE CASCADE ON UPDATE CASCADE,</span></span>
-<span id="cb33-50"><a href="join-tabel-subkueri.html#cb33-50" tabindex="-1"></a><span class="st">  CONSTRAINT `FK_tb_penjualan_detail_tb_penjualan` FOREIGN KEY (`id_transaksi`) REFERENCES `penjualan` (`id_transaksi`) ON DELETE CASCADE ON UPDATE CASCADE</span></span>
-<span id="cb33-51"><a href="join-tabel-subkueri.html#cb33-51" tabindex="-1"></a><span class="st">)</span></span>
-<span id="cb33-52"><a href="join-tabel-subkueri.html#cb33-52" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
-<span id="cb33-53"><a href="join-tabel-subkueri.html#cb33-53" tabindex="-1"></a></span>
-<span id="cb33-54"><a href="join-tabel-subkueri.html#cb33-54" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
-<span id="cb33-55"><a href="join-tabel-subkueri.html#cb33-55" tabindex="-1"></a>cursor2.execute(sql)</span>
-<span id="cb33-56"><a href="join-tabel-subkueri.html#cb33-56" tabindex="-1"></a></span>
-<span id="cb33-57"><a href="join-tabel-subkueri.html#cb33-57" tabindex="-1"></a>db2.commit()</span></code></pre></div>
+<span id="cb33-12"><a href="join-tabel-subkueri.html#cb33-12" tabindex="-1"></a><span class="co"># membuat objek &#39;cursor` sebagai kata kunci eksekusi SQL</span></span>
+<span id="cb33-13"><a href="join-tabel-subkueri.html#cb33-13" tabindex="-1"></a>cursor2 <span class="op">=</span> db2.cursor()</span></code></pre></div>
+<p>Setelah koneksi dan kursor baru berhasil dibuatkan, berikutnya kita buatkan struktur tabel yang diperlukan;</p>
+<div id="barang" class="section level4 unnumbered hasAnchor">
+<h4>Barang<a href="join-tabel-subkueri.html#barang" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="join-tabel-subkueri.html#cb34-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb34-2"><a href="join-tabel-subkueri.html#cb34-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb34-3"><a href="join-tabel-subkueri.html#cb34-3" tabindex="-1"></a><span class="st">CREATE TABLE IF NOT EXISTS `barang` (</span></span>
+<span id="cb34-4"><a href="join-tabel-subkueri.html#cb34-4" tabindex="-1"></a><span class="st">  `id_barang` int(11) NOT NULL AUTO_INCREMENT,</span></span>
+<span id="cb34-5"><a href="join-tabel-subkueri.html#cb34-5" tabindex="-1"></a><span class="st">  `id_kategori` smallint(6) NOT NULL,</span></span>
+<span id="cb34-6"><a href="join-tabel-subkueri.html#cb34-6" tabindex="-1"></a><span class="st">  `nama_barang` varchar(255) CHARACTER SET latin1 NOT NULL,</span></span>
+<span id="cb34-7"><a href="join-tabel-subkueri.html#cb34-7" tabindex="-1"></a><span class="st">  `harga` int(11) NOT NULL,</span></span>
+<span id="cb34-8"><a href="join-tabel-subkueri.html#cb34-8" tabindex="-1"></a><span class="st">  `stok` int(11) NOT NULL,</span></span>
+<span id="cb34-9"><a href="join-tabel-subkueri.html#cb34-9" tabindex="-1"></a><span class="st">  PRIMARY KEY (`id_barang`)</span></span>
+<span id="cb34-10"><a href="join-tabel-subkueri.html#cb34-10" tabindex="-1"></a><span class="st">); </span></span>
+<span id="cb34-11"><a href="join-tabel-subkueri.html#cb34-11" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb34-12"><a href="join-tabel-subkueri.html#cb34-12" tabindex="-1"></a></span>
+<span id="cb34-13"><a href="join-tabel-subkueri.html#cb34-13" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb34-14"><a href="join-tabel-subkueri.html#cb34-14" tabindex="-1"></a>cursor2.execute(sql)</span>
+<span id="cb34-15"><a href="join-tabel-subkueri.html#cb34-15" tabindex="-1"></a></span>
+<span id="cb34-16"><a href="join-tabel-subkueri.html#cb34-16" tabindex="-1"></a><span class="co"># Simpan perubahan</span></span>
+<span id="cb34-17"><a href="join-tabel-subkueri.html#cb34-17" tabindex="-1"></a>db2.commit()</span></code></pre></div>
+</div>
+<div id="pelanggan" class="section level4 unnumbered hasAnchor">
+<h4>Pelanggan<a href="join-tabel-subkueri.html#pelanggan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="join-tabel-subkueri.html#cb35-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb35-2"><a href="join-tabel-subkueri.html#cb35-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb35-3"><a href="join-tabel-subkueri.html#cb35-3" tabindex="-1"></a><span class="st">CREATE TABLE IF NOT EXISTS `pelanggan` (</span></span>
+<span id="cb35-4"><a href="join-tabel-subkueri.html#cb35-4" tabindex="-1"></a><span class="st">  `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT,</span></span>
+<span id="cb35-5"><a href="join-tabel-subkueri.html#cb35-5" tabindex="-1"></a><span class="st">  `nama` varchar(50) DEFAULT NULL,</span></span>
+<span id="cb35-6"><a href="join-tabel-subkueri.html#cb35-6" tabindex="-1"></a><span class="st">  `email` varchar(50) DEFAULT NULL,</span></span>
+<span id="cb35-7"><a href="join-tabel-subkueri.html#cb35-7" tabindex="-1"></a><span class="st">  PRIMARY KEY (`id_pelanggan`) </span></span>
+<span id="cb35-8"><a href="join-tabel-subkueri.html#cb35-8" tabindex="-1"></a><span class="st">); </span></span>
+<span id="cb35-9"><a href="join-tabel-subkueri.html#cb35-9" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb35-10"><a href="join-tabel-subkueri.html#cb35-10" tabindex="-1"></a></span>
+<span id="cb35-11"><a href="join-tabel-subkueri.html#cb35-11" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb35-12"><a href="join-tabel-subkueri.html#cb35-12" tabindex="-1"></a>cursor2.execute(sql)</span>
+<span id="cb35-13"><a href="join-tabel-subkueri.html#cb35-13" tabindex="-1"></a></span>
+<span id="cb35-14"><a href="join-tabel-subkueri.html#cb35-14" tabindex="-1"></a><span class="co"># Simpan perubahan</span></span>
+<span id="cb35-15"><a href="join-tabel-subkueri.html#cb35-15" tabindex="-1"></a>db2.commit()</span></code></pre></div>
+</div>
+<div id="penjualan" class="section level4 unnumbered hasAnchor">
+<h4>Penjualan<a href="join-tabel-subkueri.html#penjualan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="join-tabel-subkueri.html#cb36-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb36-2"><a href="join-tabel-subkueri.html#cb36-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb36-3"><a href="join-tabel-subkueri.html#cb36-3" tabindex="-1"></a><span class="st">CREATE TABLE IF NOT EXISTS `penjualan` (</span></span>
+<span id="cb36-4"><a href="join-tabel-subkueri.html#cb36-4" tabindex="-1"></a><span class="st">  `id_transaksi` int(11) NOT NULL AUTO_INCREMENT,</span></span>
+<span id="cb36-5"><a href="join-tabel-subkueri.html#cb36-5" tabindex="-1"></a><span class="st">  `id_pelanggan` int(11) DEFAULT NULL,</span></span>
+<span id="cb36-6"><a href="join-tabel-subkueri.html#cb36-6" tabindex="-1"></a><span class="st">  `tgl_transaksi` date NOT NULL,</span></span>
+<span id="cb36-7"><a href="join-tabel-subkueri.html#cb36-7" tabindex="-1"></a><span class="st">  `total_transaksi` int(11) NOT NULL,</span></span>
+<span id="cb36-8"><a href="join-tabel-subkueri.html#cb36-8" tabindex="-1"></a><span class="st">  PRIMARY KEY (`id_transaksi`),</span></span>
+<span id="cb36-9"><a href="join-tabel-subkueri.html#cb36-9" tabindex="-1"></a><span class="st">  KEY `FK_penjualan_pelanggan` (`id_pelanggan`),</span></span>
+<span id="cb36-10"><a href="join-tabel-subkueri.html#cb36-10" tabindex="-1"></a><span class="st">  CONSTRAINT `FK_penjualan_pelanggan` FOREIGN KEY (`id_pelanggan`) REFERENCES `pelanggan` (`id_pelanggan`) ON DELETE SET NULL ON UPDATE CASCADE</span></span>
+<span id="cb36-11"><a href="join-tabel-subkueri.html#cb36-11" tabindex="-1"></a><span class="st">); </span></span>
+<span id="cb36-12"><a href="join-tabel-subkueri.html#cb36-12" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb36-13"><a href="join-tabel-subkueri.html#cb36-13" tabindex="-1"></a></span>
+<span id="cb36-14"><a href="join-tabel-subkueri.html#cb36-14" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb36-15"><a href="join-tabel-subkueri.html#cb36-15" tabindex="-1"></a>cursor2.execute(sql)</span>
+<span id="cb36-16"><a href="join-tabel-subkueri.html#cb36-16" tabindex="-1"></a></span>
+<span id="cb36-17"><a href="join-tabel-subkueri.html#cb36-17" tabindex="-1"></a><span class="co"># Simpan perubahan</span></span>
+<span id="cb36-18"><a href="join-tabel-subkueri.html#cb36-18" tabindex="-1"></a>db2.commit()</span></code></pre></div>
+</div>
+<div id="detail-penjualan" class="section level4 unnumbered hasAnchor">
+<h4>Detail Penjualan<a href="join-tabel-subkueri.html#detail-penjualan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="join-tabel-subkueri.html#cb37-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb37-2"><a href="join-tabel-subkueri.html#cb37-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb37-3"><a href="join-tabel-subkueri.html#cb37-3" tabindex="-1"></a><span class="st">CREATE TABLE IF NOT EXISTS `penjualan_detail` (</span></span>
+<span id="cb37-4"><a href="join-tabel-subkueri.html#cb37-4" tabindex="-1"></a><span class="st">  `id_transaksi_detail` int(11) NOT NULL AUTO_INCREMENT,</span></span>
+<span id="cb37-5"><a href="join-tabel-subkueri.html#cb37-5" tabindex="-1"></a><span class="st">  `id_transaksi` int(11) DEFAULT NULL,</span></span>
+<span id="cb37-6"><a href="join-tabel-subkueri.html#cb37-6" tabindex="-1"></a><span class="st">  `id_barang` int(11) DEFAULT NULL,</span></span>
+<span id="cb37-7"><a href="join-tabel-subkueri.html#cb37-7" tabindex="-1"></a><span class="st">  `jml_barang` smallint(6) DEFAULT NULL,</span></span>
+<span id="cb37-8"><a href="join-tabel-subkueri.html#cb37-8" tabindex="-1"></a><span class="st">  `harga_satuan` int(11) DEFAULT NULL,</span></span>
+<span id="cb37-9"><a href="join-tabel-subkueri.html#cb37-9" tabindex="-1"></a><span class="st">  PRIMARY KEY (`id_transaksi_detail`),</span></span>
+<span id="cb37-10"><a href="join-tabel-subkueri.html#cb37-10" tabindex="-1"></a><span class="st">  KEY `FK_tb_penjualan_detail_tb_barang` (`id_barang`),</span></span>
+<span id="cb37-11"><a href="join-tabel-subkueri.html#cb37-11" tabindex="-1"></a><span class="st">  KEY `FK_tb_penjualan_detail_tb_penjualan` (`id_transaksi`),</span></span>
+<span id="cb37-12"><a href="join-tabel-subkueri.html#cb37-12" tabindex="-1"></a><span class="st">  CONSTRAINT `FK_tb_penjualan_detail_tb_barang` FOREIGN KEY (`id_barang`) REFERENCES `barang` (`id_barang`) ON DELETE CASCADE ON UPDATE CASCADE,</span></span>
+<span id="cb37-13"><a href="join-tabel-subkueri.html#cb37-13" tabindex="-1"></a><span class="st">  CONSTRAINT `FK_tb_penjualan_detail_tb_penjualan` FOREIGN KEY (`id_transaksi`) REFERENCES `penjualan` (`id_transaksi`) ON DELETE CASCADE ON UPDATE CASCADE</span></span>
+<span id="cb37-14"><a href="join-tabel-subkueri.html#cb37-14" tabindex="-1"></a><span class="st">)</span></span>
+<span id="cb37-15"><a href="join-tabel-subkueri.html#cb37-15" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb37-16"><a href="join-tabel-subkueri.html#cb37-16" tabindex="-1"></a></span>
+<span id="cb37-17"><a href="join-tabel-subkueri.html#cb37-17" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb37-18"><a href="join-tabel-subkueri.html#cb37-18" tabindex="-1"></a>cursor2.execute(sql)</span>
+<span id="cb37-19"><a href="join-tabel-subkueri.html#cb37-19" tabindex="-1"></a></span>
+<span id="cb37-20"><a href="join-tabel-subkueri.html#cb37-20" tabindex="-1"></a><span class="co"># Simpan perubahan</span></span>
+<span id="cb37-21"><a href="join-tabel-subkueri.html#cb37-21" tabindex="-1"></a>db2.commit()</span></code></pre></div>
+<p><strong>Catatan: </strong> <a href="http://nyunyunbee.blogspot.com/2013/06/pengertian-cascade-dalam-mysql.html">Pengertian Cascade dalam MySql</a></p>
 <p><strong>Keterangan</strong>:</p>
 <p>Pengaturan Struktur Tabel SQL digunakan untuk menentukan aturan struktur data dalam tabel. Batasan digunakan untuk membatasi jenis data yang dapat masuk ke dalam tabel, memastikan keakuratan dan keandalan data dalam tabel. Batasan dapat berupa tingkat kolom atau tingkat tabel. Batasan tingkat kolom berlaku untuk kolom, dan batasan tingkat tabel berlaku untuk keseluruhan tabel. Berikut Batasan yang biasanya digunakan dalam SQL:</p>
 <ul>
@@ -412,33 +452,96 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><em>AUTO_INCREMENT:</em> memungkinkan inset data unik pada kolom tertentu yang dihasilkan secara otomatis saat data baru dimasukkan ke dalam tabel. Seringkali kolom ini adalah adalah juga <em>PRIMARY KEY</em> dan ingin dibuat secara otomatis setiap kali catatan baru dimasukkan.</li>
 </ul>
 </div>
+</div>
 <div id="insert-data-tabel" class="section level3 hasAnchor" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> INSERT Data Tabel<a href="join-tabel-subkueri.html#insert-data-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="join-tabel-subkueri.html#cb34-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; USE join_tabel;</span></span>
-<span id="cb34-2"><a href="join-tabel-subkueri.html#cb34-2" tabindex="-1"></a><span class="st">INSERT INTO `barang` (`id_barang`, `id_kategori`, `nama_barang`, `harga`, `stok`) </span></span>
-<span id="cb34-3"><a href="join-tabel-subkueri.html#cb34-3" tabindex="-1"></a><span class="st">         VALUES (</span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">)&#39;&#39;&#39;</span></span>
-<span id="cb34-4"><a href="join-tabel-subkueri.html#cb34-4" tabindex="-1"></a>values <span class="op">=</span> [(<span class="dv">1</span>, <span class="dv">1</span>, <span class="st">&#39;RAM&#39;</span>, <span class="dv">230000</span>, <span class="dv">4</span>),</span>
-<span id="cb34-5"><a href="join-tabel-subkueri.html#cb34-5" tabindex="-1"></a>            (<span class="dv">2</span>, <span class="dv">1</span>, <span class="st">&#39;Mainboard&#39;</span>, <span class="dv">1250000</span>, <span class="dv">7</span>),</span>
-<span id="cb34-6"><a href="join-tabel-subkueri.html#cb34-6" tabindex="-1"></a>            (<span class="dv">3</span>, <span class="dv">1</span>, <span class="st">&#39;Mouse&#39;</span>, <span class="dv">80000</span>, <span class="dv">6</span>),</span>
-<span id="cb34-7"><a href="join-tabel-subkueri.html#cb34-7" tabindex="-1"></a>            (<span class="dv">4</span>, <span class="dv">3</span>, <span class="st">&#39;Mousepad&#39;</span>, <span class="dv">35000</span>, <span class="dv">3</span>),</span>
-<span id="cb34-8"><a href="join-tabel-subkueri.html#cb34-8" tabindex="-1"></a>            (<span class="dv">5</span>, <span class="dv">3</span>, <span class="st">&#39;Keyboard&#39;</span>, <span class="dv">80000</span>, <span class="dv">5</span>)</span>
-<span id="cb34-9"><a href="join-tabel-subkueri.html#cb34-9" tabindex="-1"></a>         ]</span>
-<span id="cb34-10"><a href="join-tabel-subkueri.html#cb34-10" tabindex="-1"></a>         </span>
-<span id="cb34-11"><a href="join-tabel-subkueri.html#cb34-11" tabindex="-1"></a><span class="cf">for</span> val <span class="kw">in</span> values:</span>
-<span id="cb34-12"><a href="join-tabel-subkueri.html#cb34-12" tabindex="-1"></a>  cursor1.execute(sql, val)</span>
-<span id="cb34-13"><a href="join-tabel-subkueri.html#cb34-13" tabindex="-1"></a>  db1.commit()</span></code></pre></div>
-<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="join-tabel-subkueri.html#cb35-1" tabindex="-1"></a><span class="im">from</span> sqlalchemy <span class="im">import</span> create_engine</span>
-<span id="cb35-2"><a href="join-tabel-subkueri.html#cb35-2" tabindex="-1"></a><span class="im">import</span> pymysql</span>
-<span id="cb35-3"><a href="join-tabel-subkueri.html#cb35-3" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb35-4"><a href="join-tabel-subkueri.html#cb35-4" tabindex="-1"></a></span>
-<span id="cb35-5"><a href="join-tabel-subkueri.html#cb35-5" tabindex="-1"></a><span class="co"># membuat engine</span></span>
-<span id="cb35-6"><a href="join-tabel-subkueri.html#cb35-6" tabindex="-1"></a>engine <span class="op">=</span> create_engine(<span class="st">&quot;mysql+pymysql://</span><span class="sc">{user}</span><span class="st">:</span><span class="sc">{pw}</span><span class="st">@localhost/</span><span class="sc">{db}</span><span class="st">&quot;</span></span>
-<span id="cb35-7"><a href="join-tabel-subkueri.html#cb35-7" tabindex="-1"></a>                       .<span class="bu">format</span>(user<span class="op">=</span><span class="st">&quot;bakti&quot;</span>,</span>
-<span id="cb35-8"><a href="join-tabel-subkueri.html#cb35-8" tabindex="-1"></a>                               pw<span class="op">=</span><span class="st">&quot;123&quot;</span>,</span>
-<span id="cb35-9"><a href="join-tabel-subkueri.html#cb35-9" tabindex="-1"></a>                               db<span class="op">=</span><span class="st">&quot;jne2&quot;</span>))</span>
-<span id="cb35-10"><a href="join-tabel-subkueri.html#cb35-10" tabindex="-1"></a></span>
-<span id="cb35-11"><a href="join-tabel-subkueri.html#cb35-11" tabindex="-1"></a><span class="co"># engine koneksi ke database</span></span>
-<span id="cb35-12"><a href="join-tabel-subkueri.html#cb35-12" tabindex="-1"></a>db_enco <span class="op">=</span> engine.<span class="ex">connect</span>()</span></code></pre></div>
+<p>Berikut ini adalah koding yang digunakan untuk menambahkan data ke dalam tabel;</p>
+<div id="data-barang" class="section level4 unnumbered hasAnchor">
+<h4>Data Barang<a href="join-tabel-subkueri.html#data-barang" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="join-tabel-subkueri.html#cb38-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb38-2"><a href="join-tabel-subkueri.html#cb38-2" tabindex="-1"></a><span class="st">INSERT INTO `barang` (`id_barang`, `id_kategori`, `nama_barang`, `harga`, `stok`) </span></span>
+<span id="cb38-3"><a href="join-tabel-subkueri.html#cb38-3" tabindex="-1"></a><span class="st">      VALUES (</span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">)&#39;&#39;&#39;</span></span>
+<span id="cb38-4"><a href="join-tabel-subkueri.html#cb38-4" tabindex="-1"></a>      </span>
+<span id="cb38-5"><a href="join-tabel-subkueri.html#cb38-5" tabindex="-1"></a>values <span class="op">=</span> [(<span class="dv">1</span>, <span class="dv">1</span>, <span class="st">&#39;RAM&#39;</span>, <span class="dv">230000</span>, <span class="dv">4</span>),</span>
+<span id="cb38-6"><a href="join-tabel-subkueri.html#cb38-6" tabindex="-1"></a>            (<span class="dv">2</span>, <span class="dv">1</span>, <span class="st">&#39;Mainboard&#39;</span>, <span class="dv">1250000</span>, <span class="dv">7</span>),</span>
+<span id="cb38-7"><a href="join-tabel-subkueri.html#cb38-7" tabindex="-1"></a>            (<span class="dv">3</span>, <span class="dv">1</span>, <span class="st">&#39;Mouse&#39;</span>, <span class="dv">80000</span>, <span class="dv">6</span>),</span>
+<span id="cb38-8"><a href="join-tabel-subkueri.html#cb38-8" tabindex="-1"></a>            (<span class="dv">4</span>, <span class="dv">3</span>, <span class="st">&#39;Mousepad&#39;</span>, <span class="dv">35000</span>, <span class="dv">3</span>),</span>
+<span id="cb38-9"><a href="join-tabel-subkueri.html#cb38-9" tabindex="-1"></a>            (<span class="dv">5</span>, <span class="dv">3</span>, <span class="st">&#39;Keyboard&#39;</span>, <span class="dv">80000</span>, <span class="dv">5</span>)</span>
+<span id="cb38-10"><a href="join-tabel-subkueri.html#cb38-10" tabindex="-1"></a>         ]</span>
+<span id="cb38-11"><a href="join-tabel-subkueri.html#cb38-11" tabindex="-1"></a>         </span>
+<span id="cb38-12"><a href="join-tabel-subkueri.html#cb38-12" tabindex="-1"></a><span class="cf">for</span> val <span class="kw">in</span> values:</span>
+<span id="cb38-13"><a href="join-tabel-subkueri.html#cb38-13" tabindex="-1"></a>  cursor2.execute(sql, val)</span>
+<span id="cb38-14"><a href="join-tabel-subkueri.html#cb38-14" tabindex="-1"></a>  db2.commit()</span></code></pre></div>
+</div>
+<div id="data-pelanggan" class="section level4 unnumbered hasAnchor">
+<h4>Data Pelanggan<a href="join-tabel-subkueri.html#data-pelanggan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="join-tabel-subkueri.html#cb39-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb39-2"><a href="join-tabel-subkueri.html#cb39-2" tabindex="-1"></a><span class="st">INSERT INTO `pelanggan` (`id_pelanggan`, `nama`, `email`)</span></span>
+<span id="cb39-3"><a href="join-tabel-subkueri.html#cb39-3" tabindex="-1"></a><span class="st">      VALUES (</span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">)&#39;&#39;&#39;</span></span>
+<span id="cb39-4"><a href="join-tabel-subkueri.html#cb39-4" tabindex="-1"></a>      </span>
+<span id="cb39-5"><a href="join-tabel-subkueri.html#cb39-5" tabindex="-1"></a>values <span class="op">=</span> [(<span class="dv">1</span>, <span class="st">&#39;Alfa&#39;</span>, <span class="st">&#39;alfa@yahoo.com&#39;</span>),</span>
+<span id="cb39-6"><a href="join-tabel-subkueri.html#cb39-6" tabindex="-1"></a>            (<span class="dv">2</span>, <span class="st">&#39;Beta&#39;</span>, <span class="st">&#39;beta@gmail.com&#39;</span>),</span>
+<span id="cb39-7"><a href="join-tabel-subkueri.html#cb39-7" tabindex="-1"></a>            (<span class="dv">3</span>, <span class="st">&#39;Delta&#39;</span>, <span class="st">&#39;delta@hotmail.com&#39;</span>),</span>
+<span id="cb39-8"><a href="join-tabel-subkueri.html#cb39-8" tabindex="-1"></a>            (<span class="dv">4</span>, <span class="st">&#39;Bakti&#39;</span>, <span class="st">&#39;dsciencelabs@outlook.com&#39;</span>)</span>
+<span id="cb39-9"><a href="join-tabel-subkueri.html#cb39-9" tabindex="-1"></a>           ]</span>
+<span id="cb39-10"><a href="join-tabel-subkueri.html#cb39-10" tabindex="-1"></a>         </span>
+<span id="cb39-11"><a href="join-tabel-subkueri.html#cb39-11" tabindex="-1"></a><span class="cf">for</span> val <span class="kw">in</span> values:</span>
+<span id="cb39-12"><a href="join-tabel-subkueri.html#cb39-12" tabindex="-1"></a>  cursor2.execute(sql, val)</span>
+<span id="cb39-13"><a href="join-tabel-subkueri.html#cb39-13" tabindex="-1"></a>  db2.commit()</span></code></pre></div>
+</div>
+<div id="data-penjualan" class="section level4 unnumbered hasAnchor">
+<h4>Data Penjualan<a href="join-tabel-subkueri.html#data-penjualan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="join-tabel-subkueri.html#cb40-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb40-2"><a href="join-tabel-subkueri.html#cb40-2" tabindex="-1"></a><span class="st">INSERT INTO `penjualan` (`id_transaksi`, `id_pelanggan`, `tgl_transaksi`, `total_transaksi`)</span></span>
+<span id="cb40-3"><a href="join-tabel-subkueri.html#cb40-3" tabindex="-1"></a><span class="st">      VALUES (</span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">)&#39;&#39;&#39;</span></span>
+<span id="cb40-4"><a href="join-tabel-subkueri.html#cb40-4" tabindex="-1"></a>      </span>
+<span id="cb40-5"><a href="join-tabel-subkueri.html#cb40-5" tabindex="-1"></a>values <span class="op">=</span> [(<span class="dv">1</span>, <span class="dv">1</span>, <span class="st">&#39;2023-06-22&#39;</span>, <span class="dv">230000</span>),</span>
+<span id="cb40-6"><a href="join-tabel-subkueri.html#cb40-6" tabindex="-1"></a>            (<span class="dv">2</span>, <span class="dv">3</span>, <span class="st">&#39;2023-06-22&#39;</span>, <span class="dv">195000</span>),</span>
+<span id="cb40-7"><a href="join-tabel-subkueri.html#cb40-7" tabindex="-1"></a>            (<span class="dv">3</span>, <span class="dv">2</span>, <span class="st">&#39;2023-05-01&#39;</span>, <span class="dv">1710000</span>),</span>
+<span id="cb40-8"><a href="join-tabel-subkueri.html#cb40-8" tabindex="-1"></a>            (<span class="dv">4</span>, <span class="dv">1</span>, <span class="st">&#39;2023-07-04&#39;</span>, <span class="dv">310000</span>),</span>
+<span id="cb40-9"><a href="join-tabel-subkueri.html#cb40-9" tabindex="-1"></a>            (<span class="dv">5</span>, <span class="dv">4</span>, <span class="st">&#39;2023-07-10&#39;</span>, <span class="dv">80000</span>)</span>
+<span id="cb40-10"><a href="join-tabel-subkueri.html#cb40-10" tabindex="-1"></a>           ]</span>
+<span id="cb40-11"><a href="join-tabel-subkueri.html#cb40-11" tabindex="-1"></a>         </span>
+<span id="cb40-12"><a href="join-tabel-subkueri.html#cb40-12" tabindex="-1"></a><span class="cf">for</span> val <span class="kw">in</span> values:</span>
+<span id="cb40-13"><a href="join-tabel-subkueri.html#cb40-13" tabindex="-1"></a>  cursor2.execute(sql, val)</span>
+<span id="cb40-14"><a href="join-tabel-subkueri.html#cb40-14" tabindex="-1"></a>  db2.commit()</span></code></pre></div>
+</div>
+<div id="data-detail-penjualan" class="section level4 unnumbered hasAnchor">
+<h4>Data Detail Penjualan<a href="join-tabel-subkueri.html#data-detail-penjualan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="join-tabel-subkueri.html#cb41-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb41-2"><a href="join-tabel-subkueri.html#cb41-2" tabindex="-1"></a><span class="st">INSERT INTO `penjualan_detail` (`id_transaksi_detail`, `id_transaksi`, `id_barang`, `jml_barang`, `harga_satuan`)</span></span>
+<span id="cb41-3"><a href="join-tabel-subkueri.html#cb41-3" tabindex="-1"></a><span class="st">      VALUES (</span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">); </span></span>
+<span id="cb41-4"><a href="join-tabel-subkueri.html#cb41-4" tabindex="-1"></a><span class="st">      &#39;&#39;&#39;</span></span>
+<span id="cb41-5"><a href="join-tabel-subkueri.html#cb41-5" tabindex="-1"></a>values <span class="op">=</span> [(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">230000</span>),</span>
+<span id="cb41-6"><a href="join-tabel-subkueri.html#cb41-6" tabindex="-1"></a>            (<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">35000</span>),</span>
+<span id="cb41-7"><a href="join-tabel-subkueri.html#cb41-7" tabindex="-1"></a>            (<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">80000</span>),</span>
+<span id="cb41-8"><a href="join-tabel-subkueri.html#cb41-8" tabindex="-1"></a>            (<span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1250000</span>),</span>
+<span id="cb41-9"><a href="join-tabel-subkueri.html#cb41-9" tabindex="-1"></a>            (<span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">230000</span>),</span>
+<span id="cb41-10"><a href="join-tabel-subkueri.html#cb41-10" tabindex="-1"></a>            (<span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">35000</span>),</span>
+<span id="cb41-11"><a href="join-tabel-subkueri.html#cb41-11" tabindex="-1"></a>            (<span class="dv">7</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">80000</span>),</span>
+<span id="cb41-12"><a href="join-tabel-subkueri.html#cb41-12" tabindex="-1"></a>            (<span class="dv">8</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">80000</span>),</span>
+<span id="cb41-13"><a href="join-tabel-subkueri.html#cb41-13" tabindex="-1"></a>            (<span class="dv">9</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">80000</span>)</span>
+<span id="cb41-14"><a href="join-tabel-subkueri.html#cb41-14" tabindex="-1"></a>           ]</span>
+<span id="cb41-15"><a href="join-tabel-subkueri.html#cb41-15" tabindex="-1"></a>         </span>
+<span id="cb41-16"><a href="join-tabel-subkueri.html#cb41-16" tabindex="-1"></a><span class="cf">for</span> val <span class="kw">in</span> values:</span>
+<span id="cb41-17"><a href="join-tabel-subkueri.html#cb41-17" tabindex="-1"></a>  cursor2.execute(sql, val)</span>
+<span id="cb41-18"><a href="join-tabel-subkueri.html#cb41-18" tabindex="-1"></a>  db2.commit()</span></code></pre></div>
+</div>
+</div>
+<div id="read-tabel" class="section level3 hasAnchor" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> READ tabel<a href="join-tabel-subkueri.html#read-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="join-tabel-subkueri.html#cb42-1" tabindex="-1"></a><span class="im">from</span> sqlalchemy <span class="im">import</span> create_engine</span>
+<span id="cb42-2"><a href="join-tabel-subkueri.html#cb42-2" tabindex="-1"></a><span class="im">import</span> pymysql</span>
+<span id="cb42-3"><a href="join-tabel-subkueri.html#cb42-3" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb42-4"><a href="join-tabel-subkueri.html#cb42-4" tabindex="-1"></a></span>
+<span id="cb42-5"><a href="join-tabel-subkueri.html#cb42-5" tabindex="-1"></a><span class="co"># membuat engine</span></span>
+<span id="cb42-6"><a href="join-tabel-subkueri.html#cb42-6" tabindex="-1"></a>engine <span class="op">=</span> create_engine(<span class="st">&quot;mysql+pymysql://</span><span class="sc">{user}</span><span class="st">:</span><span class="sc">{pw}</span><span class="st">@localhost/</span><span class="sc">{db}</span><span class="st">&quot;</span></span>
+<span id="cb42-7"><a href="join-tabel-subkueri.html#cb42-7" tabindex="-1"></a>                       .<span class="bu">format</span>(user<span class="op">=</span><span class="st">&quot;bakti&quot;</span>,</span>
+<span id="cb42-8"><a href="join-tabel-subkueri.html#cb42-8" tabindex="-1"></a>                               pw<span class="op">=</span><span class="st">&quot;123&quot;</span>,</span>
+<span id="cb42-9"><a href="join-tabel-subkueri.html#cb42-9" tabindex="-1"></a>                               db<span class="op">=</span><span class="st">&quot;jne2&quot;</span>))</span>
+<span id="cb42-10"><a href="join-tabel-subkueri.html#cb42-10" tabindex="-1"></a></span>
+<span id="cb42-11"><a href="join-tabel-subkueri.html#cb42-11" tabindex="-1"></a><span class="co"># engine koneksi ke database</span></span>
+<span id="cb42-12"><a href="join-tabel-subkueri.html#cb42-12" tabindex="-1"></a>db_enco <span class="op">=</span> engine.<span class="ex">connect</span>()</span></code></pre></div>
 <ul>
 <li><a href="https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b" class="uri">https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b</a></li>
 <li><a href="https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/" class="uri">https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/</a></li>

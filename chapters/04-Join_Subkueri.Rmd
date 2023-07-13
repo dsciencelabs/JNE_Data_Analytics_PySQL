@@ -76,7 +76,7 @@ cursor2 = db2.cursor()
 
 Setelah koneksi dan kursor baru berhasil dibuatkan, berikutnya kita buatkan struktur tabel yang diperlukan;
 
-#### Barang {-}
+#### Struktur Tabel Barang {-}
 
 ```{python, eval=F}
 # Perintah SQL
@@ -99,7 +99,7 @@ db2.commit()
 ```
 
 
-#### Pelanggan {-}
+#### Struktur Tabel Pelanggan {-}
 
 ```{python, eval=F}
 # Perintah SQL
@@ -119,7 +119,7 @@ cursor2.execute(sql)
 db2.commit()
 ```
 
-#### Penjualan {-}
+#### Struktur Tabel Penjualan {-}
 
 ```{python, eval=F}
 # Perintah SQL
@@ -142,7 +142,7 @@ cursor2.execute(sql)
 db2.commit()
 ```
 
-#### Detail Penjualan {-}
+#### Struktur Tabel Detail Penjualan {-}
 
 ```{python, eval=F}
 # Perintah SQL
@@ -190,7 +190,7 @@ Pengaturan Struktur Tabel SQL digunakan untuk menentukan aturan struktur data da
 
 Berikut ini adalah koding yang digunakan untuk menambahkan data ke dalam tabel;
 
-#### Data Barang {-}
+#### Insert Data Barang {-}
 
 ```{python, eval=F}
 sql = '''
@@ -209,7 +209,7 @@ for val in values:
   db2.commit()
 ```
 
-#### Data Pelanggan {-}
+#### Insert Data Pelanggan {-}
 
 ```{python, eval=F}
 sql = '''
@@ -228,7 +228,7 @@ for val in values:
 ```
 
 
-#### Data Penjualan {-}
+#### Insert Data Penjualan {-}
 
 ```{python, eval=F}
 sql = '''
@@ -248,7 +248,7 @@ for val in values:
 ```
 
 
-#### Data Detail Penjualan {-}
+#### Insert Data Penjulan Detail {-}
 
 ```{python, eval=F}
 sql = '''
@@ -272,9 +272,9 @@ for val in values:
 ```
 
 
-### READ tabel
+### READ Tabel
 
-
+Membaca data tabel SQL dengan Python diperlukan koneksi dan engine yang aktif untuk memuat data yang diperlihatkan ke pengguna. Berikut ini adalah langkah pembentukan koneksi dan enginya.
 
 ```{python, eval=F}
 from sqlalchemy import create_engine
@@ -285,11 +285,57 @@ import pandas as pd
 engine = create_engine("mysql+pymysql://{user}:{pw}@localhost/{db}"
                        .format(user="bakti",
                                pw="123",
-                               db="jne2"))
+                               db="join_tabel"))
 
 # engine koneksi ke database
-db_enco = engine.connect()
+en_co = engine.connect()
 ```
+
+#### Read Tabel Barang {-}
+
+Selanjutnya, untuk membaca tabel sql menjadi DataFrame, tanpa mengeksekusi kueri apa pun, kita dapat menggunakan fungsi read_sql_table() yang ada pada library Pandas.
+
+```{python, eval=F}
+barang = pd.read_sql_table('barang', en_co)
+barang
+```
+
+#### Read Tabel Pelanggan {-}
+
+```{python, eval=F}
+pelanggan = pd.read_sql_table('pelanggan', en_co)
+pelanggan
+```
+
+#### Read Tabel Penjualan {-}
+
+```{python, eval=F}
+penjualan = pd.read_sql_table('penjualan', en_co)
+penjualan
+```
+
+#### Read Tabel Penjulan Detail {-}
+
+```{python, eval=F}
+detail_penjualan = pd.read_sql_table('penjualan_detail', en_co)
+detail_penjualan
+```
+
+## Join Tabel 
+
+SQL JOIN adalah fungsi yang disediakan SQL yang digunakan untuk menggabungkan tabel melalui kolom atau key tertentu yang nilainya saling terkait untuk memperoleh sekumpulan data dengan informasi yang lengkap. Dengan perintah JOIN pengguna dapat menggabungkan beberapa tabel agar mendapat informasi secara lengkap sesuai yang dibutuhkan untuk analisis. Beberapa jenis join tabel ini akan dijelaskan satu persatu pada sub-topik berikut.
+
+### INNER JOIN 
+
+Pada MySQL, penulisan INNER JOIN dapat dilakukan dengan tiga cara yaitu (1) menggunakan klausa INNER JOIN (2) menggunakan klausa CROSS JOIN (3) cukup menggunakan klausa JOIN saja. Pengguna bebas menggunakan sintaks yang mana saja asal konsisten, penulis lebih prefer menggunakan JOIN saja, karena lebih simpel.
+
+Sebagai contoh kita akan menampilkan data pelanggan yang melakukan pesanan, query yang kita jalankan:
+
+
+
+
+
+
 
 
 

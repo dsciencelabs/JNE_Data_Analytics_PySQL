@@ -85,6 +85,8 @@ create-database-baru
 create-tabel
 insert-data-tabel
 read-tabel
+join-tabel
+inner-join
 w1h-visualisasi
 persentasi-tugas-akhir
 penutup

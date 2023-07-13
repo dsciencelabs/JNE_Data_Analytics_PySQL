@@ -273,7 +273,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="4.2.1" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#create-tabel"><i class="fa fa-check"></i><b>4.2.1</b> CREATE Tabel</a></li>
 <li class="chapter" data-level="4.2.2" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#insert-data-tabel"><i class="fa fa-check"></i><b>4.2.2</b> INSERT Data Tabel</a></li>
-<li class="chapter" data-level="4.2.3" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#read-tabel"><i class="fa fa-check"></i><b>4.2.3</b> READ tabel</a></li>
+<li class="chapter" data-level="4.2.3" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#read-tabel"><i class="fa fa-check"></i><b>4.2.3</b> READ Tabel</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#join-tabel"><i class="fa fa-check"></i><b>4.3</b> Join Tabel</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#inner-join"><i class="fa fa-check"></i><b>4.3.1</b> INNER JOIN</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="w1h-visualisasi.html"><a href="w1h-visualisasi.html"><i class="fa fa-check"></i><b>5</b> 5W1H &amp; Visualisasi</a></li>
@@ -356,8 +360,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb33-12"><a href="join-tabel-subkueri.html#cb33-12" tabindex="-1"></a><span class="co"># membuat objek &#39;cursor` sebagai kata kunci eksekusi SQL</span></span>
 <span id="cb33-13"><a href="join-tabel-subkueri.html#cb33-13" tabindex="-1"></a>cursor2 <span class="op">=</span> db2.cursor()</span></code></pre></div>
 <p>Setelah koneksi dan kursor baru berhasil dibuatkan, berikutnya kita buatkan struktur tabel yang diperlukan;</p>
-<div id="barang" class="section level4 unnumbered hasAnchor">
-<h4>Barang<a href="join-tabel-subkueri.html#barang" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="struktur-tabel-barang" class="section level4 unnumbered hasAnchor">
+<h4>Struktur Tabel Barang<a href="join-tabel-subkueri.html#struktur-tabel-barang" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="join-tabel-subkueri.html#cb34-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
 <span id="cb34-2"><a href="join-tabel-subkueri.html#cb34-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb34-3"><a href="join-tabel-subkueri.html#cb34-3" tabindex="-1"></a><span class="st">CREATE TABLE IF NOT EXISTS `barang` (</span></span>
@@ -376,8 +380,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb34-16"><a href="join-tabel-subkueri.html#cb34-16" tabindex="-1"></a><span class="co"># Simpan perubahan</span></span>
 <span id="cb34-17"><a href="join-tabel-subkueri.html#cb34-17" tabindex="-1"></a>db2.commit()</span></code></pre></div>
 </div>
-<div id="pelanggan" class="section level4 unnumbered hasAnchor">
-<h4>Pelanggan<a href="join-tabel-subkueri.html#pelanggan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="struktur-tabel-pelanggan" class="section level4 unnumbered hasAnchor">
+<h4>Struktur Tabel Pelanggan<a href="join-tabel-subkueri.html#struktur-tabel-pelanggan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="join-tabel-subkueri.html#cb35-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
 <span id="cb35-2"><a href="join-tabel-subkueri.html#cb35-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
 <span id="cb35-3"><a href="join-tabel-subkueri.html#cb35-3" tabindex="-1"></a><span class="st">CREATE TABLE IF NOT EXISTS `pelanggan` (</span></span>
@@ -394,8 +398,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb35-14"><a href="join-tabel-subkueri.html#cb35-14" tabindex="-1"></a><span class="co"># Simpan perubahan</span></span>
 <span id="cb35-15"><a href="join-tabel-subkueri.html#cb35-15" tabindex="-1"></a>db2.commit()</span></code></pre></div>
 </div>
-<div id="penjualan" class="section level4 unnumbered hasAnchor">
-<h4>Penjualan<a href="join-tabel-subkueri.html#penjualan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="struktur-tabel-penjualan" class="section level4 unnumbered hasAnchor">
+<h4>Struktur Tabel Penjualan<a href="join-tabel-subkueri.html#struktur-tabel-penjualan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="join-tabel-subkueri.html#cb36-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
 <span id="cb36-2"><a href="join-tabel-subkueri.html#cb36-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
 <span id="cb36-3"><a href="join-tabel-subkueri.html#cb36-3" tabindex="-1"></a><span class="st">CREATE TABLE IF NOT EXISTS `penjualan` (</span></span>
@@ -415,8 +419,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb36-17"><a href="join-tabel-subkueri.html#cb36-17" tabindex="-1"></a><span class="co"># Simpan perubahan</span></span>
 <span id="cb36-18"><a href="join-tabel-subkueri.html#cb36-18" tabindex="-1"></a>db2.commit()</span></code></pre></div>
 </div>
-<div id="detail-penjualan" class="section level4 unnumbered hasAnchor">
-<h4>Detail Penjualan<a href="join-tabel-subkueri.html#detail-penjualan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="struktur-tabel-detail-penjualan" class="section level4 unnumbered hasAnchor">
+<h4>Struktur Tabel Detail Penjualan<a href="join-tabel-subkueri.html#struktur-tabel-detail-penjualan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="join-tabel-subkueri.html#cb37-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
 <span id="cb37-2"><a href="join-tabel-subkueri.html#cb37-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
 <span id="cb37-3"><a href="join-tabel-subkueri.html#cb37-3" tabindex="-1"></a><span class="st">CREATE TABLE IF NOT EXISTS `penjualan_detail` (</span></span>
@@ -456,8 +460,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="insert-data-tabel" class="section level3 hasAnchor" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> INSERT Data Tabel<a href="join-tabel-subkueri.html#insert-data-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Berikut ini adalah koding yang digunakan untuk menambahkan data ke dalam tabel;</p>
-<div id="data-barang" class="section level4 unnumbered hasAnchor">
-<h4>Data Barang<a href="join-tabel-subkueri.html#data-barang" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="insert-data-barang" class="section level4 unnumbered hasAnchor">
+<h4>Insert Data Barang<a href="join-tabel-subkueri.html#insert-data-barang" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="join-tabel-subkueri.html#cb38-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb38-2"><a href="join-tabel-subkueri.html#cb38-2" tabindex="-1"></a><span class="st">INSERT INTO `barang` (`id_barang`, `id_kategori`, `nama_barang`, `harga`, `stok`) </span></span>
 <span id="cb38-3"><a href="join-tabel-subkueri.html#cb38-3" tabindex="-1"></a><span class="st">      VALUES (</span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">)&#39;&#39;&#39;</span></span>
@@ -473,8 +477,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb38-13"><a href="join-tabel-subkueri.html#cb38-13" tabindex="-1"></a>  cursor2.execute(sql, val)</span>
 <span id="cb38-14"><a href="join-tabel-subkueri.html#cb38-14" tabindex="-1"></a>  db2.commit()</span></code></pre></div>
 </div>
-<div id="data-pelanggan" class="section level4 unnumbered hasAnchor">
-<h4>Data Pelanggan<a href="join-tabel-subkueri.html#data-pelanggan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="insert-data-pelanggan" class="section level4 unnumbered hasAnchor">
+<h4>Insert Data Pelanggan<a href="join-tabel-subkueri.html#insert-data-pelanggan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="join-tabel-subkueri.html#cb39-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb39-2"><a href="join-tabel-subkueri.html#cb39-2" tabindex="-1"></a><span class="st">INSERT INTO `pelanggan` (`id_pelanggan`, `nama`, `email`)</span></span>
 <span id="cb39-3"><a href="join-tabel-subkueri.html#cb39-3" tabindex="-1"></a><span class="st">      VALUES (</span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">)&#39;&#39;&#39;</span></span>
@@ -489,8 +493,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb39-12"><a href="join-tabel-subkueri.html#cb39-12" tabindex="-1"></a>  cursor2.execute(sql, val)</span>
 <span id="cb39-13"><a href="join-tabel-subkueri.html#cb39-13" tabindex="-1"></a>  db2.commit()</span></code></pre></div>
 </div>
-<div id="data-penjualan" class="section level4 unnumbered hasAnchor">
-<h4>Data Penjualan<a href="join-tabel-subkueri.html#data-penjualan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="insert-data-penjualan" class="section level4 unnumbered hasAnchor">
+<h4>Insert Data Penjualan<a href="join-tabel-subkueri.html#insert-data-penjualan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="join-tabel-subkueri.html#cb40-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb40-2"><a href="join-tabel-subkueri.html#cb40-2" tabindex="-1"></a><span class="st">INSERT INTO `penjualan` (`id_transaksi`, `id_pelanggan`, `tgl_transaksi`, `total_transaksi`)</span></span>
 <span id="cb40-3"><a href="join-tabel-subkueri.html#cb40-3" tabindex="-1"></a><span class="st">      VALUES (</span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">)&#39;&#39;&#39;</span></span>
@@ -506,8 +510,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb40-13"><a href="join-tabel-subkueri.html#cb40-13" tabindex="-1"></a>  cursor2.execute(sql, val)</span>
 <span id="cb40-14"><a href="join-tabel-subkueri.html#cb40-14" tabindex="-1"></a>  db2.commit()</span></code></pre></div>
 </div>
-<div id="data-detail-penjualan" class="section level4 unnumbered hasAnchor">
-<h4>Data Detail Penjualan<a href="join-tabel-subkueri.html#data-detail-penjualan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="insert-data-penjulan-detail" class="section level4 unnumbered hasAnchor">
+<h4>Insert Data Penjulan Detail<a href="join-tabel-subkueri.html#insert-data-penjulan-detail" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="join-tabel-subkueri.html#cb41-1" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb41-2"><a href="join-tabel-subkueri.html#cb41-2" tabindex="-1"></a><span class="st">INSERT INTO `penjualan_detail` (`id_transaksi_detail`, `id_transaksi`, `id_barang`, `jml_barang`, `harga_satuan`)</span></span>
 <span id="cb41-3"><a href="join-tabel-subkueri.html#cb41-3" tabindex="-1"></a><span class="st">      VALUES (</span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">, </span><span class="sc">%s</span><span class="st">); </span></span>
@@ -529,7 +533,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div id="read-tabel" class="section level3 hasAnchor" number="4.2.3">
-<h3><span class="header-section-number">4.2.3</span> READ tabel<a href="join-tabel-subkueri.html#read-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3><span class="header-section-number">4.2.3</span> READ Tabel<a href="join-tabel-subkueri.html#read-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Membaca data tabel SQL dengan Python diperlukan koneksi dan engine yang aktif untuk memuat data yang diperlihatkan ke pengguna. Berikut ini adalah langkah pembentukan koneksi dan enginya.</p>
 <div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="join-tabel-subkueri.html#cb42-1" tabindex="-1"></a><span class="im">from</span> sqlalchemy <span class="im">import</span> create_engine</span>
 <span id="cb42-2"><a href="join-tabel-subkueri.html#cb42-2" tabindex="-1"></a><span class="im">import</span> pymysql</span>
 <span id="cb42-3"><a href="join-tabel-subkueri.html#cb42-3" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -538,10 +543,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb42-6"><a href="join-tabel-subkueri.html#cb42-6" tabindex="-1"></a>engine <span class="op">=</span> create_engine(<span class="st">&quot;mysql+pymysql://</span><span class="sc">{user}</span><span class="st">:</span><span class="sc">{pw}</span><span class="st">@localhost/</span><span class="sc">{db}</span><span class="st">&quot;</span></span>
 <span id="cb42-7"><a href="join-tabel-subkueri.html#cb42-7" tabindex="-1"></a>                       .<span class="bu">format</span>(user<span class="op">=</span><span class="st">&quot;bakti&quot;</span>,</span>
 <span id="cb42-8"><a href="join-tabel-subkueri.html#cb42-8" tabindex="-1"></a>                               pw<span class="op">=</span><span class="st">&quot;123&quot;</span>,</span>
-<span id="cb42-9"><a href="join-tabel-subkueri.html#cb42-9" tabindex="-1"></a>                               db<span class="op">=</span><span class="st">&quot;jne2&quot;</span>))</span>
+<span id="cb42-9"><a href="join-tabel-subkueri.html#cb42-9" tabindex="-1"></a>                               db<span class="op">=</span><span class="st">&quot;join_tabel&quot;</span>))</span>
 <span id="cb42-10"><a href="join-tabel-subkueri.html#cb42-10" tabindex="-1"></a></span>
 <span id="cb42-11"><a href="join-tabel-subkueri.html#cb42-11" tabindex="-1"></a><span class="co"># engine koneksi ke database</span></span>
-<span id="cb42-12"><a href="join-tabel-subkueri.html#cb42-12" tabindex="-1"></a>db_enco <span class="op">=</span> engine.<span class="ex">connect</span>()</span></code></pre></div>
+<span id="cb42-12"><a href="join-tabel-subkueri.html#cb42-12" tabindex="-1"></a>en_co <span class="op">=</span> engine.<span class="ex">connect</span>()</span></code></pre></div>
+<div id="read-tabel-barang" class="section level4 unnumbered hasAnchor">
+<h4>Read Tabel Barang<a href="join-tabel-subkueri.html#read-tabel-barang" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Selanjutnya, untuk membaca tabel sql menjadi DataFrame, tanpa mengeksekusi kueri apa pun, kita dapat menggunakan fungsi read_sql_table() yang ada pada library Pandas.</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="join-tabel-subkueri.html#cb43-1" tabindex="-1"></a>barang <span class="op">=</span> pd.read_sql_table(<span class="st">&#39;barang&#39;</span>, en_co)</span>
+<span id="cb43-2"><a href="join-tabel-subkueri.html#cb43-2" tabindex="-1"></a>barang</span></code></pre></div>
+</div>
+<div id="read-tabel-pelanggan" class="section level4 unnumbered hasAnchor">
+<h4>Read Tabel Pelanggan<a href="join-tabel-subkueri.html#read-tabel-pelanggan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="join-tabel-subkueri.html#cb44-1" tabindex="-1"></a>pelanggan <span class="op">=</span> pd.read_sql_table(<span class="st">&#39;pelanggan&#39;</span>, en_co)</span>
+<span id="cb44-2"><a href="join-tabel-subkueri.html#cb44-2" tabindex="-1"></a>pelanggan</span></code></pre></div>
+</div>
+<div id="read-tabel-penjualan" class="section level4 unnumbered hasAnchor">
+<h4>Read Tabel Penjualan<a href="join-tabel-subkueri.html#read-tabel-penjualan" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="join-tabel-subkueri.html#cb45-1" tabindex="-1"></a>penjualan <span class="op">=</span> pd.read_sql_table(<span class="st">&#39;penjualan&#39;</span>, en_co)</span>
+<span id="cb45-2"><a href="join-tabel-subkueri.html#cb45-2" tabindex="-1"></a>penjualan</span></code></pre></div>
+</div>
+<div id="read-tabel-penjulan-detail" class="section level4 unnumbered hasAnchor">
+<h4>Read Tabel Penjulan Detail<a href="join-tabel-subkueri.html#read-tabel-penjulan-detail" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="join-tabel-subkueri.html#cb46-1" tabindex="-1"></a>detail_penjualan <span class="op">=</span> pd.read_sql_table(<span class="st">&#39;penjualan_detail&#39;</span>, en_co)</span>
+<span id="cb46-2"><a href="join-tabel-subkueri.html#cb46-2" tabindex="-1"></a>detail_penjualan</span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="join-tabel" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Join Tabel<a href="join-tabel-subkueri.html#join-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>SQL JOIN adalah fungsi yang disediakan SQL yang digunakan untuk menggabungkan tabel melalui kolom atau key tertentu yang nilainya saling terkait untuk memperoleh sekumpulan data dengan informasi yang lengkap. Dengan perintah JOIN pengguna dapat menggabungkan beberapa tabel agar mendapat informasi secara lengkap sesuai yang dibutuhkan untuk analisis. Beberapa jenis join tabel ini akan dijelaskan satu persatu pada sub-topik berikut.</p>
+<div id="inner-join" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> INNER JOIN<a href="join-tabel-subkueri.html#inner-join" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Pada MySQL, penulisan INNER JOIN dapat dilakukan dengan tiga cara yaitu (1) menggunakan klausa INNER JOIN (2) menggunakan klausa CROSS JOIN (3) cukup menggunakan klausa JOIN saja. Pengguna bebas menggunakan sintaks yang mana saja asal konsisten, penulis lebih prefer menggunakan JOIN saja, karena lebih simpel.</p>
+<p>Sebagai contoh kita akan menampilkan data pelanggan yang melakukan pesanan, query yang kita jalankan:</p>
 <ul>
 <li><a href="https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b" class="uri">https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b</a></li>
 <li><a href="https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/" class="uri">https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/</a></li>

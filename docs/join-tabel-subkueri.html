@@ -23,7 +23,7 @@
 <meta name="author" content="Bakti Siregar, M.Sc" />
 
 
-<meta name="date" content="2023-07-13" />
+<meta name="date" content="2023-07-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -282,8 +282,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3.3" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#left-join-partial"><i class="fa fa-check"></i><b>4.3.3</b> LEFT JOIN (Partial)</a></li>
 <li class="chapter" data-level="4.3.4" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#right-join"><i class="fa fa-check"></i><b>4.3.4</b> RIGHT JOIN</a></li>
 <li class="chapter" data-level="4.3.5" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#full-join"><i class="fa fa-check"></i><b>4.3.5</b> FULL JOIN</a></li>
+<li class="chapter" data-level="4.3.6" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#implisit-join-tabel"><i class="fa fa-check"></i><b>4.3.6</b> Implisit Join Tabel</a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#implisit-join-tabel"><i class="fa fa-check"></i><b>4.4</b> Implisit Join Tabel</a></li>
+<li class="chapter" data-level="4.4" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#studi-kasus"><i class="fa fa-check"></i><b>4.4</b> Studi Kasus</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#soal-1"><i class="fa fa-check"></i><b>4.4.1</b> Soal 1</a></li>
+<li class="chapter" data-level="4.4.2" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#soal-2"><i class="fa fa-check"></i><b>4.4.2</b> Soal 2</a></li>
+<li class="chapter" data-level="4.4.3" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#soal-3"><i class="fa fa-check"></i><b>4.4.3</b> Soal 3</a></li>
+<li class="chapter" data-level="4.4.4" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#soal-4"><i class="fa fa-check"></i><b>4.4.4</b> Soal 4</a></li>
+<li class="chapter" data-level="4.4.5" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#soal-5"><i class="fa fa-check"></i><b>4.4.5</b> Soal 5</a></li>
+<li class="chapter" data-level="4.4.6" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#soal-6"><i class="fa fa-check"></i><b>4.4.6</b> Soal 6</a></li>
+<li class="chapter" data-level="4.4.7" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#soal-7"><i class="fa fa-check"></i><b>4.4.7</b> Soal 7</a></li>
+<li class="chapter" data-level="4.4.8" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#soal-8"><i class="fa fa-check"></i><b>4.4.8</b> Soal 8</a></li>
+<li class="chapter" data-level="4.4.9" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#soal-9"><i class="fa fa-check"></i><b>4.4.9</b> Soal 9</a></li>
+<li class="chapter" data-level="4.4.10" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#soal-10"><i class="fa fa-check"></i><b>4.4.10</b> Soal 10</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="join-tabel-subkueri.html"><a href="join-tabel-subkueri.html#referensi"><i class="fa fa-check"></i>Referensi</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="w1h-visualisasi.html"><a href="w1h-visualisasi.html"><i class="fa fa-check"></i><b>5</b> 5W1H &amp; Visualisasi</a></li>
 <li class="chapter" data-level="6" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html"><i class="fa fa-check"></i><b>6</b> Persentasi Tugas Akhir</a></li>
@@ -587,7 +601,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb47-2"><a href="join-tabel-subkueri.html#cb47-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
 <span id="cb47-3"><a href="join-tabel-subkueri.html#cb47-3" tabindex="-1"></a><span class="st">SELECT pl.id_pelanggan, nama, tgl_transaksi, total_transaksi</span></span>
 <span id="cb47-4"><a href="join-tabel-subkueri.html#cb47-4" tabindex="-1"></a><span class="st">  FROM pelanggan AS pl</span></span>
-<span id="cb47-5"><a href="join-tabel-subkueri.html#cb47-5" tabindex="-1"></a><span class="st">    JOIN penjualan AS </span></span>
+<span id="cb47-5"><a href="join-tabel-subkueri.html#cb47-5" tabindex="-1"></a><span class="st">    JOIN penjualan AS pn</span></span>
 <span id="cb47-6"><a href="join-tabel-subkueri.html#cb47-6" tabindex="-1"></a><span class="st">      ON pl.id_pelanggan = pn.id_pelanggan</span></span>
 <span id="cb47-7"><a href="join-tabel-subkueri.html#cb47-7" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb47-8"><a href="join-tabel-subkueri.html#cb47-8" tabindex="-1"></a></span>
@@ -667,17 +681,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="join-tabel-subkueri.html#cb52-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
 <span id="cb52-2"><a href="join-tabel-subkueri.html#cb52-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
 <span id="cb52-3"><a href="join-tabel-subkueri.html#cb52-3" tabindex="-1"></a><span class="st">SELECT *</span></span>
-<span id="cb52-4"><a href="join-tabel-subkueri.html#cb52-4" tabindex="-1"></a><span class="st">  FROM pelanggan pl</span></span>
-<span id="cb52-5"><a href="join-tabel-subkueri.html#cb52-5" tabindex="-1"></a><span class="st">    FULL OUTER JOIN penjualan </span></span>
-<span id="cb52-6"><a href="join-tabel-subkueri.html#cb52-6" tabindex="-1"></a><span class="st">      USING(id_pelanggan)</span></span>
+<span id="cb52-4"><a href="join-tabel-subkueri.html#cb52-4" tabindex="-1"></a><span class="st">  FROM penjualan AS pn</span></span>
+<span id="cb52-5"><a href="join-tabel-subkueri.html#cb52-5" tabindex="-1"></a><span class="st">    JOIN penjualan_detail AS pede</span></span>
+<span id="cb52-6"><a href="join-tabel-subkueri.html#cb52-6" tabindex="-1"></a><span class="st">      ON pn.id_transaksi != pede.id_transaksi</span></span>
 <span id="cb52-7"><a href="join-tabel-subkueri.html#cb52-7" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
 <span id="cb52-8"><a href="join-tabel-subkueri.html#cb52-8" tabindex="-1"></a></span>
 <span id="cb52-9"><a href="join-tabel-subkueri.html#cb52-9" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
 <span id="cb52-10"><a href="join-tabel-subkueri.html#cb52-10" tabindex="-1"></a>pd.read_sql(sql, en_co)</span></code></pre></div>
 </div>
-</div>
-<div id="implisit-join-tabel" class="section level2 hasAnchor" number="4.4">
-<h2><span class="header-section-number">4.4</span> Implisit Join Tabel<a href="join-tabel-subkueri.html#implisit-join-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="implisit-join-tabel" class="section level3 hasAnchor" number="4.3.6">
+<h3><span class="header-section-number">4.3.6</span> Implisit Join Tabel<a href="join-tabel-subkueri.html#implisit-join-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Sejauh ini, kita menampilkan data dari beberapa tabel MySQL dengan menggunakan klausa JOIN. Selain menggunakan klausa JOIN, terdapat satu cara lagi untuk menggabungkan tabel MySQL, yaitu menggunakan implisit join, disebut implisit join karena kita tidak menggunakan klausa JOIN, pada implisit join, kriteria hubungan antar tabel di definisikan pada klausa WHERE. Sebagai contoh, mari kita gabungkan tabel pelanggan dan penjualan, jalankan query berikut:</p>
 <div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="join-tabel-subkueri.html#cb53-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
 <span id="cb53-2"><a href="join-tabel-subkueri.html#cb53-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
@@ -712,7 +725,259 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb55-8"><a href="join-tabel-subkueri.html#cb55-8" tabindex="-1"></a></span>
 <span id="cb55-9"><a href="join-tabel-subkueri.html#cb55-9" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
 <span id="cb55-10"><a href="join-tabel-subkueri.html#cb55-10" tabindex="-1"></a>pd.read_sql(sql, en_co)</span></code></pre></div>
+</div>
+</div>
+<div id="studi-kasus" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Studi Kasus<a href="join-tabel-subkueri.html#studi-kasus" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Database JNE2 adalah data fiktif yang dikembangkan oleh tim dsciencelabs untuk pelatihan Data Analytics with Python &amp; SQL. Kumpulan data tersebut berisi informasi tentang pelanggan, produk, pesanan, logistik, promosi, dan kampanye pemasaran digital. Tugas peserta pelatihan di sini adalah menjawab beberapa pertanyaan terkait bisnis, mendapatkan wawasan, dan memberikan beberapa rekomendasi untuk meningkatkan pendapatan suatu perusahaan.</p>
+<div id="soal-1" class="section level3 hasAnchor" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> Soal 1<a href="join-tabel-subkueri.html#soal-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Andaikan Divisi Marketing akan memberikan promosi selama perayaan Imlek untuk pelanggan wanita di Jepang melalui email. Bagaimana anda mendapatkan data tentang berapa banyak pelanggan yang harus dipromosikan setiap email!</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="join-tabel-subkueri.html#cb56-1" tabindex="-1"></a><span class="im">from</span> sqlalchemy <span class="im">import</span> create_engine</span>
+<span id="cb56-2"><a href="join-tabel-subkueri.html#cb56-2" tabindex="-1"></a><span class="im">import</span> pymysql</span>
+<span id="cb56-3"><a href="join-tabel-subkueri.html#cb56-3" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb56-4"><a href="join-tabel-subkueri.html#cb56-4" tabindex="-1"></a></span>
+<span id="cb56-5"><a href="join-tabel-subkueri.html#cb56-5" tabindex="-1"></a><span class="co"># membuat engine</span></span>
+<span id="cb56-6"><a href="join-tabel-subkueri.html#cb56-6" tabindex="-1"></a>engine <span class="op">=</span> create_engine(<span class="st">&quot;mysql+pymysql://</span><span class="sc">{user}</span><span class="st">:</span><span class="sc">{pw}</span><span class="st">@localhost/</span><span class="sc">{db}</span><span class="st">&quot;</span></span>
+<span id="cb56-7"><a href="join-tabel-subkueri.html#cb56-7" tabindex="-1"></a>                       .<span class="bu">format</span>(user<span class="op">=</span><span class="st">&quot;bakti&quot;</span>,</span>
+<span id="cb56-8"><a href="join-tabel-subkueri.html#cb56-8" tabindex="-1"></a>                               pw<span class="op">=</span><span class="st">&quot;123&quot;</span>,</span>
+<span id="cb56-9"><a href="join-tabel-subkueri.html#cb56-9" tabindex="-1"></a>                               db<span class="op">=</span><span class="st">&quot;jne2&quot;</span>))</span>
+<span id="cb56-10"><a href="join-tabel-subkueri.html#cb56-10" tabindex="-1"></a></span>
+<span id="cb56-11"><a href="join-tabel-subkueri.html#cb56-11" tabindex="-1"></a><span class="co"># engine koneksi ke database</span></span>
+<span id="cb56-12"><a href="join-tabel-subkueri.html#cb56-12" tabindex="-1"></a>en_co2 <span class="op">=</span> engine.<span class="ex">connect</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="join-tabel-subkueri.html#cb57-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb57-2"><a href="join-tabel-subkueri.html#cb57-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb57-3"><a href="join-tabel-subkueri.html#cb57-3" tabindex="-1"></a><span class="st">SELECT id, email</span></span>
+<span id="cb57-4"><a href="join-tabel-subkueri.html#cb57-4" tabindex="-1"></a><span class="st">  FROM `users` </span></span>
+<span id="cb57-5"><a href="join-tabel-subkueri.html#cb57-5" tabindex="-1"></a><span class="st">    WHERE gender = &#39;F&#39; AND country = &#39;Japan&#39;</span></span>
+<span id="cb57-6"><a href="join-tabel-subkueri.html#cb57-6" tabindex="-1"></a><span class="st">      ORDER BY 1</span></span>
+<span id="cb57-7"><a href="join-tabel-subkueri.html#cb57-7" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb57-8"><a href="join-tabel-subkueri.html#cb57-8" tabindex="-1"></a></span>
+<span id="cb57-9"><a href="join-tabel-subkueri.html#cb57-9" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb57-10"><a href="join-tabel-subkueri.html#cb57-10" tabindex="-1"></a>pd.read_sql(sql, en_co2)</span></code></pre></div>
+<p><strong>Kuis:</strong></p>
 <ul>
+<li>Apakah maksud dari <code>ORDER BY 1</code> ?</li>
+</ul>
+</div>
+<div id="soal-2" class="section level3 hasAnchor" number="4.4.2">
+<h3><span class="header-section-number">4.4.2</span> Soal 2<a href="join-tabel-subkueri.html#soal-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Cara pemasaran apa yang harus perlu ditingkatkan oleh marketing?</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="join-tabel-subkueri.html#cb58-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb58-2"><a href="join-tabel-subkueri.html#cb58-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb58-3"><a href="join-tabel-subkueri.html#cb58-3" tabindex="-1"></a><span class="st">SELECT</span></span>
+<span id="cb58-4"><a href="join-tabel-subkueri.html#cb58-4" tabindex="-1"></a><span class="st">  u.traffic_source, </span></span>
+<span id="cb58-5"><a href="join-tabel-subkueri.html#cb58-5" tabindex="-1"></a><span class="st">  COUNT(DISTINCT oi.user_id) total_customer</span></span>
+<span id="cb58-6"><a href="join-tabel-subkueri.html#cb58-6" tabindex="-1"></a><span class="st">FROM `order_items` oi</span></span>
+<span id="cb58-7"><a href="join-tabel-subkueri.html#cb58-7" tabindex="-1"></a><span class="st">LEFT JOIN `users` u</span></span>
+<span id="cb58-8"><a href="join-tabel-subkueri.html#cb58-8" tabindex="-1"></a><span class="st">ON oi.user_id = u.id</span></span>
+<span id="cb58-9"><a href="join-tabel-subkueri.html#cb58-9" tabindex="-1"></a><span class="st">WHERE oi.status NOT IN (&#39;Cancelled&#39;,&#39;Returned&#39;)</span></span>
+<span id="cb58-10"><a href="join-tabel-subkueri.html#cb58-10" tabindex="-1"></a><span class="st">GROUP BY 1</span></span>
+<span id="cb58-11"><a href="join-tabel-subkueri.html#cb58-11" tabindex="-1"></a><span class="st">ORDER BY 2 DESC</span></span>
+<span id="cb58-12"><a href="join-tabel-subkueri.html#cb58-12" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb58-13"><a href="join-tabel-subkueri.html#cb58-13" tabindex="-1"></a></span>
+<span id="cb58-14"><a href="join-tabel-subkueri.html#cb58-14" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb58-15"><a href="join-tabel-subkueri.html#cb58-15" tabindex="-1"></a>pd.read_sql(sql, en_co2)</span></code></pre></div>
+</div>
+<div id="soal-3" class="section level3 hasAnchor" number="4.4.3">
+<h3><span class="header-section-number">4.4.3</span> Soal 3<a href="join-tabel-subkueri.html#soal-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Berikan daftar 10 id pelanggan dengan total pembelian keseluruhan terbesar. Dalam hal ini Marketing akan memberikan diskon untuk kampanye 7.7!</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="join-tabel-subkueri.html#cb59-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb59-2"><a href="join-tabel-subkueri.html#cb59-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb59-3"><a href="join-tabel-subkueri.html#cb59-3" tabindex="-1"></a><span class="st">SELECT oi.user_id, u.email,</span></span>
+<span id="cb59-4"><a href="join-tabel-subkueri.html#cb59-4" tabindex="-1"></a><span class="st">  SUM(oi.sale_price*o.num_of_item) total_purchase</span></span>
+<span id="cb59-5"><a href="join-tabel-subkueri.html#cb59-5" tabindex="-1"></a><span class="st">FROM `order_items` oi</span></span>
+<span id="cb59-6"><a href="join-tabel-subkueri.html#cb59-6" tabindex="-1"></a><span class="st">  LEFT JOIN `users` u ON oi.user_id = u.id</span></span>
+<span id="cb59-7"><a href="join-tabel-subkueri.html#cb59-7" tabindex="-1"></a><span class="st">  LEFT JOIN `orders` o ON oi.order_id = o.order_id</span></span>
+<span id="cb59-8"><a href="join-tabel-subkueri.html#cb59-8" tabindex="-1"></a><span class="st">WHERE oi.status NOT IN (&#39;Cancelled&#39;,&#39;Returned&#39;)</span></span>
+<span id="cb59-9"><a href="join-tabel-subkueri.html#cb59-9" tabindex="-1"></a><span class="st">GROUP BY 1, 2</span></span>
+<span id="cb59-10"><a href="join-tabel-subkueri.html#cb59-10" tabindex="-1"></a><span class="st">ORDER BY 3 DESC</span></span>
+<span id="cb59-11"><a href="join-tabel-subkueri.html#cb59-11" tabindex="-1"></a><span class="st">LIMIT 10</span></span>
+<span id="cb59-12"><a href="join-tabel-subkueri.html#cb59-12" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb59-13"><a href="join-tabel-subkueri.html#cb59-13" tabindex="-1"></a></span>
+<span id="cb59-14"><a href="join-tabel-subkueri.html#cb59-14" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb59-15"><a href="join-tabel-subkueri.html#cb59-15" tabindex="-1"></a>pd.read_sql(sql, en_co2)</span></code></pre></div>
+</div>
+<div id="soal-4" class="section level3 hasAnchor" number="4.4.4">
+<h3><span class="header-section-number">4.4.4</span> Soal 4<a href="join-tabel-subkueri.html#soal-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Berapa banyak penjualan Marketing setiap bulan? Apakah tinggi atau rendah dibandingkan dengan bulan lalu?</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="join-tabel-subkueri.html#cb60-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb60-2"><a href="join-tabel-subkueri.html#cb60-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb60-3"><a href="join-tabel-subkueri.html#cb60-3" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb60-4"><a href="join-tabel-subkueri.html#cb60-4" tabindex="-1"></a><span class="st">  DATE_FORMAT(oi.created_at,&#39;MONTH&#39;) AS order_date,</span></span>
+<span id="cb60-5"><a href="join-tabel-subkueri.html#cb60-5" tabindex="-1"></a><span class="st">  SUM(oi.sale_price*o.num_of_item) AS revenue,</span></span>
+<span id="cb60-6"><a href="join-tabel-subkueri.html#cb60-6" tabindex="-1"></a><span class="st">  COUNT(DISTINCT oi.order_id) AS order_count,</span></span>
+<span id="cb60-7"><a href="join-tabel-subkueri.html#cb60-7" tabindex="-1"></a><span class="st">  COUNT(DISTINCT oi.user_id) AS customers_purchased</span></span>
+<span id="cb60-8"><a href="join-tabel-subkueri.html#cb60-8" tabindex="-1"></a><span class="st">FROM `order_items` AS oi</span></span>
+<span id="cb60-9"><a href="join-tabel-subkueri.html#cb60-9" tabindex="-1"></a><span class="st">LEFT JOIN `orders` AS o </span></span>
+<span id="cb60-10"><a href="join-tabel-subkueri.html#cb60-10" tabindex="-1"></a><span class="st">ON oi.order_id = o.order_id</span></span>
+<span id="cb60-11"><a href="join-tabel-subkueri.html#cb60-11" tabindex="-1"></a><span class="st">WHERE oi.status NOT IN (&#39;Cancelled&#39;,&#39;Returned&#39;)</span></span>
+<span id="cb60-12"><a href="join-tabel-subkueri.html#cb60-12" tabindex="-1"></a><span class="st">GROUP BY 1</span></span>
+<span id="cb60-13"><a href="join-tabel-subkueri.html#cb60-13" tabindex="-1"></a><span class="st">ORDER BY 1 DESC</span></span>
+<span id="cb60-14"><a href="join-tabel-subkueri.html#cb60-14" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb60-15"><a href="join-tabel-subkueri.html#cb60-15" tabindex="-1"></a></span>
+<span id="cb60-16"><a href="join-tabel-subkueri.html#cb60-16" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb60-17"><a href="join-tabel-subkueri.html#cb60-17" tabindex="-1"></a>pd.read_sql(sql, en_co2)</span></code></pre></div>
+<p><strong>Catatan:</strong> Hasilnya masih salah karena format tanggal dan jam belum terdeteksi dengan baik.</p>
+</div>
+<div id="soal-5" class="section level3 hasAnchor" number="4.4.5">
+<h3><span class="header-section-number">4.4.5</span> Soal 5<a href="join-tabel-subkueri.html#soal-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Siapa saja pelanggan JNE?</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="join-tabel-subkueri.html#cb61-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb61-2"><a href="join-tabel-subkueri.html#cb61-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb61-3"><a href="join-tabel-subkueri.html#cb61-3" tabindex="-1"></a><span class="st">WITH</span></span>
+<span id="cb61-4"><a href="join-tabel-subkueri.html#cb61-4" tabindex="-1"></a><span class="st">cust AS (</span></span>
+<span id="cb61-5"><a href="join-tabel-subkueri.html#cb61-5" tabindex="-1"></a><span class="st">  SELECT </span></span>
+<span id="cb61-6"><a href="join-tabel-subkueri.html#cb61-6" tabindex="-1"></a><span class="st">    DISTINCT oi.user_id,</span></span>
+<span id="cb61-7"><a href="join-tabel-subkueri.html#cb61-7" tabindex="-1"></a><span class="st">    SUM(CASE WHEN u.gender = &#39;M&#39; THEN 1 ELSE null END) AS male,</span></span>
+<span id="cb61-8"><a href="join-tabel-subkueri.html#cb61-8" tabindex="-1"></a><span class="st">    SUM(CASE WHEN u.gender = &#39;F&#39; THEN 1 ELSE null END) AS female,</span></span>
+<span id="cb61-9"><a href="join-tabel-subkueri.html#cb61-9" tabindex="-1"></a><span class="st">    u.country AS country</span></span>
+<span id="cb61-10"><a href="join-tabel-subkueri.html#cb61-10" tabindex="-1"></a><span class="st">  FROM `order_items` AS oi</span></span>
+<span id="cb61-11"><a href="join-tabel-subkueri.html#cb61-11" tabindex="-1"></a><span class="st">  INNER JOIN `users` AS u  </span></span>
+<span id="cb61-12"><a href="join-tabel-subkueri.html#cb61-12" tabindex="-1"></a><span class="st">  ON oi.user_id = u.id</span></span>
+<span id="cb61-13"><a href="join-tabel-subkueri.html#cb61-13" tabindex="-1"></a><span class="st">  WHERE oi.status NOT IN (&#39;Cancelled&#39;,&#39;Returned&#39;)</span></span>
+<span id="cb61-14"><a href="join-tabel-subkueri.html#cb61-14" tabindex="-1"></a><span class="st">  GROUP BY 1, 4</span></span>
+<span id="cb61-15"><a href="join-tabel-subkueri.html#cb61-15" tabindex="-1"></a><span class="st">)</span></span>
+<span id="cb61-16"><a href="join-tabel-subkueri.html#cb61-16" tabindex="-1"></a></span>
+<span id="cb61-17"><a href="join-tabel-subkueri.html#cb61-17" tabindex="-1"></a><span class="st">SELECT</span></span>
+<span id="cb61-18"><a href="join-tabel-subkueri.html#cb61-18" tabindex="-1"></a><span class="st">  c.country,</span></span>
+<span id="cb61-19"><a href="join-tabel-subkueri.html#cb61-19" tabindex="-1"></a><span class="st">  COUNT(DISTINCT c.user_id) AS customers_count,</span></span>
+<span id="cb61-20"><a href="join-tabel-subkueri.html#cb61-20" tabindex="-1"></a><span class="st">  COUNT(c.female) AS female,</span></span>
+<span id="cb61-21"><a href="join-tabel-subkueri.html#cb61-21" tabindex="-1"></a><span class="st">  COUNT(c.male) AS male</span></span>
+<span id="cb61-22"><a href="join-tabel-subkueri.html#cb61-22" tabindex="-1"></a><span class="st">FROM cust AS c</span></span>
+<span id="cb61-23"><a href="join-tabel-subkueri.html#cb61-23" tabindex="-1"></a><span class="st">GROUP BY 1</span></span>
+<span id="cb61-24"><a href="join-tabel-subkueri.html#cb61-24" tabindex="-1"></a><span class="st">ORDER BY 2 DESC</span></span>
+<span id="cb61-25"><a href="join-tabel-subkueri.html#cb61-25" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb61-26"><a href="join-tabel-subkueri.html#cb61-26" tabindex="-1"></a></span>
+<span id="cb61-27"><a href="join-tabel-subkueri.html#cb61-27" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb61-28"><a href="join-tabel-subkueri.html#cb61-28" tabindex="-1"></a>pd.read_sql(sql, en_co2)</span></code></pre></div>
+</div>
+<div id="soal-6" class="section level3 hasAnchor" number="4.4.6">
+<h3><span class="header-section-number">4.4.6</span> Soal 6<a href="join-tabel-subkueri.html#soal-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Buktikan bahwa Mayoritas pelanggan kami berasal dari China, Amerika Serikat, lalu Brasil.</p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb62-1"><a href="join-tabel-subkueri.html#cb62-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb62-2"><a href="join-tabel-subkueri.html#cb62-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb62-3"><a href="join-tabel-subkueri.html#cb62-3" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb62-4"><a href="join-tabel-subkueri.html#cb62-4" tabindex="-1"></a><span class="st">  o.gender,</span></span>
+<span id="cb62-5"><a href="join-tabel-subkueri.html#cb62-5" tabindex="-1"></a><span class="st">  SUM(oi.sale_price*o.num_of_item) revenue,</span></span>
+<span id="cb62-6"><a href="join-tabel-subkueri.html#cb62-6" tabindex="-1"></a><span class="st">  SUM(o.num_of_item) quantity</span></span>
+<span id="cb62-7"><a href="join-tabel-subkueri.html#cb62-7" tabindex="-1"></a><span class="st">FROM `order_items` oi</span></span>
+<span id="cb62-8"><a href="join-tabel-subkueri.html#cb62-8" tabindex="-1"></a><span class="st">LEFT JOIN `orders` o</span></span>
+<span id="cb62-9"><a href="join-tabel-subkueri.html#cb62-9" tabindex="-1"></a><span class="st">ON oi.order_id = o.order_id</span></span>
+<span id="cb62-10"><a href="join-tabel-subkueri.html#cb62-10" tabindex="-1"></a><span class="st">WHERE oi.status NOT IN (&#39;Cancelled&#39;,&#39;Returned&#39;)</span></span>
+<span id="cb62-11"><a href="join-tabel-subkueri.html#cb62-11" tabindex="-1"></a><span class="st">GROUP BY 1</span></span>
+<span id="cb62-12"><a href="join-tabel-subkueri.html#cb62-12" tabindex="-1"></a><span class="st">ORDER BY 2</span></span>
+<span id="cb62-13"><a href="join-tabel-subkueri.html#cb62-13" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb62-14"><a href="join-tabel-subkueri.html#cb62-14" tabindex="-1"></a></span>
+<span id="cb62-15"><a href="join-tabel-subkueri.html#cb62-15" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb62-16"><a href="join-tabel-subkueri.html#cb62-16" tabindex="-1"></a>pd.read_sql(sql, en_co2)</span></code></pre></div>
+</div>
+<div id="soal-7" class="section level3 hasAnchor" number="4.4.7">
+<h3><span class="header-section-number">4.4.7</span> Soal 7<a href="join-tabel-subkueri.html#soal-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Berapa proporsi pelanggan berdasarkan jenis kelamin di setiap negara?</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="join-tabel-subkueri.html#cb63-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb63-2"><a href="join-tabel-subkueri.html#cb63-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb63-3"><a href="join-tabel-subkueri.html#cb63-3" tabindex="-1"></a><span class="st">SELECT</span></span>
+<span id="cb63-4"><a href="join-tabel-subkueri.html#cb63-4" tabindex="-1"></a><span class="st">  CASE </span></span>
+<span id="cb63-5"><a href="join-tabel-subkueri.html#cb63-5" tabindex="-1"></a><span class="st">    WHEN u.age &lt;15 THEN &#39;Kids&#39;</span></span>
+<span id="cb63-6"><a href="join-tabel-subkueri.html#cb63-6" tabindex="-1"></a><span class="st">    WHEN u.age BETWEEN 15 AND 24 THEN &#39;Teenager&#39;</span></span>
+<span id="cb63-7"><a href="join-tabel-subkueri.html#cb63-7" tabindex="-1"></a><span class="st">    WHEN u.age BETWEEN 25 AND 50 THEN &#39;Adult&#39;</span></span>
+<span id="cb63-8"><a href="join-tabel-subkueri.html#cb63-8" tabindex="-1"></a><span class="st">    WHEN u.age &gt;50 THEN &#39;Eldery&#39; END AS age_group,</span></span>
+<span id="cb63-9"><a href="join-tabel-subkueri.html#cb63-9" tabindex="-1"></a><span class="st">  COUNT(DISTINCT oi.user_id) total_customer</span></span>
+<span id="cb63-10"><a href="join-tabel-subkueri.html#cb63-10" tabindex="-1"></a><span class="st">FROM `order_items` oi</span></span>
+<span id="cb63-11"><a href="join-tabel-subkueri.html#cb63-11" tabindex="-1"></a><span class="st">LEFT JOIN `users` u</span></span>
+<span id="cb63-12"><a href="join-tabel-subkueri.html#cb63-12" tabindex="-1"></a><span class="st">ON oi.user_id = u.id</span></span>
+<span id="cb63-13"><a href="join-tabel-subkueri.html#cb63-13" tabindex="-1"></a><span class="st">WHERE oi.status NOT IN (&#39;Cancelled&#39;,&#39;Returned&#39;)</span></span>
+<span id="cb63-14"><a href="join-tabel-subkueri.html#cb63-14" tabindex="-1"></a><span class="st">GROUP BY 1</span></span>
+<span id="cb63-15"><a href="join-tabel-subkueri.html#cb63-15" tabindex="-1"></a><span class="st">ORDER BY 2 DESC</span></span>
+<span id="cb63-16"><a href="join-tabel-subkueri.html#cb63-16" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb63-17"><a href="join-tabel-subkueri.html#cb63-17" tabindex="-1"></a></span>
+<span id="cb63-18"><a href="join-tabel-subkueri.html#cb63-18" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb63-19"><a href="join-tabel-subkueri.html#cb63-19" tabindex="-1"></a>pd.read_sql(sql, en_co2)</span></code></pre></div>
+</div>
+<div id="soal-8" class="section level3 hasAnchor" number="4.4.8">
+<h3><span class="header-section-number">4.4.8</span> Soal 8<a href="join-tabel-subkueri.html#soal-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Produk apa yang JNE jual paling banyak dan paling sedikit?</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb64-1"><a href="join-tabel-subkueri.html#cb64-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb64-2"><a href="join-tabel-subkueri.html#cb64-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb64-3"><a href="join-tabel-subkueri.html#cb64-3" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb64-4"><a href="join-tabel-subkueri.html#cb64-4" tabindex="-1"></a><span class="st">  p.brand,</span></span>
+<span id="cb64-5"><a href="join-tabel-subkueri.html#cb64-5" tabindex="-1"></a><span class="st">  SUM(oi.sale_price*o.num_of_item) AS revenue,</span></span>
+<span id="cb64-6"><a href="join-tabel-subkueri.html#cb64-6" tabindex="-1"></a><span class="st">  SUM(o.num_of_item) AS quantity</span></span>
+<span id="cb64-7"><a href="join-tabel-subkueri.html#cb64-7" tabindex="-1"></a><span class="st">FROM `order_items` AS oi</span></span>
+<span id="cb64-8"><a href="join-tabel-subkueri.html#cb64-8" tabindex="-1"></a><span class="st">  LEFT JOIN `orders` AS o ON oi.order_id = o.order_id</span></span>
+<span id="cb64-9"><a href="join-tabel-subkueri.html#cb64-9" tabindex="-1"></a><span class="st">  LEFT JOIN `products` AS p ON oi.product_id = p.id</span></span>
+<span id="cb64-10"><a href="join-tabel-subkueri.html#cb64-10" tabindex="-1"></a><span class="st">WHERE oi.status NOT IN (&#39;Cancelled&#39;,&#39;Returned&#39;)</span></span>
+<span id="cb64-11"><a href="join-tabel-subkueri.html#cb64-11" tabindex="-1"></a><span class="st">GROUP BY 1</span></span>
+<span id="cb64-12"><a href="join-tabel-subkueri.html#cb64-12" tabindex="-1"></a><span class="st">ORDER BY 3 DESC</span></span>
+<span id="cb64-13"><a href="join-tabel-subkueri.html#cb64-13" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb64-14"><a href="join-tabel-subkueri.html#cb64-14" tabindex="-1"></a></span>
+<span id="cb64-15"><a href="join-tabel-subkueri.html#cb64-15" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb64-16"><a href="join-tabel-subkueri.html#cb64-16" tabindex="-1"></a>pd.read_sql(sql, en_co2)</span></code></pre></div>
+</div>
+<div id="soal-9" class="section level3 hasAnchor" number="4.4.9">
+<h3><span class="header-section-number">4.4.9</span> Soal 9<a href="join-tabel-subkueri.html#soal-9" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Merek yang paling banyak menghasilkan pendapatan?</p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb65-1"><a href="join-tabel-subkueri.html#cb65-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb65-2"><a href="join-tabel-subkueri.html#cb65-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb65-3"><a href="join-tabel-subkueri.html#cb65-3" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb65-4"><a href="join-tabel-subkueri.html#cb65-4" tabindex="-1"></a><span class="st">  p.category,</span></span>
+<span id="cb65-5"><a href="join-tabel-subkueri.html#cb65-5" tabindex="-1"></a><span class="st">  SUM(oi.sale_price*o.num_of_item) AS revenue,</span></span>
+<span id="cb65-6"><a href="join-tabel-subkueri.html#cb65-6" tabindex="-1"></a><span class="st">  SUM(o.num_of_item) AS quantity</span></span>
+<span id="cb65-7"><a href="join-tabel-subkueri.html#cb65-7" tabindex="-1"></a><span class="st">FROM `order_items` AS oi</span></span>
+<span id="cb65-8"><a href="join-tabel-subkueri.html#cb65-8" tabindex="-1"></a><span class="st">LEFT JOIN `orders` AS o</span></span>
+<span id="cb65-9"><a href="join-tabel-subkueri.html#cb65-9" tabindex="-1"></a><span class="st">ON oi.order_id = o.order_id</span></span>
+<span id="cb65-10"><a href="join-tabel-subkueri.html#cb65-10" tabindex="-1"></a><span class="st">LEFT JOIN `products` AS p</span></span>
+<span id="cb65-11"><a href="join-tabel-subkueri.html#cb65-11" tabindex="-1"></a><span class="st">ON oi.product_id = p.id</span></span>
+<span id="cb65-12"><a href="join-tabel-subkueri.html#cb65-12" tabindex="-1"></a><span class="st">WHERE oi.status NOT IN (&#39;Cancelled&#39;,&#39;Returned&#39;)</span></span>
+<span id="cb65-13"><a href="join-tabel-subkueri.html#cb65-13" tabindex="-1"></a><span class="st">GROUP BY 1</span></span>
+<span id="cb65-14"><a href="join-tabel-subkueri.html#cb65-14" tabindex="-1"></a><span class="st">ORDER BY 3 DESC</span></span>
+<span id="cb65-15"><a href="join-tabel-subkueri.html#cb65-15" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb65-16"><a href="join-tabel-subkueri.html#cb65-16" tabindex="-1"></a></span>
+<span id="cb65-17"><a href="join-tabel-subkueri.html#cb65-17" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb65-18"><a href="join-tabel-subkueri.html#cb65-18" tabindex="-1"></a>pd.read_sql(sql, en_co2)</span></code></pre></div>
+</div>
+<div id="soal-10" class="section level3 hasAnchor" number="4.4.10">
+<h3><span class="header-section-number">4.4.10</span> Soal 10<a href="join-tabel-subkueri.html#soal-10" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Merek &amp; kategori produk yang paling banyak dibatalkan dan dikembalikan.</p>
+<div class="sourceCode" id="cb66"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb66-1"><a href="join-tabel-subkueri.html#cb66-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb66-2"><a href="join-tabel-subkueri.html#cb66-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb66-3"><a href="join-tabel-subkueri.html#cb66-3" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb66-4"><a href="join-tabel-subkueri.html#cb66-4" tabindex="-1"></a><span class="st">  p.brand,</span></span>
+<span id="cb66-5"><a href="join-tabel-subkueri.html#cb66-5" tabindex="-1"></a><span class="st">  SUM(CASE WHEN oi.status = &#39;Cancelled&#39; THEN 1 ELSE null END) AS Cancelled,</span></span>
+<span id="cb66-6"><a href="join-tabel-subkueri.html#cb66-6" tabindex="-1"></a><span class="st">  SUM(CASE WHEN oi.status = &#39;Returned&#39; THEN 1 ELSE null END) AS Returned</span></span>
+<span id="cb66-7"><a href="join-tabel-subkueri.html#cb66-7" tabindex="-1"></a><span class="st">FROM `order_items` oi</span></span>
+<span id="cb66-8"><a href="join-tabel-subkueri.html#cb66-8" tabindex="-1"></a><span class="st">LEFT JOIN `products` p</span></span>
+<span id="cb66-9"><a href="join-tabel-subkueri.html#cb66-9" tabindex="-1"></a><span class="st">ON oi.product_id = p.id</span></span>
+<span id="cb66-10"><a href="join-tabel-subkueri.html#cb66-10" tabindex="-1"></a><span class="st">GROUP BY 1</span></span>
+<span id="cb66-11"><a href="join-tabel-subkueri.html#cb66-11" tabindex="-1"></a><span class="st">ORDER BY 2 DESC;</span></span>
+<span id="cb66-12"><a href="join-tabel-subkueri.html#cb66-12" tabindex="-1"></a></span>
+<span id="cb66-13"><a href="join-tabel-subkueri.html#cb66-13" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb66-14"><a href="join-tabel-subkueri.html#cb66-14" tabindex="-1"></a></span>
+<span id="cb66-15"><a href="join-tabel-subkueri.html#cb66-15" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb66-16"><a href="join-tabel-subkueri.html#cb66-16" tabindex="-1"></a>pd.read_sql(sql, en_co2)</span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="join-tabel-subkueri.html#cb67-1" tabindex="-1"></a><span class="co"># Perintah SQL</span></span>
+<span id="cb67-2"><a href="join-tabel-subkueri.html#cb67-2" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39; </span></span>
+<span id="cb67-3"><a href="join-tabel-subkueri.html#cb67-3" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb67-4"><a href="join-tabel-subkueri.html#cb67-4" tabindex="-1"></a><span class="st">p.category,</span></span>
+<span id="cb67-5"><a href="join-tabel-subkueri.html#cb67-5" tabindex="-1"></a><span class="st">SUM(CASE WHEN oi.status = &#39;Cancelled&#39; THEN 1 ELSE null END) AS Cancelled,</span></span>
+<span id="cb67-6"><a href="join-tabel-subkueri.html#cb67-6" tabindex="-1"></a><span class="st">SUM(CASE WHEN oi.status = &#39;Returned&#39; THEN 1 ELSE null END) AS Returned</span></span>
+<span id="cb67-7"><a href="join-tabel-subkueri.html#cb67-7" tabindex="-1"></a><span class="st">FROM `order_items` oi</span></span>
+<span id="cb67-8"><a href="join-tabel-subkueri.html#cb67-8" tabindex="-1"></a><span class="st">LEFT JOIN `products` p</span></span>
+<span id="cb67-9"><a href="join-tabel-subkueri.html#cb67-9" tabindex="-1"></a><span class="st">ON oi.product_id = p.id</span></span>
+<span id="cb67-10"><a href="join-tabel-subkueri.html#cb67-10" tabindex="-1"></a><span class="st">GROUP BY 1</span></span>
+<span id="cb67-11"><a href="join-tabel-subkueri.html#cb67-11" tabindex="-1"></a><span class="st">ORDER BY 2 DESC;</span></span>
+<span id="cb67-12"><a href="join-tabel-subkueri.html#cb67-12" tabindex="-1"></a></span>
+<span id="cb67-13"><a href="join-tabel-subkueri.html#cb67-13" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb67-14"><a href="join-tabel-subkueri.html#cb67-14" tabindex="-1"></a></span>
+<span id="cb67-15"><a href="join-tabel-subkueri.html#cb67-15" tabindex="-1"></a><span class="co"># Eksekusi perintah  SQL</span></span>
+<span id="cb67-16"><a href="join-tabel-subkueri.html#cb67-16" tabindex="-1"></a>pd.read_sql(sql, en_co2)</span></code></pre></div>
+</div>
+</div>
+<div id="referensi" class="section level2 unnumbered hasAnchor">
+<h2>Referensi<a href="join-tabel-subkueri.html#referensi" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://revou.co/panduan-teknis/sql-subquery" class="uri">https://revou.co/panduan-teknis/sql-subquery</a></li>
 <li><a href="https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b" class="uri">https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b</a></li>
 <li><a href="https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/" class="uri">https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/</a></li>
 <li><a href="https://jagowebdev.com/wp-content/demo/files/join_pada_mysql.sql.txt" class="uri">https://jagowebdev.com/wp-content/demo/files/join_pada_mysql.sql.txt</a></li>

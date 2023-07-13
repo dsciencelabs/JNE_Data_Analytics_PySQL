@@ -340,7 +340,7 @@ Sebagai contoh kita akan menampilkan data pelanggan yang melakukan pesanan, quer
 sql = ''' 
 SELECT pl.id_pelanggan, nama, tgl_transaksi, total_transaksi
   FROM pelanggan AS pl
-    JOIN penjualan AS 
+    JOIN penjualan AS pn
       ON pl.id_pelanggan = pn.id_pelanggan
 '''
 
@@ -434,14 +434,15 @@ Jika kita teliti lebih lanjut, sebenarnya right join hanya memindah posisi tabel
 
 ### FULL JOIN
 
-Tabel yang dihasilkan adalah tabel dengan semua nilai dari kedua tabel.  Apabila terdapat nilai yang tidak memiliki kesamaan dari kedua tabel, maka muncul nilai null. 
+Tabel yang dihasilkan adalah tabel dengan semua nilai dari kedua tabel.  Apabila terdapat nilai yang tidak memiliki kesamaan dari kedua tabel, maka muncul nilai null.
+
 ```{python, eval=F}
 # Perintah SQL
 sql = ''' 
 SELECT *
-  FROM pelanggan pl
-    FULL OUTER JOIN penjualan 
-      USING(id_pelanggan)
+  FROM penjualan AS pn
+    JOIN penjualan_detail AS pede
+      ON pn.id_transaksi != pede.id_transaksi
 '''
 
 # Eksekusi perintah  SQL
@@ -449,7 +450,7 @@ pd.read_sql(sql, en_co)
 ```
 
 
-## Implisit Join Tabel
+### Implisit Join Tabel
 
 Sejauh ini, kita menampilkan data dari beberapa tabel MySQL dengan menggunakan klausa JOIN. Selain menggunakan klausa JOIN, terdapat satu cara lagi untuk menggabungkan tabel MySQL, yaitu menggunakan implisit join, disebut implisit join karena kita tidak menggunakan klausa JOIN, pada implisit join, kriteria hubungan antar tabel di definisikan pada klausa WHERE. Sebagai contoh, mari kita gabungkan tabel pelanggan dan penjualan, jalankan query berikut:
 
@@ -499,6 +500,300 @@ SELECT pl.id_pelanggan, nama, id_transaksi, tgl_transaksi, total_transaksi
 pd.read_sql(sql, en_co)
 ```
 
+## Studi Kasus 
+
+Database JNE2 adalah data fiktif yang dikembangkan oleh tim dsciencelabs untuk pelatihan Data Analytics with Python & SQL. Kumpulan data tersebut berisi informasi tentang pelanggan, produk, pesanan, logistik, promosi, dan kampanye pemasaran digital. Tugas peserta pelatihan di sini adalah menjawab beberapa pertanyaan terkait bisnis, mendapatkan wawasan, dan memberikan beberapa rekomendasi untuk meningkatkan pendapatan suatu perusahaan.
+
+
+### Soal 1
+
+Andaikan Divisi Marketing akan memberikan promosi selama perayaan Imlek untuk pelanggan wanita di Jepang melalui email. Bagaimana anda mendapatkan data tentang berapa banyak pelanggan yang harus dipromosikan setiap email!
+
+```{python, eval=F}
+from sqlalchemy import create_engine
+import pymysql
+import pandas as pd
+
+# membuat engine
+engine = create_engine("mysql+pymysql://{user}:{pw}@localhost/{db}"
+                       .format(user="bakti",
+                               pw="123",
+                               db="jne2"))
+
+# engine koneksi ke database
+en_co2 = engine.connect()
+```
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+SELECT id, email
+  FROM `users` 
+    WHERE gender = 'F' AND country = 'Japan'
+      ORDER BY 1
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co2)
+```
+
+**Kuis:**
+
+* Apakah maksud dari `ORDER BY 1` ? 
+
+
+### Soal 2
+
+Cara pemasaran apa yang harus perlu ditingkatkan oleh marketing?
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+SELECT
+  u.traffic_source, 
+  COUNT(DISTINCT oi.user_id) total_customer
+FROM `order_items` oi
+LEFT JOIN `users` u
+ON oi.user_id = u.id
+WHERE oi.status NOT IN ('Cancelled','Returned')
+GROUP BY 1
+ORDER BY 2 DESC
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co2)
+```
+
+### Soal 3 
+
+Berikan daftar 10 id pelanggan dengan total pembelian keseluruhan terbesar. Dalam hal ini Marketing akan memberikan diskon untuk kampanye 7.7!
+
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+SELECT oi.user_id, u.email,
+  SUM(oi.sale_price*o.num_of_item) total_purchase
+FROM `order_items` oi
+  LEFT JOIN `users` u ON oi.user_id = u.id
+  LEFT JOIN `orders` o ON oi.order_id = o.order_id
+WHERE oi.status NOT IN ('Cancelled','Returned')
+GROUP BY 1, 2
+ORDER BY 3 DESC
+LIMIT 10
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co2)
+```
+
+
+### Soal 4
+
+Berapa banyak penjualan Marketing setiap bulan? Apakah tinggi atau rendah dibandingkan dengan bulan lalu?
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+SELECT 
+  DATE_FORMAT(oi.created_at,'MONTH') AS order_date,
+  SUM(oi.sale_price*o.num_of_item) AS revenue,
+  COUNT(DISTINCT oi.order_id) AS order_count,
+  COUNT(DISTINCT oi.user_id) AS customers_purchased
+FROM `order_items` AS oi
+LEFT JOIN `orders` AS o 
+ON oi.order_id = o.order_id
+WHERE oi.status NOT IN ('Cancelled','Returned')
+GROUP BY 1
+ORDER BY 1 DESC
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co2)
+```
+
+**Catatan:** Hasilnya masih salah karena format tanggal dan jam belum terdeteksi dengan baik.
+
+
+### Soal 5
+
+Siapa saja pelanggan JNE?
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+WITH
+cust AS (
+  SELECT 
+    DISTINCT oi.user_id,
+    SUM(CASE WHEN u.gender = 'M' THEN 1 ELSE null END) AS male,
+    SUM(CASE WHEN u.gender = 'F' THEN 1 ELSE null END) AS female,
+    u.country AS country
+  FROM `order_items` AS oi
+  INNER JOIN `users` AS u  
+  ON oi.user_id = u.id
+  WHERE oi.status NOT IN ('Cancelled','Returned')
+  GROUP BY 1, 4
+)
+
+SELECT
+  c.country,
+  COUNT(DISTINCT c.user_id) AS customers_count,
+  COUNT(c.female) AS female,
+  COUNT(c.male) AS male
+FROM cust AS c
+GROUP BY 1
+ORDER BY 2 DESC
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co2)
+```
+
+
+### Soal 6
+
+Buktikan bahwa Mayoritas pelanggan kami berasal dari China, Amerika Serikat, lalu Brasil.
+
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+SELECT 
+  o.gender,
+  SUM(oi.sale_price*o.num_of_item) revenue,
+  SUM(o.num_of_item) quantity
+FROM `order_items` oi
+LEFT JOIN `orders` o
+ON oi.order_id = o.order_id
+WHERE oi.status NOT IN ('Cancelled','Returned')
+GROUP BY 1
+ORDER BY 2
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co2)
+```
+
+### Soal 7
+
+Berapa proporsi pelanggan berdasarkan jenis kelamin di setiap negara?
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+SELECT
+  CASE 
+    WHEN u.age <15 THEN 'Kids'
+    WHEN u.age BETWEEN 15 AND 24 THEN 'Teenager'
+    WHEN u.age BETWEEN 25 AND 50 THEN 'Adult'
+    WHEN u.age >50 THEN 'Eldery' END AS age_group,
+  COUNT(DISTINCT oi.user_id) total_customer
+FROM `order_items` oi
+LEFT JOIN `users` u
+ON oi.user_id = u.id
+WHERE oi.status NOT IN ('Cancelled','Returned')
+GROUP BY 1
+ORDER BY 2 DESC
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co2)
+```
+
+### Soal 8
+
+Produk apa yang JNE jual paling banyak dan paling sedikit? 
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+SELECT 
+  p.brand,
+  SUM(oi.sale_price*o.num_of_item) AS revenue,
+  SUM(o.num_of_item) AS quantity
+FROM `order_items` AS oi
+  LEFT JOIN `orders` AS o ON oi.order_id = o.order_id
+  LEFT JOIN `products` AS p ON oi.product_id = p.id
+WHERE oi.status NOT IN ('Cancelled','Returned')
+GROUP BY 1
+ORDER BY 3 DESC
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co2)
+```
+
+### Soal 9
+
+Merek yang paling banyak menghasilkan pendapatan?
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+SELECT 
+  p.category,
+  SUM(oi.sale_price*o.num_of_item) AS revenue,
+  SUM(o.num_of_item) AS quantity
+FROM `order_items` AS oi
+LEFT JOIN `orders` AS o
+ON oi.order_id = o.order_id
+LEFT JOIN `products` AS p
+ON oi.product_id = p.id
+WHERE oi.status NOT IN ('Cancelled','Returned')
+GROUP BY 1
+ORDER BY 3 DESC
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co2)
+```
+
+### Soal 10
+
+Merek & kategori produk yang paling banyak dibatalkan dan dikembalikan.
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+SELECT 
+  p.brand,
+  SUM(CASE WHEN oi.status = 'Cancelled' THEN 1 ELSE null END) AS Cancelled,
+  SUM(CASE WHEN oi.status = 'Returned' THEN 1 ELSE null END) AS Returned
+FROM `order_items` oi
+LEFT JOIN `products` p
+ON oi.product_id = p.id
+GROUP BY 1
+ORDER BY 2 DESC;
+
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co2)
+```
+
+```{python, eval=F}
+# Perintah SQL
+sql = ''' 
+SELECT 
+p.category,
+SUM(CASE WHEN oi.status = 'Cancelled' THEN 1 ELSE null END) AS Cancelled,
+SUM(CASE WHEN oi.status = 'Returned' THEN 1 ELSE null END) AS Returned
+FROM `order_items` oi
+LEFT JOIN `products` p
+ON oi.product_id = p.id
+GROUP BY 1
+ORDER BY 2 DESC;
+
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co2)
+```
+
+## Referensi {-}
+
+* https://revou.co/panduan-teknis/sql-subquery
 * https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b
 * https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/
 * https://jagowebdev.com/wp-content/demo/files/join_pada_mysql.sql.txt

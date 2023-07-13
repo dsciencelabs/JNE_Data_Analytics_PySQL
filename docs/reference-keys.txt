@@ -92,6 +92,17 @@ left-join-partial
 right-join
 full-join
 implisit-join-tabel
+studi-kasus
+soal-1
+soal-2
+soal-3
+soal-4
+soal-5
+soal-6
+soal-7
+soal-8
+soal-9
+soal-10
 w1h-visualisasi
 persentasi-tugas-akhir
 penutup

@@ -449,7 +449,6 @@ SELECT *
 pd.read_sql(sql, en_co)
 ```
 
-
 ### Implisit Join Tabel
 
 Sejauh ini, kita menampilkan data dari beberapa tabel MySQL dengan menggunakan klausa JOIN. Selain menggunakan klausa JOIN, terdapat satu cara lagi untuk menggabungkan tabel MySQL, yaitu menggunakan implisit join, disebut implisit join karena kita tidak menggunakan klausa JOIN, pada implisit join, kriteria hubungan antar tabel di definisikan pada klausa WHERE. Sebagai contoh, mari kita gabungkan tabel pelanggan dan penjualan, jalankan query berikut:
@@ -500,14 +499,19 @@ SELECT pl.id_pelanggan, nama, id_transaksi, tgl_transaksi, total_transaksi
 pd.read_sql(sql, en_co)
 ```
 
-## Studi Kasus 
 
-Database JNE2 adalah data fiktif yang dikembangkan oleh tim dsciencelabs untuk pelatihan Data Analytics with Python & SQL. Kumpulan data tersebut berisi informasi tentang pelanggan, produk, pesanan, logistik, promosi, dan kampanye pemasaran digital. Tugas peserta pelatihan di sini adalah menjawab beberapa pertanyaan terkait bisnis, mendapatkan wawasan, dan memberikan beberapa rekomendasi untuk meningkatkan pendapatan suatu perusahaan.
+## SUBQUERY
 
+Subquery yang digunakan adalah scalar subquery, tetapi subqueries juga dibagi menjadi beberapa tipe berdasarkan penggunaannya yaitu sebagaimana dikutip dari Scalar:
 
-### Soal 1
+- Single row subquery
+- Multiple row subquery
+- Correlated subquery
+- Nested subqueries
 
-Andaikan Divisi Marketing akan memberikan promosi selama perayaan Imlek untuk pelanggan wanita di Jepang melalui email. Bagaimana anda mendapatkan data tentang berapa banyak pelanggan yang harus dipromosikan setiap email!
+### Single row subquery
+
+hasil yang diperoleh digunakan sebagai operator pembanding seperti =, >, <, atau klausa IN.
 
 ```{python, eval=F}
 from sqlalchemy import create_engine
@@ -523,6 +527,83 @@ engine = create_engine("mysql+pymysql://{user}:{pw}@localhost/{db}"
 # engine koneksi ke database
 en_co2 = engine.connect()
 ```
+
+Contoh dibawah ini adalah melihat status dari harga jual maksimum dari order items.
+
+```{python, eval=F}
+# Perintah SQL
+sql = '''
+SELECT order_id, product_id, status , sale_price
+  FROM `order_items` 
+  WHERE sale_price = (SELECT MAX(sale_price) FROM `order_items`)
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co2)
+```
+
+### Multiple row subquery
+
+Multiple row subquery merupakan jenis subquery yang menghasilkan beberapa baris data. Serupa dengan single row subquery, hasil yang diperoleh dari subquery akan digunakan sebagai operator pembanding. 
+
+Contoh dibawah ini adalah melihat negara-negara mana saja yang berada berdasarkan tabel products. Maka akan ditampilkan bahwa didalam tabel products, hanya distribusi dari 6 negara.
+
+```{python, eval=F}
+# Perintah SQL
+sql = '''
+SELECT id, name,latitude, longitude 
+  FROM `distribution_centers` 
+    WHERE id IN (SELECT distribution_center_id FROM `products`)
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co2)
+```
+
+### Correlated Subquery
+
+Correlated subquery merupakan jenis subquery yang hasilnya bergantung dengan query utama (main query). Sifatnya yang dependen membuat subquery jenis ini berbeda dari jenis lainnya. Ciri-ciri subquery jenis ini adalah memiliki sumber data yang sama dengan query utama. Umumnya, hasil yang diperoleh akan digunakan untuk memfilter hasil dari query utama.
+
+Contohnya adalah dengan mengambil id, product_id, product_category, dan product_name dengan melihat product retail price yang lebih kecil dari rata rata product retail price keseluruhannya.
+
+```{python, eval=F}
+# Perintah SQL
+sql = '''
+SELECT id,product_id, product_category, product_name 
+  FROM `inventory_items` 
+  WHERE product_retail_price <(SELECT AVG(product_retail_price) 
+    FROM `inventory_items`)
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co2)
+```
+
+### Nested Subqueries
+
+Nested Subqueries merupakan jenis subqueries di mana terdapat subquery lain di dalam subquery. Pada umumnya, subquery jenis ini digunakan untuk perhitungan atau filter yang cukup kompleks untuk sebuah dataset.
+
+Contoh disini tidak jauh beda dengan contoh sebelumnya namun disini dikhususkan untuk product category "ACCESSORIES"
+
+```{python, eval=F}
+# Perintah SQL
+sql = '''
+SELECT id,product_id,product_name FROM `inventory_items` WHERE product_retail_price < (SELECT AVG(product_retail_price) FROM `inventory_items` WHERE product_category="Accessories")
+'''
+
+# Eksekusi perintah  SQL
+pd.read_sql(sql, en_co2)
+```
+
+
+## Studi Kasus 
+
+Database JNE2 adalah data fiktif yang dikembangkan oleh tim dsciencelabs untuk pelatihan Data Analytics with Python & SQL. Kumpulan data tersebut berisi informasi tentang pelanggan, produk, pesanan, logistik, promosi, dan kampanye pemasaran digital. Tugas peserta pelatihan di sini adalah menjawab beberapa pertanyaan terkait bisnis, mendapatkan wawasan, dan memberikan beberapa rekomendasi untuk meningkatkan pendapatan suatu perusahaan.
+
+
+### Soal 1
+
+Andaikan Divisi Marketing akan memberikan promosi selama perayaan Imlek untuk pelanggan wanita di Jepang melalui email. Bagaimana anda mendapatkan data tentang berapa banyak pelanggan yang harus dipromosikan setiap email!
 
 ```{python, eval=F}
 # Perintah SQL
@@ -566,7 +647,7 @@ pd.read_sql(sql, en_co2)
 
 ### Soal 3 
 
-Berikan daftar 10 id pelanggan dengan total pembelian keseluruhan terbesar. Dalam hal ini Marketing akan memberikan diskon untuk kampanye 7.7!
+Berikan daftar 10 id pelanggan dengan total pembelian paling banyak secara keseluruhan. 
 
 
 ```{python, eval=F}
@@ -588,214 +669,4 @@ pd.read_sql(sql, en_co2)
 ```
 
 
-### Soal 4
-
-Berapa banyak penjualan Marketing setiap bulan? Apakah tinggi atau rendah dibandingkan dengan bulan lalu?
-
-```{python, eval=F}
-# Perintah SQL
-sql = ''' 
-SELECT 
-  DATE_FORMAT(oi.created_at,'MONTH') AS order_date,
-  SUM(oi.sale_price*o.num_of_item) AS revenue,
-  COUNT(DISTINCT oi.order_id) AS order_count,
-  COUNT(DISTINCT oi.user_id) AS customers_purchased
-FROM `order_items` AS oi
-LEFT JOIN `orders` AS o 
-ON oi.order_id = o.order_id
-WHERE oi.status NOT IN ('Cancelled','Returned')
-GROUP BY 1
-ORDER BY 1 DESC
-'''
-
-# Eksekusi perintah  SQL
-pd.read_sql(sql, en_co2)
-```
-
-**Catatan:** Hasilnya masih salah karena format tanggal dan jam belum terdeteksi dengan baik.
-
-
-### Soal 5
-
-Siapa saja pelanggan JNE?
-
-```{python, eval=F}
-# Perintah SQL
-sql = ''' 
-WITH
-cust AS (
-  SELECT 
-    DISTINCT oi.user_id,
-    SUM(CASE WHEN u.gender = 'M' THEN 1 ELSE null END) AS male,
-    SUM(CASE WHEN u.gender = 'F' THEN 1 ELSE null END) AS female,
-    u.country AS country
-  FROM `order_items` AS oi
-  INNER JOIN `users` AS u  
-  ON oi.user_id = u.id
-  WHERE oi.status NOT IN ('Cancelled','Returned')
-  GROUP BY 1, 4
-)
-
-SELECT
-  c.country,
-  COUNT(DISTINCT c.user_id) AS customers_count,
-  COUNT(c.female) AS female,
-  COUNT(c.male) AS male
-FROM cust AS c
-GROUP BY 1
-ORDER BY 2 DESC
-'''
-
-# Eksekusi perintah  SQL
-pd.read_sql(sql, en_co2)
-```
-
-
-### Soal 6
-
-Buktikan bahwa Mayoritas pelanggan kami berasal dari China, Amerika Serikat, lalu Brasil.
-
-
-```{python, eval=F}
-# Perintah SQL
-sql = ''' 
-SELECT 
-  o.gender,
-  SUM(oi.sale_price*o.num_of_item) revenue,
-  SUM(o.num_of_item) quantity
-FROM `order_items` oi
-LEFT JOIN `orders` o
-ON oi.order_id = o.order_id
-WHERE oi.status NOT IN ('Cancelled','Returned')
-GROUP BY 1
-ORDER BY 2
-'''
-
-# Eksekusi perintah  SQL
-pd.read_sql(sql, en_co2)
-```
-
-### Soal 7
-
-Berapa proporsi pelanggan berdasarkan jenis kelamin di setiap negara?
-
-```{python, eval=F}
-# Perintah SQL
-sql = ''' 
-SELECT
-  CASE 
-    WHEN u.age <15 THEN 'Kids'
-    WHEN u.age BETWEEN 15 AND 24 THEN 'Teenager'
-    WHEN u.age BETWEEN 25 AND 50 THEN 'Adult'
-    WHEN u.age >50 THEN 'Eldery' END AS age_group,
-  COUNT(DISTINCT oi.user_id) total_customer
-FROM `order_items` oi
-LEFT JOIN `users` u
-ON oi.user_id = u.id
-WHERE oi.status NOT IN ('Cancelled','Returned')
-GROUP BY 1
-ORDER BY 2 DESC
-'''
-
-# Eksekusi perintah  SQL
-pd.read_sql(sql, en_co2)
-```
-
-### Soal 8
-
-Produk apa yang JNE jual paling banyak dan paling sedikit? 
-
-```{python, eval=F}
-# Perintah SQL
-sql = ''' 
-SELECT 
-  p.brand,
-  SUM(oi.sale_price*o.num_of_item) AS revenue,
-  SUM(o.num_of_item) AS quantity
-FROM `order_items` AS oi
-  LEFT JOIN `orders` AS o ON oi.order_id = o.order_id
-  LEFT JOIN `products` AS p ON oi.product_id = p.id
-WHERE oi.status NOT IN ('Cancelled','Returned')
-GROUP BY 1
-ORDER BY 3 DESC
-'''
-
-# Eksekusi perintah  SQL
-pd.read_sql(sql, en_co2)
-```
-
-### Soal 9
-
-Merek yang paling banyak menghasilkan pendapatan?
-
-```{python, eval=F}
-# Perintah SQL
-sql = ''' 
-SELECT 
-  p.category,
-  SUM(oi.sale_price*o.num_of_item) AS revenue,
-  SUM(o.num_of_item) AS quantity
-FROM `order_items` AS oi
-LEFT JOIN `orders` AS o
-ON oi.order_id = o.order_id
-LEFT JOIN `products` AS p
-ON oi.product_id = p.id
-WHERE oi.status NOT IN ('Cancelled','Returned')
-GROUP BY 1
-ORDER BY 3 DESC
-'''
-
-# Eksekusi perintah  SQL
-pd.read_sql(sql, en_co2)
-```
-
-### Soal 10
-
-Merek & kategori produk yang paling banyak dibatalkan dan dikembalikan.
-
-```{python, eval=F}
-# Perintah SQL
-sql = ''' 
-SELECT 
-  p.brand,
-  SUM(CASE WHEN oi.status = 'Cancelled' THEN 1 ELSE null END) AS Cancelled,
-  SUM(CASE WHEN oi.status = 'Returned' THEN 1 ELSE null END) AS Returned
-FROM `order_items` oi
-LEFT JOIN `products` p
-ON oi.product_id = p.id
-GROUP BY 1
-ORDER BY 2 DESC;
-
-'''
-
-# Eksekusi perintah  SQL
-pd.read_sql(sql, en_co2)
-```
-
-```{python, eval=F}
-# Perintah SQL
-sql = ''' 
-SELECT 
-p.category,
-SUM(CASE WHEN oi.status = 'Cancelled' THEN 1 ELSE null END) AS Cancelled,
-SUM(CASE WHEN oi.status = 'Returned' THEN 1 ELSE null END) AS Returned
-FROM `order_items` oi
-LEFT JOIN `products` p
-ON oi.product_id = p.id
-GROUP BY 1
-ORDER BY 2 DESC;
-
-'''
-
-# Eksekusi perintah  SQL
-pd.read_sql(sql, en_co2)
-```
-
-## Referensi {-}
-
-* https://revou.co/panduan-teknis/sql-subquery
-* https://medium.com/@simonazhangzy/practice-real-sql-in-bigquery-with-the-public-e-commerce-dataset-f14838b2755b
-* https://jagowebdev.com/menampilkan-data-dari-beberapa-tabel-mysql-join-pada-mysql/
-* https://jagowebdev.com/wp-content/demo/files/join_pada_mysql.sql.txt
-* https://blog.devgenius.io/thelook-ecommerce-data-analysis-using-sql-2cf420de9095
 

@@ -101,6 +101,7 @@ studi-kasus
 soal-1
 soal-2
 soal-3
+soal-latihan-kelompok
 w1h-visualisasi
 soal-1-1
 soal-2-1

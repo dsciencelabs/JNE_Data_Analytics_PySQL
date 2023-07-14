@@ -669,4 +669,12 @@ pd.read_sql(sql, en_co2)
 ```
 
 
+## Soal Latihan Kelompok
 
+1. Berapa Penjualan setiap barang yang terdapat pada penjualan detail
+2. Siapa Nama Pelanggan yang total transaksi paling banyak
+3. Nama Barang yang dibeli oleh setiap pelanggan dan jumlahnya
+4. Mencari dan Menunjukkan Status dari orders dengan berdasarkan nilai maximum dari order_id dengan menampilkan order_id, user_id, num_of_item, status. 
+5. Mencari dan Menunjukkan Negara mana saja yang TIDAK tercantum dalam data inventory_items dengan menampilkan id, name,latitude, longitude. 
+6. Mencari dan Menunjukkan nama product dan brand jika dengan berdasarkan retail price lebih besar dari rata-rata retail price keseluhurannya dalam data products dengan menampilkan id,name,brand
+7. Mencari dan Menunjukkan nama product jika dengan berdasarkan retail price lebih besar dari rata-rata retail price keseluhurannya dalam data products Serta berdasarkan brand "TYR" dengan menampilkan id,cost,name,sku

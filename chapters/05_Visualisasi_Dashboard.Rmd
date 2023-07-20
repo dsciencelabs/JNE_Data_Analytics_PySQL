@@ -1,5 +1,70 @@
 # Visualisasi & Dashboard
 
+```{r include=FALSE}
+library(reticulate)
+library(Rcpp)
+# conda_list()
+use_condaenv("base", required = TRUE)
+```
+
+Pertemuan kali ini kita akan fokus pada pelatihan visualisasi yang sudah perlah dipelajari pada wokshop sebelumnya yaitu **Data Analytics with Python**. Kita akan mulai dengan mengakses database terlebih dahulu,  kemudian melakukan kueri sesuai kebutuhan analisis, selanjutnya menampilkannya dalam bentuk visual, dan pada akhirnya membentuk dashboard.
+
+
+## Buat Database Baru
+
+Pertama-tama buatlah koneksi Python ke database MySQL menggunakan dan mengatifkan XAMPP.
+
+```{python, eval=F}
+# import module 
+import mysql.connector
+
+# koneksi server
+db1 = mysql.connector.connect(
+  host='localhost',
+  user='bakti',
+  passwd='123'
+)
+
+# membuat objek 'cursor` sebagai kata kunci eksekusi SQL
+cursor1 = db1.cursor()
+
+# Perintah SQL
+sql='''CREATE DATABASE IF NOT EXISTS dashboard'''
+
+# Eksekusi perintah  SQL
+cursor1.execute(sql)
+```
+
+
+## Import Tabel ke Database
+
+Berikut ini adalah cara untuk menambahkan tabel ke database dengan menggunakan file csv yang telah desediakan.
+
+```{python, eval=F}
+import pandas as pd
+
+# read data CSV
+link1 = 'https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/users.csv'
+link2 = 'https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/products.csv'
+link3 = 'https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/orders.csv'
+link4 = 'https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/order_items.csv'
+link5 = 'https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/inventory_items.csv'
+link6 = 'https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/events.csv'
+link7 = 'https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/data/data_latihan/distribution_centers.csv'
+
+df1 = pd.read_csv(link1, sep=';' )
+df2 = pd.read_csv(link2, sep=';' )
+df3 = pd.read_csv(link3, sep=';' )
+cols= df3.columns[4:7]
+df3[cols] = df3[cols].apply(pd.to_datetime)
+
+df4 = pd.read_csv(link4, sep=';' )
+df5 = pd.read_csv(link5, sep=';' )
+df6 = pd.read_csv(link6, sep=';' )
+df7 = pd.read_csv(link7, sep=';' )
+```
+
+
 ### Soal 1
 
 Berapa banyak penjualan Marketing setiap bulan? Apakah tinggi atau rendah dibandingkan dengan bulan lalu?

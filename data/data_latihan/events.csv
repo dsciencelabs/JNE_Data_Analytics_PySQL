@@ -1,501 +1,501 @@
 ﻿id;user_id;sequence_number;session_id;created_at;ip_address;city;state;postal_code;browser;traffic_source;uri;event_type
-643427;49283;4;ccbd1798-94fc-4ff3-a648-af0d440d9f1f;05/11/2023;11.169.39.134;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
-1128586;86669;3;3a4db649-531e-432e-acbc-6f06bcba77b8;02/11/2021;76162148173;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
-1086989;83539;4;088d2011-3069-421f-88c6-a033437c9f50;4/15/2022 12:04:25;170.99.67.112;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
-832761;63893;3;f8e36164-f3f4-4b4a-bef8-5e7cd0bd7ba9;5/29/2021 14:32:20;43.125.63.116;Bogatynia;Dolnośląskie;59;IE;Facebook;/cart;cart
-254265;19512;12;84cc445f-4057-4411-ab8f-815e5e533198;01/02/2023;138.37.197.15;Bogatynia;Dolnośląskie;59;Safari;Adwords;/cart;cart
-1388475;;2;7d4f4919-b7e3-491f-9f2f-6d3c92298bc2;11/08/2020;42.19.50.42;Bogatynia;Dolnośląskie;59;Safari;Adwords;/cart;cart
-561616;43109;4;0d92dd0e-a104-4e89-9028-11e893b93fce;2/25/2023 15:26:25;59112156253;Bogatynia;Dolnośląskie;59;IE;Email;/cart;cart
-733045;56114;4;de529c4e-4ae2-486b-a9b9-8b7c0f8327ea;05/03/2023;170.159.97.229;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
-1339385;;3;3fb81f83-78ff-46dd-96ea-bf0f92c876a2;4/27/2022 10:14:00;7179152136;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
-58166;4506;9;86be78d2-05c1-4558-84b1-f42e95dc97da;6/29/2023 5:51:44;9.107.211.76;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
-832764;63893;6;f8e36164-f3f4-4b4a-bef8-5e7cd0bd7ba9;5/29/2021 14:37:06;43.125.63.116;Bogatynia;Dolnośląskie;59;IE;Facebook;/cart;cart
-100140;7701;6;831f3fc8-9229-4fe5-89be-1257221ce4c7;9/29/2020 16:27:14;1129246173;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
-609080;46709;4;fb5448d3-3bc1-4723-bd89-27e868175b13;11/10/2022;125.1.146.133;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
-1559421;;3;290d84a9-8661-4713-a362-88f17237d9e7;08/10/2020;121.183.235.82;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
-2226756;;3;d425ea3c-1a5a-4dcc-9778-2eae1489d732;08/03/2019;204.171.98.42;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
-2269370;;2;db0b948e-66b5-4b80-aa5d-c5c44ad29109;2/15/2023 10:03:00;48.141.3.24;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
-967242;74261;4;ad2d3da6-5941-4392-94e0-6b74b2e718d4;12/30/2022 5:43:01;27.193.46.50;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
-742709;56847;9;47e8998b-71bc-45bd-836d-d311b2d928ba;06/11/2023;50226122141;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
-1326427;;2;0e968791-6b0f-4d61-81c1-d069b974998d;3/29/2019 10:41:00;48.24.248.151;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
-742719;56847;9;d708c26f-e3e0-4fe0-a0ec-7583641d8480;06/11/2023;195.78.155.20;Bogatynia;Dolnośląskie;59;Firefox;YouTube;/cart;cart
-2174538;;3;5aeb5925-0b76-4a7b-9372-7cb10d38642f;06/12/2020;16.129.127.30;Bogatynia;Dolnośląskie;59;Safari;Email;/cart;cart
-543911;41714;4;d8dbf0eb-e353-48c0-b91d-61f9cb26340c;1/18/2021 15:54:35;205.93.86.45;Bogatynia;Dolnośląskie;59;Firefox;Email;/cart;cart
-1281705;98360;3;32fba431-810a-45a9-a972-3ba77fd86eb8;7/15/2021 11:20:22;73.75.108.181;Bogatynia;Dolnośląskie;59;Safari;Adwords;/cart;cart
-861667;66169;6;dad47714-c96b-405d-b3bd-35194929f1ec;11/29/2022 6:24:35;41.225.205.48;Bogatynia;Dolnośląskie;59;Firefox;Facebook;/cart;cart
-498738;38333;4;59caaa48-882b-45bc-a463-100fb33a6736;08/03/2022;44.152.169.41;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
-555027;42540;4;a5cd48df-e840-4411-8600-79eeff809eb5;9/25/2021 9:24:40;6.181.86.5;Bogatynia;Dolnośląskie;59;Firefox;Adwords;/cart;cart
-2193016;;2;0cc0f8bb-8f4b-41a7-82ed-9b08862f1280;02/06/2020;99.200.62.196;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
-2091045;;2;43d6d5f5-fdc3-4976-b12c-b105e9a19088;12/04/2022;78.151.160.46;Bogatynia;Dolnośląskie;59;Safari;YouTube;/cart;cart
-1591789;;2;c29edd66-1db8-4fd8-bdaf-a16bd52755e2;5/13/2022 11:33:00;85.82.52.164;Bogatynia;Dolnośląskie;59;Chrome;Organic;/cart;cart
-1492921;;3;5a8841c1-0288-4791-9780-e866d84f94b6;04/02/2020;2,02117E+11;Bogatynia;Dolnośląskie;59;Safari;Email;/cart;cart
-929507;71302;6;6c44c833-6151-47c1-a485-b93aca799685;08/07/2021;142.56.47.181;Bogatynia;Dolnośląskie;59;Firefox;Adwords;/cart;cart
-1777821;;3;1f62b635-cb62-43ab-97a9-3d428785c861;4/26/2022 17:53:00;40252146237;Bogatynia;Dolnośląskie;59;IE;Email;/cart;cart
-2398864;;2;11536d8e-63f7-4a72-b51c-6db4114ae0e8;01/10/2021;220.117.2.152;Bogatynia;Dolnośląskie;59;Other;Organic;/cart;cart
-2179254;;2;e6ac7f2c-bee1-45ef-a3df-b5ee234e846e;10/08/2022;101.65.199.193;Bogatynia;Dolnośląskie;59;Safari;Facebook;/cart;cart
-58176;4506;6;68d8eba6-a214-4903-bcab-0fd88248a053;6/29/2023 3:07:12;67.20.19.180;Bogatynia;Dolnośląskie;59;Safari;Adwords;/cart;cart
-254288;19512;9;62e6119d-26e7-4a21-99a5-7f1106c67a96;01/01/2023;4.240.188.46;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
-730352;55925;4;ba46c51d-dac7-41ae-b3e0-225262aac279;06/08/2023;1,68192E+11;Bogatynia;Dolnośląskie;59;Firefox;Facebook;/cart;cart
-1573310;;2;b210068a-27ef-4b63-ac53-677a8b5d3ac9;4/20/2021 9:13:00;26.198.244.25;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
-824970;63311;9;7b44ea46-4b90-4be1-a1cf-3acbd8e5298a;6/20/2023 8:54:44;135.57.129.221;Bogatynia;Dolnośląskie;59;Safari;Email;/cart;cart
-2213128;;2;8c16e7f2-a88a-4bec-9f2b-f024cb605439;06/08/2021;173.107.189.65;Bogatynia;Dolnośląskie;59;Safari;YouTube;/cart;cart
-254249;19512;9;83302d41-0eac-47da-b9c7-a9923db846b5;01/01/2023;36.47.178.171;Bogatynia;Dolnośląskie;59;IE;Email;/cart;cart
-191883;14821;6;dfa9c5cf-7d57-48a8-9c60-9f83476bc926;6/16/2023 8:09:28;1,00235E+11;Bogatynia;Dolnośląskie;59;Safari;Adwords;/cart;cart
-861660;66169;6;0f287016-b1da-4d91-85e5-e48146a9119f;11/29/2022 9:00:52;100.42.125.216;Bogatynia;Dolnośląskie;59;Safari;Organic;/cart;cart
-434235;33255;3;ba82abc4-94bb-4f95-8c14-64127a09921c;4/17/2021 5:25:18;204.147.161.92;Bogatynia;Dolnośląskie;59;Chrome;YouTube;/cart;cart
-1449775;;3;eb788d09-b5ad-4b32-bf82-4bdef434a936;11/02/2021;16144144229;Bogatynia;Dolnośląskie;59;Firefox;Adwords;/cart;cart
-93875;7230;3;c9dea195-f2ac-423f-9bc6-bc52fcd89522;8/29/2022 17:10:50;89.33.90.54;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
-1453397;;2;58705eb3-9f30-4c72-82a5-679130f76b54;7/14/2022 12:48:00;141.77.164.90;Bogatynia;Dolnośląskie;59;Firefox;Email;/cart;cart
-413657;31678;4;2dcd888f-ab00-491a-b859-d77726e57adb;07/05/2021;142.85.161.98;Bogatynia;Dolnośląskie;59;Safari;Adwords;/cart;cart
-2341577;;3;82e33dfc-5c14-4bfb-ba02-3f3d5f669edf;01/05/2021;16.87.17.211;Bogatynia;Dolnośląskie;59;Safari;Email;/cart;cart
-608969;46700;4;3af6f2a9-84a4-4db9-a80a-9555593b8779;06/02/2022;150.240.170.17;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
-1497713;;2;2573d559-e4b7-4a30-ab3c-8f80196e9f0f;2/16/2022 5:57:00;6.30.6.93;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
-2220220;;2;9309b7ee-4557-4eca-9dc4-6c4e2ec549ad;10/19/2022 4:23:00;220.124.153.76;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
-1258691;96543;12;fbbf2e07-f0dd-4a0d-83a1-9cd02490a61f;01/09/2022;33.67.124.55;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
-1281714;98360;12;32fba431-810a-45a9-a972-3ba77fd86eb8;7/15/2021 11:32:26;73.75.108.181;Bogatynia;Dolnośląskie;59;Safari;Adwords;/cart;cart
-58147;4506;3;f8d62542-59e9-4d43-89f6-56196c22fe84;6/29/2023 3:02:05;35.99.48.142;Bogatynia;Dolnośląskie;59;Chrome;Facebook;/cart;cart
-150028;11609;4;441a22bb-6da6-420d-bab5-75ade93130e3;5/22/2022 2:27:00;9226103112;Gorzów Wielkopolski;Lubuskie;66;Firefox;Facebook;/cart;cart
-1508171;;2;b7fcda38-ebd8-4c98-b819-caec762e7c92;12/30/2022 3:56:00;30.33.186.136;Gorzów Wielkopolski;Lubuskie;66;Safari;YouTube;/cart;cart
-866136;66538;4;2cf1d8d8-8450-480d-95c6-b150ee4f71b3;01/08/2023;94.43.59.146;Gorzów Wielkopolski;Lubuskie;66;Chrome;Adwords;/cart;cart
-245434;18812;6;02ea90f3-655e-4f4c-896f-83486222e309;06/08/2023;61144212110;Gorzów Wielkopolski;Lubuskie;66;Safari;Email;/cart;cart
-1114638;85596;4;6f52d419-7720-4774-9257-518109ca6b66;11/14/2021 10:18:06;119.33.182.224;Gorzów Wielkopolski;Lubuskie;66;Chrome;Adwords;/cart;cart
-642218;49188;6;c0e02ead-daa3-4bd5-b003-f7dbaad1190b;4/21/2021 18:16:49;183.149.187.17;Gorzów Wielkopolski;Lubuskie;66;Firefox;YouTube;/cart;cart
-2005806;;2;88d160a2-d0f2-4f0d-97ff-2a9197db11b0;4/28/2019 16:27:00;25.81.176.164;Gorzów Wielkopolski;Lubuskie;66;Safari;Facebook;/cart;cart
-357070;27442;9;0751a0ac-12fc-4922-8c68-c8c5e968f515;04/10/2021;148.144.101.67;Gorzów Wielkopolski;Lubuskie;66;IE;Facebook;/cart;cart
-1673073;;3;1f725ea4-5c5a-462f-a4f5-14179fcd0ae6;03/07/2021;1,86142E+11;Gorzów Wielkopolski;Lubuskie;66;Chrome;Email;/cart;cart
-245424;18812;9;1b47d218-b25e-406d-9836-a7e985e2b5bc;06/08/2023;167.182.1.117;Gorzów Wielkopolski;Lubuskie;66;Chrome;Email;/cart;cart
-2327026;;2;ff081461-d3d2-4229-b556-b09bc92cc8db;07/06/2020;153.198.50.137;Gorzów Wielkopolski;Lubuskie;66;Safari;Organic;/cart;cart
-505685;38843;6;cab17890-b21c-4072-835f-cf25a56ae1b4;12/26/2022 5:48:28;80.18.221.255;Gorzów Wielkopolski;Lubuskie;66;Firefox;Adwords;/cart;cart
-1184756;90957;4;864099a7-6788-4f86-9558-0e55adffe7f6;1/18/2021 22:47:00;4.14.60.1;Gorzów Wielkopolski;Lubuskie;66;IE;Adwords;/cart;cart
-2252139;;3;c9278d15-f654-4560-a7ed-c132dde8a60f;5/17/2022 3:13:00;205.104.171.81;Gorzów Wielkopolski;Lubuskie;66;Safari;Facebook;/cart;cart
-2270729;;2;3b18f219-42a6-4328-8583-b94f886888e3;03/10/2021;1,65223E+11;Gorzów Wielkopolski;Lubuskie;66;Safari;Email;/cart;cart
-424820;32535;3;7249ec17-755b-4406-8995-548f6b23040f;1/15/2021 12:30:54;1,96238E+11;Gorzów Wielkopolski;Lubuskie;66;Firefox;Email;/cart;cart
-2294969;;3;a40076a4-764c-47cf-98e8-8ee8f1b19245;12/10/2020;2,14217E+11;Gorzów Wielkopolski;Lubuskie;66;Safari;Email;/cart;cart
-285759;21946;4;06b699a1-350b-49dc-a08b-a3e94651e351;04/08/2023;73.139.182.18;Gorzów Wielkopolski;Lubuskie;66;Chrome;Organic;/cart;cart
-1458719;;3;4430fd80-be93-4920-8e33-de7b4353419a;9/21/2021 12:53:00;159.83.173.101;Gorzów Wielkopolski;Lubuskie;66;Chrome;Email;/cart;cart
-1065111;81802;4;74015e29-c38e-4fd5-bc40-78d1b787d280;7/15/2021 9:19:48;214.193.126.37;Gorzów Wielkopolski;Lubuskie;66;IE;Adwords;/cart;cart
-158878;12268;6;8aff0272-e7b3-429b-a743-b390cf3ac31e;2/17/2023 3:25:23;89.90.65.21;Gorzów Wielkopolski;Lubuskie;66;Safari;YouTube;/cart;cart
-266337;20485;4;f0164170-70f1-4b59-83e7-dc46443401b4;6/24/2023 14:44:51;12175189235;Gorzów Wielkopolski;Lubuskie;66;Safari;Email;/cart;cart
-392324;30093;3;09ba33cb-9939-49f7-92c1-480bb6b267df;11/29/2022 2:22:06;215.98.29.214;Gorzów Wielkopolski;Lubuskie;66;Chrome;Adwords;/cart;cart
-239747;18374;4;e0087fb2-943f-4e48-8306-68b420d0f1a7;11/13/2019 11:44:11;116.125.83.185;Gorzów Wielkopolski;Lubuskie;66;Firefox;Email;/cart;cart
-2324890;;2;11e2ec2e-81ae-4cc6-a07f-e9aa67671c4c;08/03/2021;48104216239;Gorzów Wielkopolski;Lubuskie;66;Chrome;Adwords;/cart;cart
-1100628;84569;6;7f3ce032-df35-4299-b139-36e5b86e6dde;01/11/2023;22.193.24.74;Gorzów Wielkopolski;Lubuskie;66;Chrome;Email;/cart;cart
-957594;73501;4;aa03dfcb-9364-419a-8df1-8ea61db0811d;02/06/2021;53.60.34.126;Gorzów Wielkopolski;Lubuskie;66;Chrome;Email;/cart;cart
-505695;38843;3;9682f044-af93-4cae-bdce-532109f67e22;12/26/2022 4:55:08;146.235.72.254;Gorzów Wielkopolski;Lubuskie;66;Chrome;Organic;/cart;cart
-689181;52863;6;94a6a1ca-5eae-42f1-82a0-73c7e2c75685;12/03/2021;153.73.247.219;Gorzów Wielkopolski;Lubuskie;66;Firefox;Email;/cart;cart
-407807;31242;4;4d9ca24a-c053-42a8-b525-2826d4c776c0;2/19/2022 12:55:00;126.27.187.154;Gorzów Wielkopolski;Lubuskie;66;Safari;Adwords;/cart;cart
-1716408;;3;f59b335c-5069-4f7e-b693-1e6fea93b636;07/10/2021;170.219.8.241;Gorzów Wielkopolski;Lubuskie;66;Other;Email;/cart;cart
-357093;27442;6;dd704287-3ecd-4499-907f-cfcb7422d6ad;04/10/2021;63.99.33.141;Gorzów Wielkopolski;Lubuskie;66;Chrome;YouTube;/cart;cart
-172117;13301;6;84367980-12d0-45fa-93ca-b613d31ba17f;11/13/2021 15:00:01;223.90.68.157;Gorzów Wielkopolski;Lubuskie;66;Firefox;Email;/cart;cart
-2176442;;3;3eb5abb1-5a16-45e9-9e7b-8a8b0f1514ad;10/09/2022;178.228.112.38;Gorzów Wielkopolski;Lubuskie;66;Chrome;Facebook;/cart;cart
-1028337;78971;3;70b15041-d967-42c4-a5e7-b806b3b7f02e;2/17/2023 8:57:04;99.0.44.1;Gorzów Wielkopolski;Lubuskie;66;Chrome;Email;/cart;cart
-245437;18812;9;02ea90f3-655e-4f4c-896f-83486222e309;06/08/2023;61144212110;Gorzów Wielkopolski;Lubuskie;66;Safari;Email;/cart;cart
-1043289;80114;4;925ac3ae-e119-4bdc-8789-14c9a5b4689f;05/09/2022;28.29.123.232;Gorzów Wielkopolski;Lubuskie;66;Chrome;Email;/cart;cart
-1945283;;2;7fadcb4c-51f0-4fc7-9393-3c3700146578;5/28/2021 18:52:00;66.71.12.206;Gorzów Wielkopolski;Lubuskie;66;Chrome;Adwords;/cart;cart
-1669859;;3;94b22481-457a-4420-a1e3-cb8c36ab3053;6/21/2023 13:05:00;148.160.26.252;Gorzów Wielkopolski;Lubuskie;66;Safari;Adwords;/cart;cart
-1553155;;3;3ba40c61-d6db-4663-afb9-0e98e08b1524;03/10/2022;63.244.176.63;Gorzów Wielkopolski;Lubuskie;66;Chrome;Adwords;/cart;cart
-2079536;;3;4eb1369a-770f-4441-b072-d52a74d9811c;06/10/2021;189.112.82.49;Gorzów Wielkopolski;Lubuskie;66;Chrome;YouTube;/cart;cart
-517610;39740;4;98a9cd38-a033-46e6-846e-bf8ab4504e3c;11/30/2022 13:17:06;160.18.234.146;Gorzów Wielkopolski;Lubuskie;66;Safari;Email;/cart;cart
-34466;2638;4;abdd06c7-6d53-4161-a368-480bbf9d3562;3/15/2023 8:15:17;216.219.91.135;Żagań;Lubuskie;68;Firefox;Facebook;/cart;cart
-250578;19229;6;0724df3d-d56e-40f8-a9e3-cd099fa6377d;9/13/2022 10:52:38;2,04224E+11;Żagań;Lubuskie;68;Firefox;Adwords;/cart;cart
-250591;19229;9;ff6be63a-e43e-41ac-808e-54dfb6fc646f;9/13/2022 14:14:51;154.127.78.126;Żagań;Lubuskie;68;Firefox;Facebook;/cart;cart
-1060931;81465;4;aeff498e-68c1-424a-b150-0edc3e1c40c3;4/20/2020 17:26:47;25.239.76.242;Żagań;Lubuskie;68;Chrome;Email;/cart;cart
-76305;5878;4;fc3be065-e5fd-4868-bfdc-3c43e07893ee;10/06/2020;12171169163;Żagań;Lubuskie;68;Other;Adwords;/cart;cart
-860831;66106;6;29cb37d4-cd8f-4221-b7eb-ae31f680a2ff;01/06/2021;10.133.70.65;Żagań;Lubuskie;68;Chrome;Adwords;/cart;cart
-860821;66106;3;c40d27d6-6970-494e-9b67-90c87a71bb2c;01/06/2021;128.67.117.240;Żagań;Lubuskie;68;Safari;Email;/cart;cart
-1723805;;3;28bd020a-8ec1-4690-aeb0-6967bfa63b81;02/11/2022;182.139.116.65;Żagań;Lubuskie;68;Chrome;Email;/cart;cart
-903529;69328;9;c48e75b6-5179-427e-8ab6-de5070b7ec2b;6/27/2023 11:19:27;118.30.2.86;Żagań;Lubuskie;68;Chrome;YouTube;/cart;cart
-454742;34911;3;93eb8236-dec2-45f5-9e21-61eac814771e;7/27/2022 21:25:57;212.61.85.16;Ziltendorf;Lubuskie;69;Firefox;Facebook;/cart;cart
-909479;69749;12;f6035278-9c50-47c2-bcd4-7824874c86b7;11/09/2022;56.0.109.107;Ziltendorf;Lubuskie;69;Firefox;Adwords;/cart;cart
-2100334;;2;2ba095ac-7d9b-4053-a9f9-49147648fdb1;08/07/2019;78.74.158.167;Ziltendorf;Lubuskie;69;Safari;Facebook;/cart;cart
-909476;69749;9;f6035278-9c50-47c2-bcd4-7824874c86b7;11/09/2022;56.0.109.107;Ziltendorf;Lubuskie;69;Firefox;Adwords;/cart;cart
-909518;69749;12;9468129d-4f2f-4136-9236-557b95bb7ee5;11/09/2022;1,93139E+11;Ziltendorf;Lubuskie;69;Chrome;Email;/cart;cart
-750939;57525;4;656e2280-83db-4e41-9b17-b7a7299432e4;10/22/2022 10:49:21;161.118.54.21;Ziltendorf;Lubuskie;69;Firefox;Adwords;/cart;cart
-911423;69907;6;7178c13b-063c-4dec-a291-eca08c76e138;03/04/2021;53.105.97.251;Ziltendorf;Lubuskie;69;Chrome;Adwords;/cart;cart
-1992106;;3;1f622f9b-731d-4750-9080-445fc66ca6a0;04/04/2021;189.179.2.129;Schwedt/Oder;Zachodniopomorskie;74;Chrome;Email;/cart;cart
-823479;63203;6;679e3a31-cf55-409f-9cd7-ad69dbcfeea6;12/29/2022 3:49:54;89.202.15.246;Schwedt/Oder;Zachodniopomorskie;74;Chrome;Email;/cart;cart
-467295;35820;6;fbbadbb6-4a74-4181-b983-6c34cae4df0d;1/13/2023 12:20:17;197.78.148.52;Schwedt/Oder;Zachodniopomorskie;74;Chrome;Facebook;/cart;cart
-823482;63203;9;679e3a31-cf55-409f-9cd7-ad69dbcfeea6;12/29/2022 3:52:11;89.202.15.246;Schwedt/Oder;Zachodniopomorskie;74;Chrome;Email;/cart;cart
-841049;64559;12;b728d0ae-ce13-4d5d-a08f-5d40ef19c988;4/19/2022 2:52:24;26212244138;Schwedt/Oder;Zachodniopomorskie;74;Safari;Email;/cart;cart
-823469;63203;6;c346d2d6-15e8-4bdb-906d-4ff77a80af5a;12/29/2022 5:37:44;26.233.152.22;Schwedt/Oder;Zachodniopomorskie;74;Chrome;YouTube;/cart;cart
-1799564;;3;0187c72b-3b94-4d99-9bec-547084027be9;4/20/2019 16:19:00;114.142.76.226;Schwedt/Oder;Zachodniopomorskie;74;Chrome;Email;/cart;cart
-841033;64559;9;e9e3f6bd-5296-4fdb-a4ee-4ec4d8e67046;4/19/2022 3:53:59;65.49.64.76;Schwedt/Oder;Zachodniopomorskie;74;Safari;Email;/cart;cart
-258890;19840;4;fe2eaa21-f255-4673-bc1c-171f70cf8b52;4/27/2023 23:29:48;185.250.25.98;Schwedt/Oder;Zachodniopomorskie;74;Chrome;Email;/cart;cart
-841066;64559;3;6d87076e-c9c8-4e18-9acf-05ed323a1db0;4/19/2022 1:34:46;202.153.228.82;Schwedt/Oder;Zachodniopomorskie;74;Firefox;Adwords;/cart;cart
-2217330;;2;b83ed857-5c22-48d8-82f4-196de07ca59c;10/26/2021 12:18:00;99.111.136.51;Schwedt/Oder;Zachodniopomorskie;74;Other;Adwords;/cart;cart
-403067;30883;9;9d0abe49-e500-49f4-9d76-03e81e97a7a3;3/18/2022 5:31:37;1,45177E+11;Birmingham;England;B8;Chrome;Email;/cart;cart
-2124351;;2;34688bec-de58-4348-92d4-4d3459991040;8/25/2020 12:28:00;174.212.56.250;Birmingham;England;B8;Chrome;Email;/cart;cart
-921963;70697;6;49edca67-e9dc-4579-a03a-e37d18e868ed;03/04/2023;22.47.212.223;Birmingham;England;B9;Chrome;Email;/cart;cart
-1800696;;3;d42b510e-7170-48c9-b9ed-5febd90cda0a;8/14/2021 9:20:00;94216144178;London;England;E1;Safari;Email;/cart;cart
-2370284;;3;b099f945-5458-4af8-862a-972485357c61;12/10/2020;78254166245;London;England;E1;Chrome;Email;/cart;cart
-1508829;;2;adc06dff-1a6d-4e3f-b00b-86095654d480;03/07/2020;176.152.53.193;London;England;E2;Safari;Email;/cart;cart
-494472;38004;3;03da2bd3-7377-4cd9-a132-a6a45abe23a8;11/03/2020;201.58.71.94;London;England;E2;Chrome;Adwords;/cart;cart
-494475;38004;6;03da2bd3-7377-4cd9-a132-a6a45abe23a8;11/03/2020;201.58.71.94;London;England;E2;Chrome;Adwords;/cart;cart
-494478;38004;9;03da2bd3-7377-4cd9-a132-a6a45abe23a8;11/03/2020;201.58.71.94;London;England;E2;Chrome;Adwords;/cart;cart
-1873378;;2;d5e827b3-8d5d-42eb-a1a3-3da8f8250cbb;4/22/2023 3:58:00;153.153.115.19;London;England;E2;Chrome;YouTube;/cart;cart
-1420783;;2;9fc3e3df-6b14-480b-b4dc-1e5a1a697504;10/07/2020;180.190.229.44;London;England;E3;Firefox;Email;/cart;cart
-972291;74653;3;b96adc23-6ebd-48fb-94ac-ffbf2c2a711d;06/05/2023;47.73.35.193;London;England;E3;Safari;Adwords;/cart;cart
-494332;37987;3;081ef7c3-f6f1-4cc2-84de-79e09a9d46fd;6/19/2023 9:12:51;123.26.186.7;London;England;E4;Chrome;Organic;/cart;cart
-318921;24529;4;825ff227-b41d-479e-b7be-4bd4918c7b27;5/26/2023 3:36:40;6.100.17.34;London;England;E4;Firefox;YouTube;/cart;cart
-1984144;;3;25cf1aca-5025-4b68-ab2f-6f753fb28ebc;04/06/2022;194.111.160.84;London;England;E5;Safari;Email;/cart;cart
-339209;26078;3;55465827-ad98-45c3-991e-8bb0ce9598d6;6/18/2021 16:19:58;1,33201E+11;London;England;E5;Chrome;YouTube;/cart;cart
-493098;37875;9;1233a98a-ed36-4bda-a4d0-2c5d8c6050f2;8/25/2022 23:18:53;153.249.142.12;London;England;E5;Firefox;Facebook;/cart;cart
-1235947;94776;4;a30f178f-f5b1-4901-a1d2-3d17223e7a4a;9/22/2022 23:48:07;91114191183;London;England;E6;IE;Adwords;/cart;cart
-59907;4642;4;ca324062-875f-45c1-9e5e-89f069fb69fa;05/04/2023;111.132.29.243;London;England;E6;Firefox;Facebook;/cart;cart
-59921;4642;3;48a95e13-00a8-4aac-b1df-626798e44b31;6/15/2022 21:56:45;99.178.59.168;London;England;E6;Chrome;Facebook;/cart;cart
-2207341;;3;4b3067ad-28a6-4c3f-90e1-a84f582fd4e6;4/22/2021 9:25:00;102.64.110.92;London;England;E6;Chrome;Adwords;/cart;cart
-1286325;98700;9;8919daab-eee3-4a80-bc97-04beb05fc8ec;12/12/2021;205.52.36.32;London;England;E6;Chrome;Adwords;/cart;cart
-1286306;98700;3;e8e3fc62-b354-43c9-afd3-71d477c69970;12/12/2021;136.102.147.8;London;England;E6;Safari;Organic;/cart;cart
-59931;4642;3;9bdbbb43-cac7-4027-ad5e-61d06c0a69ea;6/15/2022 21:33:23;200.45.212.13;London;England;E6;Firefox;Facebook;/cart;cart
-2131478;;3;01a4b6cb-2777-4103-9614-958c342fad60;5/31/2019 2:41:00;26.125.15.116;London;England;E6;Firefox;Email;/cart;cart
-1964634;;3;725e6e65-aa58-476b-979e-7325450dfe59;5/29/2022 14:17:00;194.145.0.171;London;England;E7;Chrome;Email;/cart;cart
-1256681;96364;4;de0f78ee-58ee-49de-af36-0461bb333ea8;4/18/2023 10:29:35;122.204.91.184;London;England;E7;Firefox;Email;/cart;cart
-2370050;;2;0019a2a8-a428-42dd-907c-a55f73d2e4a2;03/04/2023;1,06178E+11;London;England;E7;Safari;Email;/cart;cart
-1671419;;3;a679d997-88f4-4f3e-9be0-657718750c63;2/16/2022 2:53:00;2,04107E+11;London;England;E8;Chrome;Email;/cart;cart
-2123972;;3;77a48163-56e5-4fa2-9a8c-7e4b9a45516c;12/23/2020 0:37:00;36.209.60.37;London;England;E8;Safari;Email;/cart;cart
-919261;70511;3;36577a7d-40e6-429f-a871-f960408202ac;08/12/2021;139.18.69.196;London;England;E8;Chrome;Adwords;/cart;cart
-919277;70511;6;90ee5eb5-8da5-4ad5-80b5-f0e017db748e;08/12/2021;79.161.242.7;London;England;E8;Chrome;Adwords;/cart;cart
-2025144;;2;09bdbf37-2be8-4f71-87a7-0efdeeefae35;01/12/2020;66.239.84.9;London;England;E9;Safari;Email;/cart;cart
-2091647;;2;6619ea45-c98c-4b24-a148-1448a5e407a5;4/21/2023 18:19:00;75.207.174.80;London;England;E9;Firefox;Email;/cart;cart
-762284;58408;12;1fa810fc-fd99-4d7b-a192-f948b9653524;05/01/2021;72.75.116.120;London;England;E9;Firefox;Email;/cart;cart
-762291;58408;6;fb215794-22ed-41ee-a109-d2c61ca355db;05/01/2021;1,9919E+11;London;England;E9;Safari;Adwords;/cart;cart
-5069;394;3;91f56cd3-194e-41c7-b6b1-d3814beb79fe;05/07/2020;85.38.160.238;Liverpool;England;L4;Chrome;Email;/cart;cart
-1163732;89340;3;58e87e42-da60-4834-9d15-9dee5af00cfb;2/24/2022 0:34:50;137.222.83.172;Liverpool;England;L4;Firefox;Email;/cart;cart
-762898;58454;4;18202e9c-4dd2-47c9-9b6b-7be92f004255;05/11/2023;5206219101;Liverpool;England;L4;Chrome;Adwords;/cart;cart
-560143;42986;3;454d0e45-5ce2-4b57-8d32-153e20bdb40f;3/13/2020 11:32:54;5.130.46.37;Liverpool;England;L4;Other;Adwords;/cart;cart
-560149;42986;9;454d0e45-5ce2-4b57-8d32-153e20bdb40f;3/13/2020 11:41:32;5.130.46.37;Liverpool;England;L4;Other;Adwords;/cart;cart
-1681095;;2;47988303-26f8-4e9b-9784-fbbb9ad17aea;3/15/2023 5:02:00;196.15.96.60;Liverpool;England;L4;Chrome;Adwords;/cart;cart
-1163700;89340;9;9c6d9e7d-5cd1-45f5-874d-fe03624ea047;03/05/2023;179.241.98.225;Liverpool;England;L4;Other;Adwords;/cart;cart
-560123;42986;9;d2f6baa8-a6aa-43b7-ac4b-0908e21e8f1b;3/13/2020 11:59:09;85.0.65.165;Liverpool;England;L4;Other;Email;/cart;cart
-1441622;;3;3a08a4a4-32d1-4298-af36-d5f05e7fbaad;7/23/2021 2:24:00;1,03204E+11;Salford;England;M6;Chrome;Facebook;/cart;cart
-1261546;96777;3;97210d69-8359-4317-af0b-f680569bd48c;2/15/2023 10:05:35;1,06176E+11;Salford;England;M7;Firefox;Facebook;/cart;cart
-1261552;96777;9;97210d69-8359-4317-af0b-f680569bd48c;2/15/2023 10:12:09;1,06176E+11;Salford;England;M7;Firefox;Facebook;/cart;cart
-550199;42191;4;c562f1c8-c650-4c00-a17f-beed44342e02;12/23/2022 22:41:13;2,21177E+11;Salford;England;M7;Chrome;Email;/cart;cart
-152026;11764;6;2ed3ee0c-7aad-45eb-a460-5fa7d10a1bdf;6/22/2022 1:47:16;102.128.68.2;Manchester;England;M8;IE;Email;/cart;cart
-1653006;;2;b38e7493-af8c-49e2-88fd-f900d9cb7b88;11/16/2020 10:30:00;1,00195E+11;London;England;N1;Firefox;Organic;/cart;cart
-2070405;;3;ab0f8c50-2dca-409d-967b-28cc9e971b1e;1/30/2019 11:26:00;1,4816E+11;London;England;N1;Firefox;YouTube;/cart;cart
-814808;62510;4;c6208120-cb8a-4adf-b8a2-dcf52dadadc7;04/02/2023;1,31228E+11;London;England;N1;Safari;Email;/cart;cart
-2395134;;2;5d505587-faf4-4841-a3d3-02ef82f8bbd1;03/02/2021;4.103.67.116;London;England;N3;Chrome;Adwords;/cart;cart
-2207476;;2;75205344-04fd-4d9a-8949-d16d7a80ea72;5/22/2021 6:42:00;67.69.213.212;London;England;N4;Firefox;Adwords;/cart;cart
-273792;21060;6;e9323436-0170-4e61-8d05-3813cf06f542;08/12/2021;117.193.15.204;London;England;N4;Chrome;Facebook;/cart;cart
-273798;21060;12;e9323436-0170-4e61-8d05-3813cf06f542;08/12/2021;117.193.15.204;London;England;N4;Chrome;Facebook;/cart;cart
-1398960;;2;3f55deba-b708-4796-a805-e830cee51858;12/09/2021;70.168.33.27;London;England;N4;Safari;Email;/cart;cart
-819123;62861;6;5a864532-f61d-4dab-b62a-62f13bfeb208;3/28/2023 9:05:25;39.10.136.193;London;England;N8;Chrome;Adwords;/cart;cart
-2121529;;3;af93a9c7-fde8-4a0c-8bca-3ab5fbc78914;07/11/2021;96.19.180.43;London;England;N9;Chrome;Email;/cart;cart
-276262;21252;3;88f0dab3-265c-4486-9fb2-fbcd23b7042d;11/12/2021;2,1723E+11;London;England;N9;Chrome;Email;/cart;cart
-1524660;;3;1eda9d7e-9fe9-4723-8049-e59bdca9b893;10/19/2020 9:24:00;180.160.86.58;Sheffield;England;S2;Chrome;Facebook;/cart;cart
-1435497;;2;7d930a8c-0ed9-4766-a2f5-357139c465b3;7/17/2021 7:54:00;42.188.27.225;Sheffield;England;S2;Chrome;Organic;/cart;cart
-224998;17337;3;4a2e8629-db62-49cc-938c-2f9f96612f9b;11/21/2019 2:34:44;37.52.226.155;Sheffield;England;S5;Firefox;Facebook;/cart;cart
-1359438;;3;b5796637-0c29-4a5a-a32c-76f49b63ee69;5/24/2019 13:24:00;134.141.7.9;Sheffield;England;S5;Safari;Email;/cart;cart
-1952343;;2;b3507d60-146a-4db3-b41f-959513bd2b66;11/11/2021;1,43209E+11;Sheffield;England;S6;Firefox;Email;/cart;cart
-8534;653;6;22922c90-fa12-4f1d-9744-b8d26dc24973;8/19/2022 4:00:20;54.219.222.84;London;England;W2;Firefox;Email;/cart;cart
-2177852;;3;b513dd29-cd0b-4f21-b7b1-7726b86d2f6d;10/18/2020 12:32:00;219.1.21.83;London;England;W2;Firefox;Email;/cart;cart
-8531;653;3;22922c90-fa12-4f1d-9744-b8d26dc24973;8/19/2022 3:54:46;54.219.222.84;London;England;W2;Firefox;Email;/cart;cart
-290002;22306;4;269735ed-c4a3-464f-a96f-637be227b5a1;1/19/2023 0:35:58;209.254.16.51;London;England;W2;Safari;Adwords;/cart;cart
-1146424;88046;4;8984fa99-b966-4472-8923-0012f4cb7a62;09/09/2021;147.116.27.86;London;England;W2;Chrome;Email;/cart;cart
-1149613;88285;3;674e02ff-36da-4d2e-83b2-423770219071;8/18/2022 0:20:51;37.96.239.225;London;England;W3;Chrome;Email;/cart;cart
-1149620;88285;3;d54d4c28-b191-405a-a46c-e62c35a28c00;8/17/2022 23:44:50;128.111.154.94;London;England;W3;IE;YouTube;/cart;cart
-1149639;88285;3;9776120e-ab47-4bb8-8c7d-aeb341e13e60;11/10/2022;1,82161E+11;London;England;W3;Chrome;Email;/cart;cart
-1211239;92931;3;4f9967ed-5714-42ce-8d60-7a4efaacc606;02/07/2022;5.177.35.21;London;England;W3;Chrome;Email;/cart;cart
-1331948;;3;b07c0ce7-a81c-4f3b-aace-c00acc609f9e;11/04/2019;151.20.204.40;London;England;W4;Firefox;Email;/cart;cart
-485320;37300;4;506713ce-ae26-415c-a79d-13ffa9de25b8;3/26/2023 16:15:23;15.107.227.24;London;England;W4;Chrome;Adwords;/cart;cart
-310679;23887;6;4ae0c8a6-0719-4133-8e9a-96d525abd12c;5/30/2020 11:42:44;1.85.71.117;London;England;W5;Chrome;Adwords;/cart;cart
-2011656;;2;58290ff9-3f62-4630-a4d9-782fd86e9d14;3/25/2021 17:21:00;207.64.76.255;London;England;W5;Firefox;Email;/cart;cart
-1552383;;2;82dab183-50c6-4df4-8b7b-8b69d1f8afb5;5/15/2021 9:11:00;2,23175E+11;London;England;W5;Chrome;Email;/cart;cart
-182235;14072;3;727d8934-f9a6-4076-b299-da379ce79351;09/05/2021;91.146.84.117;London;England;W6;Chrome;Email;/cart;cart
-439501;33665;12;97ca65ff-300b-4263-aca5-c604c67534b2;2/19/2020 6:19:11;209.132.42.60;London;England;W6;Chrome;Adwords;/cart;cart
-439479;33665;3;80655a83-e254-45c1-b7c6-dc253905bd5a;2/19/2020 5:25:42;71194114189;London;England;W6;Safari;Organic;/cart;cart
-439492;33665;3;97ca65ff-300b-4263-aca5-c604c67534b2;2/19/2020 6:09:57;209.132.42.60;London;England;W6;Chrome;Adwords;/cart;cart
-1585648;;2;e21e3bdc-c686-453b-a6f5-13621c6a4264;3/23/2020 11:19:00;140.171.16.70;London;England;W6;Chrome;Adwords;/cart;cart
-821095;63021;4;97092faa-d5e1-4e96-b189-6f690e0e96a9;03/10/2023;96.180.47.226;London;England;W6;Chrome;Email;/cart;cart
-1585585;;3;ac5795db-7f48-4c74-9b50-659aa65c04b8;9/30/2022 16:27:00;159.121.167.71;London;England;W7;Firefox;Email;/cart;cart
-2037369;;2;3e68a8a0-2ebf-4a87-83e7-bc5829f2c9a5;3/13/2023 11:10:00;185.42.24.175;London;England;W9;Safari;Email;/cart;cart
-399300;30575;9;7a0c8193-c721-4d04-a66b-272e0c567452;06/08/2023;70176243136;Darwin;Northern Territory;810;Firefox;Email;/cart;cart
-1806761;;2;0cc5af3f-7f68-468f-92a0-5216ed482106;5/27/2021 11:52:00;221.13.157.150;Darwin;Northern Territory;810;Chrome;Email;/cart;cart
-2341823;;2;59a39e03-bd6c-4440-9e12-a9d74b3896ab;12/20/2019 4:14:00;220.42.202.55;Darwin;Northern Territory;810;Chrome;Email;/cart;cart
-761451;58342;4;e9d9db00-cc9a-4abc-b4fb-2e8df7513c2b;11/07/2022;1,88118E+11;Darwin;Northern Territory;810;Safari;Adwords;/cart;cart
-244061;18713;6;0c0a51b6-110d-4013-9905-b2a5e392b2e9;07/11/2022;164.56.101.193;Buffalo Creek;Northern Territory;812;Chrome;YouTube;/cart;cart
-244035;18713;6;19a5432d-6c16-4d42-9f5f-75ccf285d1a7;07/11/2022;41.237.96.7;Buffalo Creek;Northern Territory;812;Chrome;Organic;/cart;cart
-410041;31430;3;89b77c31-a5e4-41ca-bf7e-0a8c1409ccee;9/13/2021 10:56:21;80212192183;Darwin;Northern Territory;820;Chrome;Adwords;/cart;cart
-410048;31430;3;f3fac024-ad76-435b-9e25-4bbfbffded75;9/13/2021 8:10:10;197.185.11.255;Darwin;Northern Territory;820;Chrome;Email;/cart;cart
-2173249;;3;8910ade6-4959-4bf0-bc85-49e97eabc171;9/20/2022 12:28:00;81.211.43.8;East Arnhem;Northern Territory;822;Chrome;Adwords;/cart;cart
-1207283;92653;6;b345a4c4-f049-48e8-b657-5e6ac6b4400d;02/05/2023;145.147.83.80;Mitchell;Northern Territory;832;Firefox;Facebook;/cart;cart
-1207276;92653;9;0c74b7c1-8b0d-4927-b495-7a61e4bb8a3f;02/05/2023;77.32.245.225;Mitchell;Northern Territory;832;Other;Adwords;/cart;cart
-1617861;;3;9b6190b7-1c10-4704-a6e9-11dd9d2f9418;09/02/2020;198.31.130.12;Alice Springs;Northern Territory;870;Chrome;Email;/cart;cart
-1736502;;2;f7e28b44-512e-43c6-bd7f-0880612fe680;7/15/2020 8:32:00;1,60209E+11;Larapinta;Northern Territory;875;Chrome;Adwords;/cart;cart
-499024;38358;4;0c50294f-de3e-43d2-8dd4-f9b125d4b370;11/01/2022;154.37.44.136;St Albans;England;AL1;Chrome;Adwords;/cart;cart
-736893;56433;6;0ad9f513-daf1-4e25-bc3c-2f14b5f1ad75;2/26/2023 12:48:05;11.25.217.134;St Albans;England;AL1;Chrome;Adwords;/cart;cart
-1219379;93542;4;d1295410-1e67-4da9-a42c-1c64668a2413;11/27/2021 5:45:52;89.201.5.252;St Albans;England;AL1;Safari;Adwords;/cart;cart
-138141;10637;4;65fb3659-1bf0-4296-92b9-50fb9bb58ac0;12/07/2022;147.11.104.168;St Albans;England;AL4;Other;Email;/cart;cart
-1707749;;2;a7407b9d-e8c5-4fdc-ae97-967387245663;11/29/2022 9:59:00;2.53.114.101;St Albans;England;AL4;Chrome;Email;/cart;cart
-561821;43125;6;a6a07338-d635-480f-8463-843da8f77f0c;9/23/2021 9:53:24;46.29.168.36;St Albans;England;AL4;Chrome;Adwords;/cart;cart
-1798229;;3;805eff72-45fd-4910-8072-3eadda1cc4fa;3/21/2022 1:44:00;139.243.53.151;Harpenden;England;AL5;Safari;Email;/cart;cart
-479629;36863;4;f5d2e638-9690-4e8a-aa81-4af521475175;05/08/2022;161.98.168.140;Harpenden;England;AL5;Safari;Email;/cart;cart
-649208;49735;4;a0935c5c-bc22-4ea6-b0f0-533ad738a540;12/28/2020 8:43:38;52.30.106.122;Birmingham;England;B11;Safari;YouTube;/cart;cart
-2244698;;3;47ec3644-f109-44c6-bf3f-c2f68fb88f51;10/08/2020;216.62.80.23;Birmingham;England;B11;Other;YouTube;/cart;cart
-1806686;;2;de9700da-b9ea-41fb-9b27-7d66f17204a9;11/09/2019;67204162230;Birmingham;England;B13;Firefox;Adwords;/cart;cart
-1784155;;2;a8a14c83-107d-468b-9036-09b29654f85e;09/04/2020;122.46.102.151;Birmingham;England;B13;Safari;Adwords;/cart;cart
-1761418;;3;6e8caee3-7768-4a4a-ac0b-d330233add7b;12/30/2020 9:46:00;189.203.81.52;Birmingham;England;B20;Safari;Adwords;/cart;cart
-1965014;;3;1d2df0bb-bd09-411f-9bf2-d3a6ee7bdf37;5/23/2020 13:48:00;122.184.220.41;Birmingham;England;B20;Chrome;Adwords;/cart;cart
-1904787;;2;62889e42-ec7f-4bb4-a183-8f84e633d932;11/26/2021 7:14:00;1,55183E+11;Birmingham;England;B23;Safari;Email;/cart;cart
-2241100;;2;dc976ea5-4d63-4144-bef2-c39823238cee;07/12/2022;94.51.145.89;Birmingham;England;B24;Chrome;Email;/cart;cart
-2325596;;2;abd6ded2-4618-4466-9a79-2465bdd834b9;7/20/2021 8:54:00;14.48.122.97;Birmingham;England;B24;Chrome;Email;/cart;cart
-53585;4174;3;dd6540c3-f993-4ed4-bb41-27bf999ddcb3;1/31/2023 9:12:21;116.13.140.234;Birmingham;England;B26;Chrome;Email;/cart;cart
-2071112;;3;90561ab5-7fb1-4db4-9f97-800624cc3a9e;11/05/2020;130.64.152.8;Birmingham;England;B30;Firefox;Email;/cart;cart
-2228548;;2;40ee574e-36f1-49fa-a4e0-c784a96ef119;07/02/2022;184.36.179.6;Birmingham;England;B30;Safari;Email;/cart;cart
-302307;23193;4;82ee9608-d20e-4f91-8de0-df98df4f1fc3;02/09/2021;18.166.50.1;Birmingham;England;B30;Chrome;Email;/cart;cart
-1292395;99165;12;b4b72613-2d44-4d81-8af9-3a5a4597874f;5/28/2023 3:54:45;52.95.57.40;Birmingham;England;B32;Safari;Email;/cart;cart
-2381713;;3;02443622-27e0-4538-b50e-60f1900aeaa4;09/09/2020;206.94.185.78;Birmingham;England;B32;Chrome;Email;/cart;cart
-1093335;84009;6;dc8fc783-60a2-40fd-9151-ac82a81a48b5;07/04/2022;142.43.71.193;Birmingham;England;B33;Firefox;Adwords;/cart;cart
-1093325;84009;9;ada0f8ff-2200-4870-8cd7-9bb3ac246c6f;07/04/2022;223.46.13.94;Birmingham;England;B33;Chrome;Adwords;/cart;cart
-1093315;84009;12;e9baec63-2672-4691-862c-3cf18b66da62;07/04/2022;215.95.108.43;Birmingham;England;B33;Chrome;Facebook;/cart;cart
-1093309;84009;6;e9baec63-2672-4691-862c-3cf18b66da62;07/04/2022;215.95.108.43;Birmingham;England;B33;Chrome;Facebook;/cart;cart
-1206731;92617;4;5a07c3c4-1301-443b-a894-0e64e8b3ae7f;08/02/2022;100.237.60.36;Birmingham;England;B37;Chrome;Adwords;/cart;cart
-1651763;;2;fce72154-85cc-44ca-80ce-b65523211e0d;12/29/2019 1:58:00;4.223.241.15;Birmingham;England;B43;Firefox;Organic;/cart;cart
-1761778;;3;c25e5d12-2bd7-4353-b78d-42887795fd37;3/14/2023 4:14:00;3129146206;Birmingham;England;B43;Other;Adwords;/cart;cart
-1208388;92708;4;a8a4467a-f2b5-4696-b503-7fe1c8e400a2;06/12/2023;207.142.247.54;Rubery;England;B45;Chrome;Email;/cart;cart
-394584;30239;3;f1373e0b-46f2-4f98-a05f-154c3432360b;8/17/2020 9:06:50;26.38.118.243;Rubery;England;B45;Firefox;Email;/cart;cart
-2390566;;2;a9df81d3-da07-4f40-a406-c20c5bcd980d;11/02/2019;175.110.115.34;Halesowen;England;B63;Chrome;Adwords;/cart;cart
-1479319;;3;7176f04f-9f47-42d5-aed0-363f17d5c955;04/12/2021;218.244.24.63;Halesowen;England;B63;Chrome;YouTube;/cart;cart
-745180;57061;6;87ecc6d7-df7b-43a6-87d6-829f9f1dfe21;3/18/2020 8:56:06;19214127205;Smethwick;England;B66;Safari;Adwords;/cart;cart
-560285;42988;3;77cf01ac-1da7-4314-95ef-9781a8563650;03/04/2023;151.37.97.128;Smethwick;England;B66;Firefox;Adwords;/cart;cart
-560239;42988;9;2b1465ee-9eed-47e0-a130-5e178b391a96;03/01/2023;61.199.45.161;Smethwick;England;B66;Chrome;Email;/cart;cart
-1053753;80870;4;05ca28e4-9934-47e9-b7a8-87f99aa531f1;05/07/2022;1,10135E+11;Oldbury;England;B68;Other;Adwords;/cart;cart
-2145049;;2;abd9415b-6f4c-4d4b-9508-1f902b4b04ac;05/03/2022;139.112.231.43;The Royal Town of Sutton Coldfield;England;B74;Chrome;YouTube;/cart;cart
-80045;6188;9;88c35877-d11d-4442-95ea-8f0debb5637d;4/14/2023 23:55:26;15.177.55.152;The Royal Town of Sutton Coldfield;England;B74;Other;Adwords;/cart;cart
-80055;6188;6;7fec1e24-d5c3-4832-930c-f9bf1c68f9fb;4/15/2023 1:11:21;65.8.203.142;The Royal Town of Sutton Coldfield;England;B74;Chrome;Adwords;/cart;cart
-2424728;;3;dd89acb5-6b49-4847-86a1-5455c21d65fb;03/08/2022;204.50.61.153;Tamworth;England;B77;Chrome;Email;/cart;cart
-160167;12378;4;40a652ea-3c53-4130-922c-0cdf5bc4e9d9;2/15/2022 15:18:55;109.35.117.137;Solihull;England;B91;Firefox;Adwords;/cart;cart
-1378231;;2;f8013f7c-744c-41d7-b730-94e447c49b70;8/17/2020 11:28:00;149.226.201.81;Solihull;England;B92;Chrome;Adwords;/cart;cart
-1239202;95035;4;175d0520-392a-43c2-8760-8ed6f7767030;1/24/2023 9:31:27;43.140.80.58;Solihull;England;B92;Safari;Adwords;/cart;cart
-663979;50943;4;66fa382b-a475-419e-b8d5-15a60f3d373e;8/31/2021 1:11:26;190.137.84.131;Redditch;England;B97;Chrome;Adwords;/cart;cart
-752286;57615;3;777c44cc-573d-4b0f-8be1-2b259658847c;4/18/2023 1:18:02;132.81.231.15;Redditch;England;B98;Firefox;Adwords;/cart;cart
-2175398;;3;12b3783a-c573-423a-bc42-94a4fd6b9a74;2/22/2019 18:25:00;1,32188E+11;Redditch;England;B98;Chrome;YouTube;/cart;cart
-782643;59985;4;51c039e4-49da-4b21-81af-c67d3daa19bf;3/22/2023 4:02:43;1,92137E+11;Bath;England;BA1;IE;Email;/cart;cart
-782648;59985;4;b55b8867-e3e0-4664-8b7a-7e80cc1579fe;4/17/2023 3:26:42;161.75.169.30;Bath;England;BA1;IE;Adwords;/cart;cart
-1638254;;3;6f63e4a2-08c0-4b25-98ad-88118a3b2b86;6/29/2021 7:28:00;186.179.210.92;Bath;England;BA1;Firefox;Facebook;/cart;cart
-1916865;;2;d096710c-832f-4c01-93ee-8c1e16c8c4c8;07/01/2019;93.172.25.233;Bath;England;BA2;Chrome;Adwords;/cart;cart
-750559;57498;4;bb3a2ee1-ab9c-41a6-aced-fd2ebf84a168;1/21/2023 18:48:54;26.5.1.73;Bath;England;BA2;Chrome;Email;/cart;cart
-1771622;;3;4456b440-dba3-4584-bebf-019dcd02ddca;7/13/2021 15:52:00;2,17169E+11;Radstock;England;BA3;Chrome;Adwords;/cart;cart
-129378;9961;3;75b18150-3c7e-4c14-98dd-89c6c6967a24;6/29/2023 6:36:00;59.71.89.146;Radstock;England;BA3;Chrome;Facebook;/cart;cart
-1875855;;3;f8011df8-d22c-4782-82ef-1064f9092a61;12/09/2022;69.182.97.226;Blackburn;England;BB1;Firefox;Organic;/cart;cart
-1737863;;3;887dcbe9-372a-4b6b-8de0-37ac332686d3;6/30/2021 5:07:00;80138231130;Blackburn;England;BB2;Chrome;Email;/cart;cart
-320636;24676;4;12344954-1f74-45f7-89e8-c39e75be285f;7/29/2022 18:13:51;66.80.147.226;Darwen;England;BB3;Chrome;Facebook;/cart;cart
-819979;62935;4;db12d710-aa7e-4f63-bf28-415334dee33d;3/21/2023 12:23:25;103.137.238.54;Haslingden;England;BB4;Chrome;Adwords;/cart;cart
-1263822;96944;3;885a4567-d2da-43b2-8100-d04fd2de2620;2/28/2023 16:55:59;26207173248;Accrington;England;BB5;Chrome;Adwords;/cart;cart
-1298533;99623;3;e7eae308-cfb9-4308-abe2-455bf5756ac1;3/28/2022 6:17:41;161.47.148.45;Accrington;England;BB5;Chrome;Email;/cart;cart
-1263847;96944;4;974613c1-27f3-42ca-b47b-3dc8de728291;2/16/2022 13:36:42;65.224.191.67;Accrington;England;BB5;Safari;Adwords;/cart;cart
-71852;5538;6;65210367-41be-400a-8f38-98e5bc93f6dc;5/18/2022 7:16:02;175.228.169.61;Nelson;England;BB9;Chrome;Organic;/cart;cart
-1568614;;3;0ac0de0a-82dd-417b-a4cc-8cc06df32bb9;08/08/2021;67192221250;Bradford;England;BD3;Firefox;YouTube;/cart;cart
-626198;48026;9;fcae724b-d352-4d01-86df-2ddec7ca15db;12/10/2021;52.161.175.41;Bradford;England;BD4;Firefox;Email;/cart;cart
-100686;7756;4;cc520672-0a87-45f3-b66a-400f7fdc37c1;1/25/2022 2:39:10;214.121.186.33;Bradford;England;BD4;Chrome;Adwords;/cart;cart
-626202;48026;3;167b1b10-bae7-441c-a4cb-952878784ead;12/10/2021;94.234.11.32;Bradford;England;BD4;Chrome;Adwords;/cart;cart
-1842609;;3;175145d9-3174-4af7-8a22-34a0495a87bb;08/11/2019;214.138.35.30;Bradford;England;BD4;Chrome;Email;/cart;cart
-2044951;;3;3702b1bb-f0d3-4034-a192-214e417dab45;4/24/2022 16:53:00;195.52.84.209;Bradford;England;BD5;Safari;Adwords;/cart;cart
-1056915;81140;6;a55b63b9-897a-41c0-bda6-ed3e90fd1a6f;6/29/2023 15:11:24;135.83.1.47;Bradford;England;BD5;Firefox;Adwords;/cart;cart
-1615838;;3;a47a7ace-6624-4952-9f93-76470cd5d899;8/20/2020 18:21:00;50129197249;Bradford;England;BD6;Safari;Email;/cart;cart
-746001;57132;4;24af6bdb-5f0f-444e-b763-a55b60af4ad7;11/24/2021 0:40:49;75.19.156.157;Bradford;England;BD6;Chrome;Adwords;/cart;cart
-454166;34870;4;2b145298-fcbf-4843-bcb7-82086f9ac28c;3/21/2023 10:36:38;49.74.84.156;Bradford;England;BD7;Firefox;Adwords;/cart;cart
-1693258;;3;5d04d926-31f8-4ba4-b6cb-4987ad4bb12a;10/21/2021 18:01:00;187.189.33.197;Bradford;England;BD7;Chrome;Adwords;/cart;cart
-331813;25500;4;17c2c08e-9de6-440e-b9ef-4414dcb7737e;03/03/2022;103.188.156.64;Bradford;England;BD7;Chrome;Email;/cart;cart
-630159;48307;4;1ad5f320-2a02-4f1c-bc45-ebed9b3f69fe;3/14/2020 11:21:10;147.140.79.112;Bradford;England;BD7;Safari;Email;/cart;cart
-335399;25790;3;47112b12-e01b-4328-b147-192f6879c400;10/25/2021 5:05:30;111.149.46.93;Bradford;England;BD8;Chrome;YouTube;/cart;cart
-1678243;;3;7931fbe1-37e9-473e-91e3-bd730d1802ad;05/01/2019;2,0714E+11;Bradford;England;BD8;Safari;YouTube;/cart;cart
-230816;17751;4;418dfb71-ad01-4561-b541-ca582d5cb917;03/10/2023;17.123.26.196;Bournemouth;England;BH9;Firefox;Facebook;/cart;cart
-1054776;80956;3;4bed8ed1-2f4f-41a5-a7dc-0e388a734db4;03/10/2023;167.130.221.86;Bournemouth;England;BH9;Chrome;Organic;/cart;cart
-1263049;96895;4;438bc48c-56e7-4899-abe7-106ad5f5ef1d;5/20/2022 12:47:01;3.78.161.252;Bolton;England;BL1;Chrome;Adwords;/cart;cart
-2388294;;2;f89fa1f5-47d6-4343-8fcb-1131b83b5a3f;1/24/2022 16:50:00;61.219.25.109;Bolton;England;BL1;Safari;Email;/cart;cart
-1583061;;2;3e1d8b44-51ee-43ad-818b-7182d88c742a;03/05/2019;1.248.64.236;Bolton;England;BL1;Chrome;Email;/cart;cart
-2317202;;2;4238bdf0-bc1d-4d6c-96cf-175e847c45aa;9/18/2019 6:41:00;119.83.110.237;Bolton;England;BL1;Chrome;Email;/cart;cart
-1727146;;3;9b93ad5f-0fd7-44c6-a989-9fc417bfba8b;10/10/2022;85169177251;Bolton;England;BL1;Chrome;YouTube;/cart;cart
-2280529;;3;7148244e-1b18-47ad-8413-60fd4495b96f;9/28/2021 9:49:00;42.27.10.17;Bolton;England;BL3;Chrome;Facebook;/cart;cart
-226371;17442;6;9f848ee3-d439-4a7d-a79d-7a22045b0f22;2/21/2022 9:05:54;52.124.189.86;Farnworth;England;BL4;Chrome;Email;/cart;cart
-226355;17442;3;d26c1fb9-c50c-4fa4-83e0-a775a26b28dd;2/21/2022 6:15:08;80.94.131.173;Farnworth;England;BL4;Safari;Adwords;/cart;cart
-321279;24724;3;ac1fe427-3113-4d04-a253-29d82c774323;02/03/2022;10.211.38.13;Westhoughton;England;BL5;Chrome;Adwords;/cart;cart
-1765835;;2;6925aaaa-f079-4dd4-819b-08f3fda678ee;8/23/2019 15:43:00;122.242.142.88;Westhoughton;England;BL5;Chrome;Facebook;/cart;cart
-1269739;97425;9;f0674178-22c7-43ff-836f-37c75cf5aba4;2/22/2022 13:06:18;44.191.12.214;Horwich;England;BL6;Chrome;Email;/cart;cart
-1269762;97425;6;57c357a6-0873-41bb-8172-855a2a21ca86;2/22/2022 12:51:06;1,02126E+11;Horwich;England;BL6;Safari;Organic;/cart;cart
-1223257;93795;9;c594859a-b768-4b8c-baba-154e43f50df6;11/20/2022 4:47:33;207.147.32.158;Horwich;England;BL6;Chrome;Email;/cart;cart
-1269786;97425;4;b8acb7b1-3db3-428c-94e2-03dfa72be7c7;06/02/2021;118.230.150.5;Horwich;England;BL6;Chrome;YouTube;/cart;cart
-1223244;93795;9;46dcde4b-ea51-4af2-91a5-3a6ea8d932c8;11/20/2022 5:07:55;46.25.132.155;Horwich;England;BL6;Safari;Organic;/cart;cart
-1969998;;3;99b64d13-2acd-4a8b-a97d-fd3c7de17f96;11/16/2019 14:30:00;103.108.173.90;Bury;England;BL8;IE;Email;/cart;cart
-100657;7755;4;d0811aa0-f0a5-4bb5-a2cc-9fdb207917e5;09/02/2020;33.179.62.237;Bury;England;BL8;Chrome;Adwords;/cart;cart
-1562782;;3;262458a2-e83e-4e4a-9f7d-66778adbb0f3;10/28/2022 1:20:00;168.232.32.178;Bury;England;BL9;Chrome;Email;/cart;cart
-1443255;;2;b8c40de9-a970-4b21-87a2-5b3468231a80;11/30/2022 11:31:00;1,07101E+11;Bury;England;BL9;Firefox;Email;/cart;cart
-1880464;;2;c1696b23-707c-43eb-826f-f4a1edd2cf50;2/14/2019 3:05:00;84.50.174.186;Bury;England;BL9;Chrome;Adwords;/cart;cart
-2087095;;2;645357f6-5e91-416a-a226-29ca2e93636e;10/01/2019;29135214227;Bury;England;BL9;Other;Email;/cart;cart
-1685839;;2;a1a1c653-4634-438e-a3e0-5d2b00df46f2;12/15/2019 14:39:00;48.239.59.20;Brighton;England;BN1;Firefox;Email;/cart;cart
-870198;66857;4;97223c8d-bc24-4eb1-b10f-ac194b84d4fa;8/24/2022 15:35:48;99.250.232.67;Brighton;England;BN1;Chrome;Email;/cart;cart
-2371811;;3;076a4329-bf2e-469c-b5bd-da242f50b63c;10/28/2022 1:42:00;88108185226;Brighton;England;BN1;Chrome;Adwords;/cart;cart
-723105;55344;6;e75ea64b-95c9-4bd5-baa3-e4a67a7c6594;10/13/2022 16:14:43;117.29.160.69;Brighton;England;BN1;Safari;YouTube;/cart;cart
-2117421;;2;7be38a18-3e8b-43e7-a419-050251341ced;08/08/2019;188.76.97.106;Brighton;England;BN2;Safari;Adwords;/cart;cart
-854370;65598;3;b00f6161-ec15-4bc9-8985-18635ec98bb3;06/04/2021;60.6.39.62;Brighton;England;BN2;Other;YouTube;/cart;cart
-854301;65598;12;ff377913-8952-47de-acb1-4ec76fa51157;07/11/2020;13.136.84.173;Brighton;England;BN2;Other;YouTube;/cart;cart
-2175455;;3;86f63cf9-b9f0-4ae0-95d6-cafe2a33d708;01/01/2020;97.46.245.13;Brighton;England;BN2;Safari;Adwords;/cart;cart
-59615;4628;3;d177d8ec-c136-4b88-8915-af1e3c20cdda;01/10/2023;191.76.251.127;Brighton;England;BN2;Chrome;Email;/cart;cart
-359514;27624;6;3a5b6d38-f1a5-4f42-ab7f-5b135326e6e7;06/09/2023;43202128204;Brighton;England;BN2;IE;Email;/cart;cart
-2230738;;3;f7c3277c-292a-413e-8629-4b26eedeb907;11/26/2021 10:32:00;1,41179E+11;Brighton;England;BN2;Safari;Email;/cart;cart
-662856;50839;4;d13c4f3f-cafc-46e0-bb16-ed57beaae186;06/09/2022;176.204.75.200;Brighton;England;BN2;Chrome;Email;/cart;cart
-854324;65598;9;0a178bbf-b7f7-4240-b6fb-47113ef2c473;07/11/2020;101.46.109.72;Brighton;England;BN2;Firefox;Email;/cart;cart
-2082999;;2;e387a14c-57ff-4465-a828-7f46a5147827;09/06/2022;1,53217E+11;Brighton;England;BN2;Firefox;Email;/cart;cart
-1460520;;2;0de7bcff-64a7-456a-b627-b0719085c098;02/09/2023;47.39.69.34;Hove;England;BN3;Safari;Adwords;/cart;cart
-801367;61494;9;0d30f416-4979-4762-b32f-baab58b9e23f;01/09/2022;1,29189E+11;Hove;England;BN3;Chrome;Email;/cart;cart
-33927;2606;3;06d7f1d3-a7b0-4fa1-a75e-f11ca584b7e9;10/13/2021 8:42:42;172.86.134.87;Hove;England;BN3;Safari;Email;/cart;cart
-1595768;;3;24322ad9-4191-4a5f-87a1-0da506e1a311;09/10/2019;1,81117E+11;Hove;England;BN3;Chrome;Email;/cart;cart
-1399398;;3;a7fd2aed-ad7e-474f-b34a-8c3896153aa3;10/21/2019 4:40:00;82.18.70.29;Bromley;England;BR1;Safari;YouTube;/cart;cart
-2014532;;3;79100895-b973-438a-89bb-1122be3f03de;2/14/2022 19:03:00;180.167.50.178;Bromley;England;BR1;Chrome;Adwords;/cart;cart
-456499;35038;4;4f4753c0-b3a1-435d-8af1-dd3cbd5f9fab;5/19/2023 21:47:58;81.225.52.235;Bromley;England;BR2;Chrome;Email;/cart;cart
-13946;1102;6;be021870-7df7-4f53-8b6d-c865bad48a00;6/23/2023 23:27:44;65.184.22.156;Bromley;England;BR2;Firefox;Organic;/cart;cart
-2347984;;2;fdb7b774-ffc9-4a24-8463-f8a9e6d6bf9d;09/03/2020;89.10.23.44;Bromley;England;BR2;Firefox;YouTube;/cart;cart
-847280;65062;9;ae0e08e7-3a35-4cec-8bcb-6e3312869839;5/27/2023 13:04:46;222.149.175.68;Beckenham;England;BR3;Chrome;Facebook;/cart;cart
-1197741;91907;6;d7d8dced-7f9e-4ca1-b542-0e7bb12fbd6a;12/23/2019 13:52:45;77.13.15.242;Beckenham;England;BR3;Chrome;Facebook;/cart;cart
-512135;39343;4;ae68abb2-cb28-446b-b115-3dce5f8445f3;11/25/2022 12:02:41;115.53.186.123;Orpington;England;BR5;Safari;Email;/cart;cart
-928852;71243;4;af02f9e8-9379-47ec-b5ff-1fc49835d60e;07/09/2022;108.160.153.4;Orpington;England;BR5;Chrome;Facebook;/cart;cart
-512130;39343;4;4210b8eb-f294-4d2a-9f0b-382ed7301225;2/20/2020 11:21:10;178.74.207.33;Orpington;England;BR5;Safari;Organic;/cart;cart
-2296832;;3;b264932b-edd7-462f-aa0d-e5897f3cbdc1;12/17/2022 14:45:00;12.244.77.224;Orpington;England;BR5;Safari;Email;/cart;cart
-928847;71243;6;c7e2aa41-adb6-4cf9-91fc-156f8e1c7b6c;09/08/2020;46.35.151.196;Orpington;England;BR5;Safari;Email;/cart;cart
-1011450;77663;4;4854df52-baff-45d1-9548-69fbc5622548;6/22/2023 8:43:49;1,19191E+11;Orpington;England;BR6;Safari;Email;/cart;cart
-1694938;;3;3666fc8f-b7f5-4aca-a144-d7bf129764b9;9/26/2021 8:56:00;83.214.237.63;Bristol;England;BS3;Chrome;Adwords;/cart;cart
-136475;10515;4;d788bb0e-5b90-4267-985b-4f86b09e8fed;7/14/2022 2:59:12;182.212.32.35;Bristol;England;BS3;Chrome;Adwords;/cart;cart
-1391666;;3;81022d8d-0dfb-45ba-b496-2f72605ab532;5/30/2021 6:43:00;1,04215E+11;Bristol;England;BS3;Firefox;Facebook;/cart;cart
-632857;48543;4;7d50778b-d10f-4014-88b8-8f465a4f88f3;06/12/2020;208.223.125.78;Bristol;England;BS5;Firefox;Adwords;/cart;cart
-1407748;;3;93033033-bbb6-4561-bbf9-103f4758b9ff;6/13/2023 16:34:00;222.92.105.123;Bristol;England;BS5;Chrome;Email;/cart;cart
-1681032;;2;3d8ad603-86ed-45b6-9bc2-7fa3c448e7be;4/24/2023 12:51:00;47.50.126.170;Bristol;England;BS5;Chrome;Facebook;/cart;cart
-25244;1964;4;3a796a00-bf72-40ed-8956-9b9561164a37;12/22/2022 5:04:12;52.247.203.43;Bristol;England;BS7;IE;Email;/cart;cart
-1242448;95279;6;3d14f750-1a39-4557-adb9-d7179908d919;11/24/2020 22:59:33;43.83.135.75;Bristol;England;BS7;Firefox;Email;/cart;cart
-2339077;;3;46eda2aa-8685-417f-a184-b2e87795afe1;01/10/2020;2,152E+11;Bristol;England;BS7;Safari;Email;/cart;cart
-864804;66437;3;b48d8b90-f98d-4f09-ace9-451a491dce62;10/21/2022 3:32:37;189.144.136.16;Bristol;England;BS8;Other;Email;/cart;cart
-658135;50474;6;f6186f96-1221-4e85-a445-0d259d019869;7/30/2022 4:24:23;40.160.105.74;Bristol;England;BS9;IE;Adwords;/cart;cart
-1047576;80417;6;5b8c3cb1-31da-46d0-a847-4c5108c64ea7;6/28/2023 5:21:55;82.103.29.222;Bristol;England;BS9;Chrome;Email;/cart;cart
-848208;65124;9;b281665d-4ee7-4950-b664-66f0ce8b39ca;4/24/2021 14:13:03;82.189.42.119;Carryduff;Northern Ireland;BT8;Firefox;Facebook;/cart;cart
-1518163;;3;5feacb7a-52dd-4a11-bf78-2a16c660d03a;01/04/2023;163.62.209.86;Carryduff;Northern Ireland;BT8;Firefox;Adwords;/cart;cart
-986112;75633;4;adb5b893-2bf6-4f1a-8cfe-ecd452c04e15;6/27/2023 17:54:31;21.59.17.205;Carryduff;Northern Ireland;BT8;Chrome;Adwords;/cart;cart
-1275245;97820;9;772a9817-01da-40ad-bc77-72729dfc6f2b;02/02/2023;39.130.16.41;Belfast;Northern Ireland;BT9;Chrome;Email;/cart;cart
-1275232;97820;9;76565e9e-cb3b-4db5-924c-8e5d457858ea;02/02/2023;32.38.240.21;Belfast;Northern Ireland;BT9;Chrome;Facebook;/cart;cart
-1959936;;2;26a955f2-a450-4477-8aff-39406c46ba4a;07/06/2019;66.42.173.117;Cambridge;England;CB1;Chrome;Organic;/cart;cart
-1189739;91293;3;1e8dd628-eadc-41c2-8514-2e19e0d695d0;02/09/2023;29.140.48.220;Cambridge;England;CB1;Firefox;Adwords;/cart;cart
-1189728;91293;4;717f193b-0e9a-4a30-9e3e-6dfbdd2d7d1a;04/05/2022;1,93212E+11;Cambridge;England;CB1;Chrome;Email;/cart;cart
-1176145;90335;4;155a8df2-28b2-46fb-8a07-7f6f5067d9b5;08/07/2022;118.126.200.97;Cambridge;England;CB1;Firefox;Email;/cart;cart
-845252;64889;12;9077d7d9-5b20-439d-b0ca-d7fb52055daa;3/21/2021 9:43:42;24181103136;Cambridge;England;CB4;Firefox;Email;/cart;cart
-845230;64889;3;b00f5ff4-1c7c-40b1-b9f9-e2dec9f39d9f;3/21/2021 6:10:12;1,31115E+11;Cambridge;England;CB4;Firefox;Organic;/cart;cart
-765198;58616;3;3335538b-751b-4a8e-9033-8b38c50a79cc;07/08/2021;72248121166;Cambridge;England;CB4;Safari;Facebook;/cart;cart
-744718;57019;3;0c785121-ee15-43d9-96a7-b4c48bbdb27b;12/08/2021;69.253.211.36;Haverhill;England;CB9;Firefox;Adwords;/cart;cart
-285819;21954;3;1a4b6f48-2277-492a-abb9-6700ddeef59e;08/10/2021;150.250.128.82;Haverhill;England;CB9;Other;Adwords;/cart;cart
-285832;21954;4;b80fc378-bf70-4bf5-81ba-a02106227b8e;4/18/2022 14:33:37;162.99.121.9;Haverhill;England;CB9;Firefox;Adwords;/cart;cart
-843698;64768;6;c42519d6-4631-437f-a389-6e532c65bd04;10/18/2022 1:40:23;12.226.49.238;Haverhill;England;CB9;Chrome;Organic;/cart;cart
-843711;64768;6;4b85afe2-6ea9-40c7-98a7-405ec8d55d3f;10/17/2022 21:55:25;213.245.201.65;Haverhill;England;CB9;Firefox;Email;/cart;cart
-1603939;;2;acdfc7b1-c51f-4f5b-b176-d6a135d1fdc0;03/09/2022;90.79.188.254;Haverhill;England;CB9;Chrome;Email;/cart;cart
-744708;57019;3;06d8eb38-69e2-4bcc-ac57-c2cbc399d2f6;12/08/2021;76.138.14.16;Haverhill;England;CB9;Chrome;Adwords;/cart;cart
-843675;64768;9;547f1d2f-0f35-47c3-ba04-7c9fa265684b;10/17/2022 22:30:27;175.14.191.162;Haverhill;England;CB9;Safari;Facebook;/cart;cart
-1064849;81769;9;bd3ec1bb-fd62-44dc-9332-507e1371b2fe;9/21/2020 14:35:06;149.6.243.48;Saint Mellons;Wales;CF3;IE;Email;/cart;cart
-811344;62228;6;269dc934-9f50-4b25-bc92-0af2369bf89b;12/18/2022 1:44:00;78.165.28.169;Saint Mellons;Wales;CF3;Safari;Adwords;/cart;cart
-2112364;;3;fa260714-c7d5-4b5c-bba9-1913fda72a68;2/15/2021 9:18:00;88.212.58.193;Saint Mellons;Wales;CF3;Safari;YouTube;/cart;cart
-2175058;;3;3c6827a7-f29b-41f1-8646-4ad64270b983;01/12/2020;220.35.79.250;Saint Mellons;Wales;CF3;Chrome;Facebook;/cart;cart
-891519;68426;6;5d99e330-f7f1-4b2b-bc54-a35f735f2941;10/17/2022 9:44:49;149.48.143.131;Cardiff;Wales;CF5;Firefox;Facebook;/cart;cart
-1199235;92024;6;7fb29130-e7cc-4ffd-98d4-2efb5e828f04;4/13/2022 10:46:23;222.40.156.108;Cardiff;Wales;CF5;Other;YouTube;/cart;cart
-925701;70990;4;9a1f4fd9-3692-43c1-9ad6-b518d601f9a0;12/22/2021 11:40:53;15.236.98.153;Cardiff;Wales;CF5;Safari;Email;/cart;cart
-2021344;;3;ae30da92-9006-45e9-83c6-d6f67f22c10d;08/04/2019;165.165.98.226;Cardiff;Wales;CF5;Firefox;Adwords;/cart;cart
-891545;68426;6;150b0884-faa2-402e-8d20-f4fff38d118c;10/17/2022 9:06:24;99.120.45.38;Cardiff;Wales;CF5;Firefox;Adwords;/cart;cart
-468557;35926;4;f6d979e1-bc8a-44bc-bd77-d9d91f85b5cb;6/20/2023 3:43:03;86.42.145.134;Saughall;England;CH1;Chrome;Facebook;/cart;cart
-547907;42024;6;4101511b-ba54-442b-9545-2507f526e949;05/05/2021;38.84.228.137;Christleton;England;CH3;Chrome;Adwords;/cart;cart
-547930;42024;9;0e504044-dc20-4659-bffa-64bbef013a43;05/05/2021;125.160.19.18;Christleton;England;CH3;Safari;Email;/cart;cart
-283553;21763;6;a64eb56a-ac7d-4488-85d7-40d93a8e9de7;9/13/2021 9:43:02;88.66.74.78;Higher Kinnerton;England;CH4;Chrome;Organic;/cart;cart
-283527;21763;6;ac829282-2683-4a2d-8e35-819cf39c55b4;9/13/2021 9:47:22;138.236.180.10;Higher Kinnerton;England;CH4;Chrome;Email;/cart;cart
-1893942;;2;327f4726-0ba4-4ba1-91c5-35ee6194987f;08/08/2021;2,19159E+11;Higher Kinnerton;England;CH4;Chrome;Adwords;/cart;cart
-283520;21763;12;45f58e82-b597-4742-aa4d-536d87dae38b;9/13/2021 9:47:01;106.98.205.138;Higher Kinnerton;England;CH4;Firefox;Email;/cart;cart
-1816085;;3;cb9f5049-6953-41e1-bd5e-8c76520c83de;08/11/2021;179.74.89.71;Higher Kinnerton;England;CH4;Firefox;Email;/cart;cart
-1901390;;3;d9587ea2-6799-4ce6-a5cc-495c152268db;11/05/2021;164.88.57.117;Higher Kinnerton;England;CH4;Safari;Facebook;/cart;cart
-1558597;;2;49f2fc76-786c-4f14-ac86-fc9dfaadbbae;5/23/2021 15:39:00;18.145.68.24;Connah's Quay;Wales;CH5;Safari;YouTube;/cart;cart
-879052;67537;6;7279bb1b-6514-405f-9d1c-cb9b6011d680;6/24/2023 23:38:48;180.69.194.102;Writtle;England;CM1;Chrome;YouTube;/cart;cart
-1802407;;2;5eb1bc0b-8d67-4370-b68d-af017e3fafbb;3/29/2023 12:52:00;163.144.224.18;Writtle;England;CM1;Chrome;Email;/cart;cart
-2097833;;3;fd24a9d8-1aa7-4c58-a1ba-5bd3cc4f6f83;03/10/2022;46.226.80.185;Chelmsford;England;CM2;Firefox;Facebook;/cart;cart
-2060281;;3;e4fb26ae-0ac8-4aef-bdfd-b4e6fd1c96ae;09/08/2020;106.0.153.191;Boreham;England;CM3;Other;Email;/cart;cart
-281508;21632;4;2024b2f3-2fc6-45c1-8137-6f7a25d20c31;09/12/2021;1,87141E+11;Boreham;England;CM3;Chrome;Adwords;/cart;cart
-610920;46853;4;7fd22d76-9a22-45c5-95d4-9b27c03f3c3e;2/25/2023 12:52:41;2,01162E+11;Braintree;England;CM7;Safari;YouTube;/cart;cart
-979808;75185;3;f1471054-384d-484e-bc53-060a27965bcf;8/28/2022 13:40:51;27.120.91.170;Braintree;England;CM7;Chrome;Adwords;/cart;cart
-979811;75185;6;f1471054-384d-484e-bc53-060a27965bcf;8/28/2022 13:45:10;27.120.91.170;Braintree;England;CM7;Chrome;Adwords;/cart;cart
-936385;71836;3;fa2c8b0b-b1e2-4e4e-8ed1-d98e44884146;4/17/2021 14:32:58;151.181.98.74;Braintree;England;CM7;Firefox;Email;/cart;cart
-528064;40534;4;ef7c589e-c984-411f-a519-bc55b2904b90;3/30/2023 14:31:51;201.5.232.231;Witham;England;CM8;Chrome;Email;/cart;cart
-2200589;;2;c6633dc4-e16a-4892-9e6c-6667a912c809;07/03/2021;210.90.195.72;Witham;England;CM8;Firefox;Email;/cart;cart
-431982;33092;3;2ad21f03-4f8b-4ab8-9923-e3e1f28e4d34;03/07/2023;203.203.141.72;Colchester;England;CO2;Safari;Email;/cart;cart
-1917261;;3;0381d994-2d1b-4937-afee-85a78b8d9392;8/23/2021 6:44:00;53.53.102.235;Colchester;England;CO3;Firefox;Email;/cart;cart
-1329208;;3;b6eabed0-9f17-483d-ac41-0308b81cd99c;9/16/2021 7:32:00;88.226.12.181;Colchester;England;CO3;Safari;Email;/cart;cart
-391989;30063;3;371440fd-dd28-4cb4-96b9-2f328d4112c8;6/29/2023 12:45:06;82.162.118.76;Colchester;England;CO4;Chrome;Email;/cart;cart
-2338894;;3;2a661e54-4db7-4ca8-bbe4-70a8b7ad09de;06/05/2019;94.111.58.107;Colchester;England;CO4;Chrome;Adwords;/cart;cart
-2053832;;3;569d4269-0e4d-4e9e-9747-7961d8c1e88e;08/04/2022;151.61.236.213;Croydon;England;CR0;Chrome;YouTube;/cart;cart
-1302937;99942;4;1cd33771-105a-4e4c-b4a2-f8ab2ce5d305;02/10/2022;113.175.213.69;Croydon;England;CR0;Chrome;Facebook;/cart;cart
-2256531;;3;fcb72d2f-840c-4cb2-a17f-7629579d9b63;7/24/2020 3:17:00;1,63219E+11;Croydon;England;CR0;Firefox;Email;/cart;cart
-1256935;96379;6;6832de87-ef9b-4da3-8409-a7bf195e5a9c;9/14/2021 4:02:38;47.26.21.172;Croydon;England;CR0;Firefox;Email;/cart;cart
-1302927;99942;4;0fba2a28-2bdd-4cf0-9492-c57479715eb8;05/02/2023;122.210.58.109;Croydon;England;CR0;Chrome;Email;/cart;cart
-1607007;;2;618bd01b-e61d-4f2b-bdbf-631c25bb7e88;3/15/2023 11:11:00;70.67.186.139;Croydon;England;CR0;Chrome;Adwords;/cart;cart
-1379885;;3;9fea234a-c94c-4f73-9e3e-a216c8ac2ef8;09/04/2020;21.227.91.166;South Croydon;England;CR2;Chrome;Email;/cart;cart
-2282523;;2;f2de7e43-9c6d-47d3-be83-2cecb1135e06;07/12/2022;215.69.1.29;South Croydon;England;CR2;Safari;Email;/cart;cart
-666329;51145;9;6772de8a-99a2-4c12-b328-be1cbf998711;4/17/2023 1:18:40;75.47.146.208;South Croydon;England;CR2;Chrome;Adwords;/cart;cart
-1819607;;3;a516249d-65e2-4dec-8859-4d77b2f245a5;10/18/2022 16:21:00;57.118.186.1;South Croydon;England;CR2;Firefox;Email;/cart;cart
-401543;30757;4;f2235064-2283-4fb2-ac31-95b091dd1d49;12/14/2022 6:54:47;180.37.74.254;South Croydon;England;CR2;Safari;Email;/cart;cart
-101948;7854;6;12a58c05-2fa0-4b47-a375-dca6d99af4ca;3/28/2023 17:35:37;1,76235E+11;Mitcham;England;CR4;Firefox;Email;/cart;cart
-750159;57473;3;cd2fda76-473c-4002-9f32-7834e5b953fe;4/21/2022 10:31:01;11108172121;Mitcham;England;CR4;Firefox;Adwords;/cart;cart
-6335;490;6;528c1dcf-0f4c-41f4-bf89-43775a833087;3/23/2022 5:31:26;115.81.114.207;Coulsdon;England;CR5;Firefox;Adwords;/cart;cart
-1884926;;2;7135194f-8863-4916-bb60-4b38bbe6f0b1;10/03/2020;60.64.161.41;Blean;England;CT2;Chrome;Adwords;/cart;cart
-1892794;;2;384b6031-e93a-4b7a-92e8-db1629a6dd7a;12/19/2022 14:05:00;2,04113E+11;Blean;England;CT2;Safari;Email;/cart;cart
-296990;22844;4;72944603-fbc5-4d0d-a342-6be3aedc320b;1/16/2021 11:43:33;173.48.186.132;Whitstable;England;CT5;Chrome;Email;/cart;cart
-1092841;83972;6;6fc2bd7a-5595-4f47-82ab-defb5c8d9f10;11/11/2021;32.255.111.64;Whitstable;England;CT5;Safari;Email;/cart;cart
-297010;22844;9;b0098904-1573-4818-85d2-20b97d14aff2;08/07/2022;192.149.82.167;Whitstable;England;CT5;Safari;Adwords;/cart;cart
-1092834;83972;6;45a0eefb-a25e-4068-988f-fd9c2d53a88c;11/11/2021;41.22.145.156;Whitstable;England;CT5;Safari;Email;/cart;cart
-439130;33637;6;a0796dbe-cab5-484f-b69a-8d2aa0d20948;5/16/2022 4:30:16;162.175.98.199;Margate;England;CT9;Safari;YouTube;/cart;cart
-1787736;;2;1e4afd7d-1396-4af3-855b-b4657b7b1b8b;04/04/2019;65.216.72.246;Coventry;England;CV2;Chrome;Adwords;/cart;cart
-2377829;;2;4e3efbf4-6890-4fcc-8dd9-dd1231a5d1d2;5/31/2019 9:21:00;173.85.148.150;Coventry;England;CV2;Safari;Email;/cart;cart
-2186900;;3;8e777791-da52-4dfa-849d-b7a58fbb01e8;1/27/2021 3:52:00;205.167.78.64;Coventry;England;CV2;Chrome;Adwords;/cart;cart
-1199071;92013;3;bb82ee34-fb35-4f73-a8c7-5a56a5bf6eac;9/19/2022 4:34:39;6.154.55.244;Coventry;England;CV2;Chrome;Adwords;/cart;cart
-1199087;92013;9;6e95433a-6f11-47bc-9037-b1ccd6d25447;9/19/2022 5:40:12;11244101126;Coventry;England;CV2;Chrome;Adwords;/cart;cart
-1199091;92013;3;c890aefa-b054-4ec1-ae97-5e21aa84f4ff;9/19/2022 4:26:32;12.3.156.179;Coventry;England;CV2;Chrome;Email;/cart;cart
-365079;28052;4;b3028195-bdee-438e-ba1e-bb68879425da;10/09/2022;38.222.169.99;Coventry;England;CV3;Firefox;Facebook;/cart;cart
-887305;68144;3;d67a2c4e-16a6-4df7-8fe7-e9ebafa07ef1;4/26/2021 2:17:21;144.75.200.53;Coventry;England;CV3;Chrome;Email;/cart;cart
-1971834;;2;264e73e0-5029-484a-b916-fd10456b2fc5;2/27/2020 14:06:00;172.87.139.240;Coventry;England;CV3;Safari;Email;/cart;cart
-669739;51401;4;3fc1b857-9735-4a2c-82bc-42d22cf8a495;3/22/2022 9:37:46;1,92114E+11;Coventry;England;CV3;Chrome;Email;/cart;cart
-887321;68144;6;02e8ffa1-ddc1-470a-a1a2-569eebbc8a2c;4/26/2021 2:31:59;45.210.246.4;Coventry;England;CV3;Firefox;YouTube;/cart;cart
-2107007;;2;a5ab101e-b904-4151-833f-d4a386397690;9/14/2022 5:54:00;47.97.89.224;Coventry;England;CV4;Chrome;YouTube;/cart;cart
-1634435;;2;ce507591-7869-484a-b50f-7d5c23482481;12/09/2020;185.31.233.186;Coventry;England;CV4;IE;YouTube;/cart;cart
-38741;2965;4;f96df24d-902e-4558-9ec3-e6572265be53;4/18/2023 3:58:32;8.14.212.141;Coventry;England;CV5;IE;Adwords;/cart;cart
-218771;16871;3;a8adf28d-0b56-4643-a420-08b815010cdc;4/22/2022 6:22:29;77.108.92.178;Coventry;England;CV6;Chrome;Email;/cart;cart
-337946;25994;9;2ad2cbca-6a68-4cdb-832c-d1adcb586841;12/02/2019;29.82.204.238;Coventry;England;CV6;Chrome;Organic;/cart;cart
-218780;16871;12;a8adf28d-0b56-4643-a420-08b815010cdc;4/22/2022 6:32:00;77.108.92.178;Coventry;England;CV6;Chrome;Email;/cart;cart
-881112;67685;4;b61fd12b-2c66-4351-80e8-51ac6c117c49;06/01/2022;136.115.225.9;Coventry;England;CV6;Chrome;YouTube;/cart;cart
-1752259;;3;f94f48a0-8141-40f5-8ab5-ed6a7314b222;10/22/2022 7:29:00;1,20131E+11;Coventry;England;CV6;Chrome;Email;/cart;cart
-269386;20723;9;b3f56936-457a-4bad-b724-e36b4fbb8e42;11/19/2022 11:50:41;173.190.69.204;Coventry;England;CV6;Firefox;Email;/cart;cart
-218764;16871;9;1ab04401-796a-46b0-ab9e-02aabad43447;4/22/2022 5:21:13;68.211.255.43;Coventry;England;CV6;Chrome;YouTube;/cart;cart
-1900329;;2;a5e29cd7-3d71-4684-9cbe-ec10b8b94b77;12/11/2021;123.77.196.156;Coventry;England;CV6;Firefox;Adwords;/cart;cart
-218754;16871;12;cf63c2aa-7098-4121-a2e8-a75a986f15bf;4/22/2022 7:25:01;170.69.100.107;Coventry;England;CV6;Chrome;Adwords;/cart;cart
-1845035;;3;d64da2f9-09d7-4a29-8253-d65475448ae6;05/08/2020;126.136.34.84;Meriden;England;CV7;Chrome;Facebook;/cart;cart
-951171;72981;6;7b213880-aed9-4892-b598-ec512f227100;11/17/2022 13:03:09;194.223.110.77;Meriden;England;CV7;Firefox;YouTube;/cart;cart
-951545;73016;4;53ca9437-727e-46ac-ab9b-dc2c3bef60ca;6/27/2023 2:22:02;153.93.50.167;Meriden;England;CV7;Safari;Adwords;/cart;cart
-951178;72981;6;b34dbac1-0e20-4ccf-a96a-6964e416fa29;11/17/2022 13:58:26;100.190.58.246;Meriden;England;CV7;Chrome;Email;/cart;cart
-2265361;;3;b371e449-2332-4925-8b26-00c2ef5ebb47;4/15/2019 12:51:00;1,35156E+11;Meriden;England;CV7;Firefox;Adwords;/cart;cart
-758807;58141;3;149a794e-a2a4-4f82-a726-92661890f4df;6/27/2023 16:33:01;20.74.140.56;Crewe;England;CW1;Chrome;Email;/cart;cart
-1884513;;3;04754323-a9e2-401a-9a62-55d562336831;03/06/2019;35.134.132.40;Crewe;England;CW2;Chrome;Facebook;/cart;cart
-1059970;81382;4;248c3b91-c96c-45df-8948-c2f97f9b68eb;4/20/2023 11:15:42;26161143244;Crewe;England;CW2;Firefox;Email;/cart;cart
-1389502;;3;8a28bf80-0265-4308-ac8f-7a3a43e635d0;8/16/2020 7:56:00;18168231253;Nantwich;England;CW5;Chrome;Adwords;/cart;cart
-1155538;88764;3;1250afcb-2ad4-4267-8d97-30d5a24e6c14;01/10/2023;215.217.51.48;Winsford;England;CW7;Chrome;YouTube;/cart;cart
-1155541;88764;6;1250afcb-2ad4-4267-8d97-30d5a24e6c14;01/10/2023;215.217.51.48;Winsford;England;CW7;Chrome;YouTube;/cart;cart
-1520068;;2;847a6bca-e600-41fc-9706-dcaa0b969d2d;11/20/2022 14:38:00;156.254.69.245;Weaverham;England;CW8;Safari;Email;/cart;cart
-1773716;;2;afd0b290-d98b-4f64-9b5b-e04d2ed18e68;3/17/2019 1:36:00;2,11184E+11;Davenham;England;CW9;Safari;Adwords;/cart;cart
-756627;57952;4;35315384-b0ca-4f68-bbbd-94ce4a039193;6/20/2023 17:01:45;58.185.93.246;Davenham;England;CW9;Chrome;Email;/cart;cart
-673014;51655;3;372d9928-af4e-4f51-af1a-979e24d3ca2c;07/01/2021;115.2.27.184;Dartford;England;DA1;Chrome;YouTube;/cart;cart
-603671;46243;9;2a189f6a-51d2-401b-8a19-493bf443f118;1/17/2023 8:02:35;146.106.32.70;Dartford;England;DA1;Chrome;Adwords;/cart;cart
-673017;51655;6;372d9928-af4e-4f51-af1a-979e24d3ca2c;07/01/2021;115.2.27.184;Dartford;England;DA1;Chrome;YouTube;/cart;cart
-1627582;;2;ebe888ca-1e27-4616-9e54-903a6c024300;7/28/2020 3:20:00;171.97.246.116;Dartford;England;DA1;Firefox;Adwords;/cart;cart
-673010;51655;4;af260441-aa4d-4e49-97c5-d8d5788cd9dc;02/12/2022;185.83.148.67;Dartford;England;DA1;Chrome;Adwords;/cart;cart
-430207;32952;9;fc9407c0-bf72-44c9-8d02-f345cbbc8576;9/18/2020 11:04:28;109.121.67.37;Bexleyheath;England;DA7;Firefox;Email;/cart;cart
-430175;32952;3;0b010c8f-bfad-42b9-bda1-b0adb7f41a08;9/18/2020 9:21:16;123.228.250.30;Bexleyheath;England;DA7;Safari;Organic;/cart;cart
-1802716;;2;c464be4b-ab8e-48f8-b401-d59637319c4b;6/16/2019 8:28:00;51.157.250.21;Erith;England;DA8;Other;Adwords;/cart;cart
-1698938;;2;c9cf45de-eec2-45f6-84c9-55bf0041eb01;09/08/2019;56.137.21.155;Erith;England;DA8;Safari;Adwords;/cart;cart
-2016376;;2;d2bdd9c8-3fe9-4d79-a260-c27ab86b3059;6/25/2022 16:18:00;133.142.234.30;Dundee;Scotland;DD3;Chrome;Adwords;/cart;cart
-707153;54204;3;4834f747-f0ac-4183-b873-8055cef788ce;11/24/2022 9:19:39;84.186.215.8;Dundee;Scotland;DD3;Chrome;YouTube;/cart;cart
-1870630;;2;53747b95-f587-4195-9e8e-7cc92c7c3b38;9/23/2021 7:35:00;133.217.55.208;Dundee;Scotland;DD3;Safari;Email;/cart;cart
-2254462;;2;053d2d25-c111-48be-a6b1-9b7eedb08e18;11/27/2020 7:36:00;113.185.184.89;Dundee;Scotland;DD4;Safari;Email;/cart;cart
-199806;15417;9;0763aebc-7384-4c9a-99d6-94080bf2a1e0;4/28/2023 16:35:06;163.28.84.215;Dundee;Scotland;DD4;Chrome;Adwords;/cart;cart
-199796;15417;9;95c8daf6-55b7-4a04-82c0-f4d2eb7be700;4/28/2023 15:09:00;76.82.60.50;Dundee;Scotland;DD4;Chrome;Adwords;/cart;cart
-199793;15417;6;95c8daf6-55b7-4a04-82c0-f4d2eb7be700;4/28/2023 15:05:48;76.82.60.50;Dundee;Scotland;DD4;Chrome;Adwords;/cart;cart
-1833319;;2;8450455f-d299-407c-8b05-1dea7d967137;8/25/2021 17:37:00;183.57.56.255;Forfar;Scotland;DD8;Chrome;Email;/cart;cart
-371943;28542;4;6675c3f7-bf19-490e-aca4-b362cf6fac0a;05/11/2022;29.85.192.90;Forfar;Scotland;DD8;Chrome;Adwords;/cart;cart
-1009061;77465;3;ae14f9f1-78d2-4732-8d24-2dc372ff22e6;11/02/2021;55207233169;Ilkeston;England;DE7;Chrome;Adwords;/cart;cart
+5000;1;4;ccbd1798-94fc-4ff3-a648-af0d440d9f1f;05/11/2023;11.169.39.134;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
+5001;2;3;3a4db649-531e-432e-acbc-6f06bcba77b8;02/11/2021;76162148173;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
+5002;3;4;088d2011-3069-421f-88c6-a033437c9f50;4/15/2022 12:04:25;170.99.67.112;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
+5003;4;3;f8e36164-f3f4-4b4a-bef8-5e7cd0bd7ba9;5/29/2021 14:32:20;43.125.63.116;Bogatynia;Dolnośląskie;59;IE;Facebook;/cart;cart
+5004;5;12;84cc445f-4057-4411-ab8f-815e5e533198;01/02/2023;138.37.197.15;Bogatynia;Dolnośląskie;59;Safari;Adwords;/cart;cart
+5005;6;2;7d4f4919-b7e3-491f-9f2f-6d3c92298bc2;11/08/2020;42.19.50.42;Bogatynia;Dolnośląskie;59;Safari;Adwords;/cart;cart
+5006;7;4;0d92dd0e-a104-4e89-9028-11e893b93fce;2/25/2023 15:26:25;59112156253;Bogatynia;Dolnośląskie;59;IE;Email;/cart;cart
+5007;8;4;de529c4e-4ae2-486b-a9b9-8b7c0f8327ea;05/03/2023;170.159.97.229;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
+5008;9;3;3fb81f83-78ff-46dd-96ea-bf0f92c876a2;4/27/2022 10:14:00;7179152136;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
+5009;10;9;86be78d2-05c1-4558-84b1-f42e95dc97da;6/29/2023 5:51:44;9.107.211.76;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
+5010;11;6;f8e36164-f3f4-4b4a-bef8-5e7cd0bd7ba9;5/29/2021 14:37:06;43.125.63.116;Bogatynia;Dolnośląskie;59;IE;Facebook;/cart;cart
+5011;12;6;831f3fc8-9229-4fe5-89be-1257221ce4c7;9/29/2020 16:27:14;1129246173;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
+5012;13;4;fb5448d3-3bc1-4723-bd89-27e868175b13;11/10/2022;125.1.146.133;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
+5013;14;3;290d84a9-8661-4713-a362-88f17237d9e7;08/10/2020;121.183.235.82;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
+5014;15;3;d425ea3c-1a5a-4dcc-9778-2eae1489d732;08/03/2019;204.171.98.42;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
+5015;16;2;db0b948e-66b5-4b80-aa5d-c5c44ad29109;2/15/2023 10:03:00;48.141.3.24;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
+5016;17;4;ad2d3da6-5941-4392-94e0-6b74b2e718d4;12/30/2022 5:43:01;27.193.46.50;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
+5017;18;9;47e8998b-71bc-45bd-836d-d311b2d928ba;06/11/2023;50226122141;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
+5018;19;2;0e968791-6b0f-4d61-81c1-d069b974998d;3/29/2019 10:41:00;48.24.248.151;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
+5019;20;9;d708c26f-e3e0-4fe0-a0ec-7583641d8480;06/11/2023;195.78.155.20;Bogatynia;Dolnośląskie;59;Firefox;YouTube;/cart;cart
+5020;21;3;5aeb5925-0b76-4a7b-9372-7cb10d38642f;06/12/2020;16.129.127.30;Bogatynia;Dolnośląskie;59;Safari;Email;/cart;cart
+5021;22;4;d8dbf0eb-e353-48c0-b91d-61f9cb26340c;1/18/2021 15:54:35;205.93.86.45;Bogatynia;Dolnośląskie;59;Firefox;Email;/cart;cart
+5022;23;3;32fba431-810a-45a9-a972-3ba77fd86eb8;7/15/2021 11:20:22;73.75.108.181;Bogatynia;Dolnośląskie;59;Safari;Adwords;/cart;cart
+5023;24;6;dad47714-c96b-405d-b3bd-35194929f1ec;11/29/2022 6:24:35;41.225.205.48;Bogatynia;Dolnośląskie;59;Firefox;Facebook;/cart;cart
+5024;25;4;59caaa48-882b-45bc-a463-100fb33a6736;08/03/2022;44.152.169.41;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
+5025;26;4;a5cd48df-e840-4411-8600-79eeff809eb5;9/25/2021 9:24:40;6.181.86.5;Bogatynia;Dolnośląskie;59;Firefox;Adwords;/cart;cart
+5026;27;2;0cc0f8bb-8f4b-41a7-82ed-9b08862f1280;02/06/2020;99.200.62.196;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
+5027;28;2;43d6d5f5-fdc3-4976-b12c-b105e9a19088;12/04/2022;78.151.160.46;Bogatynia;Dolnośląskie;59;Safari;YouTube;/cart;cart
+5028;29;2;c29edd66-1db8-4fd8-bdaf-a16bd52755e2;5/13/2022 11:33:00;85.82.52.164;Bogatynia;Dolnośląskie;59;Chrome;Organic;/cart;cart
+5029;30;3;5a8841c1-0288-4791-9780-e866d84f94b6;04/02/2020;2,02E+11;Bogatynia;Dolnośląskie;59;Safari;Email;/cart;cart
+5030;31;6;6c44c833-6151-47c1-a485-b93aca799685;08/07/2021;142.56.47.181;Bogatynia;Dolnośląskie;59;Firefox;Adwords;/cart;cart
+5031;32;3;1f62b635-cb62-43ab-97a9-3d428785c861;4/26/2022 17:53:00;40252146237;Bogatynia;Dolnośląskie;59;IE;Email;/cart;cart
+5032;33;2;11536d8e-63f7-4a72-b51c-6db4114ae0e8;01/10/2021;220.117.2.152;Bogatynia;Dolnośląskie;59;Other;Organic;/cart;cart
+5033;34;2;e6ac7f2c-bee1-45ef-a3df-b5ee234e846e;10/08/2022;101.65.199.193;Bogatynia;Dolnośląskie;59;Safari;Facebook;/cart;cart
+5034;35;6;68d8eba6-a214-4903-bcab-0fd88248a053;6/29/2023 3:07:12;67.20.19.180;Bogatynia;Dolnośląskie;59;Safari;Adwords;/cart;cart
+5035;36;9;62e6119d-26e7-4a21-99a5-7f1106c67a96;01/01/2023;4.240.188.46;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
+5036;37;4;ba46c51d-dac7-41ae-b3e0-225262aac279;06/08/2023;1,68E+11;Bogatynia;Dolnośląskie;59;Firefox;Facebook;/cart;cart
+5037;38;2;b210068a-27ef-4b63-ac53-677a8b5d3ac9;4/20/2021 9:13:00;26.198.244.25;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
+5038;39;9;7b44ea46-4b90-4be1-a1cf-3acbd8e5298a;6/20/2023 8:54:44;135.57.129.221;Bogatynia;Dolnośląskie;59;Safari;Email;/cart;cart
+5039;40;2;8c16e7f2-a88a-4bec-9f2b-f024cb605439;06/08/2021;173.107.189.65;Bogatynia;Dolnośląskie;59;Safari;YouTube;/cart;cart
+5040;41;9;83302d41-0eac-47da-b9c7-a9923db846b5;01/01/2023;36.47.178.171;Bogatynia;Dolnośląskie;59;IE;Email;/cart;cart
+5041;42;6;dfa9c5cf-7d57-48a8-9c60-9f83476bc926;6/16/2023 8:09:28;1,00E+11;Bogatynia;Dolnośląskie;59;Safari;Adwords;/cart;cart
+5042;43;6;0f287016-b1da-4d91-85e5-e48146a9119f;11/29/2022 9:00:52;100.42.125.216;Bogatynia;Dolnośląskie;59;Safari;Organic;/cart;cart
+5043;44;3;ba82abc4-94bb-4f95-8c14-64127a09921c;4/17/2021 5:25:18;204.147.161.92;Bogatynia;Dolnośląskie;59;Chrome;YouTube;/cart;cart
+5044;45;3;eb788d09-b5ad-4b32-bf82-4bdef434a936;11/02/2021;16144144229;Bogatynia;Dolnośląskie;59;Firefox;Adwords;/cart;cart
+5045;46;3;c9dea195-f2ac-423f-9bc6-bc52fcd89522;8/29/2022 17:10:50;89.33.90.54;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
+5046;47;2;58705eb3-9f30-4c72-82a5-679130f76b54;7/14/2022 12:48:00;141.77.164.90;Bogatynia;Dolnośląskie;59;Firefox;Email;/cart;cart
+5047;48;4;2dcd888f-ab00-491a-b859-d77726e57adb;07/05/2021;142.85.161.98;Bogatynia;Dolnośląskie;59;Safari;Adwords;/cart;cart
+5048;49;3;82e33dfc-5c14-4bfb-ba02-3f3d5f669edf;01/05/2021;16.87.17.211;Bogatynia;Dolnośląskie;59;Safari;Email;/cart;cart
+5049;50;4;3af6f2a9-84a4-4db9-a80a-9555593b8779;06/02/2022;150.240.170.17;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
+5050;51;2;2573d559-e4b7-4a30-ab3c-8f80196e9f0f;2/16/2022 5:57:00;6.30.6.93;Bogatynia;Dolnośląskie;59;Chrome;Email;/cart;cart
+5051;52;2;9309b7ee-4557-4eca-9dc4-6c4e2ec549ad;10/19/2022 4:23:00;220.124.153.76;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
+5052;53;12;fbbf2e07-f0dd-4a0d-83a1-9cd02490a61f;01/09/2022;33.67.124.55;Bogatynia;Dolnośląskie;59;Chrome;Adwords;/cart;cart
+5053;54;12;32fba431-810a-45a9-a972-3ba77fd86eb8;7/15/2021 11:32:26;73.75.108.181;Bogatynia;Dolnośląskie;59;Safari;Adwords;/cart;cart
+5054;55;3;f8d62542-59e9-4d43-89f6-56196c22fe84;6/29/2023 3:02:05;35.99.48.142;Bogatynia;Dolnośląskie;59;Chrome;Facebook;/cart;cart
+5055;56;4;441a22bb-6da6-420d-bab5-75ade93130e3;5/22/2022 2:27:00;9226103112;Gorzów Wielkopolski;Lubuskie;66;Firefox;Facebook;/cart;cart
+5056;57;2;b7fcda38-ebd8-4c98-b819-caec762e7c92;12/30/2022 3:56:00;30.33.186.136;Gorzów Wielkopolski;Lubuskie;66;Safari;YouTube;/cart;cart
+5057;58;4;2cf1d8d8-8450-480d-95c6-b150ee4f71b3;01/08/2023;94.43.59.146;Gorzów Wielkopolski;Lubuskie;66;Chrome;Adwords;/cart;cart
+5058;59;6;02ea90f3-655e-4f4c-896f-83486222e309;06/08/2023;61144212110;Gorzów Wielkopolski;Lubuskie;66;Safari;Email;/cart;cart
+5059;60;4;6f52d419-7720-4774-9257-518109ca6b66;11/14/2021 10:18:06;119.33.182.224;Gorzów Wielkopolski;Lubuskie;66;Chrome;Adwords;/cart;cart
+5060;61;6;c0e02ead-daa3-4bd5-b003-f7dbaad1190b;4/21/2021 18:16:49;183.149.187.17;Gorzów Wielkopolski;Lubuskie;66;Firefox;YouTube;/cart;cart
+5061;62;2;88d160a2-d0f2-4f0d-97ff-2a9197db11b0;4/28/2019 16:27:00;25.81.176.164;Gorzów Wielkopolski;Lubuskie;66;Safari;Facebook;/cart;cart
+5062;63;9;0751a0ac-12fc-4922-8c68-c8c5e968f515;04/10/2021;148.144.101.67;Gorzów Wielkopolski;Lubuskie;66;IE;Facebook;/cart;cart
+5063;64;3;1f725ea4-5c5a-462f-a4f5-14179fcd0ae6;03/07/2021;1,86E+11;Gorzów Wielkopolski;Lubuskie;66;Chrome;Email;/cart;cart
+5064;65;9;1b47d218-b25e-406d-9836-a7e985e2b5bc;06/08/2023;167.182.1.117;Gorzów Wielkopolski;Lubuskie;66;Chrome;Email;/cart;cart
+5065;66;2;ff081461-d3d2-4229-b556-b09bc92cc8db;07/06/2020;153.198.50.137;Gorzów Wielkopolski;Lubuskie;66;Safari;Organic;/cart;cart
+5066;67;6;cab17890-b21c-4072-835f-cf25a56ae1b4;12/26/2022 5:48:28;80.18.221.255;Gorzów Wielkopolski;Lubuskie;66;Firefox;Adwords;/cart;cart
+5067;68;4;864099a7-6788-4f86-9558-0e55adffe7f6;1/18/2021 22:47:00;4.14.60.1;Gorzów Wielkopolski;Lubuskie;66;IE;Adwords;/cart;cart
+5068;69;3;c9278d15-f654-4560-a7ed-c132dde8a60f;5/17/2022 3:13:00;205.104.171.81;Gorzów Wielkopolski;Lubuskie;66;Safari;Facebook;/cart;cart
+5069;70;2;3b18f219-42a6-4328-8583-b94f886888e3;03/10/2021;1,65E+11;Gorzów Wielkopolski;Lubuskie;66;Safari;Email;/cart;cart
+5070;71;3;7249ec17-755b-4406-8995-548f6b23040f;1/15/2021 12:30:54;1,96E+11;Gorzów Wielkopolski;Lubuskie;66;Firefox;Email;/cart;cart
+5071;72;3;a40076a4-764c-47cf-98e8-8ee8f1b19245;12/10/2020;2,14E+11;Gorzów Wielkopolski;Lubuskie;66;Safari;Email;/cart;cart
+5072;73;4;06b699a1-350b-49dc-a08b-a3e94651e351;04/08/2023;73.139.182.18;Gorzów Wielkopolski;Lubuskie;66;Chrome;Organic;/cart;cart
+5073;74;3;4430fd80-be93-4920-8e33-de7b4353419a;9/21/2021 12:53:00;159.83.173.101;Gorzów Wielkopolski;Lubuskie;66;Chrome;Email;/cart;cart
+5074;75;4;74015e29-c38e-4fd5-bc40-78d1b787d280;7/15/2021 9:19:48;214.193.126.37;Gorzów Wielkopolski;Lubuskie;66;IE;Adwords;/cart;cart
+5075;76;6;8aff0272-e7b3-429b-a743-b390cf3ac31e;2/17/2023 3:25:23;89.90.65.21;Gorzów Wielkopolski;Lubuskie;66;Safari;YouTube;/cart;cart
+5076;77;4;f0164170-70f1-4b59-83e7-dc46443401b4;6/24/2023 14:44:51;12175189235;Gorzów Wielkopolski;Lubuskie;66;Safari;Email;/cart;cart
+5077;78;3;09ba33cb-9939-49f7-92c1-480bb6b267df;11/29/2022 2:22:06;215.98.29.214;Gorzów Wielkopolski;Lubuskie;66;Chrome;Adwords;/cart;cart
+5078;79;4;e0087fb2-943f-4e48-8306-68b420d0f1a7;11/13/2019 11:44:11;116.125.83.185;Gorzów Wielkopolski;Lubuskie;66;Firefox;Email;/cart;cart
+5079;80;2;11e2ec2e-81ae-4cc6-a07f-e9aa67671c4c;08/03/2021;48104216239;Gorzów Wielkopolski;Lubuskie;66;Chrome;Adwords;/cart;cart
+5080;81;6;7f3ce032-df35-4299-b139-36e5b86e6dde;01/11/2023;22.193.24.74;Gorzów Wielkopolski;Lubuskie;66;Chrome;Email;/cart;cart
+5081;82;4;aa03dfcb-9364-419a-8df1-8ea61db0811d;02/06/2021;53.60.34.126;Gorzów Wielkopolski;Lubuskie;66;Chrome;Email;/cart;cart
+5082;83;3;9682f044-af93-4cae-bdce-532109f67e22;12/26/2022 4:55:08;146.235.72.254;Gorzów Wielkopolski;Lubuskie;66;Chrome;Organic;/cart;cart
+5083;84;6;94a6a1ca-5eae-42f1-82a0-73c7e2c75685;12/03/2021;153.73.247.219;Gorzów Wielkopolski;Lubuskie;66;Firefox;Email;/cart;cart
+5084;85;4;4d9ca24a-c053-42a8-b525-2826d4c776c0;2/19/2022 12:55:00;126.27.187.154;Gorzów Wielkopolski;Lubuskie;66;Safari;Adwords;/cart;cart
+5085;86;3;f59b335c-5069-4f7e-b693-1e6fea93b636;07/10/2021;170.219.8.241;Gorzów Wielkopolski;Lubuskie;66;Other;Email;/cart;cart
+5086;87;6;dd704287-3ecd-4499-907f-cfcb7422d6ad;04/10/2021;63.99.33.141;Gorzów Wielkopolski;Lubuskie;66;Chrome;YouTube;/cart;cart
+5087;88;6;84367980-12d0-45fa-93ca-b613d31ba17f;11/13/2021 15:00:01;223.90.68.157;Gorzów Wielkopolski;Lubuskie;66;Firefox;Email;/cart;cart
+5088;89;3;3eb5abb1-5a16-45e9-9e7b-8a8b0f1514ad;10/09/2022;178.228.112.38;Gorzów Wielkopolski;Lubuskie;66;Chrome;Facebook;/cart;cart
+5089;90;3;70b15041-d967-42c4-a5e7-b806b3b7f02e;2/17/2023 8:57:04;99.0.44.1;Gorzów Wielkopolski;Lubuskie;66;Chrome;Email;/cart;cart
+5090;91;9;02ea90f3-655e-4f4c-896f-83486222e309;06/08/2023;61144212110;Gorzów Wielkopolski;Lubuskie;66;Safari;Email;/cart;cart
+5091;92;4;925ac3ae-e119-4bdc-8789-14c9a5b4689f;05/09/2022;28.29.123.232;Gorzów Wielkopolski;Lubuskie;66;Chrome;Email;/cart;cart
+5092;93;2;7fadcb4c-51f0-4fc7-9393-3c3700146578;5/28/2021 18:52:00;66.71.12.206;Gorzów Wielkopolski;Lubuskie;66;Chrome;Adwords;/cart;cart
+5093;94;3;94b22481-457a-4420-a1e3-cb8c36ab3053;6/21/2023 13:05:00;148.160.26.252;Gorzów Wielkopolski;Lubuskie;66;Safari;Adwords;/cart;cart
+5094;95;3;3ba40c61-d6db-4663-afb9-0e98e08b1524;03/10/2022;63.244.176.63;Gorzów Wielkopolski;Lubuskie;66;Chrome;Adwords;/cart;cart
+5095;96;3;4eb1369a-770f-4441-b072-d52a74d9811c;06/10/2021;189.112.82.49;Gorzów Wielkopolski;Lubuskie;66;Chrome;YouTube;/cart;cart
+5096;97;4;98a9cd38-a033-46e6-846e-bf8ab4504e3c;11/30/2022 13:17:06;160.18.234.146;Gorzów Wielkopolski;Lubuskie;66;Safari;Email;/cart;cart
+5097;98;4;abdd06c7-6d53-4161-a368-480bbf9d3562;3/15/2023 8:15:17;216.219.91.135;Żagań;Lubuskie;68;Firefox;Facebook;/cart;cart
+5098;99;6;0724df3d-d56e-40f8-a9e3-cd099fa6377d;9/13/2022 10:52:38;2,04E+11;Żagań;Lubuskie;68;Firefox;Adwords;/cart;cart
+5099;100;9;ff6be63a-e43e-41ac-808e-54dfb6fc646f;9/13/2022 14:14:51;154.127.78.126;Żagań;Lubuskie;68;Firefox;Facebook;/cart;cart
+5100;101;4;aeff498e-68c1-424a-b150-0edc3e1c40c3;4/20/2020 17:26:47;25.239.76.242;Żagań;Lubuskie;68;Chrome;Email;/cart;cart
+5101;102;4;fc3be065-e5fd-4868-bfdc-3c43e07893ee;10/06/2020;12171169163;Żagań;Lubuskie;68;Other;Adwords;/cart;cart
+5102;103;6;29cb37d4-cd8f-4221-b7eb-ae31f680a2ff;01/06/2021;10.133.70.65;Żagań;Lubuskie;68;Chrome;Adwords;/cart;cart
+5103;104;3;c40d27d6-6970-494e-9b67-90c87a71bb2c;01/06/2021;128.67.117.240;Żagań;Lubuskie;68;Safari;Email;/cart;cart
+5104;105;3;28bd020a-8ec1-4690-aeb0-6967bfa63b81;02/11/2022;182.139.116.65;Żagań;Lubuskie;68;Chrome;Email;/cart;cart
+5105;106;9;c48e75b6-5179-427e-8ab6-de5070b7ec2b;6/27/2023 11:19:27;118.30.2.86;Żagań;Lubuskie;68;Chrome;YouTube;/cart;cart
+5106;107;3;93eb8236-dec2-45f5-9e21-61eac814771e;7/27/2022 21:25:57;212.61.85.16;Ziltendorf;Lubuskie;69;Firefox;Facebook;/cart;cart
+5107;108;12;f6035278-9c50-47c2-bcd4-7824874c86b7;11/09/2022;56.0.109.107;Ziltendorf;Lubuskie;69;Firefox;Adwords;/cart;cart
+5108;109;2;2ba095ac-7d9b-4053-a9f9-49147648fdb1;08/07/2019;78.74.158.167;Ziltendorf;Lubuskie;69;Safari;Facebook;/cart;cart
+5109;110;9;f6035278-9c50-47c2-bcd4-7824874c86b7;11/09/2022;56.0.109.107;Ziltendorf;Lubuskie;69;Firefox;Adwords;/cart;cart
+5110;111;12;9468129d-4f2f-4136-9236-557b95bb7ee5;11/09/2022;1,93E+11;Ziltendorf;Lubuskie;69;Chrome;Email;/cart;cart
+5111;112;4;656e2280-83db-4e41-9b17-b7a7299432e4;10/22/2022 10:49:21;161.118.54.21;Ziltendorf;Lubuskie;69;Firefox;Adwords;/cart;cart
+5112;113;6;7178c13b-063c-4dec-a291-eca08c76e138;03/04/2021;53.105.97.251;Ziltendorf;Lubuskie;69;Chrome;Adwords;/cart;cart
+5113;114;3;1f622f9b-731d-4750-9080-445fc66ca6a0;04/04/2021;189.179.2.129;Schwedt/Oder;Zachodniopomorskie;74;Chrome;Email;/cart;cart
+5114;115;6;679e3a31-cf55-409f-9cd7-ad69dbcfeea6;12/29/2022 3:49:54;89.202.15.246;Schwedt/Oder;Zachodniopomorskie;74;Chrome;Email;/cart;cart
+5115;116;6;fbbadbb6-4a74-4181-b983-6c34cae4df0d;1/13/2023 12:20:17;197.78.148.52;Schwedt/Oder;Zachodniopomorskie;74;Chrome;Facebook;/cart;cart
+5116;117;9;679e3a31-cf55-409f-9cd7-ad69dbcfeea6;12/29/2022 3:52:11;89.202.15.246;Schwedt/Oder;Zachodniopomorskie;74;Chrome;Email;/cart;cart
+5117;118;12;b728d0ae-ce13-4d5d-a08f-5d40ef19c988;4/19/2022 2:52:24;26212244138;Schwedt/Oder;Zachodniopomorskie;74;Safari;Email;/cart;cart
+5118;119;6;c346d2d6-15e8-4bdb-906d-4ff77a80af5a;12/29/2022 5:37:44;26.233.152.22;Schwedt/Oder;Zachodniopomorskie;74;Chrome;YouTube;/cart;cart
+5119;120;3;0187c72b-3b94-4d99-9bec-547084027be9;4/20/2019 16:19:00;114.142.76.226;Schwedt/Oder;Zachodniopomorskie;74;Chrome;Email;/cart;cart
+5120;121;9;e9e3f6bd-5296-4fdb-a4ee-4ec4d8e67046;4/19/2022 3:53:59;65.49.64.76;Schwedt/Oder;Zachodniopomorskie;74;Safari;Email;/cart;cart
+5121;122;4;fe2eaa21-f255-4673-bc1c-171f70cf8b52;4/27/2023 23:29:48;185.250.25.98;Schwedt/Oder;Zachodniopomorskie;74;Chrome;Email;/cart;cart
+5122;123;3;6d87076e-c9c8-4e18-9acf-05ed323a1db0;4/19/2022 1:34:46;202.153.228.82;Schwedt/Oder;Zachodniopomorskie;74;Firefox;Adwords;/cart;cart
+5123;124;2;b83ed857-5c22-48d8-82f4-196de07ca59c;10/26/2021 12:18:00;99.111.136.51;Schwedt/Oder;Zachodniopomorskie;74;Other;Adwords;/cart;cart
+5124;125;9;9d0abe49-e500-49f4-9d76-03e81e97a7a3;3/18/2022 5:31:37;1,45E+11;Birmingham;England;B8;Chrome;Email;/cart;cart
+5125;126;2;34688bec-de58-4348-92d4-4d3459991040;8/25/2020 12:28:00;174.212.56.250;Birmingham;England;B8;Chrome;Email;/cart;cart
+5126;127;6;49edca67-e9dc-4579-a03a-e37d18e868ed;03/04/2023;22.47.212.223;Birmingham;England;B9;Chrome;Email;/cart;cart
+5127;128;3;d42b510e-7170-48c9-b9ed-5febd90cda0a;8/14/2021 9:20:00;94216144178;London;England;E1;Safari;Email;/cart;cart
+5128;129;3;b099f945-5458-4af8-862a-972485357c61;12/10/2020;78254166245;London;England;E1;Chrome;Email;/cart;cart
+5129;130;2;adc06dff-1a6d-4e3f-b00b-86095654d480;03/07/2020;176.152.53.193;London;England;E2;Safari;Email;/cart;cart
+5130;131;3;03da2bd3-7377-4cd9-a132-a6a45abe23a8;11/03/2020;201.58.71.94;London;England;E2;Chrome;Adwords;/cart;cart
+5131;132;6;03da2bd3-7377-4cd9-a132-a6a45abe23a8;11/03/2020;201.58.71.94;London;England;E2;Chrome;Adwords;/cart;cart
+5132;133;9;03da2bd3-7377-4cd9-a132-a6a45abe23a8;11/03/2020;201.58.71.94;London;England;E2;Chrome;Adwords;/cart;cart
+5133;134;2;d5e827b3-8d5d-42eb-a1a3-3da8f8250cbb;4/22/2023 3:58:00;153.153.115.19;London;England;E2;Chrome;YouTube;/cart;cart
+5134;135;2;9fc3e3df-6b14-480b-b4dc-1e5a1a697504;10/07/2020;180.190.229.44;London;England;E3;Firefox;Email;/cart;cart
+5135;136;3;b96adc23-6ebd-48fb-94ac-ffbf2c2a711d;06/05/2023;47.73.35.193;London;England;E3;Safari;Adwords;/cart;cart
+5136;137;3;081ef7c3-f6f1-4cc2-84de-79e09a9d46fd;6/19/2023 9:12:51;123.26.186.7;London;England;E4;Chrome;Organic;/cart;cart
+5137;138;4;825ff227-b41d-479e-b7be-4bd4918c7b27;5/26/2023 3:36:40;6.100.17.34;London;England;E4;Firefox;YouTube;/cart;cart
+5138;139;3;25cf1aca-5025-4b68-ab2f-6f753fb28ebc;04/06/2022;194.111.160.84;London;England;E5;Safari;Email;/cart;cart
+5139;140;3;55465827-ad98-45c3-991e-8bb0ce9598d6;6/18/2021 16:19:58;1,33E+11;London;England;E5;Chrome;YouTube;/cart;cart
+5140;141;9;1233a98a-ed36-4bda-a4d0-2c5d8c6050f2;8/25/2022 23:18:53;153.249.142.12;London;England;E5;Firefox;Facebook;/cart;cart
+5141;142;4;a30f178f-f5b1-4901-a1d2-3d17223e7a4a;9/22/2022 23:48:07;91114191183;London;England;E6;IE;Adwords;/cart;cart
+5142;143;4;ca324062-875f-45c1-9e5e-89f069fb69fa;05/04/2023;111.132.29.243;London;England;E6;Firefox;Facebook;/cart;cart
+5143;144;3;48a95e13-00a8-4aac-b1df-626798e44b31;6/15/2022 21:56:45;99.178.59.168;London;England;E6;Chrome;Facebook;/cart;cart
+5144;145;3;4b3067ad-28a6-4c3f-90e1-a84f582fd4e6;4/22/2021 9:25:00;102.64.110.92;London;England;E6;Chrome;Adwords;/cart;cart
+5145;146;9;8919daab-eee3-4a80-bc97-04beb05fc8ec;12/12/2021;205.52.36.32;London;England;E6;Chrome;Adwords;/cart;cart
+5146;147;3;e8e3fc62-b354-43c9-afd3-71d477c69970;12/12/2021;136.102.147.8;London;England;E6;Safari;Organic;/cart;cart
+5147;148;3;9bdbbb43-cac7-4027-ad5e-61d06c0a69ea;6/15/2022 21:33:23;200.45.212.13;London;England;E6;Firefox;Facebook;/cart;cart
+5148;149;3;01a4b6cb-2777-4103-9614-958c342fad60;5/31/2019 2:41:00;26.125.15.116;London;England;E6;Firefox;Email;/cart;cart
+5149;150;3;725e6e65-aa58-476b-979e-7325450dfe59;5/29/2022 14:17:00;194.145.0.171;London;England;E7;Chrome;Email;/cart;cart
+5150;151;4;de0f78ee-58ee-49de-af36-0461bb333ea8;4/18/2023 10:29:35;122.204.91.184;London;England;E7;Firefox;Email;/cart;cart
+5151;152;2;0019a2a8-a428-42dd-907c-a55f73d2e4a2;03/04/2023;1,06E+11;London;England;E7;Safari;Email;/cart;cart
+5152;153;3;a679d997-88f4-4f3e-9be0-657718750c63;2/16/2022 2:53:00;2,04E+11;London;England;E8;Chrome;Email;/cart;cart
+5153;154;3;77a48163-56e5-4fa2-9a8c-7e4b9a45516c;12/23/2020 0:37:00;36.209.60.37;London;England;E8;Safari;Email;/cart;cart
+5154;155;3;36577a7d-40e6-429f-a871-f960408202ac;08/12/2021;139.18.69.196;London;England;E8;Chrome;Adwords;/cart;cart
+5155;156;6;90ee5eb5-8da5-4ad5-80b5-f0e017db748e;08/12/2021;79.161.242.7;London;England;E8;Chrome;Adwords;/cart;cart
+5156;157;2;09bdbf37-2be8-4f71-87a7-0efdeeefae35;01/12/2020;66.239.84.9;London;England;E9;Safari;Email;/cart;cart
+5157;158;2;6619ea45-c98c-4b24-a148-1448a5e407a5;4/21/2023 18:19:00;75.207.174.80;London;England;E9;Firefox;Email;/cart;cart
+5158;159;12;1fa810fc-fd99-4d7b-a192-f948b9653524;05/01/2021;72.75.116.120;London;England;E9;Firefox;Email;/cart;cart
+5159;160;6;fb215794-22ed-41ee-a109-d2c61ca355db;05/01/2021;1,99E+11;London;England;E9;Safari;Adwords;/cart;cart
+5160;161;3;91f56cd3-194e-41c7-b6b1-d3814beb79fe;05/07/2020;85.38.160.238;Liverpool;England;L4;Chrome;Email;/cart;cart
+5161;162;3;58e87e42-da60-4834-9d15-9dee5af00cfb;2/24/2022 0:34:50;137.222.83.172;Liverpool;England;L4;Firefox;Email;/cart;cart
+5162;163;4;18202e9c-4dd2-47c9-9b6b-7be92f004255;05/11/2023;5206219101;Liverpool;England;L4;Chrome;Adwords;/cart;cart
+5163;164;3;454d0e45-5ce2-4b57-8d32-153e20bdb40f;3/13/2020 11:32:54;5.130.46.37;Liverpool;England;L4;Other;Adwords;/cart;cart
+5164;165;9;454d0e45-5ce2-4b57-8d32-153e20bdb40f;3/13/2020 11:41:32;5.130.46.37;Liverpool;England;L4;Other;Adwords;/cart;cart
+5165;166;2;47988303-26f8-4e9b-9784-fbbb9ad17aea;3/15/2023 5:02:00;196.15.96.60;Liverpool;England;L4;Chrome;Adwords;/cart;cart
+5166;167;9;9c6d9e7d-5cd1-45f5-874d-fe03624ea047;03/05/2023;179.241.98.225;Liverpool;England;L4;Other;Adwords;/cart;cart
+5167;168;9;d2f6baa8-a6aa-43b7-ac4b-0908e21e8f1b;3/13/2020 11:59:09;85.0.65.165;Liverpool;England;L4;Other;Email;/cart;cart
+5168;169;3;3a08a4a4-32d1-4298-af36-d5f05e7fbaad;7/23/2021 2:24:00;1,03E+11;Salford;England;M6;Chrome;Facebook;/cart;cart
+5169;170;3;97210d69-8359-4317-af0b-f680569bd48c;2/15/2023 10:05:35;1,06E+11;Salford;England;M7;Firefox;Facebook;/cart;cart
+5170;171;9;97210d69-8359-4317-af0b-f680569bd48c;2/15/2023 10:12:09;1,06E+11;Salford;England;M7;Firefox;Facebook;/cart;cart
+5171;172;4;c562f1c8-c650-4c00-a17f-beed44342e02;12/23/2022 22:41:13;2,21E+11;Salford;England;M7;Chrome;Email;/cart;cart
+5172;173;6;2ed3ee0c-7aad-45eb-a460-5fa7d10a1bdf;6/22/2022 1:47:16;102.128.68.2;Manchester;England;M8;IE;Email;/cart;cart
+5173;174;2;b38e7493-af8c-49e2-88fd-f900d9cb7b88;11/16/2020 10:30:00;1,00E+11;London;England;N1;Firefox;Organic;/cart;cart
+5174;175;3;ab0f8c50-2dca-409d-967b-28cc9e971b1e;1/30/2019 11:26:00;1,48E+11;London;England;N1;Firefox;YouTube;/cart;cart
+5175;176;4;c6208120-cb8a-4adf-b8a2-dcf52dadadc7;04/02/2023;1,31E+11;London;England;N1;Safari;Email;/cart;cart
+5176;177;2;5d505587-faf4-4841-a3d3-02ef82f8bbd1;03/02/2021;4.103.67.116;London;England;N3;Chrome;Adwords;/cart;cart
+5177;178;2;75205344-04fd-4d9a-8949-d16d7a80ea72;5/22/2021 6:42:00;67.69.213.212;London;England;N4;Firefox;Adwords;/cart;cart
+5178;179;6;e9323436-0170-4e61-8d05-3813cf06f542;08/12/2021;117.193.15.204;London;England;N4;Chrome;Facebook;/cart;cart
+5179;180;12;e9323436-0170-4e61-8d05-3813cf06f542;08/12/2021;117.193.15.204;London;England;N4;Chrome;Facebook;/cart;cart
+5180;181;2;3f55deba-b708-4796-a805-e830cee51858;12/09/2021;70.168.33.27;London;England;N4;Safari;Email;/cart;cart
+5181;182;6;5a864532-f61d-4dab-b62a-62f13bfeb208;3/28/2023 9:05:25;39.10.136.193;London;England;N8;Chrome;Adwords;/cart;cart
+5182;183;3;af93a9c7-fde8-4a0c-8bca-3ab5fbc78914;07/11/2021;96.19.180.43;London;England;N9;Chrome;Email;/cart;cart
+5183;184;3;88f0dab3-265c-4486-9fb2-fbcd23b7042d;11/12/2021;2,17E+11;London;England;N9;Chrome;Email;/cart;cart
+5184;185;3;1eda9d7e-9fe9-4723-8049-e59bdca9b893;10/19/2020 9:24:00;180.160.86.58;Sheffield;England;S2;Chrome;Facebook;/cart;cart
+5185;186;2;7d930a8c-0ed9-4766-a2f5-357139c465b3;7/17/2021 7:54:00;42.188.27.225;Sheffield;England;S2;Chrome;Organic;/cart;cart
+5186;187;3;4a2e8629-db62-49cc-938c-2f9f96612f9b;11/21/2019 2:34:44;37.52.226.155;Sheffield;England;S5;Firefox;Facebook;/cart;cart
+5187;188;3;b5796637-0c29-4a5a-a32c-76f49b63ee69;5/24/2019 13:24:00;134.141.7.9;Sheffield;England;S5;Safari;Email;/cart;cart
+5188;189;2;b3507d60-146a-4db3-b41f-959513bd2b66;11/11/2021;1,43E+11;Sheffield;England;S6;Firefox;Email;/cart;cart
+5189;190;6;22922c90-fa12-4f1d-9744-b8d26dc24973;8/19/2022 4:00:20;54.219.222.84;London;England;W2;Firefox;Email;/cart;cart
+5190;191;3;b513dd29-cd0b-4f21-b7b1-7726b86d2f6d;10/18/2020 12:32:00;219.1.21.83;London;England;W2;Firefox;Email;/cart;cart
+5191;192;3;22922c90-fa12-4f1d-9744-b8d26dc24973;8/19/2022 3:54:46;54.219.222.84;London;England;W2;Firefox;Email;/cart;cart
+5192;193;4;269735ed-c4a3-464f-a96f-637be227b5a1;1/19/2023 0:35:58;209.254.16.51;London;England;W2;Safari;Adwords;/cart;cart
+5193;194;4;8984fa99-b966-4472-8923-0012f4cb7a62;09/09/2021;147.116.27.86;London;England;W2;Chrome;Email;/cart;cart
+5194;195;3;674e02ff-36da-4d2e-83b2-423770219071;8/18/2022 0:20:51;37.96.239.225;London;England;W3;Chrome;Email;/cart;cart
+5195;196;3;d54d4c28-b191-405a-a46c-e62c35a28c00;8/17/2022 23:44:50;128.111.154.94;London;England;W3;IE;YouTube;/cart;cart
+5196;197;3;9776120e-ab47-4bb8-8c7d-aeb341e13e60;11/10/2022;1,82E+11;London;England;W3;Chrome;Email;/cart;cart
+5197;198;3;4f9967ed-5714-42ce-8d60-7a4efaacc606;02/07/2022;5.177.35.21;London;England;W3;Chrome;Email;/cart;cart
+5198;199;3;b07c0ce7-a81c-4f3b-aace-c00acc609f9e;11/04/2019;151.20.204.40;London;England;W4;Firefox;Email;/cart;cart
+5199;200;4;506713ce-ae26-415c-a79d-13ffa9de25b8;3/26/2023 16:15:23;15.107.227.24;London;England;W4;Chrome;Adwords;/cart;cart
+5200;201;6;4ae0c8a6-0719-4133-8e9a-96d525abd12c;5/30/2020 11:42:44;1.85.71.117;London;England;W5;Chrome;Adwords;/cart;cart
+5201;202;2;58290ff9-3f62-4630-a4d9-782fd86e9d14;3/25/2021 17:21:00;207.64.76.255;London;England;W5;Firefox;Email;/cart;cart
+5202;203;2;82dab183-50c6-4df4-8b7b-8b69d1f8afb5;5/15/2021 9:11:00;2,23E+11;London;England;W5;Chrome;Email;/cart;cart
+5203;204;3;727d8934-f9a6-4076-b299-da379ce79351;09/05/2021;91.146.84.117;London;England;W6;Chrome;Email;/cart;cart
+5204;205;12;97ca65ff-300b-4263-aca5-c604c67534b2;2/19/2020 6:19:11;209.132.42.60;London;England;W6;Chrome;Adwords;/cart;cart
+5205;206;3;80655a83-e254-45c1-b7c6-dc253905bd5a;2/19/2020 5:25:42;71194114189;London;England;W6;Safari;Organic;/cart;cart
+5206;207;3;97ca65ff-300b-4263-aca5-c604c67534b2;2/19/2020 6:09:57;209.132.42.60;London;England;W6;Chrome;Adwords;/cart;cart
+5207;208;2;e21e3bdc-c686-453b-a6f5-13621c6a4264;3/23/2020 11:19:00;140.171.16.70;London;England;W6;Chrome;Adwords;/cart;cart
+5208;209;4;97092faa-d5e1-4e96-b189-6f690e0e96a9;03/10/2023;96.180.47.226;London;England;W6;Chrome;Email;/cart;cart
+5209;210;3;ac5795db-7f48-4c74-9b50-659aa65c04b8;9/30/2022 16:27:00;159.121.167.71;London;England;W7;Firefox;Email;/cart;cart
+5210;211;2;3e68a8a0-2ebf-4a87-83e7-bc5829f2c9a5;3/13/2023 11:10:00;185.42.24.175;London;England;W9;Safari;Email;/cart;cart
+5211;212;9;7a0c8193-c721-4d04-a66b-272e0c567452;06/08/2023;70176243136;Darwin;Northern Territory;810;Firefox;Email;/cart;cart
+5212;213;2;0cc5af3f-7f68-468f-92a0-5216ed482106;5/27/2021 11:52:00;221.13.157.150;Darwin;Northern Territory;810;Chrome;Email;/cart;cart
+5213;214;2;59a39e03-bd6c-4440-9e12-a9d74b3896ab;12/20/2019 4:14:00;220.42.202.55;Darwin;Northern Territory;810;Chrome;Email;/cart;cart
+5214;215;4;e9d9db00-cc9a-4abc-b4fb-2e8df7513c2b;11/07/2022;1,88E+11;Darwin;Northern Territory;810;Safari;Adwords;/cart;cart
+5215;216;6;0c0a51b6-110d-4013-9905-b2a5e392b2e9;07/11/2022;164.56.101.193;Buffalo Creek;Northern Territory;812;Chrome;YouTube;/cart;cart
+5216;217;6;19a5432d-6c16-4d42-9f5f-75ccf285d1a7;07/11/2022;41.237.96.7;Buffalo Creek;Northern Territory;812;Chrome;Organic;/cart;cart
+5217;218;3;89b77c31-a5e4-41ca-bf7e-0a8c1409ccee;9/13/2021 10:56:21;80212192183;Darwin;Northern Territory;820;Chrome;Adwords;/cart;cart
+5218;219;3;f3fac024-ad76-435b-9e25-4bbfbffded75;9/13/2021 8:10:10;197.185.11.255;Darwin;Northern Territory;820;Chrome;Email;/cart;cart
+5219;220;3;8910ade6-4959-4bf0-bc85-49e97eabc171;9/20/2022 12:28:00;81.211.43.8;East Arnhem;Northern Territory;822;Chrome;Adwords;/cart;cart
+5220;221;6;b345a4c4-f049-48e8-b657-5e6ac6b4400d;02/05/2023;145.147.83.80;Mitchell;Northern Territory;832;Firefox;Facebook;/cart;cart
+5221;222;9;0c74b7c1-8b0d-4927-b495-7a61e4bb8a3f;02/05/2023;77.32.245.225;Mitchell;Northern Territory;832;Other;Adwords;/cart;cart
+5222;223;3;9b6190b7-1c10-4704-a6e9-11dd9d2f9418;09/02/2020;198.31.130.12;Alice Springs;Northern Territory;870;Chrome;Email;/cart;cart
+5223;224;2;f7e28b44-512e-43c6-bd7f-0880612fe680;7/15/2020 8:32:00;1,60E+11;Larapinta;Northern Territory;875;Chrome;Adwords;/cart;cart
+5224;225;4;0c50294f-de3e-43d2-8dd4-f9b125d4b370;11/01/2022;154.37.44.136;St Albans;England;AL1;Chrome;Adwords;/cart;cart
+5225;226;6;0ad9f513-daf1-4e25-bc3c-2f14b5f1ad75;2/26/2023 12:48:05;11.25.217.134;St Albans;England;AL1;Chrome;Adwords;/cart;cart
+5226;227;4;d1295410-1e67-4da9-a42c-1c64668a2413;11/27/2021 5:45:52;89.201.5.252;St Albans;England;AL1;Safari;Adwords;/cart;cart
+5227;228;4;65fb3659-1bf0-4296-92b9-50fb9bb58ac0;12/07/2022;147.11.104.168;St Albans;England;AL4;Other;Email;/cart;cart
+5228;229;2;a7407b9d-e8c5-4fdc-ae97-967387245663;11/29/2022 9:59:00;2.53.114.101;St Albans;England;AL4;Chrome;Email;/cart;cart
+5229;230;6;a6a07338-d635-480f-8463-843da8f77f0c;9/23/2021 9:53:24;46.29.168.36;St Albans;England;AL4;Chrome;Adwords;/cart;cart
+5230;231;3;805eff72-45fd-4910-8072-3eadda1cc4fa;3/21/2022 1:44:00;139.243.53.151;Harpenden;England;AL5;Safari;Email;/cart;cart
+5231;232;4;f5d2e638-9690-4e8a-aa81-4af521475175;05/08/2022;161.98.168.140;Harpenden;England;AL5;Safari;Email;/cart;cart
+5232;233;4;a0935c5c-bc22-4ea6-b0f0-533ad738a540;12/28/2020 8:43:38;52.30.106.122;Birmingham;England;B11;Safari;YouTube;/cart;cart
+5233;234;3;47ec3644-f109-44c6-bf3f-c2f68fb88f51;10/08/2020;216.62.80.23;Birmingham;England;B11;Other;YouTube;/cart;cart
+5234;235;2;de9700da-b9ea-41fb-9b27-7d66f17204a9;11/09/2019;67204162230;Birmingham;England;B13;Firefox;Adwords;/cart;cart
+5235;236;2;a8a14c83-107d-468b-9036-09b29654f85e;09/04/2020;122.46.102.151;Birmingham;England;B13;Safari;Adwords;/cart;cart
+5236;237;3;6e8caee3-7768-4a4a-ac0b-d330233add7b;12/30/2020 9:46:00;189.203.81.52;Birmingham;England;B20;Safari;Adwords;/cart;cart
+5237;238;3;1d2df0bb-bd09-411f-9bf2-d3a6ee7bdf37;5/23/2020 13:48:00;122.184.220.41;Birmingham;England;B20;Chrome;Adwords;/cart;cart
+5238;239;2;62889e42-ec7f-4bb4-a183-8f84e633d932;11/26/2021 7:14:00;1,55E+11;Birmingham;England;B23;Safari;Email;/cart;cart
+5239;240;2;dc976ea5-4d63-4144-bef2-c39823238cee;07/12/2022;94.51.145.89;Birmingham;England;B24;Chrome;Email;/cart;cart
+5240;241;2;abd6ded2-4618-4466-9a79-2465bdd834b9;7/20/2021 8:54:00;14.48.122.97;Birmingham;England;B24;Chrome;Email;/cart;cart
+5241;242;3;dd6540c3-f993-4ed4-bb41-27bf999ddcb3;1/31/2023 9:12:21;116.13.140.234;Birmingham;England;B26;Chrome;Email;/cart;cart
+5242;243;3;90561ab5-7fb1-4db4-9f97-800624cc3a9e;11/05/2020;130.64.152.8;Birmingham;England;B30;Firefox;Email;/cart;cart
+5243;244;2;40ee574e-36f1-49fa-a4e0-c784a96ef119;07/02/2022;184.36.179.6;Birmingham;England;B30;Safari;Email;/cart;cart
+5244;245;4;82ee9608-d20e-4f91-8de0-df98df4f1fc3;02/09/2021;18.166.50.1;Birmingham;England;B30;Chrome;Email;/cart;cart
+5245;246;12;b4b72613-2d44-4d81-8af9-3a5a4597874f;5/28/2023 3:54:45;52.95.57.40;Birmingham;England;B32;Safari;Email;/cart;cart
+5246;247;3;02443622-27e0-4538-b50e-60f1900aeaa4;09/09/2020;206.94.185.78;Birmingham;England;B32;Chrome;Email;/cart;cart
+5247;248;6;dc8fc783-60a2-40fd-9151-ac82a81a48b5;07/04/2022;142.43.71.193;Birmingham;England;B33;Firefox;Adwords;/cart;cart
+5248;249;9;ada0f8ff-2200-4870-8cd7-9bb3ac246c6f;07/04/2022;223.46.13.94;Birmingham;England;B33;Chrome;Adwords;/cart;cart
+5249;250;12;e9baec63-2672-4691-862c-3cf18b66da62;07/04/2022;215.95.108.43;Birmingham;England;B33;Chrome;Facebook;/cart;cart
+5250;251;6;e9baec63-2672-4691-862c-3cf18b66da62;07/04/2022;215.95.108.43;Birmingham;England;B33;Chrome;Facebook;/cart;cart
+5251;252;4;5a07c3c4-1301-443b-a894-0e64e8b3ae7f;08/02/2022;100.237.60.36;Birmingham;England;B37;Chrome;Adwords;/cart;cart
+5252;253;2;fce72154-85cc-44ca-80ce-b65523211e0d;12/29/2019 1:58:00;4.223.241.15;Birmingham;England;B43;Firefox;Organic;/cart;cart
+5253;254;3;c25e5d12-2bd7-4353-b78d-42887795fd37;3/14/2023 4:14:00;3129146206;Birmingham;England;B43;Other;Adwords;/cart;cart
+5254;255;4;a8a4467a-f2b5-4696-b503-7fe1c8e400a2;06/12/2023;207.142.247.54;Rubery;England;B45;Chrome;Email;/cart;cart
+5255;256;3;f1373e0b-46f2-4f98-a05f-154c3432360b;8/17/2020 9:06:50;26.38.118.243;Rubery;England;B45;Firefox;Email;/cart;cart
+5256;257;2;a9df81d3-da07-4f40-a406-c20c5bcd980d;11/02/2019;175.110.115.34;Halesowen;England;B63;Chrome;Adwords;/cart;cart
+5257;258;3;7176f04f-9f47-42d5-aed0-363f17d5c955;04/12/2021;218.244.24.63;Halesowen;England;B63;Chrome;YouTube;/cart;cart
+5258;259;6;87ecc6d7-df7b-43a6-87d6-829f9f1dfe21;3/18/2020 8:56:06;19214127205;Smethwick;England;B66;Safari;Adwords;/cart;cart
+5259;260;3;77cf01ac-1da7-4314-95ef-9781a8563650;03/04/2023;151.37.97.128;Smethwick;England;B66;Firefox;Adwords;/cart;cart
+5260;261;9;2b1465ee-9eed-47e0-a130-5e178b391a96;03/01/2023;61.199.45.161;Smethwick;England;B66;Chrome;Email;/cart;cart
+5261;262;4;05ca28e4-9934-47e9-b7a8-87f99aa531f1;05/07/2022;1,10E+11;Oldbury;England;B68;Other;Adwords;/cart;cart
+5262;263;2;abd9415b-6f4c-4d4b-9508-1f902b4b04ac;05/03/2022;139.112.231.43;The Royal Town of Sutton Coldfield;England;B74;Chrome;YouTube;/cart;cart
+5263;264;9;88c35877-d11d-4442-95ea-8f0debb5637d;4/14/2023 23:55:26;15.177.55.152;The Royal Town of Sutton Coldfield;England;B74;Other;Adwords;/cart;cart
+5264;265;6;7fec1e24-d5c3-4832-930c-f9bf1c68f9fb;4/15/2023 1:11:21;65.8.203.142;The Royal Town of Sutton Coldfield;England;B74;Chrome;Adwords;/cart;cart
+5265;266;3;dd89acb5-6b49-4847-86a1-5455c21d65fb;03/08/2022;204.50.61.153;Tamworth;England;B77;Chrome;Email;/cart;cart
+5266;267;4;40a652ea-3c53-4130-922c-0cdf5bc4e9d9;2/15/2022 15:18:55;109.35.117.137;Solihull;England;B91;Firefox;Adwords;/cart;cart
+5267;268;2;f8013f7c-744c-41d7-b730-94e447c49b70;8/17/2020 11:28:00;149.226.201.81;Solihull;England;B92;Chrome;Adwords;/cart;cart
+5268;269;4;175d0520-392a-43c2-8760-8ed6f7767030;1/24/2023 9:31:27;43.140.80.58;Solihull;England;B92;Safari;Adwords;/cart;cart
+5269;270;4;66fa382b-a475-419e-b8d5-15a60f3d373e;8/31/2021 1:11:26;190.137.84.131;Redditch;England;B97;Chrome;Adwords;/cart;cart
+5270;271;3;777c44cc-573d-4b0f-8be1-2b259658847c;4/18/2023 1:18:02;132.81.231.15;Redditch;England;B98;Firefox;Adwords;/cart;cart
+5271;272;3;12b3783a-c573-423a-bc42-94a4fd6b9a74;2/22/2019 18:25:00;1,32E+11;Redditch;England;B98;Chrome;YouTube;/cart;cart
+5272;273;4;51c039e4-49da-4b21-81af-c67d3daa19bf;3/22/2023 4:02:43;1,92E+11;Bath;England;BA1;IE;Email;/cart;cart
+5273;274;4;b55b8867-e3e0-4664-8b7a-7e80cc1579fe;4/17/2023 3:26:42;161.75.169.30;Bath;England;BA1;IE;Adwords;/cart;cart
+5274;275;3;6f63e4a2-08c0-4b25-98ad-88118a3b2b86;6/29/2021 7:28:00;186.179.210.92;Bath;England;BA1;Firefox;Facebook;/cart;cart
+5275;276;2;d096710c-832f-4c01-93ee-8c1e16c8c4c8;07/01/2019;93.172.25.233;Bath;England;BA2;Chrome;Adwords;/cart;cart
+5276;277;4;bb3a2ee1-ab9c-41a6-aced-fd2ebf84a168;1/21/2023 18:48:54;26.5.1.73;Bath;England;BA2;Chrome;Email;/cart;cart
+5277;278;3;4456b440-dba3-4584-bebf-019dcd02ddca;7/13/2021 15:52:00;2,17E+11;Radstock;England;BA3;Chrome;Adwords;/cart;cart
+5278;279;3;75b18150-3c7e-4c14-98dd-89c6c6967a24;6/29/2023 6:36:00;59.71.89.146;Radstock;England;BA3;Chrome;Facebook;/cart;cart
+5279;280;3;f8011df8-d22c-4782-82ef-1064f9092a61;12/09/2022;69.182.97.226;Blackburn;England;BB1;Firefox;Organic;/cart;cart
+5280;281;3;887dcbe9-372a-4b6b-8de0-37ac332686d3;6/30/2021 5:07:00;80138231130;Blackburn;England;BB2;Chrome;Email;/cart;cart
+5281;282;4;12344954-1f74-45f7-89e8-c39e75be285f;7/29/2022 18:13:51;66.80.147.226;Darwen;England;BB3;Chrome;Facebook;/cart;cart
+5282;283;4;db12d710-aa7e-4f63-bf28-415334dee33d;3/21/2023 12:23:25;103.137.238.54;Haslingden;England;BB4;Chrome;Adwords;/cart;cart
+5283;284;3;885a4567-d2da-43b2-8100-d04fd2de2620;2/28/2023 16:55:59;26207173248;Accrington;England;BB5;Chrome;Adwords;/cart;cart
+5284;285;3;e7eae308-cfb9-4308-abe2-455bf5756ac1;3/28/2022 6:17:41;161.47.148.45;Accrington;England;BB5;Chrome;Email;/cart;cart
+5285;286;4;974613c1-27f3-42ca-b47b-3dc8de728291;2/16/2022 13:36:42;65.224.191.67;Accrington;England;BB5;Safari;Adwords;/cart;cart
+5286;287;6;65210367-41be-400a-8f38-98e5bc93f6dc;5/18/2022 7:16:02;175.228.169.61;Nelson;England;BB9;Chrome;Organic;/cart;cart
+5287;288;3;0ac0de0a-82dd-417b-a4cc-8cc06df32bb9;08/08/2021;67192221250;Bradford;England;BD3;Firefox;YouTube;/cart;cart
+5288;289;9;fcae724b-d352-4d01-86df-2ddec7ca15db;12/10/2021;52.161.175.41;Bradford;England;BD4;Firefox;Email;/cart;cart
+5289;290;4;cc520672-0a87-45f3-b66a-400f7fdc37c1;1/25/2022 2:39:10;214.121.186.33;Bradford;England;BD4;Chrome;Adwords;/cart;cart
+5290;291;3;167b1b10-bae7-441c-a4cb-952878784ead;12/10/2021;94.234.11.32;Bradford;England;BD4;Chrome;Adwords;/cart;cart
+5291;292;3;175145d9-3174-4af7-8a22-34a0495a87bb;08/11/2019;214.138.35.30;Bradford;England;BD4;Chrome;Email;/cart;cart
+5292;293;3;3702b1bb-f0d3-4034-a192-214e417dab45;4/24/2022 16:53:00;195.52.84.209;Bradford;England;BD5;Safari;Adwords;/cart;cart
+5293;294;6;a55b63b9-897a-41c0-bda6-ed3e90fd1a6f;6/29/2023 15:11:24;135.83.1.47;Bradford;England;BD5;Firefox;Adwords;/cart;cart
+5294;295;3;a47a7ace-6624-4952-9f93-76470cd5d899;8/20/2020 18:21:00;50129197249;Bradford;England;BD6;Safari;Email;/cart;cart
+5295;296;4;24af6bdb-5f0f-444e-b763-a55b60af4ad7;11/24/2021 0:40:49;75.19.156.157;Bradford;England;BD6;Chrome;Adwords;/cart;cart
+5296;297;4;2b145298-fcbf-4843-bcb7-82086f9ac28c;3/21/2023 10:36:38;49.74.84.156;Bradford;England;BD7;Firefox;Adwords;/cart;cart
+5297;298;3;5d04d926-31f8-4ba4-b6cb-4987ad4bb12a;10/21/2021 18:01:00;187.189.33.197;Bradford;England;BD7;Chrome;Adwords;/cart;cart
+5298;299;4;17c2c08e-9de6-440e-b9ef-4414dcb7737e;03/03/2022;103.188.156.64;Bradford;England;BD7;Chrome;Email;/cart;cart
+5299;300;4;1ad5f320-2a02-4f1c-bc45-ebed9b3f69fe;3/14/2020 11:21:10;147.140.79.112;Bradford;England;BD7;Safari;Email;/cart;cart
+5300;301;3;47112b12-e01b-4328-b147-192f6879c400;10/25/2021 5:05:30;111.149.46.93;Bradford;England;BD8;Chrome;YouTube;/cart;cart
+5301;302;3;7931fbe1-37e9-473e-91e3-bd730d1802ad;05/01/2019;2,07E+11;Bradford;England;BD8;Safari;YouTube;/cart;cart
+5302;303;4;418dfb71-ad01-4561-b541-ca582d5cb917;03/10/2023;17.123.26.196;Bournemouth;England;BH9;Firefox;Facebook;/cart;cart
+5303;304;3;4bed8ed1-2f4f-41a5-a7dc-0e388a734db4;03/10/2023;167.130.221.86;Bournemouth;England;BH9;Chrome;Organic;/cart;cart
+5304;305;4;438bc48c-56e7-4899-abe7-106ad5f5ef1d;5/20/2022 12:47:01;3.78.161.252;Bolton;England;BL1;Chrome;Adwords;/cart;cart
+5305;306;2;f89fa1f5-47d6-4343-8fcb-1131b83b5a3f;1/24/2022 16:50:00;61.219.25.109;Bolton;England;BL1;Safari;Email;/cart;cart
+5306;307;2;3e1d8b44-51ee-43ad-818b-7182d88c742a;03/05/2019;1.248.64.236;Bolton;England;BL1;Chrome;Email;/cart;cart
+5307;308;2;4238bdf0-bc1d-4d6c-96cf-175e847c45aa;9/18/2019 6:41:00;119.83.110.237;Bolton;England;BL1;Chrome;Email;/cart;cart
+5308;309;3;9b93ad5f-0fd7-44c6-a989-9fc417bfba8b;10/10/2022;85169177251;Bolton;England;BL1;Chrome;YouTube;/cart;cart
+5309;310;3;7148244e-1b18-47ad-8413-60fd4495b96f;9/28/2021 9:49:00;42.27.10.17;Bolton;England;BL3;Chrome;Facebook;/cart;cart
+5310;311;6;9f848ee3-d439-4a7d-a79d-7a22045b0f22;2/21/2022 9:05:54;52.124.189.86;Farnworth;England;BL4;Chrome;Email;/cart;cart
+5311;312;3;d26c1fb9-c50c-4fa4-83e0-a775a26b28dd;2/21/2022 6:15:08;80.94.131.173;Farnworth;England;BL4;Safari;Adwords;/cart;cart
+5312;313;3;ac1fe427-3113-4d04-a253-29d82c774323;02/03/2022;10.211.38.13;Westhoughton;England;BL5;Chrome;Adwords;/cart;cart
+5313;314;2;6925aaaa-f079-4dd4-819b-08f3fda678ee;8/23/2019 15:43:00;122.242.142.88;Westhoughton;England;BL5;Chrome;Facebook;/cart;cart
+5314;315;9;f0674178-22c7-43ff-836f-37c75cf5aba4;2/22/2022 13:06:18;44.191.12.214;Horwich;England;BL6;Chrome;Email;/cart;cart
+5315;316;6;57c357a6-0873-41bb-8172-855a2a21ca86;2/22/2022 12:51:06;1,02E+11;Horwich;England;BL6;Safari;Organic;/cart;cart
+5316;317;9;c594859a-b768-4b8c-baba-154e43f50df6;11/20/2022 4:47:33;207.147.32.158;Horwich;England;BL6;Chrome;Email;/cart;cart
+5317;318;4;b8acb7b1-3db3-428c-94e2-03dfa72be7c7;06/02/2021;118.230.150.5;Horwich;England;BL6;Chrome;YouTube;/cart;cart
+5318;319;9;46dcde4b-ea51-4af2-91a5-3a6ea8d932c8;11/20/2022 5:07:55;46.25.132.155;Horwich;England;BL6;Safari;Organic;/cart;cart
+5319;320;3;99b64d13-2acd-4a8b-a97d-fd3c7de17f96;11/16/2019 14:30:00;103.108.173.90;Bury;England;BL8;IE;Email;/cart;cart
+5320;321;4;d0811aa0-f0a5-4bb5-a2cc-9fdb207917e5;09/02/2020;33.179.62.237;Bury;England;BL8;Chrome;Adwords;/cart;cart
+5321;322;3;262458a2-e83e-4e4a-9f7d-66778adbb0f3;10/28/2022 1:20:00;168.232.32.178;Bury;England;BL9;Chrome;Email;/cart;cart
+5322;323;2;b8c40de9-a970-4b21-87a2-5b3468231a80;11/30/2022 11:31:00;1,07E+11;Bury;England;BL9;Firefox;Email;/cart;cart
+5323;324;2;c1696b23-707c-43eb-826f-f4a1edd2cf50;2/14/2019 3:05:00;84.50.174.186;Bury;England;BL9;Chrome;Adwords;/cart;cart
+5324;325;2;645357f6-5e91-416a-a226-29ca2e93636e;10/01/2019;29135214227;Bury;England;BL9;Other;Email;/cart;cart
+5325;326;2;a1a1c653-4634-438e-a3e0-5d2b00df46f2;12/15/2019 14:39:00;48.239.59.20;Brighton;England;BN1;Firefox;Email;/cart;cart
+5326;327;4;97223c8d-bc24-4eb1-b10f-ac194b84d4fa;8/24/2022 15:35:48;99.250.232.67;Brighton;England;BN1;Chrome;Email;/cart;cart
+5327;328;3;076a4329-bf2e-469c-b5bd-da242f50b63c;10/28/2022 1:42:00;88108185226;Brighton;England;BN1;Chrome;Adwords;/cart;cart
+5328;329;6;e75ea64b-95c9-4bd5-baa3-e4a67a7c6594;10/13/2022 16:14:43;117.29.160.69;Brighton;England;BN1;Safari;YouTube;/cart;cart
+5329;330;2;7be38a18-3e8b-43e7-a419-050251341ced;08/08/2019;188.76.97.106;Brighton;England;BN2;Safari;Adwords;/cart;cart
+5330;331;3;b00f6161-ec15-4bc9-8985-18635ec98bb3;06/04/2021;60.6.39.62;Brighton;England;BN2;Other;YouTube;/cart;cart
+5331;332;12;ff377913-8952-47de-acb1-4ec76fa51157;07/11/2020;13.136.84.173;Brighton;England;BN2;Other;YouTube;/cart;cart
+5332;333;3;86f63cf9-b9f0-4ae0-95d6-cafe2a33d708;01/01/2020;97.46.245.13;Brighton;England;BN2;Safari;Adwords;/cart;cart
+5333;334;3;d177d8ec-c136-4b88-8915-af1e3c20cdda;01/10/2023;191.76.251.127;Brighton;England;BN2;Chrome;Email;/cart;cart
+5334;335;6;3a5b6d38-f1a5-4f42-ab7f-5b135326e6e7;06/09/2023;43202128204;Brighton;England;BN2;IE;Email;/cart;cart
+5335;336;3;f7c3277c-292a-413e-8629-4b26eedeb907;11/26/2021 10:32:00;1,41E+11;Brighton;England;BN2;Safari;Email;/cart;cart
+5336;337;4;d13c4f3f-cafc-46e0-bb16-ed57beaae186;06/09/2022;176.204.75.200;Brighton;England;BN2;Chrome;Email;/cart;cart
+5337;338;9;0a178bbf-b7f7-4240-b6fb-47113ef2c473;07/11/2020;101.46.109.72;Brighton;England;BN2;Firefox;Email;/cart;cart
+5338;339;2;e387a14c-57ff-4465-a828-7f46a5147827;09/06/2022;1,53E+11;Brighton;England;BN2;Firefox;Email;/cart;cart
+5339;340;2;0de7bcff-64a7-456a-b627-b0719085c098;02/09/2023;47.39.69.34;Hove;England;BN3;Safari;Adwords;/cart;cart
+5340;341;9;0d30f416-4979-4762-b32f-baab58b9e23f;01/09/2022;1,29E+11;Hove;England;BN3;Chrome;Email;/cart;cart
+5341;342;3;06d7f1d3-a7b0-4fa1-a75e-f11ca584b7e9;10/13/2021 8:42:42;172.86.134.87;Hove;England;BN3;Safari;Email;/cart;cart
+5342;343;3;24322ad9-4191-4a5f-87a1-0da506e1a311;09/10/2019;1,81E+11;Hove;England;BN3;Chrome;Email;/cart;cart
+5343;344;3;a7fd2aed-ad7e-474f-b34a-8c3896153aa3;10/21/2019 4:40:00;82.18.70.29;Bromley;England;BR1;Safari;YouTube;/cart;cart
+5344;345;3;79100895-b973-438a-89bb-1122be3f03de;2/14/2022 19:03:00;180.167.50.178;Bromley;England;BR1;Chrome;Adwords;/cart;cart
+5345;346;4;4f4753c0-b3a1-435d-8af1-dd3cbd5f9fab;5/19/2023 21:47:58;81.225.52.235;Bromley;England;BR2;Chrome;Email;/cart;cart
+5346;347;6;be021870-7df7-4f53-8b6d-c865bad48a00;6/23/2023 23:27:44;65.184.22.156;Bromley;England;BR2;Firefox;Organic;/cart;cart
+5347;348;2;fdb7b774-ffc9-4a24-8463-f8a9e6d6bf9d;09/03/2020;89.10.23.44;Bromley;England;BR2;Firefox;YouTube;/cart;cart
+5348;349;9;ae0e08e7-3a35-4cec-8bcb-6e3312869839;5/27/2023 13:04:46;222.149.175.68;Beckenham;England;BR3;Chrome;Facebook;/cart;cart
+5349;350;6;d7d8dced-7f9e-4ca1-b542-0e7bb12fbd6a;12/23/2019 13:52:45;77.13.15.242;Beckenham;England;BR3;Chrome;Facebook;/cart;cart
+5350;351;4;ae68abb2-cb28-446b-b115-3dce5f8445f3;11/25/2022 12:02:41;115.53.186.123;Orpington;England;BR5;Safari;Email;/cart;cart
+5351;352;4;af02f9e8-9379-47ec-b5ff-1fc49835d60e;07/09/2022;108.160.153.4;Orpington;England;BR5;Chrome;Facebook;/cart;cart
+5352;353;4;4210b8eb-f294-4d2a-9f0b-382ed7301225;2/20/2020 11:21:10;178.74.207.33;Orpington;England;BR5;Safari;Organic;/cart;cart
+5353;354;3;b264932b-edd7-462f-aa0d-e5897f3cbdc1;12/17/2022 14:45:00;12.244.77.224;Orpington;England;BR5;Safari;Email;/cart;cart
+5354;355;6;c7e2aa41-adb6-4cf9-91fc-156f8e1c7b6c;09/08/2020;46.35.151.196;Orpington;England;BR5;Safari;Email;/cart;cart
+5355;356;4;4854df52-baff-45d1-9548-69fbc5622548;6/22/2023 8:43:49;1,19E+11;Orpington;England;BR6;Safari;Email;/cart;cart
+5356;357;3;3666fc8f-b7f5-4aca-a144-d7bf129764b9;9/26/2021 8:56:00;83.214.237.63;Bristol;England;BS3;Chrome;Adwords;/cart;cart
+5357;358;4;d788bb0e-5b90-4267-985b-4f86b09e8fed;7/14/2022 2:59:12;182.212.32.35;Bristol;England;BS3;Chrome;Adwords;/cart;cart
+5358;359;3;81022d8d-0dfb-45ba-b496-2f72605ab532;5/30/2021 6:43:00;1,04E+11;Bristol;England;BS3;Firefox;Facebook;/cart;cart
+5359;360;4;7d50778b-d10f-4014-88b8-8f465a4f88f3;06/12/2020;208.223.125.78;Bristol;England;BS5;Firefox;Adwords;/cart;cart
+5360;361;3;93033033-bbb6-4561-bbf9-103f4758b9ff;6/13/2023 16:34:00;222.92.105.123;Bristol;England;BS5;Chrome;Email;/cart;cart
+5361;362;2;3d8ad603-86ed-45b6-9bc2-7fa3c448e7be;4/24/2023 12:51:00;47.50.126.170;Bristol;England;BS5;Chrome;Facebook;/cart;cart
+5362;363;4;3a796a00-bf72-40ed-8956-9b9561164a37;12/22/2022 5:04:12;52.247.203.43;Bristol;England;BS7;IE;Email;/cart;cart
+5363;364;6;3d14f750-1a39-4557-adb9-d7179908d919;11/24/2020 22:59:33;43.83.135.75;Bristol;England;BS7;Firefox;Email;/cart;cart
+5364;365;3;46eda2aa-8685-417f-a184-b2e87795afe1;01/10/2020;2,15E+11;Bristol;England;BS7;Safari;Email;/cart;cart
+5365;366;3;b48d8b90-f98d-4f09-ace9-451a491dce62;10/21/2022 3:32:37;189.144.136.16;Bristol;England;BS8;Other;Email;/cart;cart
+5366;367;6;f6186f96-1221-4e85-a445-0d259d019869;7/30/2022 4:24:23;40.160.105.74;Bristol;England;BS9;IE;Adwords;/cart;cart
+5367;368;6;5b8c3cb1-31da-46d0-a847-4c5108c64ea7;6/28/2023 5:21:55;82.103.29.222;Bristol;England;BS9;Chrome;Email;/cart;cart
+5368;369;9;b281665d-4ee7-4950-b664-66f0ce8b39ca;4/24/2021 14:13:03;82.189.42.119;Carryduff;Northern Ireland;BT8;Firefox;Facebook;/cart;cart
+5369;370;3;5feacb7a-52dd-4a11-bf78-2a16c660d03a;01/04/2023;163.62.209.86;Carryduff;Northern Ireland;BT8;Firefox;Adwords;/cart;cart
+5370;371;4;adb5b893-2bf6-4f1a-8cfe-ecd452c04e15;6/27/2023 17:54:31;21.59.17.205;Carryduff;Northern Ireland;BT8;Chrome;Adwords;/cart;cart
+5371;372;9;772a9817-01da-40ad-bc77-72729dfc6f2b;02/02/2023;39.130.16.41;Belfast;Northern Ireland;BT9;Chrome;Email;/cart;cart
+5372;373;9;76565e9e-cb3b-4db5-924c-8e5d457858ea;02/02/2023;32.38.240.21;Belfast;Northern Ireland;BT9;Chrome;Facebook;/cart;cart
+5373;374;2;26a955f2-a450-4477-8aff-39406c46ba4a;07/06/2019;66.42.173.117;Cambridge;England;CB1;Chrome;Organic;/cart;cart
+5374;375;3;1e8dd628-eadc-41c2-8514-2e19e0d695d0;02/09/2023;29.140.48.220;Cambridge;England;CB1;Firefox;Adwords;/cart;cart
+5375;376;4;717f193b-0e9a-4a30-9e3e-6dfbdd2d7d1a;04/05/2022;1,93E+11;Cambridge;England;CB1;Chrome;Email;/cart;cart
+5376;377;4;155a8df2-28b2-46fb-8a07-7f6f5067d9b5;08/07/2022;118.126.200.97;Cambridge;England;CB1;Firefox;Email;/cart;cart
+5377;378;12;9077d7d9-5b20-439d-b0ca-d7fb52055daa;3/21/2021 9:43:42;24181103136;Cambridge;England;CB4;Firefox;Email;/cart;cart
+5378;379;3;b00f5ff4-1c7c-40b1-b9f9-e2dec9f39d9f;3/21/2021 6:10:12;1,31E+11;Cambridge;England;CB4;Firefox;Organic;/cart;cart
+5379;380;3;3335538b-751b-4a8e-9033-8b38c50a79cc;07/08/2021;72248121166;Cambridge;England;CB4;Safari;Facebook;/cart;cart
+5380;381;3;0c785121-ee15-43d9-96a7-b4c48bbdb27b;12/08/2021;69.253.211.36;Haverhill;England;CB9;Firefox;Adwords;/cart;cart
+5381;382;3;1a4b6f48-2277-492a-abb9-6700ddeef59e;08/10/2021;150.250.128.82;Haverhill;England;CB9;Other;Adwords;/cart;cart
+5382;383;4;b80fc378-bf70-4bf5-81ba-a02106227b8e;4/18/2022 14:33:37;162.99.121.9;Haverhill;England;CB9;Firefox;Adwords;/cart;cart
+5383;384;6;c42519d6-4631-437f-a389-6e532c65bd04;10/18/2022 1:40:23;12.226.49.238;Haverhill;England;CB9;Chrome;Organic;/cart;cart
+5384;385;6;4b85afe2-6ea9-40c7-98a7-405ec8d55d3f;10/17/2022 21:55:25;213.245.201.65;Haverhill;England;CB9;Firefox;Email;/cart;cart
+5385;386;2;acdfc7b1-c51f-4f5b-b176-d6a135d1fdc0;03/09/2022;90.79.188.254;Haverhill;England;CB9;Chrome;Email;/cart;cart
+5386;387;3;06d8eb38-69e2-4bcc-ac57-c2cbc399d2f6;12/08/2021;76.138.14.16;Haverhill;England;CB9;Chrome;Adwords;/cart;cart
+5387;388;9;547f1d2f-0f35-47c3-ba04-7c9fa265684b;10/17/2022 22:30:27;175.14.191.162;Haverhill;England;CB9;Safari;Facebook;/cart;cart
+5388;389;9;bd3ec1bb-fd62-44dc-9332-507e1371b2fe;9/21/2020 14:35:06;149.6.243.48;Saint Mellons;Wales;CF3;IE;Email;/cart;cart
+5389;390;6;269dc934-9f50-4b25-bc92-0af2369bf89b;12/18/2022 1:44:00;78.165.28.169;Saint Mellons;Wales;CF3;Safari;Adwords;/cart;cart
+5390;391;3;fa260714-c7d5-4b5c-bba9-1913fda72a68;2/15/2021 9:18:00;88.212.58.193;Saint Mellons;Wales;CF3;Safari;YouTube;/cart;cart
+5391;392;3;3c6827a7-f29b-41f1-8646-4ad64270b983;01/12/2020;220.35.79.250;Saint Mellons;Wales;CF3;Chrome;Facebook;/cart;cart
+5392;393;6;5d99e330-f7f1-4b2b-bc54-a35f735f2941;10/17/2022 9:44:49;149.48.143.131;Cardiff;Wales;CF5;Firefox;Facebook;/cart;cart
+5393;394;6;7fb29130-e7cc-4ffd-98d4-2efb5e828f04;4/13/2022 10:46:23;222.40.156.108;Cardiff;Wales;CF5;Other;YouTube;/cart;cart
+5394;395;4;9a1f4fd9-3692-43c1-9ad6-b518d601f9a0;12/22/2021 11:40:53;15.236.98.153;Cardiff;Wales;CF5;Safari;Email;/cart;cart
+5395;396;3;ae30da92-9006-45e9-83c6-d6f67f22c10d;08/04/2019;165.165.98.226;Cardiff;Wales;CF5;Firefox;Adwords;/cart;cart
+5396;397;6;150b0884-faa2-402e-8d20-f4fff38d118c;10/17/2022 9:06:24;99.120.45.38;Cardiff;Wales;CF5;Firefox;Adwords;/cart;cart
+5397;398;4;f6d979e1-bc8a-44bc-bd77-d9d91f85b5cb;6/20/2023 3:43:03;86.42.145.134;Saughall;England;CH1;Chrome;Facebook;/cart;cart
+5398;399;6;4101511b-ba54-442b-9545-2507f526e949;05/05/2021;38.84.228.137;Christleton;England;CH3;Chrome;Adwords;/cart;cart
+5399;400;9;0e504044-dc20-4659-bffa-64bbef013a43;05/05/2021;125.160.19.18;Christleton;England;CH3;Safari;Email;/cart;cart
+5400;401;6;a64eb56a-ac7d-4488-85d7-40d93a8e9de7;9/13/2021 9:43:02;88.66.74.78;Higher Kinnerton;England;CH4;Chrome;Organic;/cart;cart
+5401;402;6;ac829282-2683-4a2d-8e35-819cf39c55b4;9/13/2021 9:47:22;138.236.180.10;Higher Kinnerton;England;CH4;Chrome;Email;/cart;cart
+5402;403;2;327f4726-0ba4-4ba1-91c5-35ee6194987f;08/08/2021;2,19E+11;Higher Kinnerton;England;CH4;Chrome;Adwords;/cart;cart
+5403;404;12;45f58e82-b597-4742-aa4d-536d87dae38b;9/13/2021 9:47:01;106.98.205.138;Higher Kinnerton;England;CH4;Firefox;Email;/cart;cart
+5404;405;3;cb9f5049-6953-41e1-bd5e-8c76520c83de;08/11/2021;179.74.89.71;Higher Kinnerton;England;CH4;Firefox;Email;/cart;cart
+5405;406;3;d9587ea2-6799-4ce6-a5cc-495c152268db;11/05/2021;164.88.57.117;Higher Kinnerton;England;CH4;Safari;Facebook;/cart;cart
+5406;407;2;49f2fc76-786c-4f14-ac86-fc9dfaadbbae;5/23/2021 15:39:00;18.145.68.24;Connah's Quay;Wales;CH5;Safari;YouTube;/cart;cart
+5407;408;6;7279bb1b-6514-405f-9d1c-cb9b6011d680;6/24/2023 23:38:48;180.69.194.102;Writtle;England;CM1;Chrome;YouTube;/cart;cart
+5408;409;2;5eb1bc0b-8d67-4370-b68d-af017e3fafbb;3/29/2023 12:52:00;163.144.224.18;Writtle;England;CM1;Chrome;Email;/cart;cart
+5409;410;3;fd24a9d8-1aa7-4c58-a1ba-5bd3cc4f6f83;03/10/2022;46.226.80.185;Chelmsford;England;CM2;Firefox;Facebook;/cart;cart
+5410;411;3;e4fb26ae-0ac8-4aef-bdfd-b4e6fd1c96ae;09/08/2020;106.0.153.191;Boreham;England;CM3;Other;Email;/cart;cart
+5411;412;4;2024b2f3-2fc6-45c1-8137-6f7a25d20c31;09/12/2021;1,87E+11;Boreham;England;CM3;Chrome;Adwords;/cart;cart
+5412;413;4;7fd22d76-9a22-45c5-95d4-9b27c03f3c3e;2/25/2023 12:52:41;2,01E+11;Braintree;England;CM7;Safari;YouTube;/cart;cart
+5413;414;3;f1471054-384d-484e-bc53-060a27965bcf;8/28/2022 13:40:51;27.120.91.170;Braintree;England;CM7;Chrome;Adwords;/cart;cart
+5414;415;6;f1471054-384d-484e-bc53-060a27965bcf;8/28/2022 13:45:10;27.120.91.170;Braintree;England;CM7;Chrome;Adwords;/cart;cart
+5415;416;3;fa2c8b0b-b1e2-4e4e-8ed1-d98e44884146;4/17/2021 14:32:58;151.181.98.74;Braintree;England;CM7;Firefox;Email;/cart;cart
+5416;417;4;ef7c589e-c984-411f-a519-bc55b2904b90;3/30/2023 14:31:51;201.5.232.231;Witham;England;CM8;Chrome;Email;/cart;cart
+5417;418;2;c6633dc4-e16a-4892-9e6c-6667a912c809;07/03/2021;210.90.195.72;Witham;England;CM8;Firefox;Email;/cart;cart
+5418;419;3;2ad21f03-4f8b-4ab8-9923-e3e1f28e4d34;03/07/2023;203.203.141.72;Colchester;England;CO2;Safari;Email;/cart;cart
+5419;420;3;0381d994-2d1b-4937-afee-85a78b8d9392;8/23/2021 6:44:00;53.53.102.235;Colchester;England;CO3;Firefox;Email;/cart;cart
+5420;421;3;b6eabed0-9f17-483d-ac41-0308b81cd99c;9/16/2021 7:32:00;88.226.12.181;Colchester;England;CO3;Safari;Email;/cart;cart
+5421;422;3;371440fd-dd28-4cb4-96b9-2f328d4112c8;6/29/2023 12:45:06;82.162.118.76;Colchester;England;CO4;Chrome;Email;/cart;cart
+5422;423;3;2a661e54-4db7-4ca8-bbe4-70a8b7ad09de;06/05/2019;94.111.58.107;Colchester;England;CO4;Chrome;Adwords;/cart;cart
+5423;424;3;569d4269-0e4d-4e9e-9747-7961d8c1e88e;08/04/2022;151.61.236.213;Croydon;England;CR0;Chrome;YouTube;/cart;cart
+5424;425;4;1cd33771-105a-4e4c-b4a2-f8ab2ce5d305;02/10/2022;113.175.213.69;Croydon;England;CR0;Chrome;Facebook;/cart;cart
+5425;426;3;fcb72d2f-840c-4cb2-a17f-7629579d9b63;7/24/2020 3:17:00;1,63E+11;Croydon;England;CR0;Firefox;Email;/cart;cart
+5426;427;6;6832de87-ef9b-4da3-8409-a7bf195e5a9c;9/14/2021 4:02:38;47.26.21.172;Croydon;England;CR0;Firefox;Email;/cart;cart
+5427;428;4;0fba2a28-2bdd-4cf0-9492-c57479715eb8;05/02/2023;122.210.58.109;Croydon;England;CR0;Chrome;Email;/cart;cart
+5428;429;2;618bd01b-e61d-4f2b-bdbf-631c25bb7e88;3/15/2023 11:11:00;70.67.186.139;Croydon;England;CR0;Chrome;Adwords;/cart;cart
+5429;430;3;9fea234a-c94c-4f73-9e3e-a216c8ac2ef8;09/04/2020;21.227.91.166;South Croydon;England;CR2;Chrome;Email;/cart;cart
+5430;431;2;f2de7e43-9c6d-47d3-be83-2cecb1135e06;07/12/2022;215.69.1.29;South Croydon;England;CR2;Safari;Email;/cart;cart
+5431;432;9;6772de8a-99a2-4c12-b328-be1cbf998711;4/17/2023 1:18:40;75.47.146.208;South Croydon;England;CR2;Chrome;Adwords;/cart;cart
+5432;433;3;a516249d-65e2-4dec-8859-4d77b2f245a5;10/18/2022 16:21:00;57.118.186.1;South Croydon;England;CR2;Firefox;Email;/cart;cart
+5433;434;4;f2235064-2283-4fb2-ac31-95b091dd1d49;12/14/2022 6:54:47;180.37.74.254;South Croydon;England;CR2;Safari;Email;/cart;cart
+5434;435;6;12a58c05-2fa0-4b47-a375-dca6d99af4ca;3/28/2023 17:35:37;1,76E+11;Mitcham;England;CR4;Firefox;Email;/cart;cart
+5435;436;3;cd2fda76-473c-4002-9f32-7834e5b953fe;4/21/2022 10:31:01;11108172121;Mitcham;England;CR4;Firefox;Adwords;/cart;cart
+5436;437;6;528c1dcf-0f4c-41f4-bf89-43775a833087;3/23/2022 5:31:26;115.81.114.207;Coulsdon;England;CR5;Firefox;Adwords;/cart;cart
+5437;438;2;7135194f-8863-4916-bb60-4b38bbe6f0b1;10/03/2020;60.64.161.41;Blean;England;CT2;Chrome;Adwords;/cart;cart
+5438;439;2;384b6031-e93a-4b7a-92e8-db1629a6dd7a;12/19/2022 14:05:00;2,04E+11;Blean;England;CT2;Safari;Email;/cart;cart
+5439;440;4;72944603-fbc5-4d0d-a342-6be3aedc320b;1/16/2021 11:43:33;173.48.186.132;Whitstable;England;CT5;Chrome;Email;/cart;cart
+5440;441;6;6fc2bd7a-5595-4f47-82ab-defb5c8d9f10;11/11/2021;32.255.111.64;Whitstable;England;CT5;Safari;Email;/cart;cart
+5441;442;9;b0098904-1573-4818-85d2-20b97d14aff2;08/07/2022;192.149.82.167;Whitstable;England;CT5;Safari;Adwords;/cart;cart
+5442;443;6;45a0eefb-a25e-4068-988f-fd9c2d53a88c;11/11/2021;41.22.145.156;Whitstable;England;CT5;Safari;Email;/cart;cart
+5443;444;6;a0796dbe-cab5-484f-b69a-8d2aa0d20948;5/16/2022 4:30:16;162.175.98.199;Margate;England;CT9;Safari;YouTube;/cart;cart
+5444;445;2;1e4afd7d-1396-4af3-855b-b4657b7b1b8b;04/04/2019;65.216.72.246;Coventry;England;CV2;Chrome;Adwords;/cart;cart
+5445;446;2;4e3efbf4-6890-4fcc-8dd9-dd1231a5d1d2;5/31/2019 9:21:00;173.85.148.150;Coventry;England;CV2;Safari;Email;/cart;cart
+5446;447;3;8e777791-da52-4dfa-849d-b7a58fbb01e8;1/27/2021 3:52:00;205.167.78.64;Coventry;England;CV2;Chrome;Adwords;/cart;cart
+5447;448;3;bb82ee34-fb35-4f73-a8c7-5a56a5bf6eac;9/19/2022 4:34:39;6.154.55.244;Coventry;England;CV2;Chrome;Adwords;/cart;cart
+5448;449;9;6e95433a-6f11-47bc-9037-b1ccd6d25447;9/19/2022 5:40:12;11244101126;Coventry;England;CV2;Chrome;Adwords;/cart;cart
+5449;450;3;c890aefa-b054-4ec1-ae97-5e21aa84f4ff;9/19/2022 4:26:32;12.3.156.179;Coventry;England;CV2;Chrome;Email;/cart;cart
+5450;451;4;b3028195-bdee-438e-ba1e-bb68879425da;10/09/2022;38.222.169.99;Coventry;England;CV3;Firefox;Facebook;/cart;cart
+5451;452;3;d67a2c4e-16a6-4df7-8fe7-e9ebafa07ef1;4/26/2021 2:17:21;144.75.200.53;Coventry;England;CV3;Chrome;Email;/cart;cart
+5452;453;2;264e73e0-5029-484a-b916-fd10456b2fc5;2/27/2020 14:06:00;172.87.139.240;Coventry;England;CV3;Safari;Email;/cart;cart
+5453;454;4;3fc1b857-9735-4a2c-82bc-42d22cf8a495;3/22/2022 9:37:46;1,92E+11;Coventry;England;CV3;Chrome;Email;/cart;cart
+5454;455;6;02e8ffa1-ddc1-470a-a1a2-569eebbc8a2c;4/26/2021 2:31:59;45.210.246.4;Coventry;England;CV3;Firefox;YouTube;/cart;cart
+5455;456;2;a5ab101e-b904-4151-833f-d4a386397690;9/14/2022 5:54:00;47.97.89.224;Coventry;England;CV4;Chrome;YouTube;/cart;cart
+5456;457;2;ce507591-7869-484a-b50f-7d5c23482481;12/09/2020;185.31.233.186;Coventry;England;CV4;IE;YouTube;/cart;cart
+5457;458;4;f96df24d-902e-4558-9ec3-e6572265be53;4/18/2023 3:58:32;8.14.212.141;Coventry;England;CV5;IE;Adwords;/cart;cart
+5458;459;3;a8adf28d-0b56-4643-a420-08b815010cdc;4/22/2022 6:22:29;77.108.92.178;Coventry;England;CV6;Chrome;Email;/cart;cart
+5459;460;9;2ad2cbca-6a68-4cdb-832c-d1adcb586841;12/02/2019;29.82.204.238;Coventry;England;CV6;Chrome;Organic;/cart;cart
+5460;461;12;a8adf28d-0b56-4643-a420-08b815010cdc;4/22/2022 6:32:00;77.108.92.178;Coventry;England;CV6;Chrome;Email;/cart;cart
+5461;462;4;b61fd12b-2c66-4351-80e8-51ac6c117c49;06/01/2022;136.115.225.9;Coventry;England;CV6;Chrome;YouTube;/cart;cart
+5462;463;3;f94f48a0-8141-40f5-8ab5-ed6a7314b222;10/22/2022 7:29:00;1,20E+11;Coventry;England;CV6;Chrome;Email;/cart;cart
+5463;464;9;b3f56936-457a-4bad-b724-e36b4fbb8e42;11/19/2022 11:50:41;173.190.69.204;Coventry;England;CV6;Firefox;Email;/cart;cart
+5464;465;9;1ab04401-796a-46b0-ab9e-02aabad43447;4/22/2022 5:21:13;68.211.255.43;Coventry;England;CV6;Chrome;YouTube;/cart;cart
+5465;466;2;a5e29cd7-3d71-4684-9cbe-ec10b8b94b77;12/11/2021;123.77.196.156;Coventry;England;CV6;Firefox;Adwords;/cart;cart
+5466;467;12;cf63c2aa-7098-4121-a2e8-a75a986f15bf;4/22/2022 7:25:01;170.69.100.107;Coventry;England;CV6;Chrome;Adwords;/cart;cart
+5467;468;3;d64da2f9-09d7-4a29-8253-d65475448ae6;05/08/2020;126.136.34.84;Meriden;England;CV7;Chrome;Facebook;/cart;cart
+5468;469;6;7b213880-aed9-4892-b598-ec512f227100;11/17/2022 13:03:09;194.223.110.77;Meriden;England;CV7;Firefox;YouTube;/cart;cart
+5469;470;4;53ca9437-727e-46ac-ab9b-dc2c3bef60ca;6/27/2023 2:22:02;153.93.50.167;Meriden;England;CV7;Safari;Adwords;/cart;cart
+5470;471;6;b34dbac1-0e20-4ccf-a96a-6964e416fa29;11/17/2022 13:58:26;100.190.58.246;Meriden;England;CV7;Chrome;Email;/cart;cart
+5471;472;3;b371e449-2332-4925-8b26-00c2ef5ebb47;4/15/2019 12:51:00;1,35E+11;Meriden;England;CV7;Firefox;Adwords;/cart;cart
+5472;473;3;149a794e-a2a4-4f82-a726-92661890f4df;6/27/2023 16:33:01;20.74.140.56;Crewe;England;CW1;Chrome;Email;/cart;cart
+5473;474;3;04754323-a9e2-401a-9a62-55d562336831;03/06/2019;35.134.132.40;Crewe;England;CW2;Chrome;Facebook;/cart;cart
+5474;475;4;248c3b91-c96c-45df-8948-c2f97f9b68eb;4/20/2023 11:15:42;26161143244;Crewe;England;CW2;Firefox;Email;/cart;cart
+5475;476;3;8a28bf80-0265-4308-ac8f-7a3a43e635d0;8/16/2020 7:56:00;18168231253;Nantwich;England;CW5;Chrome;Adwords;/cart;cart
+5476;477;3;1250afcb-2ad4-4267-8d97-30d5a24e6c14;01/10/2023;215.217.51.48;Winsford;England;CW7;Chrome;YouTube;/cart;cart
+5477;478;6;1250afcb-2ad4-4267-8d97-30d5a24e6c14;01/10/2023;215.217.51.48;Winsford;England;CW7;Chrome;YouTube;/cart;cart
+5478;479;2;847a6bca-e600-41fc-9706-dcaa0b969d2d;11/20/2022 14:38:00;156.254.69.245;Weaverham;England;CW8;Safari;Email;/cart;cart
+5479;480;2;afd0b290-d98b-4f64-9b5b-e04d2ed18e68;3/17/2019 1:36:00;2,11E+11;Davenham;England;CW9;Safari;Adwords;/cart;cart
+5480;481;4;35315384-b0ca-4f68-bbbd-94ce4a039193;6/20/2023 17:01:45;58.185.93.246;Davenham;England;CW9;Chrome;Email;/cart;cart
+5481;482;3;372d9928-af4e-4f51-af1a-979e24d3ca2c;07/01/2021;115.2.27.184;Dartford;England;DA1;Chrome;YouTube;/cart;cart
+5482;483;9;2a189f6a-51d2-401b-8a19-493bf443f118;1/17/2023 8:02:35;146.106.32.70;Dartford;England;DA1;Chrome;Adwords;/cart;cart
+5483;484;6;372d9928-af4e-4f51-af1a-979e24d3ca2c;07/01/2021;115.2.27.184;Dartford;England;DA1;Chrome;YouTube;/cart;cart
+5484;485;2;ebe888ca-1e27-4616-9e54-903a6c024300;7/28/2020 3:20:00;171.97.246.116;Dartford;England;DA1;Firefox;Adwords;/cart;cart
+5485;486;4;af260441-aa4d-4e49-97c5-d8d5788cd9dc;02/12/2022;185.83.148.67;Dartford;England;DA1;Chrome;Adwords;/cart;cart
+5486;487;9;fc9407c0-bf72-44c9-8d02-f345cbbc8576;9/18/2020 11:04:28;109.121.67.37;Bexleyheath;England;DA7;Firefox;Email;/cart;cart
+5487;488;3;0b010c8f-bfad-42b9-bda1-b0adb7f41a08;9/18/2020 9:21:16;123.228.250.30;Bexleyheath;England;DA7;Safari;Organic;/cart;cart
+5488;489;2;c464be4b-ab8e-48f8-b401-d59637319c4b;6/16/2019 8:28:00;51.157.250.21;Erith;England;DA8;Other;Adwords;/cart;cart
+5489;490;2;c9cf45de-eec2-45f6-84c9-55bf0041eb01;09/08/2019;56.137.21.155;Erith;England;DA8;Safari;Adwords;/cart;cart
+5490;491;2;d2bdd9c8-3fe9-4d79-a260-c27ab86b3059;6/25/2022 16:18:00;133.142.234.30;Dundee;Scotland;DD3;Chrome;Adwords;/cart;cart
+5491;492;3;4834f747-f0ac-4183-b873-8055cef788ce;11/24/2022 9:19:39;84.186.215.8;Dundee;Scotland;DD3;Chrome;YouTube;/cart;cart
+5492;493;2;53747b95-f587-4195-9e8e-7cc92c7c3b38;9/23/2021 7:35:00;133.217.55.208;Dundee;Scotland;DD3;Safari;Email;/cart;cart
+5493;494;2;053d2d25-c111-48be-a6b1-9b7eedb08e18;11/27/2020 7:36:00;113.185.184.89;Dundee;Scotland;DD4;Safari;Email;/cart;cart
+5494;495;9;0763aebc-7384-4c9a-99d6-94080bf2a1e0;4/28/2023 16:35:06;163.28.84.215;Dundee;Scotland;DD4;Chrome;Adwords;/cart;cart
+5495;496;9;95c8daf6-55b7-4a04-82c0-f4d2eb7be700;4/28/2023 15:09:00;76.82.60.50;Dundee;Scotland;DD4;Chrome;Adwords;/cart;cart
+5496;497;6;95c8daf6-55b7-4a04-82c0-f4d2eb7be700;4/28/2023 15:05:48;76.82.60.50;Dundee;Scotland;DD4;Chrome;Adwords;/cart;cart
+5497;498;2;8450455f-d299-407c-8b05-1dea7d967137;8/25/2021 17:37:00;183.57.56.255;Forfar;Scotland;DD8;Chrome;Email;/cart;cart
+5498;499;4;6675c3f7-bf19-490e-aca4-b362cf6fac0a;05/11/2022;29.85.192.90;Forfar;Scotland;DD8;Chrome;Adwords;/cart;cart
+5499;500;3;ae14f9f1-78d2-4732-8d24-2dc372ff22e6;11/02/2021;55207233169;Ilkeston;England;DE7;Chrome;Adwords;/cart;cart

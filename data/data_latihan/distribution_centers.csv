@@ -1,11 +1,11 @@
-﻿id;name;latitude;longitude
-1;Memphis TN;35,12;-89,97
-2;Chicago IL;41,84;-87,68
-3;Houston TX;29,76;-95,37
-4;Los Angeles CA;34,05;-118,25
-5;New Orleans LA;29,95;-90,07
-6;Port Authority of New York/New Jersey NY/NJ;40,63;-73,78
-7;Philadelphia PA;39,95;-75,17
-8;Mobile AL;30,69;-88,04
-9;Charleston SC;32,78;-79,93
-10;Savannah GA;32,02;-81,12
+﻿id;kota;latitude;longitude
+1; BANDA ACEH;5,5483;95,3238
+2; BANDUNG;-6,9175;107,6191
+3; BATAM;1,1301;104,0529
+4; BEKASI;-6,2383;106,9756
+5; BOGOR;-6,5971;106,806
+6; DEPOK;-6,4025;106,7942
+7; JAKARTA;-6,1751;106,865
+8; MAKASSAR;-5,1477;119,4327
+9; MEDAN;3,5952;98,6722
+10; TANGERANG;-6,2024;106,6527

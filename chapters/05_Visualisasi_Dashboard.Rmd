@@ -100,37 +100,11 @@ df6.to_sql('events', engine, if_exists='replace', index = False)
 df7.to_sql('distribution_centers', engine, if_exists='replace', index = False)
 ```
 
+## Latihan
 
 ### Soal 1
 
-Berapa banyak penjualan Marketing setiap bulan? Apakah tinggi atau rendah dibandingkan dengan bulan lalu?
-
-```{python, eval=F}
-# Perintah SQL
-sql = ''' 
-SELECT 
-  DATE_FORMAT(oi.created_at,'MONTH') AS order_date,
-  SUM(oi.sale_price*o.num_of_item) AS revenue,
-  COUNT(DISTINCT oi.order_id) AS order_count,
-  COUNT(DISTINCT oi.user_id) AS customers_purchased
-FROM `order_items` AS oi
-LEFT JOIN `orders` AS o 
-ON oi.order_id = o.order_id
-WHERE oi.status NOT IN ('Cancelled','Returned')
-GROUP BY 1
-ORDER BY 1 DESC
-'''
-
-# Eksekusi perintah  SQL
-pd.read_sql(sql, engine)
-```
-
-**Catatan:** Hasilnya masih salah karena format tanggal dan jam belum terdeteksi dengan baik.
-
-
-### Soal 2
-
-Siapa saja pelanggan JNE?
+Buktikan bahwa Mayoritas pelanggan kami berasal dari China, Amerika Serikat, lalu Brasil.
 
 ```{python, eval=F}
 # Perintah SQL
@@ -163,34 +137,9 @@ ORDER BY 2 DESC
 pd.read_sql(sql, engine)
 ```
 
+### Soal 2
 
-### Soal 3
-
-Buktikan bahwa Mayoritas pelanggan kami berasal dari China, Amerika Serikat, lalu Brasil.
-
-
-```{python, eval=F}
-# Perintah SQL
-sql = ''' 
-SELECT 
-  o.gender,
-  SUM(oi.sale_price*o.num_of_item) revenue,
-  SUM(o.num_of_item) quantity
-FROM `order_items` oi
-LEFT JOIN `orders` o
-ON oi.order_id = o.order_id
-WHERE oi.status NOT IN ('Cancelled','Returned')
-GROUP BY 1
-ORDER BY 2
-'''
-
-# Eksekusi perintah  SQL
-pd.read_sql(sql, engine)
-```
-
-### Soal 4
-
-Berapa proporsi pelanggan berdasarkan jenis kelamin di setiap negara?
+Proporsi pelanggan berdasarkan kategori usianya?
 
 ```{python, eval=F}
 # Perintah SQL
@@ -214,9 +163,9 @@ ORDER BY 2 DESC
 pd.read_sql(sql, engine)
 ```
 
-### Soal 5
+### Soal 3
 
-Produk apa yang JNE jual paling banyak dan paling sedikit? 
+Top 10 Brand apa paling banyak revenue dan juga paling banyak terjual? 
 
 ```{python, eval=F}
 # Perintah SQL
@@ -231,13 +180,14 @@ FROM `order_items` AS oi
 WHERE oi.status NOT IN ('Cancelled','Returned')
 GROUP BY 1
 ORDER BY 3 DESC
+LIMIT 10
 '''
 
 # Eksekusi perintah  SQL
 pd.read_sql(sql, engine)
 ```
 
-### Soal 6
+### Soal 4
 
 Merek yang paling banyak menghasilkan pendapatan?
 
@@ -262,47 +212,10 @@ ORDER BY 3 DESC
 pd.read_sql(sql, engine)
 ```
 
-### Soal 7
+### Soal 5 (Tugas)
 
-Merek & kategori produk yang paling banyak dibatalkan dan dikembalikan.
+Top 10 Merek & kategori produk yang paling banyak dibatalkan dan dikembalikan.
 
-```{python, eval=F}
-# Perintah SQL
-sql = ''' 
-SELECT 
-  p.brand,
-  SUM(CASE WHEN oi.status = 'Cancelled' THEN 1 ELSE null END) AS Cancelled,
-  SUM(CASE WHEN oi.status = 'Returned' THEN 1 ELSE null END) AS Returned
-FROM `order_items` oi
-LEFT JOIN `products` p
-ON oi.product_id = p.id
-GROUP BY 1
-ORDER BY 2 DESC;
-
-'''
-
-# Eksekusi perintah  SQL
-pd.read_sql(sql, engine)
-```
-
-```{python, eval=F}
-# Perintah SQL
-sql = ''' 
-SELECT 
-p.category,
-SUM(CASE WHEN oi.status = 'Cancelled' THEN 1 ELSE null END) AS Cancelled,
-SUM(CASE WHEN oi.status = 'Returned' THEN 1 ELSE null END) AS Returned
-FROM `order_items` oi
-LEFT JOIN `products` p
-ON oi.product_id = p.id
-GROUP BY 1
-ORDER BY 2 DESC;
-
-'''
-
-# Eksekusi perintah  SQL
-pd.read_sql(sql, engine)
-```
 
 ## Referensi {-}
 

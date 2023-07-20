@@ -40,6 +40,8 @@ cursor1.execute(sql)
 
 Berikut ini adalah cara untuk menambahkan tabel ke database dengan menggunakan file csv yang telah desediakan.
 
+### Impot Data CSV
+
 ```{python, eval=F}
 import pandas as pd
 
@@ -54,14 +56,48 @@ link7 = 'https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL
 
 df1 = pd.read_csv(link1, sep=';' )
 df2 = pd.read_csv(link2, sep=';' )
-df3 = pd.read_csv(link3, sep=';' )
-cols= df3.columns[4:7]
-df3[cols] = df3[cols].apply(pd.to_datetime)
-
+df3 = pd.read_csv(link3, sep=';' ) 
 df4 = pd.read_csv(link4, sep=';' )
 df5 = pd.read_csv(link5, sep=';' )
 df6 = pd.read_csv(link6, sep=';' )
 df7 = pd.read_csv(link7, sep=';' )
+```
+
+
+### Konversi Tanggal & Waktu
+
+Merubah struktur tanggal dan waktu menggunakan Pandas.
+
+```{python, eval=F}
+df1['created_at'] = df1['created_at'].apply(pd.to_datetime)
+df3[df3.columns[4:8]] = df3[df3.columns[4:8]].apply(pd.to_datetime)
+df4[df4.columns[6:10]] = df4[df4.columns[6:10]].apply(pd.to_datetime)
+df5[df5.columns[2:4]] = df5[df5.columns[2:4]].apply(pd.to_datetime)
+df6['created_at'] = df6['created_at'].apply(pd.to_datetime)
+```
+
+### Simpan Tabel ke Database
+
+Berikut ini adalah langkah untun menyimpan tabel ke database.
+
+```{python, eval=F}
+import pymysql
+from sqlalchemy import create_engine
+
+# membuat engine
+engine = create_engine("mysql+pymysql://{user}:{pw}@localhost/{db}"
+                       .format(user="bakti",
+                               pw="123",
+                               db="dashboard"))
+
+# df1.to_sql('users', engine, if_exists = 'append', index = True)
+df1.to_sql('users', engine, if_exists='replace', index = False)
+df2.to_sql('products', engine, if_exists='replace', index = False)
+df3.to_sql('orders', engine, if_exists='replace', index = False)
+df4.to_sql('order_items', engine, if_exists='replace', index = False)
+df5.to_sql('inventory_items', engine, if_exists='replace', index = False)
+df6.to_sql('events', engine, if_exists='replace', index = False)
+df7.to_sql('distribution_centers', engine, if_exists='replace', index = False)
 ```
 
 
@@ -86,7 +122,7 @@ ORDER BY 1 DESC
 '''
 
 # Eksekusi perintah  SQL
-pd.read_sql(sql, en_co2)
+pd.read_sql(sql, engine)
 ```
 
 **Catatan:** Hasilnya masih salah karena format tanggal dan jam belum terdeteksi dengan baik.
@@ -124,7 +160,7 @@ ORDER BY 2 DESC
 '''
 
 # Eksekusi perintah  SQL
-pd.read_sql(sql, en_co2)
+pd.read_sql(sql, engine)
 ```
 
 
@@ -149,7 +185,7 @@ ORDER BY 2
 '''
 
 # Eksekusi perintah  SQL
-pd.read_sql(sql, en_co2)
+pd.read_sql(sql, engine)
 ```
 
 ### Soal 4
@@ -175,7 +211,7 @@ ORDER BY 2 DESC
 '''
 
 # Eksekusi perintah  SQL
-pd.read_sql(sql, en_co2)
+pd.read_sql(sql, engine)
 ```
 
 ### Soal 5
@@ -198,7 +234,7 @@ ORDER BY 3 DESC
 '''
 
 # Eksekusi perintah  SQL
-pd.read_sql(sql, en_co2)
+pd.read_sql(sql, engine)
 ```
 
 ### Soal 6
@@ -223,7 +259,7 @@ ORDER BY 3 DESC
 '''
 
 # Eksekusi perintah  SQL
-pd.read_sql(sql, en_co2)
+pd.read_sql(sql, engine)
 ```
 
 ### Soal 7
@@ -246,7 +282,7 @@ ORDER BY 2 DESC;
 '''
 
 # Eksekusi perintah  SQL
-pd.read_sql(sql, en_co2)
+pd.read_sql(sql, engine)
 ```
 
 ```{python, eval=F}
@@ -265,7 +301,7 @@ ORDER BY 2 DESC;
 '''
 
 # Eksekusi perintah  SQL
-pd.read_sql(sql, en_co2)
+pd.read_sql(sql, engine)
 ```
 
 ## Referensi {-}

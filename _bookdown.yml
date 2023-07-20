@@ -8,7 +8,7 @@ rmd_files: ["index.Rmd",
            "chapters/02-Eksplorasi_Data.Rmd",
            "chapters/03-Perhitungan_Statistik_Dasar.Rmd",
            "chapters/04-Join_Subkueri.Rmd",
-           "chapters/05-5W1H_Visualisasi.Rmd",
+           "chapters/05_Visualisasi_Dashboard.Rmd",
            "chapters/06-Persentasi_Tugas_Akhir.Rmd",
            "chapters/07-Penutup.Rmd",
            "chapters/08-Daftar_Pustaka.Rmd"

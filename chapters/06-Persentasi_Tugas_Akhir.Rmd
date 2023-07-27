@@ -1,2 +1,14 @@
 # Persentasi Tugas Akhir
 
+Pada pertemuan ini akan dilakukan evaluasi dan peninjauan ulang materi yang sudah dipelajara selama pelatihan Data Analytics with Python & SQL. Pertama-tama akan direview materi sebelumnya dengan simulasi studi kasus. 
+
+## Studi Kasus JNE_db 
+
+Database `JNE_db` adalah database fiktif yang dikembangkan oleh dscienclabs. Kumpulan data tersebut berisi informasi tentang pelanggan, produk, pesanan, logistik, publikasi, dan kampanye pemasaran digital. Database ini digunakan dalam pelatihan kepada praktisi data di industri yang bertujuan untuk pemahaman analisis data, penemuan ide, pengembangan pengetahuan. Berikut ini adalah struktur database yang digunakan:
+
+<img align="middle" src="images/bab4/Hubungan-Antar-Tabel.png"  width = 100% />
+
+```{python}
+
+```
+

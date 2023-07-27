@@ -23,7 +23,7 @@
 <meta name="author" content="Bakti Siregar, M.Sc" />
 
 
-<meta name="date" content="2023-07-21" />
+<meta name="date" content="2023-07-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -319,7 +319,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="visualisasi-dashboard.html"><a href="visualisasi-dashboard.html#tugas"><i class="fa fa-check"></i><b>5.4</b> Tugas</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html"><i class="fa fa-check"></i><b>6</b> Persentasi Tugas Akhir</a></li>
+<li class="chapter" data-level="6" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html"><i class="fa fa-check"></i><b>6</b> Persentasi Tugas Akhir</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#studi-kasus-e-commerce"><i class="fa fa-check"></i><b>6.1</b> Studi Kasus E-commerce</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="penutup.html"><a href="penutup.html"><i class="fa fa-check"></i><b>7</b> Penutup</a></li>
 <li><a href="section.html#section" id="toc-section"></a></li>
 <li class="chapter" data-level="" data-path="daftar-pustaka.html"><a href="daftar-pustaka.html"><i class="fa fa-check"></i>Daftar Pustaka</a></li>
@@ -511,11 +514,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb72-28"><a href="visualisasi-dashboard.html#cb72-28" tabindex="-1"></a>df3<span class="op">=</span>pd.read_sql(sql, engine)</span>
 <span id="cb72-29"><a href="visualisasi-dashboard.html#cb72-29" tabindex="-1"></a>df3</span></code></pre></div>
 <div class="sourceCode" id="cb73"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a href="visualisasi-dashboard.html#cb73-1" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
-<span id="cb73-2"><a href="visualisasi-dashboard.html#cb73-2" tabindex="-1"></a>df <span class="op">=</span> px.data.medals_long()</span>
-<span id="cb73-3"><a href="visualisasi-dashboard.html#cb73-3" tabindex="-1"></a></span>
-<span id="cb73-4"><a href="visualisasi-dashboard.html#cb73-4" tabindex="-1"></a>fig <span class="op">=</span> px.bar(df3, x<span class="op">=</span><span class="st">&quot;country&quot;</span>, </span>
-<span id="cb73-5"><a href="visualisasi-dashboard.html#cb73-5" tabindex="-1"></a>                  y<span class="op">=</span>[<span class="st">&quot;customers_count&quot;</span>,<span class="st">&quot;female&quot;</span>, <span class="st">&quot;male&quot;</span>], text_auto<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb73-6"><a href="visualisasi-dashboard.html#cb73-6" tabindex="-1"></a>fig.show()</span></code></pre></div>
+<span id="cb73-2"><a href="visualisasi-dashboard.html#cb73-2" tabindex="-1"></a>fig <span class="op">=</span> px.bar(df3, x<span class="op">=</span><span class="st">&quot;country&quot;</span>, </span>
+<span id="cb73-3"><a href="visualisasi-dashboard.html#cb73-3" tabindex="-1"></a>                  y<span class="op">=</span>[<span class="st">&quot;customers_count&quot;</span>,<span class="st">&quot;female&quot;</span>, <span class="st">&quot;male&quot;</span>], text_auto<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb73-4"><a href="visualisasi-dashboard.html#cb73-4" tabindex="-1"></a>fig.show()</span></code></pre></div>
 </div>
 <div id="soal-4" class="section level3 hasAnchor" number="5.3.4">
 <h3><span class="header-section-number">5.3.4</span> Soal 4<a href="visualisasi-dashboard.html#soal-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -581,7 +582,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="tugas" class="section level2 hasAnchor" number="5.4">
 <h2><span class="header-section-number">5.4</span> Tugas<a href="visualisasi-dashboard.html#tugas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Top 10 Merek &amp; kategori produk yang paling banyak dibatalkan dan dikembalikan.</p>
+<p>Top 10 Merek produk yang paling banyak dibatalkan dan dikembalikan.
+Top 10 kategori produk yang paling banyak dibatalkan dan dikembalikan.</p>
 
 </div>
 </div>

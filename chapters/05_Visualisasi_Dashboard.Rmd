@@ -210,8 +210,6 @@ df3
 
 ```{python, eval=F}
 import plotly.express as px
-df = px.data.medals_long()
-
 fig = px.bar(df3, x="country", 
                   y=["customers_count","female", "male"], text_auto=True)
 fig.show()
@@ -288,10 +286,13 @@ LIMIT 10
 pd.read_sql(sql, engine)
 ```
 
-
 ## Tugas
 
-Top 10 Merek & kategori produk yang paling banyak dibatalkan dan dikembalikan.
+Top 10 Merek produk yang paling banyak dibatalkan dan dikembalikan. 
+Top 10 kategori produk yang paling banyak dibatalkan dan dikembalikan. 
+
+
+
 
 
 

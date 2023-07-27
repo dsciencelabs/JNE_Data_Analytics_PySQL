@@ -117,4 +117,5 @@ soal-5
 soal-6
 tugas
 persentasi-tugas-akhir
+studi-kasus-e-commerce
 penutup

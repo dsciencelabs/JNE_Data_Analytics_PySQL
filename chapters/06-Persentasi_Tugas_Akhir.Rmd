@@ -1,14 +1,186 @@
 # Persentasi Tugas Akhir
 
+
+```{r include=FALSE}
+library(reticulate)
+library(Rcpp)
+# conda_list()
+use_condaenv("base", required = TRUE)
+```
+
+
 Pada pertemuan ini akan dilakukan evaluasi dan peninjauan ulang materi yang sudah dipelajara selama pelatihan Data Analytics with Python & SQL. Pertama-tama akan direview materi sebelumnya dengan simulasi studi kasus. 
 
-## Studi Kasus JNE_db 
+## Studi Kasus jne_db 
 
-Database `JNE_db` adalah database fiktif yang dikembangkan oleh dscienclabs. Kumpulan data tersebut berisi informasi tentang pelanggan, produk, pesanan, logistik, publikasi, dan kampanye pemasaran digital. Database ini digunakan dalam pelatihan kepada praktisi data di industri yang bertujuan untuk pemahaman analisis data, penemuan ide, pengembangan pengetahuan. Berikut ini adalah struktur database yang digunakan:
+Database `jne_db` adalah database fiktif yang dikembangkan oleh dscienclabs. Kumpulan data tersebut berisi informasi tentang pelanggan, produk, pesanan, logistik, kegiatan, dan kampanye pemasaran digital. Database ini digunakan dalam pelatihan kepada praktisi data di industri yang bertujuan untuk pemahaman analisis data, penemuan ide, pengembangan pengetahuan. Berikut ini adalah struktur database yang digunakan:
 
-<img align="middle" src="images/bab4/Hubungan-Antar-Tabel.png"  width = 100% />
+<img align="middle" src="images/diagram_database.jpg"  width = 100% />
 
-```{python}
 
+## Create Database 
+
+Pada bagian ini diperlihatkan koding Python dan sintaks PostgreSQL untuk membentuk database baru yang diberi nama `jne_db`.
+
+```{python, eval=F}
+# load modul yg diperlukan
+import psycopg2
+
+# buat koneksi python ke PostgreSQL (127.0.0.1 atau localhost)
+konek = psycopg2.connect(user='postgres', 
+                        password='123', 
+                        host='localhost', 
+                        port= '5432'
+)
+konek.autocommit = True
+
+# Eembuat kursor eksekutor 
+kursor = konek.cursor()
+
+# Kueri
+sql = '''CREATE DATABASE JNE_db''';
+
+#Creating a database
+kursor.execute(sql)
 ```
+
+
+## Import Data CSV
+
+Karena kita ingin membambahkan kumpulan data tabel ke database `jne_db` dari file CSV maka terlebih dahulu, dilakukan import data sebagai berikut:
+
+```{python, eval=F}
+import os
+os.chdir('C:/Users/user/Desktop/jne_db')
+```
+
+## Konversi Struktur Tabel
+
+Pada bagian ini, kita melakukan penyimpanan tabel yang telah diimport dari file CSV ke database PostgreSQL.
+
+
+```{python, eval=F}
+# import pandas lib as pd
+import pandas as pd
+
+# read by default 1st sheet of an excel file
+df1 = pd.read_csv('distribution_centers.csv',sep=';')
+
+df2 = pd.read_csv('events.csv',sep=',')
+df2['created_at'] = df2['created_at'].str.replace('UTC', '')
+df2['created_at'] = pd.to_datetime(df2['created_at'])
+
+df3 = pd.read_csv('inventory_items.csv',sep=',')
+cols = df3.columns[2:4]
+df3['created_at'] = df3['created_at'].str.replace('UTC', '')
+df3['sold_at'] = df3['sold_at'].str.replace('UTC', '')
+df3[cols] = df3[cols].apply(pd.to_datetime)
+
+df4 = pd.read_csv('order_items.csv',sep=',')
+df4['created_at'] = df4['created_at'].str.replace('UTC', '')
+df4['shipped_at'] = df4['shipped_at'].str.replace('UTC', '')
+df4['delivered_at'] = df4['delivered_at'].str.replace('UTC', '')
+df4['returned_at'] = df4['returned_at'].str.replace('UTC', '')
+cols = df4.columns[6:10]
+df4[cols] = df4[cols].apply(pd.to_datetime)
+
+df5 = pd.read_csv('orders.csv',sep=',')
+df5['created_at'] = df5['created_at'].str.replace('UTC', '')
+df5['shipped_at'] = df5['shipped_at'].str.replace('UTC', '')
+df5['delivered_at'] = df5['delivered_at'].str.replace('UTC', '')
+df5['returned_at'] = df5['returned_at'].str.replace('UTC', '')
+cols = df5.columns[4:8]
+df5[cols] = df5[cols].apply(pd.to_datetime)
+
+df6 = pd.read_csv('products.csv',sep=',')
+
+df7 = pd.read_csv('users.csv',sep=',')
+df7['created_at'] = df7['created_at'].str.replace('UTC', '')
+df7['created_at'] = pd.to_datetime(df7['created_at'])
+```
+
+## Simpan Tabel ke Database
+
+Pada bagian ini, kita melakukan penyimpanan tabel yang telah diimport dari file CSV ke database PostgreSQL.
+
+```{python, eval=F}
+import pandas as pd
+from sqlalchemy import create_engine
+import psycopg2
+from sqlalchemy import text
+engine = create_engine('postgresql://postgres:123@localhost:5432/jne_db')
+
+df1.to_sql("distribution_centers", engine)
+df2.to_sql("events", engine)
+df3.to_sql("inventory_items", engine)
+df4.to_sql("order_items", engine)
+df5.to_sql("orders", engine)
+df6.to_sql("products", engine)
+df7.to_sql("users", engine)
+```
+
+
+**Catatan:** Sebaiknya lakukan Import Data, Konversi,  dan Penyimpanan database menggunakan Jupterlab.
+
+## Contoh Soal
+
+Visualisasikan total order berdasarkan status!
+
+```{python,eval=F}
+query = '''SELECT date_trunc('MONTH', created_at) AS Month_Year, 
+           status, 
+           COUNT(DISTINCT user_id) as total_unique_users,
+           COUNT(DISTINCT order_id) as total_orders,
+           SUM(sale_price) as total_sale_price
+            FROM order_items
+              WHERE 
+              DATE(created_at) BETWEEN '2020-01-01' AND '2023-07-31'
+              GROUP BY 1,2
+              ORDER BY 1,2
+        '''
+
+df = pd.read_sql(query, engine)
+df 
+```
+
+```{python, eval=F}
+crosstb=pd.crosstab(df['month_year'], df['status'], df['total_orders'], aggfunc='sum')
+crosstb.head(5)
+```
+
+```{python, eval=F}
+import matplotlib.pyplot as plt
+import plotly.express as px
+fig1 = px.histogram(df, x="month_year", color="status",
+             y='total_orders',
+             title="Total Order Berdasarkan Status",
+             barmode='group',
+             height=500
+            )
+
+fig1.show()
+```
+
+Jika ditampilkan dengan Line-Char, sebagai berikut:
+
+```{python, eval=F}
+import matplotlib.pyplot as plt
+import plotly.express as px
+fig2 = px.line(df, x="month_year", color="status",
+             y='total_orders',
+             title="Total Order Berdasarkan Status",
+             height=200
+            )
+
+fig2.show()
+```
+
+
+
+
+
+
+
+
+
 

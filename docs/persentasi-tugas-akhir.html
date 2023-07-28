@@ -23,7 +23,7 @@
 <meta name="author" content="Bakti Siregar, M.Sc" />
 
 
-<meta name="date" content="2023-07-27" />
+<meta name="date" content="2023-07-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -321,7 +321,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html"><i class="fa fa-check"></i><b>6</b> Persentasi Tugas Akhir</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#studi-kasus-e-commerce"><i class="fa fa-check"></i><b>6.1</b> Studi Kasus E-commerce</a></li>
+<li class="chapter" data-level="6.1" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#studi-kasus-jne_db"><i class="fa fa-check"></i><b>6.1</b> Studi Kasus jne_db</a></li>
+<li class="chapter" data-level="6.2" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#create-database"><i class="fa fa-check"></i><b>6.2</b> Create Database</a></li>
+<li class="chapter" data-level="6.3" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#import-data-csv"><i class="fa fa-check"></i><b>6.3</b> Import Data CSV</a></li>
+<li class="chapter" data-level="6.4" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#konversi-struktur-tabel"><i class="fa fa-check"></i><b>6.4</b> Konversi Struktur Tabel</a></li>
+<li class="chapter" data-level="6.5" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#simpan-tabel-ke-database-1"><i class="fa fa-check"></i><b>6.5</b> Simpan Tabel ke Database</a></li>
+<li class="chapter" data-level="6.6" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#contoh-soal"><i class="fa fa-check"></i><b>6.6</b> Contoh Soal</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="penutup.html"><a href="penutup.html"><i class="fa fa-check"></i><b>7</b> Penutup</a></li>
 <li><a href="section.html#section" id="toc-section"></a></li>
@@ -349,8 +354,138 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="persentasi-tugas-akhir" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">Bab 6</span> Persentasi Tugas Akhir<a href="persentasi-tugas-akhir.html#persentasi-tugas-akhir" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Pada pertemuan ini akan dilakukan evaluasi dan peninjauan ulang materi yang sudah dipelajara selama pelatihan Data Analytics with Python &amp; SQL. Pertama-tama akan direview materi sebelumnya dengan simulasi studi kasus.</p>
-<div id="studi-kasus-e-commerce" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Studi Kasus E-commerce<a href="persentasi-tugas-akhir.html#studi-kasus-e-commerce" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="studi-kasus-jne_db" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Studi Kasus jne_db<a href="persentasi-tugas-akhir.html#studi-kasus-jne_db" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Database <code>jne_db</code> adalah database fiktif yang dikembangkan oleh dscienclabs. Kumpulan data tersebut berisi informasi tentang pelanggan, produk, pesanan, logistik, kegiatan, dan kampanye pemasaran digital. Database ini digunakan dalam pelatihan kepada praktisi data di industri yang bertujuan untuk pemahaman analisis data, penemuan ide, pengembangan pengetahuan. Berikut ini adalah struktur database yang digunakan:</p>
+<p><img align="middle" src="images/diagram_database.jpg"  width = 100% /></p>
+</div>
+<div id="create-database" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Create Database<a href="persentasi-tugas-akhir.html#create-database" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Pada bagian ini diperlihatkan koding Python dan sintaks PostgreSQL untuk membentuk database baru yang diberi nama <code>jne_db</code>.</p>
+<div class="sourceCode" id="cb77"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb77-1"><a href="persentasi-tugas-akhir.html#cb77-1" tabindex="-1"></a><span class="co"># load modul yg diperlukan</span></span>
+<span id="cb77-2"><a href="persentasi-tugas-akhir.html#cb77-2" tabindex="-1"></a><span class="im">import</span> psycopg2</span>
+<span id="cb77-3"><a href="persentasi-tugas-akhir.html#cb77-3" tabindex="-1"></a></span>
+<span id="cb77-4"><a href="persentasi-tugas-akhir.html#cb77-4" tabindex="-1"></a><span class="co"># buat koneksi python ke PostgreSQL (127.0.0.1 atau localhost)</span></span>
+<span id="cb77-5"><a href="persentasi-tugas-akhir.html#cb77-5" tabindex="-1"></a>konek <span class="op">=</span> psycopg2.<span class="ex">connect</span>(user<span class="op">=</span><span class="st">&#39;postgres&#39;</span>, </span>
+<span id="cb77-6"><a href="persentasi-tugas-akhir.html#cb77-6" tabindex="-1"></a>                        password<span class="op">=</span><span class="st">&#39;123&#39;</span>, </span>
+<span id="cb77-7"><a href="persentasi-tugas-akhir.html#cb77-7" tabindex="-1"></a>                        host<span class="op">=</span><span class="st">&#39;localhost&#39;</span>, </span>
+<span id="cb77-8"><a href="persentasi-tugas-akhir.html#cb77-8" tabindex="-1"></a>                        port<span class="op">=</span> <span class="st">&#39;5432&#39;</span></span>
+<span id="cb77-9"><a href="persentasi-tugas-akhir.html#cb77-9" tabindex="-1"></a>)</span>
+<span id="cb77-10"><a href="persentasi-tugas-akhir.html#cb77-10" tabindex="-1"></a>konek.autocommit <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb77-11"><a href="persentasi-tugas-akhir.html#cb77-11" tabindex="-1"></a></span>
+<span id="cb77-12"><a href="persentasi-tugas-akhir.html#cb77-12" tabindex="-1"></a><span class="co"># Eembuat kursor eksekutor </span></span>
+<span id="cb77-13"><a href="persentasi-tugas-akhir.html#cb77-13" tabindex="-1"></a>kursor <span class="op">=</span> konek.cursor()</span>
+<span id="cb77-14"><a href="persentasi-tugas-akhir.html#cb77-14" tabindex="-1"></a></span>
+<span id="cb77-15"><a href="persentasi-tugas-akhir.html#cb77-15" tabindex="-1"></a><span class="co"># Kueri</span></span>
+<span id="cb77-16"><a href="persentasi-tugas-akhir.html#cb77-16" tabindex="-1"></a>sql <span class="op">=</span> <span class="st">&#39;&#39;&#39;CREATE DATABASE JNE_db&#39;&#39;&#39;</span><span class="op">;</span></span>
+<span id="cb77-17"><a href="persentasi-tugas-akhir.html#cb77-17" tabindex="-1"></a></span>
+<span id="cb77-18"><a href="persentasi-tugas-akhir.html#cb77-18" tabindex="-1"></a><span class="co">#Creating a database</span></span>
+<span id="cb77-19"><a href="persentasi-tugas-akhir.html#cb77-19" tabindex="-1"></a>kursor.execute(sql)</span></code></pre></div>
+</div>
+<div id="import-data-csv" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Import Data CSV<a href="persentasi-tugas-akhir.html#import-data-csv" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Karena kita ingin membambahkan kumpulan data tabel ke database <code>jne_db</code> dari file CSV maka terlebih dahulu, dilakukan import data sebagai berikut:</p>
+<div class="sourceCode" id="cb78"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb78-1"><a href="persentasi-tugas-akhir.html#cb78-1" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb78-2"><a href="persentasi-tugas-akhir.html#cb78-2" tabindex="-1"></a>os.chdir(<span class="st">&#39;C:/Users/user/Desktop/jne_db&#39;</span>)</span></code></pre></div>
+</div>
+<div id="konversi-struktur-tabel" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Konversi Struktur Tabel<a href="persentasi-tugas-akhir.html#konversi-struktur-tabel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Pada bagian ini, kita melakukan penyimpanan tabel yang telah diimport dari file CSV ke database PostgreSQL.</p>
+<div class="sourceCode" id="cb79"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb79-1"><a href="persentasi-tugas-akhir.html#cb79-1" tabindex="-1"></a><span class="co"># import pandas lib as pd</span></span>
+<span id="cb79-2"><a href="persentasi-tugas-akhir.html#cb79-2" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb79-3"><a href="persentasi-tugas-akhir.html#cb79-3" tabindex="-1"></a></span>
+<span id="cb79-4"><a href="persentasi-tugas-akhir.html#cb79-4" tabindex="-1"></a><span class="co"># read by default 1st sheet of an excel file</span></span>
+<span id="cb79-5"><a href="persentasi-tugas-akhir.html#cb79-5" tabindex="-1"></a>df1 <span class="op">=</span> pd.read_csv(<span class="st">&#39;distribution_centers.csv&#39;</span>,sep<span class="op">=</span><span class="st">&#39;;&#39;</span>)</span>
+<span id="cb79-6"><a href="persentasi-tugas-akhir.html#cb79-6" tabindex="-1"></a></span>
+<span id="cb79-7"><a href="persentasi-tugas-akhir.html#cb79-7" tabindex="-1"></a>df2 <span class="op">=</span> pd.read_csv(<span class="st">&#39;events.csv&#39;</span>,sep<span class="op">=</span><span class="st">&#39;,&#39;</span>)</span>
+<span id="cb79-8"><a href="persentasi-tugas-akhir.html#cb79-8" tabindex="-1"></a>df2[<span class="st">&#39;created_at&#39;</span>] <span class="op">=</span> df2[<span class="st">&#39;created_at&#39;</span>].<span class="bu">str</span>.replace(<span class="st">&#39;UTC&#39;</span>, <span class="st">&#39;&#39;</span>)</span>
+<span id="cb79-9"><a href="persentasi-tugas-akhir.html#cb79-9" tabindex="-1"></a>df2[<span class="st">&#39;created_at&#39;</span>] <span class="op">=</span> pd.to_datetime(df2[<span class="st">&#39;created_at&#39;</span>])</span>
+<span id="cb79-10"><a href="persentasi-tugas-akhir.html#cb79-10" tabindex="-1"></a></span>
+<span id="cb79-11"><a href="persentasi-tugas-akhir.html#cb79-11" tabindex="-1"></a>df3 <span class="op">=</span> pd.read_csv(<span class="st">&#39;inventory_items.csv&#39;</span>,sep<span class="op">=</span><span class="st">&#39;,&#39;</span>)</span>
+<span id="cb79-12"><a href="persentasi-tugas-akhir.html#cb79-12" tabindex="-1"></a>cols <span class="op">=</span> df3.columns[<span class="dv">2</span>:<span class="dv">4</span>]</span>
+<span id="cb79-13"><a href="persentasi-tugas-akhir.html#cb79-13" tabindex="-1"></a>df3[<span class="st">&#39;created_at&#39;</span>] <span class="op">=</span> df3[<span class="st">&#39;created_at&#39;</span>].<span class="bu">str</span>.replace(<span class="st">&#39;UTC&#39;</span>, <span class="st">&#39;&#39;</span>)</span>
+<span id="cb79-14"><a href="persentasi-tugas-akhir.html#cb79-14" tabindex="-1"></a>df3[<span class="st">&#39;sold_at&#39;</span>] <span class="op">=</span> df3[<span class="st">&#39;sold_at&#39;</span>].<span class="bu">str</span>.replace(<span class="st">&#39;UTC&#39;</span>, <span class="st">&#39;&#39;</span>)</span>
+<span id="cb79-15"><a href="persentasi-tugas-akhir.html#cb79-15" tabindex="-1"></a>df3[cols] <span class="op">=</span> df3[cols].<span class="bu">apply</span>(pd.to_datetime)</span>
+<span id="cb79-16"><a href="persentasi-tugas-akhir.html#cb79-16" tabindex="-1"></a></span>
+<span id="cb79-17"><a href="persentasi-tugas-akhir.html#cb79-17" tabindex="-1"></a>df4 <span class="op">=</span> pd.read_csv(<span class="st">&#39;order_items.csv&#39;</span>,sep<span class="op">=</span><span class="st">&#39;,&#39;</span>)</span>
+<span id="cb79-18"><a href="persentasi-tugas-akhir.html#cb79-18" tabindex="-1"></a>df4[<span class="st">&#39;created_at&#39;</span>] <span class="op">=</span> df4[<span class="st">&#39;created_at&#39;</span>].<span class="bu">str</span>.replace(<span class="st">&#39;UTC&#39;</span>, <span class="st">&#39;&#39;</span>)</span>
+<span id="cb79-19"><a href="persentasi-tugas-akhir.html#cb79-19" tabindex="-1"></a>df4[<span class="st">&#39;shipped_at&#39;</span>] <span class="op">=</span> df4[<span class="st">&#39;shipped_at&#39;</span>].<span class="bu">str</span>.replace(<span class="st">&#39;UTC&#39;</span>, <span class="st">&#39;&#39;</span>)</span>
+<span id="cb79-20"><a href="persentasi-tugas-akhir.html#cb79-20" tabindex="-1"></a>df4[<span class="st">&#39;delivered_at&#39;</span>] <span class="op">=</span> df4[<span class="st">&#39;delivered_at&#39;</span>].<span class="bu">str</span>.replace(<span class="st">&#39;UTC&#39;</span>, <span class="st">&#39;&#39;</span>)</span>
+<span id="cb79-21"><a href="persentasi-tugas-akhir.html#cb79-21" tabindex="-1"></a>df4[<span class="st">&#39;returned_at&#39;</span>] <span class="op">=</span> df4[<span class="st">&#39;returned_at&#39;</span>].<span class="bu">str</span>.replace(<span class="st">&#39;UTC&#39;</span>, <span class="st">&#39;&#39;</span>)</span>
+<span id="cb79-22"><a href="persentasi-tugas-akhir.html#cb79-22" tabindex="-1"></a>cols <span class="op">=</span> df4.columns[<span class="dv">6</span>:<span class="dv">10</span>]</span>
+<span id="cb79-23"><a href="persentasi-tugas-akhir.html#cb79-23" tabindex="-1"></a>df4[cols] <span class="op">=</span> df4[cols].<span class="bu">apply</span>(pd.to_datetime)</span>
+<span id="cb79-24"><a href="persentasi-tugas-akhir.html#cb79-24" tabindex="-1"></a></span>
+<span id="cb79-25"><a href="persentasi-tugas-akhir.html#cb79-25" tabindex="-1"></a>df5 <span class="op">=</span> pd.read_csv(<span class="st">&#39;orders.csv&#39;</span>,sep<span class="op">=</span><span class="st">&#39;,&#39;</span>)</span>
+<span id="cb79-26"><a href="persentasi-tugas-akhir.html#cb79-26" tabindex="-1"></a>df5[<span class="st">&#39;created_at&#39;</span>] <span class="op">=</span> df5[<span class="st">&#39;created_at&#39;</span>].<span class="bu">str</span>.replace(<span class="st">&#39;UTC&#39;</span>, <span class="st">&#39;&#39;</span>)</span>
+<span id="cb79-27"><a href="persentasi-tugas-akhir.html#cb79-27" tabindex="-1"></a>df5[<span class="st">&#39;shipped_at&#39;</span>] <span class="op">=</span> df5[<span class="st">&#39;shipped_at&#39;</span>].<span class="bu">str</span>.replace(<span class="st">&#39;UTC&#39;</span>, <span class="st">&#39;&#39;</span>)</span>
+<span id="cb79-28"><a href="persentasi-tugas-akhir.html#cb79-28" tabindex="-1"></a>df5[<span class="st">&#39;delivered_at&#39;</span>] <span class="op">=</span> df5[<span class="st">&#39;delivered_at&#39;</span>].<span class="bu">str</span>.replace(<span class="st">&#39;UTC&#39;</span>, <span class="st">&#39;&#39;</span>)</span>
+<span id="cb79-29"><a href="persentasi-tugas-akhir.html#cb79-29" tabindex="-1"></a>df5[<span class="st">&#39;returned_at&#39;</span>] <span class="op">=</span> df5[<span class="st">&#39;returned_at&#39;</span>].<span class="bu">str</span>.replace(<span class="st">&#39;UTC&#39;</span>, <span class="st">&#39;&#39;</span>)</span>
+<span id="cb79-30"><a href="persentasi-tugas-akhir.html#cb79-30" tabindex="-1"></a>cols <span class="op">=</span> df5.columns[<span class="dv">4</span>:<span class="dv">8</span>]</span>
+<span id="cb79-31"><a href="persentasi-tugas-akhir.html#cb79-31" tabindex="-1"></a>df5[cols] <span class="op">=</span> df5[cols].<span class="bu">apply</span>(pd.to_datetime)</span>
+<span id="cb79-32"><a href="persentasi-tugas-akhir.html#cb79-32" tabindex="-1"></a></span>
+<span id="cb79-33"><a href="persentasi-tugas-akhir.html#cb79-33" tabindex="-1"></a>df6 <span class="op">=</span> pd.read_csv(<span class="st">&#39;products.csv&#39;</span>,sep<span class="op">=</span><span class="st">&#39;,&#39;</span>)</span>
+<span id="cb79-34"><a href="persentasi-tugas-akhir.html#cb79-34" tabindex="-1"></a></span>
+<span id="cb79-35"><a href="persentasi-tugas-akhir.html#cb79-35" tabindex="-1"></a>df7 <span class="op">=</span> pd.read_csv(<span class="st">&#39;users.csv&#39;</span>,sep<span class="op">=</span><span class="st">&#39;,&#39;</span>)</span>
+<span id="cb79-36"><a href="persentasi-tugas-akhir.html#cb79-36" tabindex="-1"></a>df7[<span class="st">&#39;created_at&#39;</span>] <span class="op">=</span> df7[<span class="st">&#39;created_at&#39;</span>].<span class="bu">str</span>.replace(<span class="st">&#39;UTC&#39;</span>, <span class="st">&#39;&#39;</span>)</span>
+<span id="cb79-37"><a href="persentasi-tugas-akhir.html#cb79-37" tabindex="-1"></a>df7[<span class="st">&#39;created_at&#39;</span>] <span class="op">=</span> pd.to_datetime(df7[<span class="st">&#39;created_at&#39;</span>])</span></code></pre></div>
+</div>
+<div id="simpan-tabel-ke-database-1" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Simpan Tabel ke Database<a href="persentasi-tugas-akhir.html#simpan-tabel-ke-database-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Pada bagian ini, kita melakukan penyimpanan tabel yang telah diimport dari file CSV ke database PostgreSQL.</p>
+<div class="sourceCode" id="cb80"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb80-1"><a href="persentasi-tugas-akhir.html#cb80-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb80-2"><a href="persentasi-tugas-akhir.html#cb80-2" tabindex="-1"></a><span class="im">from</span> sqlalchemy <span class="im">import</span> create_engine</span>
+<span id="cb80-3"><a href="persentasi-tugas-akhir.html#cb80-3" tabindex="-1"></a><span class="im">import</span> psycopg2</span>
+<span id="cb80-4"><a href="persentasi-tugas-akhir.html#cb80-4" tabindex="-1"></a><span class="im">from</span> sqlalchemy <span class="im">import</span> text</span>
+<span id="cb80-5"><a href="persentasi-tugas-akhir.html#cb80-5" tabindex="-1"></a>engine <span class="op">=</span> create_engine(<span class="st">&#39;postgresql://postgres:123@localhost:5432/jne_db&#39;</span>)</span>
+<span id="cb80-6"><a href="persentasi-tugas-akhir.html#cb80-6" tabindex="-1"></a></span>
+<span id="cb80-7"><a href="persentasi-tugas-akhir.html#cb80-7" tabindex="-1"></a>df1.to_sql(<span class="st">&quot;distribution_centers&quot;</span>, engine)</span>
+<span id="cb80-8"><a href="persentasi-tugas-akhir.html#cb80-8" tabindex="-1"></a>df2.to_sql(<span class="st">&quot;events&quot;</span>, engine)</span>
+<span id="cb80-9"><a href="persentasi-tugas-akhir.html#cb80-9" tabindex="-1"></a>df3.to_sql(<span class="st">&quot;inventory_items&quot;</span>, engine)</span>
+<span id="cb80-10"><a href="persentasi-tugas-akhir.html#cb80-10" tabindex="-1"></a>df4.to_sql(<span class="st">&quot;order_items&quot;</span>, engine)</span>
+<span id="cb80-11"><a href="persentasi-tugas-akhir.html#cb80-11" tabindex="-1"></a>df5.to_sql(<span class="st">&quot;orders&quot;</span>, engine)</span>
+<span id="cb80-12"><a href="persentasi-tugas-akhir.html#cb80-12" tabindex="-1"></a>df6.to_sql(<span class="st">&quot;products&quot;</span>, engine)</span>
+<span id="cb80-13"><a href="persentasi-tugas-akhir.html#cb80-13" tabindex="-1"></a>df7.to_sql(<span class="st">&quot;users&quot;</span>, engine)</span></code></pre></div>
+<p><strong>Catatan:</strong> Sebaiknya lakukan Import Data, Konversi, dan Penyimpanan database menggunakan Jupterlab.</p>
+</div>
+<div id="contoh-soal" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Contoh Soal<a href="persentasi-tugas-akhir.html#contoh-soal" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Visualisasikan total order berdasarkan status!</p>
+<div class="sourceCode" id="cb81"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb81-1"><a href="persentasi-tugas-akhir.html#cb81-1" tabindex="-1"></a>query <span class="op">=</span> <span class="st">&#39;&#39;&#39;SELECT date_trunc(&#39;MONTH&#39;, created_at) AS Month_Year, </span></span>
+<span id="cb81-2"><a href="persentasi-tugas-akhir.html#cb81-2" tabindex="-1"></a><span class="st">           status, </span></span>
+<span id="cb81-3"><a href="persentasi-tugas-akhir.html#cb81-3" tabindex="-1"></a><span class="st">           COUNT(DISTINCT user_id) as total_unique_users,</span></span>
+<span id="cb81-4"><a href="persentasi-tugas-akhir.html#cb81-4" tabindex="-1"></a><span class="st">           COUNT(DISTINCT order_id) as total_orders,</span></span>
+<span id="cb81-5"><a href="persentasi-tugas-akhir.html#cb81-5" tabindex="-1"></a><span class="st">           SUM(sale_price) as total_sale_price</span></span>
+<span id="cb81-6"><a href="persentasi-tugas-akhir.html#cb81-6" tabindex="-1"></a><span class="st">            FROM order_items</span></span>
+<span id="cb81-7"><a href="persentasi-tugas-akhir.html#cb81-7" tabindex="-1"></a><span class="st">              WHERE </span></span>
+<span id="cb81-8"><a href="persentasi-tugas-akhir.html#cb81-8" tabindex="-1"></a><span class="st">              DATE(created_at) BETWEEN &#39;2020-01-01&#39; AND &#39;2023-07-31&#39;</span></span>
+<span id="cb81-9"><a href="persentasi-tugas-akhir.html#cb81-9" tabindex="-1"></a><span class="st">              GROUP BY 1,2</span></span>
+<span id="cb81-10"><a href="persentasi-tugas-akhir.html#cb81-10" tabindex="-1"></a><span class="st">              ORDER BY 1,2</span></span>
+<span id="cb81-11"><a href="persentasi-tugas-akhir.html#cb81-11" tabindex="-1"></a><span class="st">        &#39;&#39;&#39;</span></span>
+<span id="cb81-12"><a href="persentasi-tugas-akhir.html#cb81-12" tabindex="-1"></a></span>
+<span id="cb81-13"><a href="persentasi-tugas-akhir.html#cb81-13" tabindex="-1"></a>df <span class="op">=</span> pd.read_sql(query, engine)</span>
+<span id="cb81-14"><a href="persentasi-tugas-akhir.html#cb81-14" tabindex="-1"></a>df </span></code></pre></div>
+<div class="sourceCode" id="cb82"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb82-1"><a href="persentasi-tugas-akhir.html#cb82-1" tabindex="-1"></a>crosstb<span class="op">=</span>pd.crosstab(df[<span class="st">&#39;month_year&#39;</span>], df[<span class="st">&#39;status&#39;</span>], df[<span class="st">&#39;total_orders&#39;</span>], aggfunc<span class="op">=</span><span class="st">&#39;sum&#39;</span>)</span>
+<span id="cb82-2"><a href="persentasi-tugas-akhir.html#cb82-2" tabindex="-1"></a>crosstb.head(<span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb83-1"><a href="persentasi-tugas-akhir.html#cb83-1" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb83-2"><a href="persentasi-tugas-akhir.html#cb83-2" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb83-3"><a href="persentasi-tugas-akhir.html#cb83-3" tabindex="-1"></a>fig1 <span class="op">=</span> px.histogram(df, x<span class="op">=</span><span class="st">&quot;month_year&quot;</span>, color<span class="op">=</span><span class="st">&quot;status&quot;</span>,</span>
+<span id="cb83-4"><a href="persentasi-tugas-akhir.html#cb83-4" tabindex="-1"></a>             y<span class="op">=</span><span class="st">&#39;total_orders&#39;</span>,</span>
+<span id="cb83-5"><a href="persentasi-tugas-akhir.html#cb83-5" tabindex="-1"></a>             title<span class="op">=</span><span class="st">&quot;Total Order Berdasarkan Status&quot;</span>,</span>
+<span id="cb83-6"><a href="persentasi-tugas-akhir.html#cb83-6" tabindex="-1"></a>             barmode<span class="op">=</span><span class="st">&#39;group&#39;</span>,</span>
+<span id="cb83-7"><a href="persentasi-tugas-akhir.html#cb83-7" tabindex="-1"></a>             height<span class="op">=</span><span class="dv">500</span></span>
+<span id="cb83-8"><a href="persentasi-tugas-akhir.html#cb83-8" tabindex="-1"></a>            )</span>
+<span id="cb83-9"><a href="persentasi-tugas-akhir.html#cb83-9" tabindex="-1"></a></span>
+<span id="cb83-10"><a href="persentasi-tugas-akhir.html#cb83-10" tabindex="-1"></a>fig1.show()</span></code></pre></div>
+<p>Jika ditampilkan dengan Line-Char, sebagai berikut:</p>
+<div class="sourceCode" id="cb84"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb84-1"><a href="persentasi-tugas-akhir.html#cb84-1" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb84-2"><a href="persentasi-tugas-akhir.html#cb84-2" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb84-3"><a href="persentasi-tugas-akhir.html#cb84-3" tabindex="-1"></a>fig2 <span class="op">=</span> px.line(df, x<span class="op">=</span><span class="st">&quot;month_year&quot;</span>, color<span class="op">=</span><span class="st">&quot;status&quot;</span>,</span>
+<span id="cb84-4"><a href="persentasi-tugas-akhir.html#cb84-4" tabindex="-1"></a>             y<span class="op">=</span><span class="st">&#39;total_orders&#39;</span>,</span>
+<span id="cb84-5"><a href="persentasi-tugas-akhir.html#cb84-5" tabindex="-1"></a>             title<span class="op">=</span><span class="st">&quot;Total Order Berdasarkan Status&quot;</span>,</span>
+<span id="cb84-6"><a href="persentasi-tugas-akhir.html#cb84-6" tabindex="-1"></a>             height<span class="op">=</span><span class="dv">200</span></span>
+<span id="cb84-7"><a href="persentasi-tugas-akhir.html#cb84-7" tabindex="-1"></a>            )</span>
+<span id="cb84-8"><a href="persentasi-tugas-akhir.html#cb84-8" tabindex="-1"></a></span>
+<span id="cb84-9"><a href="persentasi-tugas-akhir.html#cb84-9" tabindex="-1"></a>fig2.show()</span></code></pre></div>
 
 </div>
 </div>

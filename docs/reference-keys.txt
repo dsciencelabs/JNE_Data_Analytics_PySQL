@@ -117,5 +117,10 @@ soal-5
 soal-6
 tugas
 persentasi-tugas-akhir
-studi-kasus-e-commerce
+studi-kasus-jne_db
+create-database
+import-data-csv
+konversi-struktur-tabel
+simpan-tabel-ke-database-1
+contoh-soal
 penutup

@@ -125,4 +125,12 @@ simpan-tabel-ke-database-1
 contoh-soal-1
 contoh-soal-2
 contoh-soal-3
+contoh-soal-4
+contoh-soal-5
+contoh-soal-6
+contoh-soal-7
+contoh-soal-8
+ujian
+onsite
+take-home
 penutup

@@ -233,6 +233,182 @@ df
 ```
 
 
+## Contoh Soal 4
+
+Dalam laporan ini kamu akan melihat beberapa detail penjualan seperti: Total Transactions: Total nominal transaksi seluruh outlet(Dalam Rupiah) Total Transaction Count: Total jumlah transaksi si seluruh outlet. Total Outlet: Total jumlah outlet yang bertransaksi di akun tersebut.
+
+```{python, eval=F}
+with engine.begin() as conn:
+    query = text("""WITH
+total_profit AS (SELECT 
+    DATE(orders.shipped_at) AS order_date, 
+    products.category AS product_categories, 
+    SUM(sale_price-cost) AS profit
+  FROM products 
+  INNER JOIN order_items orders 
+  ON products.id = orders.product_id
+  WHERE status = 'Complete'
+    AND orders.created_at BETWEEN '2022-06-01'AND '2022-08-15'
+  GROUP BY 1,2
+  ORDER BY 2,1
+),
+MTD_table AS (SELECT order_date,
+   product_categories, 
+   profit,
+   SUM(profit) OVER(PARTITION BY product_categories, EXTRACT(MONTH FROM order_date) ORDER BY 2,1) 
+   AS MTD
+  FROM total_profit
+  ORDER BY 2,1
+)
+SELECT 
+  order_date, product_categories, round(MTD) AS MTD
+FROM MTD_table
+WHERE order_date BETWEEN '2022-06-01'AND '2022-08-15'
+  AND EXTRACT(DAY FROM order_date) = 15""")
+    df = pd.read_sql_query(query, conn)
+
+df
+
+```
+
+**Nb:**  Total Penjualan Month to Date (MTD)
+
+
+## Contoh Soal 5
+
+Persentasi perbandingan total inventori sebelum dan seudah
+
+```{python, eval=F}
+with engine.begin() as conn:
+    query = text("""WITH inventory AS
+(  SELECT 
+    date_trunc('month', created_at) AS Month_Year
+    , product_category AS categories
+    , COUNT(id) AS total_inventory
+  FROM inventory_items
+  WHERE created_at BETWEEN '2019-12-01' AND '2022-04-30'
+  GROUP BY 1,2 ) ,
+previous_inventory as 
+( SELECT *
+  , LAG (total_inventory) over (partition by inventory.categories order by date_trunc('month', Month_year)DESC,inventory.categories) AS total_prev_inv
+  FROM inventory )
+
+SELECT *, ROUND((total_inventory-total_prev_inv)/total_prev_inv*100) AS Growth
+FROM previous_inventory
+ORDER BY 1,2""")
+    df = pd.read_sql_query(query, conn)
+
+df
+```
+
+
+## Contoh Soal 6
+
+Menghitung jumlah revenue dan order item!
+
+```{python, eval=F}
+with engine.begin() as conn:
+    query = text("""SELECT 
+  DATE_TRUNC('month',oi.created_at) AS order_date,
+  SUM(oi.sale_price*o.num_of_item) AS revenue,
+  COUNT(DISTINCT oi.order_id) AS order_count,
+  COUNT(DISTINCT oi.user_id) AS customers_purchased
+FROM order_items AS oi
+LEFT JOIN orders AS o 
+ON oi.order_id = o.order_id
+WHERE oi.status NOT IN ('Cancelled','Returned')
+GROUP BY 1
+ORDER BY 1 DESC""")
+    df = pd.read_sql_query(query, conn)
+
+df
+```
+
+
+## Contoh Soal 7 
+
+Jumlah Pelanggan berdasarkan Negara, Pisahkan Berdasarkan Gender!
+
+```{python, eval=F}
+with engine.begin() as conn:
+    query = text("""WITH
+cust AS (
+  SELECT 
+    DISTINCT oi.user_id,
+    SUM(CASE WHEN u.gender = 'M' THEN 1 ELSE null END) AS male,
+    SUM(CASE WHEN u.gender = 'F' THEN 1 ELSE null END) AS female,
+    u.country AS country
+  FROM order_items AS oi
+  INNER JOIN users AS u  
+  ON oi.user_id = u.id
+  WHERE oi.status NOT IN ('Cancelled','Returned')
+  GROUP BY 1, 4
+)
+
+SELECT
+  c.country,
+  COUNT(DISTINCT c.user_id) AS customers_count,
+  COUNT(c.female) AS female,
+  COUNT(c.male) AS male
+FROM cust AS c
+GROUP BY 1
+ORDER BY 2 DESC""")
+    df = pd.read_sql_query(query, conn)
+
+df
+```
+
+
+## Contoh Soal 8
+
+Buatlah Visualisasi Jumlah Pelanggan berdasarkan Kategori 
+
+```{python, eval=F}
+with engine.begin() as conn:
+    query = text("""SELECT
+  CASE 
+    WHEN u.age <15 THEN 'Kids'
+    WHEN u.age BETWEEN 15 AND 24 THEN 'Teenager'
+    WHEN u.age BETWEEN 25 AND 50 THEN 'Adult'
+    WHEN u.age >50 THEN 'Eldery' END AS age_group,
+  COUNT(DISTINCT oi.user_id) total_customer
+FROM order_items oi
+LEFT JOIN users u
+ON oi.user_id = u.id
+WHERE oi.status NOT IN ('Cancelled','Returned')
+GROUP BY 1
+ORDER BY 2 DESC""")
+    df = pd.read_sql_query(query, conn)
+
+df
+```
+
+
+## Ujian 
+
+### Onsite
+
+* Hitunglah persentasi Status Pemesanan Produk menggunakan (Pie-chart)!
+* Total jumlah barang Terjual dengan Status Complete Setiap Tahunnya (Pie-chart)!
+* Total jumlah barang Terjual berdasarkan Kategori Produk (Bar-chart)!
+* Total Revenue Barang Terjual berdasarkan Kategori Produk (Bar-chart)!
+* Total Sale Price, Cost, dan Laba Kotor bulanan Multi Line-Chart!
+
+
+### Take Home
+
+* Buatlah Visualisasi Data Customer PEREMPUAN berdasarkan Negara dengan memperhatikan status "RETURNED" saja.
+* Visualisasi total orders complete pada tahun 2022
+* Bandingkan total order yang Complete dan Returned perbulan dalam satu grafik garis? 
+* Produk category apa yang memiliki penjualan tertinggi (revenue) pada setiap tahun (dibandingakan)? (2020-2023) dan Buatkan Visualisasi datanya!
+
+  **note:** status nya harus Complete,Shipped,Processing. Jangan masukan status yang Cancelled dan Returned 
+
+  **Hint :** sale_price pada `order_items` dikali dengan num_of_time pada `orders` untuk menentukan revenue jadi ada 3 tabel yang digunakan yaitu `products, orders,order_items`
+
+* Visualisasi Data Customers dengan berdasarkan Country menggunakan Pie Chart
+
+* Melihat Penjualan Tahunan berdasarkan status yang 'COMPLETE" berdasarkan profit dan reveneunya dengan menerapkannya pada visualisasi data.
 
 
 

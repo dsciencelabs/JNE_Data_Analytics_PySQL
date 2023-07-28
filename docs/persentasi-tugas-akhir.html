@@ -329,6 +329,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.6" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#contoh-soal-1"><i class="fa fa-check"></i><b>6.6</b> Contoh Soal 1</a></li>
 <li class="chapter" data-level="6.7" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#contoh-soal-2"><i class="fa fa-check"></i><b>6.7</b> Contoh Soal 2</a></li>
 <li class="chapter" data-level="6.8" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#contoh-soal-3"><i class="fa fa-check"></i><b>6.8</b> Contoh Soal 3</a></li>
+<li class="chapter" data-level="6.9" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#contoh-soal-4"><i class="fa fa-check"></i><b>6.9</b> Contoh Soal 4</a></li>
+<li class="chapter" data-level="6.10" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#contoh-soal-5"><i class="fa fa-check"></i><b>6.10</b> Contoh Soal 5</a></li>
+<li class="chapter" data-level="6.11" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#contoh-soal-6"><i class="fa fa-check"></i><b>6.11</b> Contoh Soal 6</a></li>
+<li class="chapter" data-level="6.12" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#contoh-soal-7"><i class="fa fa-check"></i><b>6.12</b> Contoh Soal 7</a></li>
+<li class="chapter" data-level="6.13" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#contoh-soal-8"><i class="fa fa-check"></i><b>6.13</b> Contoh Soal 8</a></li>
+<li class="chapter" data-level="6.14" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#ujian"><i class="fa fa-check"></i><b>6.14</b> Ujian</a>
+<ul>
+<li class="chapter" data-level="6.14.1" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#onsite"><i class="fa fa-check"></i><b>6.14.1</b> Onsite</a></li>
+<li class="chapter" data-level="6.14.2" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#take-home"><i class="fa fa-check"></i><b>6.14.2</b> Take Home</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="penutup.html"><a href="penutup.html"><i class="fa fa-check"></i><b>7</b> Penutup</a></li>
 <li><a href="section.html#section" id="toc-section"></a></li>
@@ -535,7 +545,162 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb86-20"><a href="persentasi-tugas-akhir.html#cb86-20" tabindex="-1"></a>    df <span class="op">=</span> pd.read_sql_query(query, conn)</span>
 <span id="cb86-21"><a href="persentasi-tugas-akhir.html#cb86-21" tabindex="-1"></a></span>
 <span id="cb86-22"><a href="persentasi-tugas-akhir.html#cb86-22" tabindex="-1"></a>df</span></code></pre></div>
+</div>
+<div id="contoh-soal-4" class="section level2 hasAnchor" number="6.9">
+<h2><span class="header-section-number">6.9</span> Contoh Soal 4<a href="persentasi-tugas-akhir.html#contoh-soal-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Dalam laporan ini kamu akan melihat beberapa detail penjualan seperti: Total Transactions: Total nominal transaksi seluruh outlet(Dalam Rupiah) Total Transaction Count: Total jumlah transaksi si seluruh outlet. Total Outlet: Total jumlah outlet yang bertransaksi di akun tersebut.</p>
+<div class="sourceCode" id="cb87"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb87-1"><a href="persentasi-tugas-akhir.html#cb87-1" tabindex="-1"></a><span class="cf">with</span> engine.begin() <span class="im">as</span> conn:</span>
+<span id="cb87-2"><a href="persentasi-tugas-akhir.html#cb87-2" tabindex="-1"></a>    query <span class="op">=</span> text(<span class="st">&quot;&quot;&quot;WITH</span></span>
+<span id="cb87-3"><a href="persentasi-tugas-akhir.html#cb87-3" tabindex="-1"></a><span class="st">total_profit AS (SELECT </span></span>
+<span id="cb87-4"><a href="persentasi-tugas-akhir.html#cb87-4" tabindex="-1"></a><span class="st">    DATE(orders.shipped_at) AS order_date, </span></span>
+<span id="cb87-5"><a href="persentasi-tugas-akhir.html#cb87-5" tabindex="-1"></a><span class="st">    products.category AS product_categories, </span></span>
+<span id="cb87-6"><a href="persentasi-tugas-akhir.html#cb87-6" tabindex="-1"></a><span class="st">    SUM(sale_price-cost) AS profit</span></span>
+<span id="cb87-7"><a href="persentasi-tugas-akhir.html#cb87-7" tabindex="-1"></a><span class="st">  FROM products </span></span>
+<span id="cb87-8"><a href="persentasi-tugas-akhir.html#cb87-8" tabindex="-1"></a><span class="st">  INNER JOIN order_items orders </span></span>
+<span id="cb87-9"><a href="persentasi-tugas-akhir.html#cb87-9" tabindex="-1"></a><span class="st">  ON products.id = orders.product_id</span></span>
+<span id="cb87-10"><a href="persentasi-tugas-akhir.html#cb87-10" tabindex="-1"></a><span class="st">  WHERE status = &#39;Complete&#39;</span></span>
+<span id="cb87-11"><a href="persentasi-tugas-akhir.html#cb87-11" tabindex="-1"></a><span class="st">    AND orders.created_at BETWEEN &#39;2022-06-01&#39;AND &#39;2022-08-15&#39;</span></span>
+<span id="cb87-12"><a href="persentasi-tugas-akhir.html#cb87-12" tabindex="-1"></a><span class="st">  GROUP BY 1,2</span></span>
+<span id="cb87-13"><a href="persentasi-tugas-akhir.html#cb87-13" tabindex="-1"></a><span class="st">  ORDER BY 2,1</span></span>
+<span id="cb87-14"><a href="persentasi-tugas-akhir.html#cb87-14" tabindex="-1"></a><span class="st">),</span></span>
+<span id="cb87-15"><a href="persentasi-tugas-akhir.html#cb87-15" tabindex="-1"></a><span class="st">MTD_table AS (SELECT order_date,</span></span>
+<span id="cb87-16"><a href="persentasi-tugas-akhir.html#cb87-16" tabindex="-1"></a><span class="st">   product_categories, </span></span>
+<span id="cb87-17"><a href="persentasi-tugas-akhir.html#cb87-17" tabindex="-1"></a><span class="st">   profit,</span></span>
+<span id="cb87-18"><a href="persentasi-tugas-akhir.html#cb87-18" tabindex="-1"></a><span class="st">   SUM(profit) OVER(PARTITION BY product_categories, EXTRACT(MONTH FROM order_date) ORDER BY 2,1) </span></span>
+<span id="cb87-19"><a href="persentasi-tugas-akhir.html#cb87-19" tabindex="-1"></a><span class="st">   AS MTD</span></span>
+<span id="cb87-20"><a href="persentasi-tugas-akhir.html#cb87-20" tabindex="-1"></a><span class="st">  FROM total_profit</span></span>
+<span id="cb87-21"><a href="persentasi-tugas-akhir.html#cb87-21" tabindex="-1"></a><span class="st">  ORDER BY 2,1</span></span>
+<span id="cb87-22"><a href="persentasi-tugas-akhir.html#cb87-22" tabindex="-1"></a><span class="st">)</span></span>
+<span id="cb87-23"><a href="persentasi-tugas-akhir.html#cb87-23" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb87-24"><a href="persentasi-tugas-akhir.html#cb87-24" tabindex="-1"></a><span class="st">  order_date, product_categories, round(MTD) AS MTD</span></span>
+<span id="cb87-25"><a href="persentasi-tugas-akhir.html#cb87-25" tabindex="-1"></a><span class="st">FROM MTD_table</span></span>
+<span id="cb87-26"><a href="persentasi-tugas-akhir.html#cb87-26" tabindex="-1"></a><span class="st">WHERE order_date BETWEEN &#39;2022-06-01&#39;AND &#39;2022-08-15&#39;</span></span>
+<span id="cb87-27"><a href="persentasi-tugas-akhir.html#cb87-27" tabindex="-1"></a><span class="st">  AND EXTRACT(DAY FROM order_date) = 15&quot;&quot;&quot;</span>)</span>
+<span id="cb87-28"><a href="persentasi-tugas-akhir.html#cb87-28" tabindex="-1"></a>    df <span class="op">=</span> pd.read_sql_query(query, conn)</span>
+<span id="cb87-29"><a href="persentasi-tugas-akhir.html#cb87-29" tabindex="-1"></a></span>
+<span id="cb87-30"><a href="persentasi-tugas-akhir.html#cb87-30" tabindex="-1"></a>df</span></code></pre></div>
+<p><strong>Nb:</strong> Total Penjualan Month to Date (MTD)</p>
+</div>
+<div id="contoh-soal-5" class="section level2 hasAnchor" number="6.10">
+<h2><span class="header-section-number">6.10</span> Contoh Soal 5<a href="persentasi-tugas-akhir.html#contoh-soal-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Persentasi perbandingan total inventori sebelum dan seudah</p>
+<div class="sourceCode" id="cb88"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb88-1"><a href="persentasi-tugas-akhir.html#cb88-1" tabindex="-1"></a><span class="cf">with</span> engine.begin() <span class="im">as</span> conn:</span>
+<span id="cb88-2"><a href="persentasi-tugas-akhir.html#cb88-2" tabindex="-1"></a>    query <span class="op">=</span> text(<span class="st">&quot;&quot;&quot;WITH inventory AS</span></span>
+<span id="cb88-3"><a href="persentasi-tugas-akhir.html#cb88-3" tabindex="-1"></a><span class="st">(  SELECT </span></span>
+<span id="cb88-4"><a href="persentasi-tugas-akhir.html#cb88-4" tabindex="-1"></a><span class="st">    date_trunc(&#39;month&#39;, created_at) AS Month_Year</span></span>
+<span id="cb88-5"><a href="persentasi-tugas-akhir.html#cb88-5" tabindex="-1"></a><span class="st">    , product_category AS categories</span></span>
+<span id="cb88-6"><a href="persentasi-tugas-akhir.html#cb88-6" tabindex="-1"></a><span class="st">    , COUNT(id) AS total_inventory</span></span>
+<span id="cb88-7"><a href="persentasi-tugas-akhir.html#cb88-7" tabindex="-1"></a><span class="st">  FROM inventory_items</span></span>
+<span id="cb88-8"><a href="persentasi-tugas-akhir.html#cb88-8" tabindex="-1"></a><span class="st">  WHERE created_at BETWEEN &#39;2019-12-01&#39; AND &#39;2022-04-30&#39;</span></span>
+<span id="cb88-9"><a href="persentasi-tugas-akhir.html#cb88-9" tabindex="-1"></a><span class="st">  GROUP BY 1,2 ) ,</span></span>
+<span id="cb88-10"><a href="persentasi-tugas-akhir.html#cb88-10" tabindex="-1"></a><span class="st">previous_inventory as </span></span>
+<span id="cb88-11"><a href="persentasi-tugas-akhir.html#cb88-11" tabindex="-1"></a><span class="st">( SELECT *</span></span>
+<span id="cb88-12"><a href="persentasi-tugas-akhir.html#cb88-12" tabindex="-1"></a><span class="st">  , LAG (total_inventory) over (partition by inventory.categories order by date_trunc(&#39;month&#39;, Month_year)DESC,inventory.categories) AS total_prev_inv</span></span>
+<span id="cb88-13"><a href="persentasi-tugas-akhir.html#cb88-13" tabindex="-1"></a><span class="st">  FROM inventory )</span></span>
+<span id="cb88-14"><a href="persentasi-tugas-akhir.html#cb88-14" tabindex="-1"></a></span>
+<span id="cb88-15"><a href="persentasi-tugas-akhir.html#cb88-15" tabindex="-1"></a><span class="st">SELECT *, ROUND((total_inventory-total_prev_inv)/total_prev_inv*100) AS Growth</span></span>
+<span id="cb88-16"><a href="persentasi-tugas-akhir.html#cb88-16" tabindex="-1"></a><span class="st">FROM previous_inventory</span></span>
+<span id="cb88-17"><a href="persentasi-tugas-akhir.html#cb88-17" tabindex="-1"></a><span class="st">ORDER BY 1,2&quot;&quot;&quot;</span>)</span>
+<span id="cb88-18"><a href="persentasi-tugas-akhir.html#cb88-18" tabindex="-1"></a>    df <span class="op">=</span> pd.read_sql_query(query, conn)</span>
+<span id="cb88-19"><a href="persentasi-tugas-akhir.html#cb88-19" tabindex="-1"></a></span>
+<span id="cb88-20"><a href="persentasi-tugas-akhir.html#cb88-20" tabindex="-1"></a>df</span></code></pre></div>
+</div>
+<div id="contoh-soal-6" class="section level2 hasAnchor" number="6.11">
+<h2><span class="header-section-number">6.11</span> Contoh Soal 6<a href="persentasi-tugas-akhir.html#contoh-soal-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Menghitung jumlah revenue dan order item!</p>
+<div class="sourceCode" id="cb89"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb89-1"><a href="persentasi-tugas-akhir.html#cb89-1" tabindex="-1"></a><span class="cf">with</span> engine.begin() <span class="im">as</span> conn:</span>
+<span id="cb89-2"><a href="persentasi-tugas-akhir.html#cb89-2" tabindex="-1"></a>    query <span class="op">=</span> text(<span class="st">&quot;&quot;&quot;SELECT </span></span>
+<span id="cb89-3"><a href="persentasi-tugas-akhir.html#cb89-3" tabindex="-1"></a><span class="st">  DATE_TRUNC(&#39;month&#39;,oi.created_at) AS order_date,</span></span>
+<span id="cb89-4"><a href="persentasi-tugas-akhir.html#cb89-4" tabindex="-1"></a><span class="st">  SUM(oi.sale_price*o.num_of_item) AS revenue,</span></span>
+<span id="cb89-5"><a href="persentasi-tugas-akhir.html#cb89-5" tabindex="-1"></a><span class="st">  COUNT(DISTINCT oi.order_id) AS order_count,</span></span>
+<span id="cb89-6"><a href="persentasi-tugas-akhir.html#cb89-6" tabindex="-1"></a><span class="st">  COUNT(DISTINCT oi.user_id) AS customers_purchased</span></span>
+<span id="cb89-7"><a href="persentasi-tugas-akhir.html#cb89-7" tabindex="-1"></a><span class="st">FROM order_items AS oi</span></span>
+<span id="cb89-8"><a href="persentasi-tugas-akhir.html#cb89-8" tabindex="-1"></a><span class="st">LEFT JOIN orders AS o </span></span>
+<span id="cb89-9"><a href="persentasi-tugas-akhir.html#cb89-9" tabindex="-1"></a><span class="st">ON oi.order_id = o.order_id</span></span>
+<span id="cb89-10"><a href="persentasi-tugas-akhir.html#cb89-10" tabindex="-1"></a><span class="st">WHERE oi.status NOT IN (&#39;Cancelled&#39;,&#39;Returned&#39;)</span></span>
+<span id="cb89-11"><a href="persentasi-tugas-akhir.html#cb89-11" tabindex="-1"></a><span class="st">GROUP BY 1</span></span>
+<span id="cb89-12"><a href="persentasi-tugas-akhir.html#cb89-12" tabindex="-1"></a><span class="st">ORDER BY 1 DESC&quot;&quot;&quot;</span>)</span>
+<span id="cb89-13"><a href="persentasi-tugas-akhir.html#cb89-13" tabindex="-1"></a>    df <span class="op">=</span> pd.read_sql_query(query, conn)</span>
+<span id="cb89-14"><a href="persentasi-tugas-akhir.html#cb89-14" tabindex="-1"></a></span>
+<span id="cb89-15"><a href="persentasi-tugas-akhir.html#cb89-15" tabindex="-1"></a>df</span></code></pre></div>
+</div>
+<div id="contoh-soal-7" class="section level2 hasAnchor" number="6.12">
+<h2><span class="header-section-number">6.12</span> Contoh Soal 7<a href="persentasi-tugas-akhir.html#contoh-soal-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Jumlah Pelanggan berdasarkan Negara, Pisahkan Berdasarkan Gender!</p>
+<div class="sourceCode" id="cb90"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb90-1"><a href="persentasi-tugas-akhir.html#cb90-1" tabindex="-1"></a><span class="cf">with</span> engine.begin() <span class="im">as</span> conn:</span>
+<span id="cb90-2"><a href="persentasi-tugas-akhir.html#cb90-2" tabindex="-1"></a>    query <span class="op">=</span> text(<span class="st">&quot;&quot;&quot;WITH</span></span>
+<span id="cb90-3"><a href="persentasi-tugas-akhir.html#cb90-3" tabindex="-1"></a><span class="st">cust AS (</span></span>
+<span id="cb90-4"><a href="persentasi-tugas-akhir.html#cb90-4" tabindex="-1"></a><span class="st">  SELECT </span></span>
+<span id="cb90-5"><a href="persentasi-tugas-akhir.html#cb90-5" tabindex="-1"></a><span class="st">    DISTINCT oi.user_id,</span></span>
+<span id="cb90-6"><a href="persentasi-tugas-akhir.html#cb90-6" tabindex="-1"></a><span class="st">    SUM(CASE WHEN u.gender = &#39;M&#39; THEN 1 ELSE null END) AS male,</span></span>
+<span id="cb90-7"><a href="persentasi-tugas-akhir.html#cb90-7" tabindex="-1"></a><span class="st">    SUM(CASE WHEN u.gender = &#39;F&#39; THEN 1 ELSE null END) AS female,</span></span>
+<span id="cb90-8"><a href="persentasi-tugas-akhir.html#cb90-8" tabindex="-1"></a><span class="st">    u.country AS country</span></span>
+<span id="cb90-9"><a href="persentasi-tugas-akhir.html#cb90-9" tabindex="-1"></a><span class="st">  FROM order_items AS oi</span></span>
+<span id="cb90-10"><a href="persentasi-tugas-akhir.html#cb90-10" tabindex="-1"></a><span class="st">  INNER JOIN users AS u  </span></span>
+<span id="cb90-11"><a href="persentasi-tugas-akhir.html#cb90-11" tabindex="-1"></a><span class="st">  ON oi.user_id = u.id</span></span>
+<span id="cb90-12"><a href="persentasi-tugas-akhir.html#cb90-12" tabindex="-1"></a><span class="st">  WHERE oi.status NOT IN (&#39;Cancelled&#39;,&#39;Returned&#39;)</span></span>
+<span id="cb90-13"><a href="persentasi-tugas-akhir.html#cb90-13" tabindex="-1"></a><span class="st">  GROUP BY 1, 4</span></span>
+<span id="cb90-14"><a href="persentasi-tugas-akhir.html#cb90-14" tabindex="-1"></a><span class="st">)</span></span>
+<span id="cb90-15"><a href="persentasi-tugas-akhir.html#cb90-15" tabindex="-1"></a></span>
+<span id="cb90-16"><a href="persentasi-tugas-akhir.html#cb90-16" tabindex="-1"></a><span class="st">SELECT</span></span>
+<span id="cb90-17"><a href="persentasi-tugas-akhir.html#cb90-17" tabindex="-1"></a><span class="st">  c.country,</span></span>
+<span id="cb90-18"><a href="persentasi-tugas-akhir.html#cb90-18" tabindex="-1"></a><span class="st">  COUNT(DISTINCT c.user_id) AS customers_count,</span></span>
+<span id="cb90-19"><a href="persentasi-tugas-akhir.html#cb90-19" tabindex="-1"></a><span class="st">  COUNT(c.female) AS female,</span></span>
+<span id="cb90-20"><a href="persentasi-tugas-akhir.html#cb90-20" tabindex="-1"></a><span class="st">  COUNT(c.male) AS male</span></span>
+<span id="cb90-21"><a href="persentasi-tugas-akhir.html#cb90-21" tabindex="-1"></a><span class="st">FROM cust AS c</span></span>
+<span id="cb90-22"><a href="persentasi-tugas-akhir.html#cb90-22" tabindex="-1"></a><span class="st">GROUP BY 1</span></span>
+<span id="cb90-23"><a href="persentasi-tugas-akhir.html#cb90-23" tabindex="-1"></a><span class="st">ORDER BY 2 DESC&quot;&quot;&quot;</span>)</span>
+<span id="cb90-24"><a href="persentasi-tugas-akhir.html#cb90-24" tabindex="-1"></a>    df <span class="op">=</span> pd.read_sql_query(query, conn)</span>
+<span id="cb90-25"><a href="persentasi-tugas-akhir.html#cb90-25" tabindex="-1"></a></span>
+<span id="cb90-26"><a href="persentasi-tugas-akhir.html#cb90-26" tabindex="-1"></a>df</span></code></pre></div>
+</div>
+<div id="contoh-soal-8" class="section level2 hasAnchor" number="6.13">
+<h2><span class="header-section-number">6.13</span> Contoh Soal 8<a href="persentasi-tugas-akhir.html#contoh-soal-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Buatlah Visualisasi Jumlah Pelanggan berdasarkan Kategori</p>
+<div class="sourceCode" id="cb91"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb91-1"><a href="persentasi-tugas-akhir.html#cb91-1" tabindex="-1"></a><span class="cf">with</span> engine.begin() <span class="im">as</span> conn:</span>
+<span id="cb91-2"><a href="persentasi-tugas-akhir.html#cb91-2" tabindex="-1"></a>    query <span class="op">=</span> text(<span class="st">&quot;&quot;&quot;SELECT</span></span>
+<span id="cb91-3"><a href="persentasi-tugas-akhir.html#cb91-3" tabindex="-1"></a><span class="st">  CASE </span></span>
+<span id="cb91-4"><a href="persentasi-tugas-akhir.html#cb91-4" tabindex="-1"></a><span class="st">    WHEN u.age &lt;15 THEN &#39;Kids&#39;</span></span>
+<span id="cb91-5"><a href="persentasi-tugas-akhir.html#cb91-5" tabindex="-1"></a><span class="st">    WHEN u.age BETWEEN 15 AND 24 THEN &#39;Teenager&#39;</span></span>
+<span id="cb91-6"><a href="persentasi-tugas-akhir.html#cb91-6" tabindex="-1"></a><span class="st">    WHEN u.age BETWEEN 25 AND 50 THEN &#39;Adult&#39;</span></span>
+<span id="cb91-7"><a href="persentasi-tugas-akhir.html#cb91-7" tabindex="-1"></a><span class="st">    WHEN u.age &gt;50 THEN &#39;Eldery&#39; END AS age_group,</span></span>
+<span id="cb91-8"><a href="persentasi-tugas-akhir.html#cb91-8" tabindex="-1"></a><span class="st">  COUNT(DISTINCT oi.user_id) total_customer</span></span>
+<span id="cb91-9"><a href="persentasi-tugas-akhir.html#cb91-9" tabindex="-1"></a><span class="st">FROM order_items oi</span></span>
+<span id="cb91-10"><a href="persentasi-tugas-akhir.html#cb91-10" tabindex="-1"></a><span class="st">LEFT JOIN users u</span></span>
+<span id="cb91-11"><a href="persentasi-tugas-akhir.html#cb91-11" tabindex="-1"></a><span class="st">ON oi.user_id = u.id</span></span>
+<span id="cb91-12"><a href="persentasi-tugas-akhir.html#cb91-12" tabindex="-1"></a><span class="st">WHERE oi.status NOT IN (&#39;Cancelled&#39;,&#39;Returned&#39;)</span></span>
+<span id="cb91-13"><a href="persentasi-tugas-akhir.html#cb91-13" tabindex="-1"></a><span class="st">GROUP BY 1</span></span>
+<span id="cb91-14"><a href="persentasi-tugas-akhir.html#cb91-14" tabindex="-1"></a><span class="st">ORDER BY 2 DESC&quot;&quot;&quot;</span>)</span>
+<span id="cb91-15"><a href="persentasi-tugas-akhir.html#cb91-15" tabindex="-1"></a>    df <span class="op">=</span> pd.read_sql_query(query, conn)</span>
+<span id="cb91-16"><a href="persentasi-tugas-akhir.html#cb91-16" tabindex="-1"></a></span>
+<span id="cb91-17"><a href="persentasi-tugas-akhir.html#cb91-17" tabindex="-1"></a>df</span></code></pre></div>
+</div>
+<div id="ujian" class="section level2 hasAnchor" number="6.14">
+<h2><span class="header-section-number">6.14</span> Ujian<a href="persentasi-tugas-akhir.html#ujian" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="onsite" class="section level3 hasAnchor" number="6.14.1">
+<h3><span class="header-section-number">6.14.1</span> Onsite<a href="persentasi-tugas-akhir.html#onsite" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Hitunglah persentasi Status Pemesanan Produk menggunakan (Pie-chart)!</li>
+<li>Total jumlah barang Terjual dengan Status Complete Setiap Tahunnya (Pie-chart)!</li>
+<li>Total jumlah barang Terjual berdasarkan Kategori Produk (Bar-chart)!</li>
+<li>Total Revenue Barang Terjual berdasarkan Kategori Produk (Bar-chart)!</li>
+<li>Total Sale Price, Cost, dan Laba Kotor bulanan Multi Line-Chart!</li>
+</ul>
+</div>
+<div id="take-home" class="section level3 hasAnchor" number="6.14.2">
+<h3><span class="header-section-number">6.14.2</span> Take Home<a href="persentasi-tugas-akhir.html#take-home" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Buatlah Visualisasi Data Customer PEREMPUAN berdasarkan Negara dengan memperhatikan status “RETURNED” saja.</p></li>
+<li><p>Visualisasi total orders complete pada tahun 2022</p></li>
+<li><p>Bandingkan total order yang Complete dan Returned perbulan dalam satu grafik garis?</p></li>
+<li><p>Produk category apa yang memiliki penjualan tertinggi (revenue) pada setiap tahun (dibandingakan)? (2020-2023) dan Buatkan Visualisasi datanya!</p>
+<p><strong>note:</strong> status nya harus Complete,Shipped,Processing. Jangan masukan status yang Cancelled dan Returned</p>
+<p><strong>Hint :</strong> sale_price pada <code>order_items</code> dikali dengan num_of_time pada <code>orders</code> untuk menentukan revenue jadi ada 3 tabel yang digunakan yaitu <code>products, orders,order_items</code></p></li>
+<li><p>Visualisasi Data Customers dengan berdasarkan Country menggunakan Pie Chart</p></li>
+<li><p>Melihat Penjualan Tahunan berdasarkan status yang ’COMPLETE” berdasarkan profit dan reveneunya dengan menerapkannya pada visualisasi data.</p></li>
+</ul>
 
+</div>
 </div>
 </div>
             </section>

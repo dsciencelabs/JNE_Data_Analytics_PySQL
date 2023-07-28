@@ -326,7 +326,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.3" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#import-data-csv"><i class="fa fa-check"></i><b>6.3</b> Import Data CSV</a></li>
 <li class="chapter" data-level="6.4" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#konversi-struktur-tabel"><i class="fa fa-check"></i><b>6.4</b> Konversi Struktur Tabel</a></li>
 <li class="chapter" data-level="6.5" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#simpan-tabel-ke-database-1"><i class="fa fa-check"></i><b>6.5</b> Simpan Tabel ke Database</a></li>
-<li class="chapter" data-level="6.6" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#contoh-soal"><i class="fa fa-check"></i><b>6.6</b> Contoh Soal</a></li>
+<li class="chapter" data-level="6.6" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#contoh-soal-1"><i class="fa fa-check"></i><b>6.6</b> Contoh Soal 1</a></li>
+<li class="chapter" data-level="6.7" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#contoh-soal-2"><i class="fa fa-check"></i><b>6.7</b> Contoh Soal 2</a></li>
+<li class="chapter" data-level="6.8" data-path="persentasi-tugas-akhir.html"><a href="persentasi-tugas-akhir.html#contoh-soal-3"><i class="fa fa-check"></i><b>6.8</b> Contoh Soal 3</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="penutup.html"><a href="penutup.html"><i class="fa fa-check"></i><b>7</b> Penutup</a></li>
 <li><a href="section.html#section" id="toc-section"></a></li>
@@ -447,8 +449,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb80-13"><a href="persentasi-tugas-akhir.html#cb80-13" tabindex="-1"></a>df7.to_sql(<span class="st">&quot;users&quot;</span>, engine)</span></code></pre></div>
 <p><strong>Catatan:</strong> Sebaiknya lakukan Import Data, Konversi, dan Penyimpanan database menggunakan Jupterlab.</p>
 </div>
-<div id="contoh-soal" class="section level2 hasAnchor" number="6.6">
-<h2><span class="header-section-number">6.6</span> Contoh Soal<a href="persentasi-tugas-akhir.html#contoh-soal" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="contoh-soal-1" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Contoh Soal 1<a href="persentasi-tugas-akhir.html#contoh-soal-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Visualisasikan total order berdasarkan status!</p>
 <div class="sourceCode" id="cb81"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb81-1"><a href="persentasi-tugas-akhir.html#cb81-1" tabindex="-1"></a>query <span class="op">=</span> <span class="st">&#39;&#39;&#39;SELECT date_trunc(&#39;MONTH&#39;, created_at) AS Month_Year, </span></span>
 <span id="cb81-2"><a href="persentasi-tugas-akhir.html#cb81-2" tabindex="-1"></a><span class="st">           status, </span></span>
@@ -476,7 +478,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb83-8"><a href="persentasi-tugas-akhir.html#cb83-8" tabindex="-1"></a>            )</span>
 <span id="cb83-9"><a href="persentasi-tugas-akhir.html#cb83-9" tabindex="-1"></a></span>
 <span id="cb83-10"><a href="persentasi-tugas-akhir.html#cb83-10" tabindex="-1"></a>fig1.show()</span></code></pre></div>
-<p>Jika ditampilkan dengan Line-Char, sebagai berikut:</p>
+<p>Jika ditampilkan dengan Line-Chart, sebagai berikut:</p>
 <div class="sourceCode" id="cb84"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb84-1"><a href="persentasi-tugas-akhir.html#cb84-1" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb84-2"><a href="persentasi-tugas-akhir.html#cb84-2" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
 <span id="cb84-3"><a href="persentasi-tugas-akhir.html#cb84-3" tabindex="-1"></a>fig2 <span class="op">=</span> px.line(df, x<span class="op">=</span><span class="st">&quot;month_year&quot;</span>, color<span class="op">=</span><span class="st">&quot;status&quot;</span>,</span>
@@ -486,6 +488,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb84-7"><a href="persentasi-tugas-akhir.html#cb84-7" tabindex="-1"></a>            )</span>
 <span id="cb84-8"><a href="persentasi-tugas-akhir.html#cb84-8" tabindex="-1"></a></span>
 <span id="cb84-9"><a href="persentasi-tugas-akhir.html#cb84-9" tabindex="-1"></a>fig2.show()</span></code></pre></div>
+</div>
+<div id="contoh-soal-2" class="section level2 hasAnchor" number="6.7">
+<h2><span class="header-section-number">6.7</span> Contoh Soal 2<a href="persentasi-tugas-akhir.html#contoh-soal-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Hitung dan Visualiasikan AOV <code>order_item</code> yang closed setiap bulannya!</p>
+<p><strong>Catatan:</strong> Average Order Value (AOV) adalah sebuah indikator yang menghitung besar pengeluaran pelanggan setiap kali mereka memesan atau membeli barang. Jadi, secara matematis, rumusnya adalah:</p>
+<p><span class="math display">\[AOV = \text{Total penghasilan dalam periode A} / \text{Total transaksi dalam periode A}\]</span></p>
+<p>Periode A yang dimaksud di sini dapat berupa 1 tahun, 3 bulan, 2 minggu, atau bahkan sehari. Misalkan, AOV brand tersebut adalah Rp30.000, yang berarti secara rata-rata pembeli mengeluarkan Rp30.000 setiap transaksi.</p>
+<div class="sourceCode" id="cb85"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb85-1"><a href="persentasi-tugas-akhir.html#cb85-1" tabindex="-1"></a><span class="cf">with</span> engine.begin() <span class="im">as</span> conn:</span>
+<span id="cb85-2"><a href="persentasi-tugas-akhir.html#cb85-2" tabindex="-1"></a>    query <span class="op">=</span> text(<span class="st">&#39;&#39;&#39;SELECT date_trunc(&#39;month&#39;, created_at) AS Month_Year,</span></span>
+<span id="cb85-3"><a href="persentasi-tugas-akhir.html#cb85-3" tabindex="-1"></a><span class="st">    ROUND((COUNT(DISTINCT order_id)/COUNT(DISTINCT user_id)),2) AS frequencies,</span></span>
+<span id="cb85-4"><a href="persentasi-tugas-akhir.html#cb85-4" tabindex="-1"></a><span class="st">    ((SUM(sale_price)/COUNT(DISTINCT order_id))) AS AOV,</span></span>
+<span id="cb85-5"><a href="persentasi-tugas-akhir.html#cb85-5" tabindex="-1"></a><span class="st">    COUNT(DISTINCT user_id) AS total_unique_users</span></span>
+<span id="cb85-6"><a href="persentasi-tugas-akhir.html#cb85-6" tabindex="-1"></a><span class="st">FROM order_items</span></span>
+<span id="cb85-7"><a href="persentasi-tugas-akhir.html#cb85-7" tabindex="-1"></a><span class="st">WHERE </span></span>
+<span id="cb85-8"><a href="persentasi-tugas-akhir.html#cb85-8" tabindex="-1"></a><span class="st">  status = &#39;Complete&#39;</span></span>
+<span id="cb85-9"><a href="persentasi-tugas-akhir.html#cb85-9" tabindex="-1"></a><span class="st">  AND DATE(created_at) BETWEEN &#39;2019-01-01&#39; AND &#39;2022-08-31&#39;</span></span>
+<span id="cb85-10"><a href="persentasi-tugas-akhir.html#cb85-10" tabindex="-1"></a><span class="st">GROUP BY 1</span></span>
+<span id="cb85-11"><a href="persentasi-tugas-akhir.html#cb85-11" tabindex="-1"></a><span class="st">ORDER BY 1&#39;&#39;&#39;</span>)</span>
+<span id="cb85-12"><a href="persentasi-tugas-akhir.html#cb85-12" tabindex="-1"></a></span>
+<span id="cb85-13"><a href="persentasi-tugas-akhir.html#cb85-13" tabindex="-1"></a>    df <span class="op">=</span> pd.read_sql_query(query, conn)</span>
+<span id="cb85-14"><a href="persentasi-tugas-akhir.html#cb85-14" tabindex="-1"></a>df</span></code></pre></div>
+</div>
+<div id="contoh-soal-3" class="section level2 hasAnchor" number="6.8">
+<h2><span class="header-section-number">6.8</span> Contoh Soal 3<a href="persentasi-tugas-akhir.html#contoh-soal-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Carilah Produk yang paling Menguntungkan!</p>
+<div class="sourceCode" id="cb86"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb86-1"><a href="persentasi-tugas-akhir.html#cb86-1" tabindex="-1"></a><span class="cf">with</span> engine.begin() <span class="im">as</span> conn:</span>
+<span id="cb86-2"><a href="persentasi-tugas-akhir.html#cb86-2" tabindex="-1"></a>    query <span class="op">=</span> text(<span class="st">&#39;&#39;&#39;WITH</span></span>
+<span id="cb86-3"><a href="persentasi-tugas-akhir.html#cb86-3" tabindex="-1"></a><span class="st">main AS (SELECT name AS product_name, </span></span>
+<span id="cb86-4"><a href="persentasi-tugas-akhir.html#cb86-4" tabindex="-1"></a><span class="st">    products.id AS products_id,</span></span>
+<span id="cb86-5"><a href="persentasi-tugas-akhir.html#cb86-5" tabindex="-1"></a><span class="st">    ROUND(retail_price) AS retail_price,</span></span>
+<span id="cb86-6"><a href="persentasi-tugas-akhir.html#cb86-6" tabindex="-1"></a><span class="st">    ROUND(cost) AS cost,</span></span>
+<span id="cb86-7"><a href="persentasi-tugas-akhir.html#cb86-7" tabindex="-1"></a><span class="st">    SUM(sale_price-cost) AS profit</span></span>
+<span id="cb86-8"><a href="persentasi-tugas-akhir.html#cb86-8" tabindex="-1"></a><span class="st">  FROM products </span></span>
+<span id="cb86-9"><a href="persentasi-tugas-akhir.html#cb86-9" tabindex="-1"></a><span class="st">  JOIN order_items </span></span>
+<span id="cb86-10"><a href="persentasi-tugas-akhir.html#cb86-10" tabindex="-1"></a><span class="st">    ON products.id = order_items.product_id</span></span>
+<span id="cb86-11"><a href="persentasi-tugas-akhir.html#cb86-11" tabindex="-1"></a><span class="st">  WHERE status = &#39;Complete&#39;</span></span>
+<span id="cb86-12"><a href="persentasi-tugas-akhir.html#cb86-12" tabindex="-1"></a><span class="st">  GROUP BY 1,2,3,4), </span></span>
+<span id="cb86-13"><a href="persentasi-tugas-akhir.html#cb86-13" tabindex="-1"></a><span class="st">  top_least AS (SELECT  *, RANK() OVER (ORDER BY profit ASC) AS top_rank FROM main), </span></span>
+<span id="cb86-14"><a href="persentasi-tugas-akhir.html#cb86-14" tabindex="-1"></a><span class="st">  top_most AS(SELECT  *, RANK() OVER (ORDER BY profit DESC) AS top_rank FROM main)</span></span>
+<span id="cb86-15"><a href="persentasi-tugas-akhir.html#cb86-15" tabindex="-1"></a><span class="st">  SELECT * , &#39;least profit&#39; AS rank_values FROM top_least </span></span>
+<span id="cb86-16"><a href="persentasi-tugas-akhir.html#cb86-16" tabindex="-1"></a><span class="st">UNION ALL</span></span>
+<span id="cb86-17"><a href="persentasi-tugas-akhir.html#cb86-17" tabindex="-1"></a><span class="st">SELECT *, &#39;most profit&#39; AS rank_values FROM top_most</span></span>
+<span id="cb86-18"><a href="persentasi-tugas-akhir.html#cb86-18" tabindex="-1"></a><span class="st">ORDER BY top_rank, rank_values DESC</span></span>
+<span id="cb86-19"><a href="persentasi-tugas-akhir.html#cb86-19" tabindex="-1"></a><span class="st">LIMIT 10&#39;&#39;&#39;</span>)</span>
+<span id="cb86-20"><a href="persentasi-tugas-akhir.html#cb86-20" tabindex="-1"></a>    df <span class="op">=</span> pd.read_sql_query(query, conn)</span>
+<span id="cb86-21"><a href="persentasi-tugas-akhir.html#cb86-21" tabindex="-1"></a></span>
+<span id="cb86-22"><a href="persentasi-tugas-akhir.html#cb86-22" tabindex="-1"></a>df</span></code></pre></div>
 
 </div>
 </div>
@@ -549,6 +598,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

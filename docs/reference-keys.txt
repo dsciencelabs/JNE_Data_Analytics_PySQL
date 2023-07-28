@@ -122,5 +122,7 @@ create-database
 import-data-csv
 konversi-struktur-tabel
 simpan-tabel-ke-database-1
-contoh-soal
+contoh-soal-1
+contoh-soal-2
+contoh-soal-3
 penutup

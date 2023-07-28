@@ -122,7 +122,7 @@ df7.to_sql("users", engine)
 
 **Catatan:** Sebaiknya lakukan Import Data, Konversi,  dan Penyimpanan database menggunakan Jupterlab.
 
-## Contoh Soal
+## Contoh Soal 1
 
 Visualisasikan total order berdasarkan status!
 
@@ -161,7 +161,7 @@ fig1 = px.histogram(df, x="month_year", color="status",
 fig1.show()
 ```
 
-Jika ditampilkan dengan Line-Char, sebagai berikut:
+Jika ditampilkan dengan Line-Chart, sebagai berikut:
 
 ```{python, eval=F}
 import matplotlib.pyplot as plt
@@ -175,9 +175,62 @@ fig2 = px.line(df, x="month_year", color="status",
 fig2.show()
 ```
 
+## Contoh Soal 2
 
+Hitung dan Visualiasikan AOV `order_item` yang closed setiap bulannya!
 
+**Catatan:** Average Order Value (AOV) adalah sebuah indikator yang menghitung besar pengeluaran pelanggan setiap kali mereka memesan atau membeli barang. Jadi, secara matematis, rumusnya adalah:
 
+   $$AOV = \text{Total penghasilan dalam periode A} / \text{Total transaksi dalam periode A}$$ 
+   
+Periode A yang dimaksud di sini dapat berupa 1 tahun, 3 bulan, 2 minggu, atau bahkan sehari. Misalkan, AOV brand tersebut adalah Rp30.000, yang berarti secara rata-rata pembeli mengeluarkan Rp30.000 setiap transaksi.
+
+```{python, eval=F}
+with engine.begin() as conn:
+    query = text('''SELECT date_trunc('month', created_at) AS Month_Year,
+    ROUND((COUNT(DISTINCT order_id)/COUNT(DISTINCT user_id)),2) AS frequencies,
+    ((SUM(sale_price)/COUNT(DISTINCT order_id))) AS AOV,
+    COUNT(DISTINCT user_id) AS total_unique_users
+FROM order_items
+WHERE 
+  status = 'Complete'
+  AND DATE(created_at) BETWEEN '2019-01-01' AND '2022-08-31'
+GROUP BY 1
+ORDER BY 1''')
+
+    df = pd.read_sql_query(query, conn)
+df
+```
+
+## Contoh Soal 3
+
+Carilah Produk yang paling Menguntungkan!
+
+```{python, eval=F}
+with engine.begin() as conn:
+    query = text('''WITH
+main AS (SELECT name AS product_name, 
+    products.id AS products_id,
+    ROUND(retail_price) AS retail_price,
+    ROUND(cost) AS cost,
+    SUM(sale_price-cost) AS profit
+  FROM products 
+  JOIN order_items 
+    ON products.id = order_items.product_id
+  WHERE status = 'Complete'
+  GROUP BY 1,2,3,4), 
+  top_least AS (SELECT  *, RANK() OVER (ORDER BY profit ASC) AS top_rank FROM main), 
+  top_most AS(SELECT  *, RANK() OVER (ORDER BY profit DESC) AS top_rank FROM main)
+  SELECT * , 'least profit' AS rank_values FROM top_least 
+UNION ALL
+SELECT *, 'most profit' AS rank_values FROM top_most
+ORDER BY top_rank, rank_values DESC
+LIMIT 10''')
+    df = pd.read_sql_query(query, conn)
+
+df
+
+```
 
 
 

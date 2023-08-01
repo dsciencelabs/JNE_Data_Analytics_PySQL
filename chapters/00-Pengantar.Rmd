@@ -74,12 +74,12 @@ Adapun rencana jadwal kegiatan dan topik pembahasan adalah sebegai berikut
 
 |Waktu |	Nama Kegiatan|
 |:---------:|:-----------|
-|09:00 ~ 10:15 WIB |	Mater I: Pemahaman 5W1H |
+|09:00 ~ 10:15 WIB |	Materi I: SQL+Visualisasi |
 |10:15 ~ 10:30 WIB|	Coffee Break I |
-|10:30 ~ 11:30 WIB |	Studi Kasus: 5W1H |
+|10:30 ~ 11:30 WIB |	SQL+Visualisasi |
 |11:30 ~ 13:00 WIB|	ISOMA |
-|13:00 ~ 14:00 WIB |	Studi Kasus: 5W1H + Visualisasi |
-|14:00 ~ 15:15 WIB |	Studi Kasus: 5W1H + Visualisasi |
+|13:00 ~ 14:00 WIB |	Studi Kasus: SQL+Visualisasi+Dashboard |
+|14:00 ~ 15:15 WIB |	Studi Kasus: SQL+Visualisasi+Dashboard |
 |15:15 ~ 15:30 WIB |	 ISO |
 |15:30 ~ 16:30 WIB |	Kuis atau Praktikum oleh Peserta |
 
@@ -101,18 +101,19 @@ Adapun rencana jadwal kegiatan dan topik pembahasan adalah sebegai berikut
 
 Berikut ini adalah nama dan biografi singkat para penulis:
 
-<img src = "/images/contributors/bakti.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" />
+
+<img src = "https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/images/contributors/bakti.png" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" />
 
 - **Bakti Siregar, M.Sc** Bakti Siregar seorang lulusan Magister Sains dari departemen matematika terapan di National Sun Yat-Sen University (Taiwan).  Beliau adalah seorang Data Scientist profesional yang memiliki Kompetensi tidak dapat diragukan lagi dalam hal pengolahan data dengan menggukan SQL dan bahasa pemrograman Python/Rstudio. Lebih dari pada itu, Dia juga akrab dalam memproses Big Data seperti pengenalan distributed computing, NoSQL Database, Hadoop, Spark dan lainnya. Dalam hal visualisasi data, Bakti Siregar mampu menginterpretasikan data dengan sangat baik menggunakan Tableau maupun Power BI. Beberapa project beliau dapat dilihat di link berikut: [Rpubs](https://rpubs.com/dsciencelabs), [Github](https://github.com/dsciencelabs), [Website](https://dsciencelabs.github.io/web/index.html), dan [Kaggle](https://www.kaggle.com/baktisiregar/code). 
 
 
 <br/>
 
-<img src = "/images/contributors/yosia.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" />
+<img src = "https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/images/contributors/yosia.png" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" />
 
 - **Yosia** adalah salah satu mahasiwa terbaik di jurusan Statistika Universitas Matana. Dia juga memiliki minat dalam pembelajaran sains data dan akuturia khususnya melakukan komputasi dengan menggunakan R dan Python. Yosia bercita-cita suatu saat nanti akan menjadi seseorang yang ahli dibidang aktuaria maupun sain data. Dia memiliki minat teoretis yang luas serta minat dalam komputasi, Yosia pernah terlibat dalam menerbitkan di jurnal Pengabdian Kepada Masyarakat Salah Satunya menjadi Assisten **(Workhshop Data Analytics With Python & SQL)** yang juga aktif dalam berbagai aktifitas organisasi kampus.
 
-<img src = "/images/contributors/clara.png?raw=true" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" />
+<img src = "https://raw.githubusercontent.com/dsciencelabs/JNE_Data_Analytics_PySQL/main/images/contributors/clara.png" width = "150" height = "150" style = "float:right; margin-left: 10px; margin-top: 7px" />
 
 - **Clara Della** adalah mahasiswi jurusan Statistik di Universitas Matana. Dia memiliki kemampuan dalam menggunakan beberapa perangkat lunak yang dibutuhkan dalam proses analisa data, seperti; R, Python, SQL, Tableau dan SPSS. Dia juga sudah pernah terlibat menjadi salah satu Assisten **(Workhshop Data Analytics With Python & SQL)**. Selain itu, Della juga aktif dalam berbagai aktifitas organisasi kampus. 
 

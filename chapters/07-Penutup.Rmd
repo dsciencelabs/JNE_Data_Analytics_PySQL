@@ -1,2 +1,118 @@
-# Penutup
+# Sertifikat
+
+Berikut ini dilampirkan Sertifikat **Workshop: Data Analytics with Python and SQL** secara keseluruhan. Sertifikat ini menjadi bukti autentik dari @dsciencelabs. Adapun materi pelatihan yang diberikan adalah sebagai berikut:
+
+*	Pertemuan 1: Pengenalan Database dan Penggunaan SQL dengan Python
+*	Pertemuan 2: Explorasi Data dengan Python  dan SQL
+*	Pertemuan 3: Perhitungan dan Dasar-dasar Statistika
+*	Pertemuan 4: Join Tabel dan SubKueri 
+*	Pertemuan 5: Visualisasi dan Dashboard sederhana
+*	Petermuan 6: Latihan dan Tugas Akhir
+
+
+## Yosia
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), out.width='100%'}
+knitr::include_graphics('https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/Sertifikat/01_Yosia.png?raw=true', dpi = NA)
+```
+
+## Clara Della Evania
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), out.width='100%'}
+knitr::include_graphics('https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/Sertifikat/02_Clara_Della_Evania.png?raw=true', dpi = NA)
+```
+
+## Valensius Jimy
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), out.width='100%'}
+knitr::include_graphics('https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/Sertifikat/03_Valensius_Jimy.png?raw=true', dpi = NA)
+```
+
+## Diyas Arya Nugroho
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), out.width='100%'}
+knitr::include_graphics('https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/Sertifikat/04_Diyas_Arya_Nugroho.png?raw=true', dpi = NA)
+```
+
+## Aldino Prasetiawan
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), out.width='100%'}
+knitr::include_graphics('https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/Sertifikat/05_Aldino_Prasetiawan.png?raw=true', dpi = NA)
+```
+
+## Fadilla Anggie Prananda
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), out.width='100%'}
+knitr::include_graphics('https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/Sertifikat/06_Fadilla_Anggie_Prananda.png?raw=true', dpi = NA)
+```
+
+## Harry Khairullah
+
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), out.width='100%'}
+knitr::include_graphics('https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/Sertifikat/07_Harry_Khairullah.png?raw=true', dpi = NA)
+```
+
+## Ibnu Falah
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), out.width='100%'}
+knitr::include_graphics('https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/Sertifikat/08_Ibnu_Falah.png?raw=true', dpi = NA)
+```
+
+## Koko Arif Budiman
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), out.width='100%'}
+knitr::include_graphics('https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/Sertifikat/09_Koko_Arif_Budiman.png?raw=true', dpi = NA)
+```
+
+## M. Syahrizal
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), out.width='100%'}
+knitr::include_graphics('https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/Sertifikat/10_Mochamad_Syahrizal.png?raw=true', dpi = NA)
+```
+
+## Suristin Adnan
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), out.width='100%'}
+knitr::include_graphics('https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/Sertifikat/11_Suristin_Adnan.png?raw=true', dpi = NA)
+```
+
+## Restu Kusumawati
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), out.width='100%'}
+knitr::include_graphics('https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/Sertifikat/12_Restu_Kusumawati.png?raw=true', dpi = NA)
+```
+
+## Retno Wulandari
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), out.width='100%'}
+knitr::include_graphics('https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/Sertifikat/13_Retno_Wulandari.png?raw=true', dpi = NA)
+```
+
+## Agung Darmanto
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), out.width='100%'}
+knitr::include_graphics('https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/Sertifikat/14_Agung_Darmanto.png?raw=true', dpi = NA)
+```
+
+## Haerul
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), out.width='100%'}
+knitr::include_graphics('https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/Sertifikat/15_Haerul.png?raw=true', dpi = NA)
+```
+
+## Wismoyo Brihayadi
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), out.width='100%'}
+knitr::include_graphics('https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/Sertifikat/16_Wismoyo_Brihayadi.png?raw=true', dpi = NA)
+```
+
+## Yudha Pratama
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), out.width='100%'}
+knitr::include_graphics('https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/Sertifikat/17_Yudha_Pratama.png?raw=true', dpi = NA)
+```
+
+## Fajar Demokrasi Putra
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), out.width='100%'}
+knitr::include_graphics('https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/Sertifikat/18_Fajar_Demokrasi_Putra.png?raw=true', dpi = NA)
+```
+
+## Ade Darmawan
+```{r fig.align='center', echo=FALSE, include=identical(knitr:::pandoc_to(), 'html'), out.width='100%'}
+knitr::include_graphics('https://github.com/dsciencelabs/JNE_Data_Analytics_PySQL/blob/main/Sertifikat/19_Ade_Darmawan.png?raw=true', dpi = NA)
+```
+
+
+
+
 
